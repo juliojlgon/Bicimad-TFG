@@ -10,6 +10,8 @@ namespace Bicimad.Core
 
         public DbSet<Bike> Bikes { get; set; }
 
+        public DbSet<Station> Stations { get; set; }
+
         public int Commit()
         {
             return SaveChanges();

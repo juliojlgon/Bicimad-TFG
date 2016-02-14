@@ -8,6 +8,7 @@ namespace Bicimad.Core
         int Commit();
         DbSet<User> Users { get; set; }
         DbSet<Bike> Bikes { get; set; }
+        DbSet<Station> Stations { get; set; }
 
     }
 }

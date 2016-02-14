@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainObjects\Station.cs" />
     <Compile Include="DomainObjects\Bike.cs" />
     <Compile Include="DomainObjects\User.cs" />
     <Compile Include="EFRepository.cs" />
@@ -62,6 +63,10 @@
     <Compile Include="Migrations\201602141141363_Initial.cs" />
     <Compile Include="Migrations\201602141141363_Initial.Designer.cs">
       <DependentUpon>201602141141363_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602141324078_StationAdded.cs" />
+    <Compile Include="Migrations\201602141324078_StationAdded.Designer.cs">
+      <DependentUpon>201602141324078_StationAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602141141363_Initial.resx">
       <DependentUpon>201602141141363_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602141324078_StationAdded.resx">
+      <DependentUpon>201602141324078_StationAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
