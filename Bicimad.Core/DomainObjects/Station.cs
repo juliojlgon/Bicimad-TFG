@@ -14,7 +14,7 @@ namespace Bicimad.Core.DomainObjects
         public DateTime CreatedDate { get; set; }
 
         [Required]
-        public int BikeNum { get; set; }
+        public string BikeNum { get; set; }
 
         [Required, MaxLength(64)]
         public string  StationName { get; set; }
@@ -23,18 +23,15 @@ namespace Bicimad.Core.DomainObjects
         public string FriendlyUrlStationName { get; set; }
 
         [Required]
-        public float Latitude { get; set; }
+        public string Latitude { get; set; }
 
         [Required]
-        public float Longitude { get; set; }
+        public string Longitude { get; set; }
 
         [Required]
         public string Metro { get; set; }
 
         [Required]
         public string Bus { get; set; }
-
-
-
     }
 }
