@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
+﻿using System.Linq;
 using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
@@ -13,7 +10,6 @@ namespace Bicimad.Services.Query
     public class StationQueryService : IStationQueryService
     {
         private readonly IRepository _repostory;
-
 
         public StationQueryService(IRepository repository)
         {
