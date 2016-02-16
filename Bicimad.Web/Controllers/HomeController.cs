@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Web.Controllers
 {
     public partial class HomeController : Controller
     {
+        private readonly IStationQueryService _stationQueryService;
+ 
+        public HomeController(IStationQueryService stationQueryService)
+        {
+            _stationQueryService = stationQueryService;
+        }
+
         public virtual ActionResult Index()
         {
             return View();

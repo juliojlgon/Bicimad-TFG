@@ -18,5 +18,3 @@ namespace Bicimad.Services.Command.Commands
         }
     }
 }
-
-}

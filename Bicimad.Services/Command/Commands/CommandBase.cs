@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Bicimad.Services.Command.Commands
 {
-    internal class CommandBase
+    public class CommandBase
     {
         public virtual CommandValidationResult Validate()
         {
