@@ -9,11 +9,23 @@ namespace Bicimad.Core.DomainObjects
         [Required]
         public string BikeNum { get; set; }
 
+        [Required]
+        public string FreeBikes { get; set; }
+
+        [Required]
+        public string StationNumber { get; set; }
+
         [Required, MaxLength(64)]
         public string StationName { get; set; }
 
         [Required, MaxLength(64)]
         public string FriendlyUrlStationName { get; set; }
+
+        [Required, MaxLength(100)]
+        public string Address { get; set; }
+
+        [Required, MaxLength(100)]
+        public string FriendlyUrlAdress { get; set; }
 
         [Required]
         public string Latitude { get; set; }

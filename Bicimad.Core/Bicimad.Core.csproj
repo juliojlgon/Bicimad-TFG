@@ -72,6 +72,14 @@
     <Compile Include="Migrations\201602152139364_UpdateStation.Designer.cs">
       <DependentUpon>201602152139364_UpdateStation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602160938513_UpdateStationA.cs" />
+    <Compile Include="Migrations\201602160938513_UpdateStationA.Designer.cs">
+      <DependentUpon>201602160938513_UpdateStationA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602161051205_UpdateStationB.cs" />
+    <Compile Include="Migrations\201602161051205_UpdateStationB.Designer.cs">
+      <DependentUpon>201602161051205_UpdateStationB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +97,22 @@
     <EmbeddedResource Include="Migrations\201602152139364_UpdateStation.resx">
       <DependentUpon>201602152139364_UpdateStation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602160938513_UpdateStationA.resx">
+      <DependentUpon>201602160938513_UpdateStationA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602161051205_UpdateStationB.resx">
+      <DependentUpon>201602161051205_UpdateStationB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\2.xml" />
+    <EmbeddedResource Include="Migrations\bicimad.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Bicimad.Helpers.csproj">
+      <Project>{1589AD50-1C09-4C11-A917-B1799DE1C805}</Project>
+      <Name>Bicimad.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

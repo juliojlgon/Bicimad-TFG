@@ -1,0 +1,1443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<locations>
+		<idestacion>1a</idestacion>
+		<nombre>Puerta del Sol A</nombre>
+		<numero_estacion>1a</numero_estacion>
+		<direccion>Puerta del Sol No 1</direccion>
+		<latitud>40.4168961</latitud>
+		<longitud>-3.7024255</longitud>
+		<libres>24</libres>
+		<total>48</total>
+	</locations>
+	<locations>
+		<idestacion>5</idestacion>
+		<nombre>Fuencarral</nombre>
+		<numero_estacion>5</numero_estacion>
+		<direccion>Calle Fuencarral No 108</direccion>
+		<latitud>40.4285280</latitud>
+		<longitud>-3.7020599</longitud>
+		<libres>21</libres>
+		<total>24</total>
+	</locations>
+	<locations>
+		<idestacion>10</idestacion>
+		<nombre>Marques de la Ensenada</nombre>
+		<numero_estacion>10</numero_estacion>
+		<direccion>Calle Marques de la Ensenada No 16</direccion>
+		<latitud>40.4250863</latitud>
+		<longitud>-3.6918807</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>24</total>
+	</locations>
+	<locations>
+		<idestacion>15</idestacion>
+		<nombre>S.Vicente Ferrer</nombre>
+		<numero_estacion>15</numero_estacion>
+		<direccion>Calle San Vicente Ferrer No 64</direccion>
+		<latitud>40.4261649</latitud>
+		<longitud>-3.7073764</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>21</total>
+		<metro>Noviciado</metro>
+	</locations>
+	<locations>
+		<idestacion>20a</idestacion>
+		<nombre>Banco de España A</nombre>
+		<numero_estacion>20a</numero_estacion>
+		<direccion>Calle Alcala No 49</direccion>
+		<latitud>40.4192342</latitud>
+		<longitud>-3.6954615</longitud>
+		<activo>True</activo>
+		<libres>12</libres>
+		<total>24</total>
+	</locations>
+	<locations>
+		<idestacion>23</idestacion>
+		<nombre>Sto. Domingo</nombre>
+		<numero_estacion>23</numero_estacion>
+		<direccion>Plaza de Santo Domingo No 1</direccion>
+		<latitud>40.4197429</latitud>
+		<longitud>-3.7080733</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>27</idestacion>
+		<nombre>Huertas</nombre>
+		<numero_estacion>27</numero_estacion>
+		<direccion>Calle Jesus no 1</direccion>
+		<latitud>40.4132798</latitud>
+		<longitud>-3.6956178</longitud>
+		<activo>True</activo>
+		<libres>17</libres>
+		<total>70.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>32</idestacion>
+		<nombre>Pza. de la Provincia</nombre>
+		<numero_estacion>32</numero_estacion>
+		<direccion>Plaza de la Provincia</direccion>
+		<latitud>40.4150099</latitud>
+		<longitud>-3.7061032</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>37</idestacion>
+		<nombre>Pza. S.Francisco</nombre>
+		<numero_estacion>37</numero_estacion>
+		<direccion>Plaza de San Francisco No 5</direccion>
+		<latitud>40.4108442</latitud>
+		<longitud>-3.7144964</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>83.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>42</idestacion>
+		<nombre>Santa Isabel</nombre>
+		<numero_estacion>42</numero_estacion>
+		<direccion>c/Atocha 95 (santa Isabel)</direccion>
+		<latitud>40.4107085</latitud>
+		<longitud>-3.6982318</longitud>
+		<activo>True</activo>
+		<libres>16</libres>
+		<total>66.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>47</idestacion>
+		<nombre>Embajadores 1</nombre>
+		<numero_estacion>47</numero_estacion>
+		<direccion>Gta. Embajadores No 6</direccion>
+		<latitud>40.4047851</latitud>
+		<longitud>-3.7028265</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>52</idestacion>
+		<nombre>Pza. Santa Ana</nombre>
+		<numero_estacion>52</numero_estacion>
+		<direccion>Plaza Santa Ana No 10</direccion>
+		<latitud>40.4144226</latitud>
+		<longitud>-3.7007164</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>57</idestacion>
+		<nombre>Sta. Cruz del Marcenado</nombre>
+		<numero_estacion>57</numero_estacion>
+		<direccion>Calle Santa Cruz del Marcenado No 24</direccion>
+		<latitud>40.4295658</latitud>
+		<longitud>-3.7126299</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>62</idestacion>
+		<nombre>ODonnell</nombre>
+		<numero_estacion>62</numero_estacion>
+		<direccion>Calle ODonnell No 50</direccion>
+		<latitud>40.4213148</latitud>
+		<longitud>-3.6724968</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>67</idestacion>
+		<nombre>Almaden</nombre>
+		<numero_estacion>67</numero_estacion>
+		<direccion>C/Almaden No 28</direccion>
+		<latitud>40.4151344</latitud>
+		<longitud>-3.6929946</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>83.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>72</idestacion>
+		<nombre>Sainz de Baranda</nombre>
+		<numero_estacion>72</numero_estacion>
+		<direccion>Calle Doctor Esquerdo No 99</direccion>
+		<latitud>40.4157413</latitud>
+		<longitud>-3.6691838</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>77</idestacion>
+		<nombre>Conde de Casal</nombre>
+		<numero_estacion>77</numero_estacion>
+		<direccion>Plaza Conde de Casal No 8</direccion>
+		<latitud>40.4068676</latitud>
+		<longitud>-3.6701204</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>81</idestacion>
+		<nombre>Cuesta Moyano</nombre>
+		<numero_estacion>81</numero_estacion>
+		<direccion>Cuesta de Claudio Moyano</direccion>
+		<latitud>40.4099442</latitud>
+		<longitud>-3.6926794</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>91</idestacion>
+		<nombre>Principe de Vergara</nombre>
+		<numero_estacion>91</numero_estacion>
+		<direccion>Calle Hermosilla</direccion>
+		<latitud>40.4261340</latitud>
+		<longitud>-3.6787441</longitud>
+		<activo>True</activo>
+		<libres>0</libres>
+		<total>0</total>
+	</locations>
+	<locations>
+		<idestacion>96</idestacion>
+		<nombre>Castello</nombre>
+		<numero_estacion>96</numero_estacion>
+		<direccion>Calle Alcala no 111</direccion>
+		<latitud>40.4220640</latitud>
+		<longitud>-3.6821793</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>55.555555555556</total>
+	</locations>
+	<locations>
+		<idestacion>101</idestacion>
+		<nombre>Jorge Juan</nombre>
+		<numero_estacion>101</numero_estacion>
+		<direccion>Calle Jorge Juan No 131</direccion>
+		<latitud>40.4231526</latitud>
+		<longitud>-3.6691523</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>110</idestacion>
+		<nombre>Moncloa</nombre>
+		<numero_estacion>110</numero_estacion>
+		<direccion>Paseo de Moret</direccion>
+		<latitud>40.4344969</latitud>
+		<longitud>-3.7206893</longitud>
+		<activo>True</activo>
+		<libres>16</libres>
+		<total>66.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>114</idestacion>
+		<nombre>Quintana</nombre>
+		<numero_estacion>114</numero_estacion>
+		<direccion>Calle Quintana,11-13</direccion>
+		<latitud>40.4277456</latitud>
+		<longitud>-3.7174158</longitud>
+		<activo>True</activo>
+		<libres>23</libres>
+		<total>95.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>118</idestacion>
+		<nombre>Juan Martin</nombre>
+		<numero_estacion>118</numero_estacion>
+		<direccion>Juan Martin el Empecinado</direccion>
+		<latitud>40.4007810</latitud>
+		<longitud>-3.6882407</longitud>
+		<activo>True</activo>
+		<libres>12</libres>
+		<total>50</total>
+	</locations>
+	<locations>
+		<idestacion>123</idestacion>
+		<nombre>Guzmán el Bueno</nombre>
+		<numero_estacion>123</numero_estacion>
+		<direccion>c/ Guzman el Bueno c/v c/Alberto Aguilera</direccion>
+		<latitud>40.4306458</latitud>
+		<longitud>-3.7133412</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>1b</idestacion>
+		<nombre>Puerta del Sol B</nombre>
+		<numero_estacion>1b</numero_estacion>
+		<direccion>Puerta del Sol No 1</direccion>
+		<latitud>40.4170009</latitud>
+		<longitud>-3.7024207</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>6</idestacion>
+		<nombre>Colegio Arquitectos</nombre>
+		<numero_estacion>6</numero_estacion>
+		<direccion>Calle Hortaleza No 63</direccion>
+		<latitud>40.4241480</latitud>
+		<longitud>-3.6984470</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>11</idestacion>
+		<nombre>S.Andres</nombre>
+		<numero_estacion>11</numero_estacion>
+		<direccion>Calle San Andres No 18</direccion>
+		<latitud>40.4269483</latitud>
+		<longitud>-3.7035918</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>16</idestacion>
+		<nombre>S.Bernardo</nombre>
+		<numero_estacion>16</numero_estacion>
+		<direccion>Calle San Bernardo no 22</direccion>
+		<latitud>40.4230721</latitud>
+		<longitud>-3.7075065</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>95.238095238095</total>
+	</locations>
+	<locations>
+		<idestacion>20b</idestacion>
+		<nombre>Banco de España B</nombre>
+		<numero_estacion>20b</numero_estacion>
+		<direccion>Calle Alcala No 49</direccion>
+		<latitud>40.4192722</latitud>
+		<longitud>-3.6951760</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>24</idestacion>
+		<nombre>Palacio Oriente</nombre>
+		<numero_estacion>24</numero_estacion>
+		<direccion>Calle Carlos III No 1</direccion>
+		<latitud>40.4182146</latitud>
+		<longitud>-3.7103538</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>28</idestacion>
+		<nombre>Sevilla</nombre>
+		<numero_estacion>28</numero_estacion>
+		<direccion>Calle Alcala No 27</direccion>
+		<latitud>40.4181663</latitud>
+		<longitud>-3.6992600</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>33</idestacion>
+		<nombre>Carretas</nombre>
+		<numero_estacion>33</numero_estacion>
+		<direccion>Calle Carretas No 8</direccion>
+		<latitud>40.4157138</latitud>
+		<longitud>-3.7031808</longitud>
+		<activo>True</activo>
+		<libres>16</libres>
+		<total>66.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>38</idestacion>
+		<nombre>Pza. de los Carros</nombre>
+		<numero_estacion>38</numero_estacion>
+		<direccion>Carrera de San Francisco No 1</direccion>
+		<latitud>40.4110406</latitud>
+		<longitud>-3.7120734</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>43</idestacion>
+		<nombre>Jesus y Maria</nombre>
+		<numero_estacion>43</numero_estacion>
+		<direccion>Plazuela en Calle Lavapies 34-36</direccion>
+		<latitud>40.4101564</latitud>
+		<longitud>-3.7025024</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>48</idestacion>
+		<nombre>Embajadores 2</nombre>
+		<numero_estacion>48</numero_estacion>
+		<direccion>Gta. Embajadores No 2</direccion>
+		<latitud>40.4056107</latitud>
+		<longitud>-3.7022591</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>53</idestacion>
+		<nombre>Pza. Lavapies</nombre>
+		<numero_estacion>53</numero_estacion>
+		<direccion>Calle Valencia No 1</direccion>
+		<latitud>40.4089282</latitud>
+		<longitud>-3.7008803</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>58</idestacion>
+		<nombre>Augusto Figueroa</nombre>
+		<numero_estacion>58</numero_estacion>
+		<direccion>C/Augusto Figueroa No 33</direccion>
+		<latitud>40.4222862</latitud>
+		<longitud>-3.6978950</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>63</idestacion>
+		<nombre>Ibiza</nombre>
+		<numero_estacion>63</numero_estacion>
+		<direccion>Calle Ibiza No 62</direccion>
+		<latitud>40.4179237</latitud>
+		<longitud>-3.6708959</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>68</idestacion>
+		<nombre>Espalter</nombre>
+		<numero_estacion>68</numero_estacion>
+		<direccion>Calle Espalter No 1</direccion>
+		<latitud>40.4128372</latitud>
+		<longitud>-3.6912023</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>66.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>73</idestacion>
+		<nombre>Pza. de Los Astros</nombre>
+		<numero_estacion>73</numero_estacion>
+		<direccion>Avda Nazaret 7(Pza astros)</direccion>
+		<latitud>40.4114475</latitud>
+		<longitud>-3.6689089</longitud>
+		<activo>True</activo>
+		<libres>24</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>78</idestacion>
+		<nombre>Pedro Bosch</nombre>
+		<numero_estacion>78</numero_estacion>
+		<direccion>c/cerro de la plata No 2</direccion>
+		<latitud>40.4009101</latitud>
+		<longitud>-3.6744804</longitud>
+		<activo>True</activo>
+		<libres>24</libres>
+		<total>24</total>
+	</locations>
+	<locations>
+		<idestacion>82</idestacion>
+		<nombre>Niño Jesus</nombre>
+		<numero_estacion>82</numero_estacion>
+		<direccion>Calle Doctor Esquerdo No 161</direccion>
+		<latitud>40.4084556</latitud>
+		<longitud>-3.6697526</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>87</idestacion>
+		<nombre>Ayala</nombre>
+		<numero_estacion>87</numero_estacion>
+		<direccion>Calle Ayala no 44</direccion>
+		<latitud>40.4277360</latitud>
+		<longitud>-3.6832566</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>92</idestacion>
+		<nombre>Claudio Coello</nombre>
+		<numero_estacion>92</numero_estacion>
+		<direccion>Calle Claudio Coello No 45</direccion>
+		<latitud>40.4262945</latitud>
+		<longitud>-3.6865463</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>97</idestacion>
+		<nombre>Alcala</nombre>
+		<numero_estacion>97</numero_estacion>
+		<direccion>Calle Menendez Pelayo No 3</direccion>
+		<latitud>40.4226906</latitud>
+		<longitud>-3.6801307</longitud>
+		<activo>True</activo>
+		<libres>12</libres>
+		<total>50</total>
+	</locations>
+	<locations>
+		<idestacion>102</idestacion>
+		<nombre>Velazquez</nombre>
+		<numero_estacion>102</numero_estacion>
+		<direccion> Calle Alcala No 95</direccion>
+		<latitud>40.4211802</latitud>
+		<longitud>-3.6840229</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>111a</idestacion>
+		<nombre>Arcipreste de Hita A</nombre>
+		<numero_estacion>111a</numero_estacion>
+		<direccion>Calle Arcipreste de Hita</direccion>
+		<latitud>40.4337322</latitud>
+		<longitud>-3.7175435</longitud>
+		<activo>True</activo>
+		<libres>23</libres>
+		<total>95.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>115</idestacion>
+		<nombre>Ferraz</nombre>
+		<numero_estacion>115</numero_estacion>
+		<direccion>Paseo Pintor Rosales</direccion>
+		<latitud>40.4253944</latitud>
+		<longitud>-3.7170448</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>119</idestacion>
+		<nombre>Mendez Álvaro</nombre>
+		<numero_estacion>119</numero_estacion>
+		<direccion>Calle Méndez Álvaro</direccion>
+		<latitud>40.4013216</latitud>
+		<longitud>-3.6863218</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>83.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>2</idestacion>
+		<nombre>Miguel Moya</nombre>
+		<numero_estacion>2</numero_estacion>
+		<direccion>Miguel Moya No 1</direccion>
+		<latitud>40.4205886</latitud>
+		<longitud>-3.7058415</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>7</idestacion>
+		<nombre>Hortaleza</nombre>
+		<numero_estacion>7</numero_estacion>
+		<direccion>Calle Hortaleza No 75</direccion>
+		<latitud>40.4251906</latitud>
+		<longitud>-3.6977715</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>61.904761904762</total>
+	</locations>
+	<locations>
+		<idestacion>12</idestacion>
+		<nombre>S.Hermenegildo</nombre>
+		<numero_estacion>12</numero_estacion>
+		<direccion>Calle San Bernardo No 85</direccion>
+		<latitud>40.4284246</latitud>
+		<longitud>-3.7061931</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>83.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>17</idestacion>
+		<nombre>Carlos Cambronero</nombre>
+		<numero_estacion>17</numero_estacion>
+		<direccion>Plaza Carlos Cambronero No 2</direccion>
+		<latitud>40.4232649</latitud>
+		<longitud>-3.7038312</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>25a</idestacion>
+		<nombre>Pza. Celenque A</nombre>
+		<numero_estacion>25a</numero_estacion>
+		<direccion>Plaza de Celenque No 1</direccion>
+		<latitud>40.4173114</latitud>
+		<longitud>-3.7064809</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>29</idestacion>
+		<nombre>Marques de Cubas</nombre>
+		<numero_estacion>29</numero_estacion>
+		<direccion>Marques de Cubas</direccion>
+		<latitud>40.4162619</latitud>
+		<longitud>-3.6957355</longitud>
+		<activo>True</activo>
+		<libres>10</libres>
+		<total>41.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>34</idestacion>
+		<nombre>Jacinto Benavente</nombre>
+		<numero_estacion>34</numero_estacion>
+		<direccion>Plaza de Jacinto Benavente</direccion>
+		<latitud>40.4146755</latitud>
+		<longitud>-3.7036825</longitud>
+		<activo>True</activo>
+		<libres>0</libres>
+		<total>0</total>
+	</locations>
+	<locations>
+		<idestacion>39</idestacion>
+		<nombre>Pza. Cebada</nombre>
+		<numero_estacion>39</numero_estacion>
+		<direccion>Plaza Cebada No 16</direccion>
+		<latitud>40.4112744</latitud>
+		<longitud>-3.7088337</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>55.555555555556</total>
+	</locations>
+	<locations>
+		<idestacion>44</idestacion>
+		<nombre>Cabestreros</nombre>
+		<numero_estacion>44</numero_estacion>
+		<direccion>c/mesosn de Paredes 35(cabestreros)</direccion>
+		<latitud>40.4097617</latitud>
+		<longitud>-3.7040666</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>61.904761904762</total>
+	</locations>
+	<locations>
+		<idestacion>49</idestacion>
+		<nombre>Casa Encendida</nombre>
+		<numero_estacion>49</numero_estacion>
+		<direccion>Ronda de Atocha 34</direccion>
+		<latitud>40.4060941</latitud>
+		<longitud>-3.6992759</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>54</idestacion>
+		<nombre>Barcelo</nombre>
+		<numero_estacion>54</numero_estacion>
+		<direccion>Calle Barcelo No 7</direccion>
+		<latitud>40.4266828</latitud>
+		<longitud>-3.7004230</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>95.238095238095</total>
+	</locations>
+	<locations>
+		<idestacion>59</idestacion>
+		<nombre>Pza. Juan Pujol</nombre>
+		<numero_estacion>59</numero_estacion>
+		<direccion>C/Espiritu Santo No 30</direccion>
+		<latitud>40.4255495</latitud>
+		<longitud>-3.7043418</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>90.47619047619</total>
+	</locations>
+	<locations>
+		<idestacion>64</idestacion>
+		<nombre>Puerta Reina Mercedes</nombre>
+		<numero_estacion>64</numero_estacion>
+		<direccion>Calle Menendez Pelayo No 10</direccion>
+		<latitud>40.4184318</latitud>
+		<longitud>-3.6789943</longitud>
+		<activo>True</activo>
+		<libres>27</libres>
+		<total>100</total>
+	</locations>
+	<locations>
+		<idestacion>69</idestacion>
+		<nombre>Puerta del Angel Caido</nombre>
+		<numero_estacion>69</numero_estacion>
+		<direccion>Avenida de Alfonso XII No 54</direccion>
+		<latitud>40.4075415</latitud>
+		<longitud>-3.6891565</longitud>
+		<activo>True</activo>
+		<libres>23</libres>
+		<total>85.185185185185</total>
+	</locations>
+	<locations>
+		<idestacion>74</idestacion>
+		<nombre>Puerta del Pacifico</nombre>
+		<numero_estacion>74</numero_estacion>
+		<direccion>Calle Menendez Pelayo No 73</direccion>
+		<latitud>40.4117627</latitud>
+		<longitud>-3.6766813</longitud>
+		<activo>True</activo>
+		<libres>23</libres>
+		<total>95.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>79</idestacion>
+		<nombre>Puerta de Granada</nombre>
+		<numero_estacion>79</numero_estacion>
+		<direccion>Calle Menendez Pelayo No 38</direccion>
+		<latitud>40.4051451</latitud>
+		<longitud>-3.6803874</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>83</idestacion>
+		<nombre>Pio Baroja</nombre>
+		<numero_estacion>83</numero_estacion>
+		<direccion>Calle Pio Baroja No 10</direccion>
+		<latitud>40.4130243</latitud>
+		<longitud>-3.6751105</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>88</idestacion>
+		<nombre>Embajada de Italia</nombre>
+		<numero_estacion>88</numero_estacion>
+		<direccion>Calle Velazquez No 75</direccion>
+		<latitud>40.4313576</latitud>
+		<longitud>-3.6838303</longitud>
+		<activo>True</activo>
+		<libres>8</libres>
+		<total>33.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>93</idestacion>
+		<nombre>Goya Colon</nombre>
+		<numero_estacion>93</numero_estacion>
+		<direccion>Plaza de Colon-Goya</direccion>
+		<latitud>40.4257046</latitud>
+		<longitud>-3.6893698</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>98</idestacion>
+		<nombre>Pza. Felipe II</nombre>
+		<numero_estacion>98</numero_estacion>
+		<direccion>Plaza Felipe II</direccion>
+		<latitud>40.4242625</latitud>
+		<longitud>-3.6753567</longitud>
+		<activo>True</activo>
+		<libres>23</libres>
+		<total>95.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>103</idestacion>
+		<nombre>Ortega y Gasset</nombre>
+		<numero_estacion>103</numero_estacion>
+		<direccion>C/ Ortega y Gasset</direccion>
+		<latitud>40.4303057</latitud>
+		<longitud>-3.6865654</longitud>
+		<activo>True</activo>
+		<libres>0</libres>
+		<total>0</total>
+	</locations>
+	<locations>
+		<idestacion>107</idestacion>
+		<nombre>Columela</nombre>
+		<numero_estacion>107</numero_estacion>
+		<direccion>Serrano esquina Columela</direccion>
+		<latitud>40.4215246</latitud>
+		<longitud>-3.6884369</longitud>
+		<activo>True</activo>
+		<libres>11</libres>
+		<total>45.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>111b</idestacion>
+		<nombre>Arcipreste de Hita B</nombre>
+		<numero_estacion>111b</numero_estacion>
+		<direccion>Calle Arcipreste de Hita</direccion>
+		<latitud>40.4337036</latitud>
+		<longitud>-3.7175115</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>116a</idestacion>
+		<nombre>Pza. España A</nombre>
+		<numero_estacion>116a</numero_estacion>
+		<direccion>Plaza de España</direccion>
+		<latitud>40.4225618</latitud>
+		<longitud>-3.7123461</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>120</idestacion>
+		<nombre>Palos de la Frontera</nombre>
+		<numero_estacion>120</numero_estacion>
+		<direccion>Calle Palos de la Frontera</direccion>
+		<latitud>40.4032208</latitud>
+		<longitud>-3.6944768</longitud>
+		<activo>True</activo>
+		<libres>7</libres>
+		<total>29.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>3</idestacion>
+		<nombre>Conde Suchil</nombre>
+		<numero_estacion>3</numero_estacion>
+		<direccion> Plaza Conde Suchil No 2-4</direccion>
+		<latitud>40.4302937</latitud>
+		<longitud>-3.7069171</longitud>
+		<activo>True</activo>
+		<libres>9</libres>
+		<total>50</total>
+	</locations>
+	<locations>
+		<idestacion>8</idestacion>
+		<nombre>Alonso Martinez</nombre>
+		<numero_estacion>8</numero_estacion>
+		<direccion>Plaza Alonso Martinez No 5</direccion>
+		<latitud>40.4278682</latitud>
+		<longitud>-3.6954403</longitud>
+		<activo>True</activo>
+		<libres>11</libres>
+		<total>45.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>13</idestacion>
+		<nombre>Conde Duque</nombre>
+		<numero_estacion>13</numero_estacion>
+		<direccion>Calle Conde Duque No 22</direccion>
+		<latitud>40.4273264</latitud>
+		<longitud>-3.7104417</longitud>
+		<activo>True</activo>
+		<libres>17</libres>
+		<total>70.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>18</idestacion>
+		<nombre>Vazquez de Mella</nombre>
+		<numero_estacion>18</numero_estacion>
+		<direccion>Plaza Vazquez de Mella No 1</direccion>
+		<latitud>40.4207773</latitud>
+		<longitud>-3.6996502</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>25b</idestacion>
+		<nombre>Pza. Celenque B</nombre>
+		<numero_estacion>25b</numero_estacion>
+		<direccion>Plaza de Celenque No 1</direccion>
+		<latitud>40.4172781</latitud>
+		<longitud>-3.7063837</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>30</idestacion>
+		<nombre>S.Quintin</nombre>
+		<numero_estacion>30</numero_estacion>
+		<direccion>Calle Pavia No 6</direccion>
+		<latitud>40.4192095</latitud>
+		<longitud>-3.7115040</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>81.481481481481</total>
+	</locations>
+	<locations>
+		<idestacion>35</idestacion>
+		<nombre>Pza. del Cordon</nombre>
+		<numero_estacion>35</numero_estacion>
+		<direccion>Plaza del Cordon</direccion>
+		<latitud>40.4141931</latitud>
+		<longitud>-3.7103285</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>40</idestacion>
+		<nombre>Conde de Romanones</nombre>
+		<numero_estacion>40</numero_estacion>
+		<direccion>Plaza de Conde de Romanones No 9</direccion>
+		<latitud>40.4138846</latitud>
+		<longitud>-3.7049407</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>45</idestacion>
+		<nombre>Puerta de Toledo</nombre>
+		<numero_estacion>45</numero_estacion>
+		<direccion>Gta. Puerta Toledo no 1</direccion>
+		<latitud>40.4070358</latitud>
+		<longitud>-3.7110513</longitud>
+		<activo>True</activo>
+		<libres>11</libres>
+		<total>52.380952380952</total>
+	</locations>
+	<locations>
+		<idestacion>50</idestacion>
+		<nombre>Museo Reina Sofia</nombre>
+		<numero_estacion>50</numero_estacion>
+		<direccion>C/Santa isabel No 57</direccion>
+		<latitud>40.4083684</latitud>
+		<longitud>-3.6933463</longitud>
+		<activo>True</activo>
+		<libres>16</libres>
+		<total>66.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>55</idestacion>
+		<nombre>Pza. S. Ildefonso</nombre>
+		<numero_estacion>55</numero_estacion>
+		<direccion>Calle Santa Barbara</direccion>
+		<latitud>40.4239757</latitud>
+		<longitud>-3.7020842</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>60</idestacion>
+		<nombre>Pza. Independencia</nombre>
+		<numero_estacion>60</numero_estacion>
+		<direccion>Plaza de la Independencia</direccion>
+		<latitud>40.4203273</latitud>
+		<longitud>-3.6885980</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>70</idestacion>
+		<nombre>Puerta del 12 de Octubre</nombre>
+		<numero_estacion>70</numero_estacion>
+		<direccion>Calle Menendez Pelayo (doce octubre)</direccion>
+		<latitud>40.4153053</latitud>
+		<longitud>-3.6779232</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>75</idestacion>
+		<nombre>Menendez Pelayo</nombre>
+		<numero_estacion>75</numero_estacion>
+		<direccion>Calle Menendez Pelayo(Poeta Esteban Villegas)</direccion>
+		<latitud>40.4082805</latitud>
+		<longitud>-3.6784838</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>65</idestacion>
+		<nombre>Antonio Maura</nombre>
+		<numero_estacion>65</numero_estacion>
+		<direccion>Antonio Maura</direccion>
+		<latitud>40.4165605</latitud>
+		<longitud>-3.6904525</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>80a</idestacion>
+		<nombre>Atocha A</nombre>
+		<numero_estacion>80a</numero_estacion>
+		<direccion>avda Ciudad de Brcelona(ATOCHA)</direccion>
+		<latitud>40.4075685</latitud>
+		<longitud>-3.6902255</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>84</idestacion>
+		<nombre>Valderribas</nombre>
+		<numero_estacion>84</numero_estacion>
+		<direccion>Calle Doctor Esquerdo No 191</direccion>
+		<latitud>40.4032501</latitud>
+		<longitud>-3.6726019</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>89</idestacion>
+		<nombre>Conde Peñalver</nombre>
+		<numero_estacion>89</numero_estacion>
+		<direccion>Calle Ayala No 102</direccion>
+		<latitud>40.4272582</latitud>
+		<longitud>-3.6752024</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>94</idestacion>
+		<nombre>Biblioteca Nacional</nombre>
+		<numero_estacion>94</numero_estacion>
+		<direccion>Paseo de Recoletos (Biblioteca Nacional)</direccion>
+		<latitud>40.4226990</latitud>
+		<longitud>-3.6909648</longitud>
+		<activo>True</activo>
+		<libres>12</libres>
+		<total>57.142857142857</total>
+	</locations>
+	<locations>
+		<idestacion>99</idestacion>
+		<nombre>Alcantara</nombre>
+		<numero_estacion>99</numero_estacion>
+		<direccion>Calle Alcantara</direccion>
+		<latitud>40.4261851</latitud>
+		<longitud>-3.6738714</longitud>
+		<activo>True</activo>
+		<libres>0</libres>
+		<total>0</total>
+	</locations>
+	<locations>
+		<idestacion>104</idestacion>
+		<nombre>Castellana</nombre>
+		<numero_estacion>104</numero_estacion>
+		<direccion>Paseo de la Castellana No 4</direccion>
+		<latitud>40.4268331</latitud>
+		<longitud>-3.6895336</longitud>
+		<activo>True</activo>
+		<libres>8</libres>
+		<total>38.095238095238</total>
+	</locations>
+	<locations>
+		<idestacion>108</idestacion>
+		<nombre>Martires Concepcionistas</nombre>
+		<numero_estacion>108</numero_estacion>
+		<direccion>c/Martires Concepcionistas No 2</direccion>
+		<latitud>40.4283867</latitud>
+		<longitud>-3.6696850</longitud>
+		<activo>True</activo>
+		<libres>17</libres>
+		<total>62.962962962963</total>
+	</locations>
+	<locations>
+		<idestacion>112</idestacion>
+		<nombre>Po Moret</nombre>
+		<numero_estacion>112</numero_estacion>
+		<direccion>Paseo Pintor Rosales</direccion>
+		<latitud>40.4325991</latitud>
+		<longitud>-3.7246532</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>116b</idestacion>
+		<nombre>Pza. España B</nombre>
+		<numero_estacion>116b</numero_estacion>
+		<direccion>Plaza de España</direccion>
+		<latitud>40.4226547</latitud>
+		<longitud>-3.7121880</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>121</idestacion>
+		<nombre>Sta. Mª de la Cabeza</nombre>
+		<numero_estacion>121</numero_estacion>
+		<direccion>Calle Santa Maria de la Cabeza</direccion>
+		<latitud>40.4017926</latitud>
+		<longitud>-3.6987665</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>4</idestacion>
+		<nombre>Malasaña</nombre>
+		<numero_estacion>4</numero_estacion>
+		<direccion>Calle Manuela Malasaña No 5</direccion>
+		<latitud>40.4285524</latitud>
+		<longitud>-3.7025875</longitud>
+		<activo>True</activo>
+		<libres>23</libres>
+		<total>95.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>9</idestacion>
+		<nombre>Pza. S.Miguel</nombre>
+		<numero_estacion>9</numero_estacion>
+		<direccion>Plaza San Miguel No 9</direccion>
+		<latitud>40.4156057</latitud>
+		<longitud>-3.7095084</longitud>
+		<activo>True</activo>
+		<libres>17</libres>
+		<total>70.833333333333</total>
+	</locations>
+	<locations>
+		<idestacion>14</idestacion>
+		<nombre>Ventura Rodriguez</nombre>
+		<numero_estacion>14</numero_estacion>
+		<direccion>Calle Duque de Liria (ventura Rodriguez)</direccion>
+		<latitud>40.4260957</latitud>
+		<longitud>-3.7134790</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>19</idestacion>
+		<nombre>Prim</nombre>
+		<numero_estacion>19</numero_estacion>
+		<direccion>Calle Prim no 2</direccion>
+		<latitud>40.4218616</latitud>
+		<longitud>-3.6954983</longitud>
+		<activo>True</activo>
+		<libres>0</libres>
+		<total>0</total>
+	</locations>
+	<locations>
+		<idestacion>22</idestacion>
+		<nombre>Jacometrezo</nombre>
+		<numero_estacion>22</numero_estacion>
+		<direccion>Calle Jacometrezo No 3</direccion>
+		<latitud>40.4200783</latitud>
+		<longitud>-3.7065376</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>83.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>26</idestacion>
+		<nombre>Barbara de Braganza</nombre>
+		<numero_estacion>26</numero_estacion>
+		<direccion>barbara de Braganza No 8</direccion>
+		<latitud>40.4235117</latitud>
+		<longitud>-3.6930040</longitud>
+		<activo>True</activo>
+		<libres>12</libres>
+		<total>50</total>
+	</locations>
+	<locations>
+		<idestacion>31</idestacion>
+		<nombre>Calle Mayor</nombre>
+		<numero_estacion>31</numero_estacion>
+		<direccion>Calle Mayor No 20</direccion>
+		<latitud>40.4163638</latitud>
+		<longitud>-3.7068969</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>81.481481481481</total>
+	</locations>
+	<locations>
+		<idestacion>36</idestacion>
+		<nombre>Pza. Ramales</nombre>
+		<numero_estacion>36</numero_estacion>
+		<direccion>Plaza de Vergara Ramales No 1</direccion>
+		<latitud>40.4167281</latitud>
+		<longitud>-3.7124038</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>41</idestacion>
+		<nombre>Anton Martin</nombre>
+		<numero_estacion>41</numero_estacion>
+		<direccion>C/Atocha,54</direccion>
+		<latitud>40.4122047</latitud>
+		<longitud>-3.6991147</longitud>
+		<activo>True</activo>
+		<libres>17</libres>
+		<total>80.952380952381</total>
+	</locations>
+	<locations>
+		<idestacion>46</idestacion>
+		<nombre>Ribera de Curtidores</nombre>
+		<numero_estacion>46</numero_estacion>
+		<direccion>c/Ribera de Curtidores 28</direccion>
+		<latitud>40.4053153</latitud>
+		<longitud>-3.7071259</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>51</idestacion>
+		<nombre>Ronda de Atocha</nombre>
+		<numero_estacion>51</numero_estacion>
+		<direccion>Ronda de Atocha No 2</direccion>
+		<latitud>40.4075606</latitud>
+		<longitud>-3.6935205</longitud>
+		<activo>True</activo>
+		<libres>11</libres>
+		<total>40.740740740741</total>
+	</locations>
+	<locations>
+		<idestacion>56</idestacion>
+		<nombre>Pza. Carmen</nombre>
+		<numero_estacion>56</numero_estacion>
+		<direccion>Plaza del Carmen No 1</direccion>
+		<latitud>40.4184192</latitud>
+		<longitud>-3.7032414</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>61</idestacion>
+		<nombre>Narvaez</nombre>
+		<numero_estacion>61</numero_estacion>
+		<direccion>Calle O'Donell No 28</direccion>
+		<latitud>40.4213983</latitud>
+		<longitud>-3.6752045</longitud>
+		<activo>True</activo>
+		<libres>22</libres>
+		<total>91.666666666667</total>
+	</locations>
+	<locations>
+		<idestacion>66</idestacion>
+		<nombre>Museo del Prado</nombre>
+		<numero_estacion>66</numero_estacion>
+		<direccion>Paseo del Prado</direccion>
+		<latitud>40.4151344</latitud>
+		<longitud>-3.6929946</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>71</idestacion>
+		<nombre>12 de Octubre</nombre>
+		<numero_estacion>71</numero_estacion>
+		<direccion>Calle Doce de Octubre no 28</direccion>
+		<latitud>40.4159569</latitud>
+		<longitud>-3.6738865</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>76</idestacion>
+		<nombre>Puerta de Mariano Cavia</nombre>
+		<numero_estacion>76</numero_estacion>
+		<direccion>Avenida del Mediterraneo No 19</direccion>
+		<latitud>40.4076726</latitud>
+		<longitud>-3.6750121</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>80b</idestacion>
+		<nombre>Atocha B</nombre>
+		<numero_estacion>80b</numero_estacion>
+		<direccion>avda Ciudad de Brcelona(ATOCHA)</direccion>
+		<latitud>40.4074902</latitud>
+		<longitud>-3.6901234</longitud>
+		<activo>True</activo>
+		<libres>20</libres>
+		<total>74.074074074074</total>
+	</locations>
+	<locations>
+		<idestacion>85</idestacion>
+		<nombre>Puerta de Madrid</nombre>
+		<numero_estacion>85</numero_estacion>
+		<direccion>Calle Menendez Pelayo (o?Donnell)</direccion>
+		<latitud>40.4220058</latitud>
+		<longitud>-3.6799277</longitud>
+		<activo>True</activo>
+		<libres>14</libres>
+		<total>58.333333333333</total>
+	</locations>
+	<locations>
+		<idestacion>95</idestacion>
+		<nombre>Villanueva</nombre>
+		<numero_estacion>95</numero_estacion>
+		<direccion>Calle Claudio Coello No 109</direccion>
+		<latitud>40.4226584</latitud>
+		<longitud>-3.6870548</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>100</idestacion>
+		<nombre>Palacio de Deportes</nombre>
+		<numero_estacion>100</numero_estacion>
+		<direccion>Goya 99</direccion>
+		<latitud>40.4248457</latitud>
+		<longitud>-3.6738635</longitud>
+		<activo>True</activo>
+		<libres>18</libres>
+		<total>75</total>
+	</locations>
+	<locations>
+		<idestacion>105</idestacion>
+		<nombre>Serrano</nombre>
+		<numero_estacion>105</numero_estacion>
+		<direccion>Serrano esquina Ayala</direccion>
+		<latitud>40.4267905</latitud>
+		<longitud>-3.6873922</longitud>
+		<activo>True</activo>
+		<libres>13</libres>
+		<total>54.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>113</idestacion>
+		<nombre>Pintor Rosales</nombre>
+		<numero_estacion>113</numero_estacion>
+		<direccion>Paseo Pintor Rosales</direccion>
+		<latitud>40.4276570</latitud>
+		<longitud>-3.7205129</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>79.166666666667</total>
+	</locations>
+	<locations>
+		<idestacion>109</idestacion>
+		<nombre>Marques de Salamanca</nombre>
+		<numero_estacion>109</numero_estacion>
+		<direccion>Plaza Marques de Salamanca</direccion>
+		<latitud>40.4300481</latitud>
+		<longitud>-3.6816402</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>117</idestacion>
+		<nombre>Altamirano</nombre>
+		<numero_estacion>117</numero_estacion>
+		<direccion>Calle Altamirano</direccion>
+		<latitud>40.4309797</latitud>
+		<longitud>-3.7188898</longitud>
+		<activo>True</activo>
+		<libres>21</libres>
+		<total>87.5</total>
+	</locations>
+	<locations>
+		<idestacion>122</idestacion>
+		<nombre>Santa Engracia</nombre>
+		<numero_estacion>122</numero_estacion>
+		<direccion>c/Santa Engracia c/v c/Zurbarán</direccion>
+		<latitud>40.4295863</latitud>
+		<longitud>-3.6963983</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>86</idestacion>
+		<nombre>Cibeles</nombre>
+		<numero_estacion>86</numero_estacion>
+		<direccion>Paseo del Prado (Cibeles)</direccion>
+		<latitud>40.4186148</latitud>
+		<longitud>-3.6926217</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>106a</idestacion>
+		<nombre>Colon A</nombre>
+		<numero_estacion>106a</numero_estacion>
+		<direccion>Serrano esquina Goya</direccion>
+		<latitud>40.4251002</latitud>
+		<longitud>-3.6877227</longitud>
+		<activo>True</activo>
+		<libres>11</libres>
+		<total>61.111111111111</total>
+	</locations>
+	<locations>
+		<idestacion>106b</idestacion>
+		<nombre>Colon B</nombre>
+		<numero_estacion>106b</numero_estacion>
+		<direccion>Serrano esquina Goya</direccion>
+		<latitud>40.4249630</latitud>
+		<longitud>-3.6877450</longitud>
+		<activo>True</activo>
+		<libres>11</libres>
+		<total>61.111111111111</total>
+	</locations>
+	<locations>
+		<idestacion>21b</idestacion>
+		<nombre>Red de S.Luis B</nombre>
+		<numero_estacion>21b</numero_estacion>
+		<direccion>Red de San Luis</direccion>
+		<latitud>40.4197204</latitud>
+		<longitud>-3.7015235</longitud>
+		<activo>True</activo>
+		<libres>15</libres>
+		<total>62.5</total>
+	</locations>
+	<locations>
+		<idestacion>90</idestacion>
+		<nombre>General Pardiñas</nombre>
+		<numero_estacion>90</numero_estacion>
+		<direccion>Calle Goya No 18</direccion>
+		<latitud>40.4250361</latitud>
+		<longitud>-3.6837876</longitud>
+		<activo>True</activo>
+		<libres>19</libres>
+		<total>70.37037037037</total>
+	</locations>
+	<locations>
+		<idestacion>21a</idestacion>
+		<nombre>Red de S.Luis A</nombre>
+		<numero_estacion>21a</numero_estacion>
+		<direccion>Red de San Luis</direccion>
+		<latitud>40.4197872</latitud>
+		<longitud>-3.7014814</longitud>
+		<activo>True</activo>
+		<libres>12</libres>
+		<total>50</total>
+	</locations>
+</root>
