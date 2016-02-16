@@ -1,18 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Bicimad.Core.DomainObjects.Interfaces;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Bicimad.Core.DomainObjects
+namespace Bicimad.Services.Command.Commands.User
 {
-    public class User : IEntity
+    class CreateUserCommand:CommandBase
     {
-
-        [Key, StringLength(13)]
-        public string Id { get; set; }
-
-        [Required]
-        public DateTime CreatedDate { get; set; }
 
         [Required, MaxLength(64)]
         public string UserName { get; set; }
@@ -26,10 +23,8 @@ namespace Bicimad.Core.DomainObjects
         [MaxLength(255)]
         public string Password { get; set; }
 
-        [Required, DefaultValue(false)]
         public bool IsActive { get; set; }
-
-        [Required, DefaultValue(false)]
+  
         public bool IsAdmin { get; set; }
 
         [MaxLength(255)]
@@ -46,6 +41,5 @@ namespace Bicimad.Core.DomainObjects
 
         [MaxLength(64)]
         public string PostalCode { get; set; }
-        
     }
 }
