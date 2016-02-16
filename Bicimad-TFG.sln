@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Core", "Bicimad.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Services", "Bicimad.Services\Bicimad.Services.csproj", "{66E10168-7502-4E07-A1AB-48AC99F03B83}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Helpers", "ClassLibrary1\Bicimad.Helpers.csproj", "{1589AD50-1C09-4C11-A917-B1799DE1C805}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +37,15 @@ Global
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1589AD50-1C09-4C11-A917-B1799DE1C805} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 	EndGlobalSection
 EndGlobal

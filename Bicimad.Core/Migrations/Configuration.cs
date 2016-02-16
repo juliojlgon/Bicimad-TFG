@@ -50,8 +50,7 @@ namespace Bicimad.Core.Migrations
                     FriendlyUrlStationName = ((string)x.Element("nombre")).Sanitize(),
                     StationNumber = (string)x.Element("numero_estacion"),
                     Longitude = (string)x.Element("longitud"),
-                    Latitude = (string)x.Element("latitud"),
-                    FreeBikes = "0"
+                    Latitude = (string)x.Element("latitud")
                 }).ToArray();
 
             resourceName = "Bicimad.Core.Migrations.2.xml";
@@ -82,13 +81,28 @@ namespace Bicimad.Core.Migrations
                     country.Metro = aux.Metro;
                     country.Bus = aux.Bus;
                     country.BikeNum = aux.BikeNum;
+                    country.FreeBikes = aux.BikeNum;
                 }
             }
 
             countries = countries.Where(c => c.Metro != null).ToArray();
 
-            context.Stations.AddOrUpdate(c => c.Id, countries);  
+            context.Stations.AddOrUpdate(c => c.Id, countries);
+            
 
+            foreach (var station in countries)
+            {
+                var bike = new Bike
+                {
+                    StationId = station.Id
+                };
+                for (int i = 0; i < int.Parse(station.BikeNum); i++)
+                {
+                    bike.CreatedDate = DateTimeHelper.SpanishNow;
+                    bike.Id = GuidHelper.GenerateId();    
+                }
+                context.Bikes.AddOrUpdate(b => b.Id, bike);
+            }
         }
     }
 }
