@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bicimad.Services.Command.Commands
 {
-    class CommandBase
+    internal class CommandBase
     {
         public virtual CommandValidationResult Validate()
         {

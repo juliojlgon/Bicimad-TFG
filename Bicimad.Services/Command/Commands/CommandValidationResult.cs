@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bicimad.Services.Command.Commands
 {
     public class CommandValidationResult
+    {
+        public CommandValidationResult(IList<ValidationResult> violations = null)
         {
-            public IList<ValidationResult> ValidationErrors { get; private set; }
+            ValidationErrors = violations ?? new List<ValidationResult>();
+        }
 
-            public CommandValidationResult(IList<ValidationResult> violations = null)
-            {
-                ValidationErrors = violations ?? new List<ValidationResult>();
-            }
+        public IList<ValidationResult> ValidationErrors { get; private set; }
 
-            public bool IsValid
-            {
-                get { return ValidationErrors.Count == 0; }
-            }
+        public bool IsValid
+        {
+            get { return ValidationErrors.Count == 0; }
         }
     }
+}
+
 }

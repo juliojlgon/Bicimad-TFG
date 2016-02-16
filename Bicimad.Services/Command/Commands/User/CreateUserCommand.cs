@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Bicimad.Services.Command.Commands.User
 {
-    class CreateUserCommand:CommandBase
+    internal class CreateUserCommand : CommandBase
     {
-
         [Required, MaxLength(64)]
         public string UserName { get; set; }
 
@@ -24,7 +17,6 @@ namespace Bicimad.Services.Command.Commands.User
         public string Password { get; set; }
 
         public bool IsActive { get; set; }
-  
         public bool IsAdmin { get; set; }
 
         [MaxLength(255)]
