@@ -26,5 +26,7 @@ namespace Bicimad.Core.DomainObjects
         [Required, MaxLength(13)]
         public string  StationId { get; set; }
 
+        public virtual Station Station { get; set; }
+
     }
 }

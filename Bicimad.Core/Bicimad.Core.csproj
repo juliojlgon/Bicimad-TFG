@@ -80,6 +80,14 @@
     <Compile Include="Migrations\201602161051205_UpdateStationB.Designer.cs">
       <DependentUpon>201602161051205_UpdateStationB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602181943041_Testing.cs" />
+    <Compile Include="Migrations\201602181943041_Testing.Designer.cs">
+      <DependentUpon>201602181943041_Testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602182034055_StationReference.cs" />
+    <Compile Include="Migrations\201602182034055_StationReference.Designer.cs">
+      <DependentUpon>201602182034055_StationReference.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,11 +114,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\2.xml" />
+    <EmbeddedResource Include="Migrations\201602181943041_Testing.resx">
+      <DependentUpon>201602181943041_Testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602182034055_StationReference.resx">
+      <DependentUpon>201602182034055_StationReference.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\Bicimad.Helpers.csproj">
-      <Project>{1589AD50-1C09-4C11-A917-B1799DE1C805}</Project>
+      <Project>{1589ad50-1c09-4c11-a917-b1799de1c805}</Project>
       <Name>Bicimad.Helpers</Name>
     </ProjectReference>
   </ItemGroup>

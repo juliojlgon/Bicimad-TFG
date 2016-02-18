@@ -15,28 +15,59 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Linq;
+using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Services.Query.Interfaces;
 
-namespace Bicimad.Web.DependencyResolution {
+namespace Bicimad.Web.DependencyResolution
+{
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
-	
-    public class DefaultRegistry : Registry {
+
+    public class DefaultRegistry : Registry
+    {
         #region Constructors and Destructors
 
-        public DefaultRegistry() {
+        public DefaultRegistry()
+        {
             Scan(
-                scan => {
+                scan =>
+                {
                     scan.TheCallingAssembly();
                     scan.WithDefaultConventions();
-					scan.With(new ControllerConvention());
-                    scan.AssemblyContainingType(typeof(IUserQueryService));
+                    scan.With(new ControllerConvention());
+                    scan.AssemblyContainingType(typeof (IUserQueryService));
                 });
             //For<IExample>().Use<Example>();
             For<IRepository>().Use<EFRepository>();
-        }
 
-        #endregion
+
+
+
+            var profiles =
+                from t in typeof (DefaultRegistry).Assembly.GetTypes()
+                where typeof (Profile).IsAssignableFrom(t)
+                select (Profile) Activator.CreateInstance(t);
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                foreach (var profile in profiles)
+                {
+                    cfg.AddProfile(profile);
+                }
+            });
+
+            For<MapperConfiguration>().Use(config);
+            For<IMapper>().Use(ctx => ctx.GetInstance<MapperConfiguration>().CreateMapper(ctx.GetInstance));
+        }
     }
 }
+
+
+
+
+#endregion
+       
+ 

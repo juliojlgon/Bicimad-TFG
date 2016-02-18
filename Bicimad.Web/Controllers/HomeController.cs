@@ -23,6 +23,8 @@ namespace Bicimad.Web.Controllers
 
         public virtual ActionResult About()
         {
+
+            _stationQueryService.GetStations();
             ViewBag.Message = "Your application description page.";
 
             return View();
