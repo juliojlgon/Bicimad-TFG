@@ -7,6 +7,7 @@ namespace Bicimad.Core.DomainObjects
 {
     public class Bike : IEntity
     {
+        //TODO: Tabla promociones y tabla asociativa de promocion con estacion
         [Key, StringLength(13)]
         public string Id { get; set; }
 
