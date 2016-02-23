@@ -52,16 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\BaseCommandService.cs" />
     <Compile Include="Command\Commands\CommandBase.cs" />
     <Compile Include="Command\Commands\CommandResult.cs" />
     <Compile Include="Command\Commands\CommandValidationResult.cs" />
     <Compile Include="Command\Commands\User\CreateUserCommand.cs" />
+    <Compile Include="Command\Interface\IUserCommandService.cs" />
+    <Compile Include="Command\UserCommandService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\Dto\Station\StationDto.cs" />
+    <Compile Include="Query\Dto\User\UserLoginDto.cs" />
     <Compile Include="Query\Dto\User\UserDto.cs" />
     <Compile Include="Query\Interfaces\IStationQueryService.cs" />
     <Compile Include="Query\Interfaces\IUserQueryService.cs" />
     <Compile Include="Query\StationQueryService.cs" />
+    <Compile Include="Query\UserQueryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +76,10 @@
     <ProjectReference Include="..\Bicimad.Core\Bicimad.Core.csproj">
       <Project>{636A6C20-8A44-464A-AF4C-626B64C6C02B}</Project>
       <Name>Bicimad.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary1\Bicimad.Helpers.csproj">
+      <Project>{1589AD50-1C09-4C11-A917-B1799DE1C805}</Project>
+      <Name>Bicimad.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

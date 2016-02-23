@@ -191,7 +191,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="BaseController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
@@ -209,6 +213,9 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="MapperProfile\StationProfile.cs" />
+    <Compile Include="Models\AccountModels\LoginModel.cs" />
+    <Compile Include="Models\AccountModels\RegisterModel.cs" />
+    <Compile Include="Models\AccountModels\UserLoggedModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -310,6 +317,10 @@
       <Project>{66E10168-7502-4E07-A1AB-48AC99F03B83}</Project>
       <Name>Bicimad.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary1\Bicimad.Helpers.csproj">
+      <Project>{1589AD50-1C09-4C11-A917-B1799DE1C805}</Project>
+      <Name>Bicimad.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -329,7 +340,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2739</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2739/</IISUrl>
+          <IISUrl>http://localhost:8888/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

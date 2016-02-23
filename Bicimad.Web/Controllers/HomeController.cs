@@ -7,7 +7,7 @@ using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Web.Controllers
 {
-    public partial class HomeController : Controller
+    public partial class HomeController : BaseController
     {
         private readonly IStationQueryService _stationQueryService;
  

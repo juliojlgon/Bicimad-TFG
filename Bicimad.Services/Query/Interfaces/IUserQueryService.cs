@@ -5,6 +5,9 @@ namespace Bicimad.Services.Query.Interfaces
 {
     public interface IUserQueryService
     {
-        List<UserDto> GetUser(string userId);
+        UserDto GetUser(string userId);
+        bool ExistsEmail(string email);
+        bool ExistsUserName(string userName);
+        bool TryLogin(string userNameOrEmail, string password, out UserLoginDto userDto);
     }
 }

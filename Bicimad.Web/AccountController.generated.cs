@@ -64,50 +64,15 @@ namespace Bicimad.Web.Controllers
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> VerifyCode()
+        public virtual System.Web.Mvc.ActionResult ValidateEmailUnique()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.VerifyCode);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ValidateEmailUnique);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ConfirmEmail()
+        public virtual System.Web.Mvc.ActionResult ValidateUserNameUnique()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ConfirmEmail);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Web.Mvc.ActionResult ResetPassword()
-        {
-            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPassword);
-        }
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Web.Mvc.ActionResult ExternalLogin()
-        {
-            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLogin);
-        }
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> SendCode()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SendCode);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ExternalLoginCallback()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginCallback);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ExternalLoginConfirmation()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginConfirmation);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ValidateUserNameUnique);
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -126,38 +91,20 @@ namespace Bicimad.Web.Controllers
         public class ActionNamesClass
         {
             public readonly string Login = "Login";
-            public readonly string VerifyCode = "VerifyCode";
             public readonly string Register = "Register";
-            public readonly string ConfirmEmail = "ConfirmEmail";
-            public readonly string ForgotPassword = "ForgotPassword";
-            public readonly string ForgotPasswordConfirmation = "ForgotPasswordConfirmation";
-            public readonly string ResetPassword = "ResetPassword";
-            public readonly string ResetPasswordConfirmation = "ResetPasswordConfirmation";
-            public readonly string ExternalLogin = "ExternalLogin";
-            public readonly string SendCode = "SendCode";
-            public readonly string ExternalLoginCallback = "ExternalLoginCallback";
-            public readonly string ExternalLoginConfirmation = "ExternalLoginConfirmation";
-            public readonly string LogOff = "LogOff";
-            public readonly string ExternalLoginFailure = "ExternalLoginFailure";
+            public readonly string LogOut = "LogOut";
+            public readonly string ValidateEmailUnique = "ValidateEmailUnique";
+            public readonly string ValidateUserNameUnique = "ValidateUserNameUnique";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Login = "Login";
-            public const string VerifyCode = "VerifyCode";
             public const string Register = "Register";
-            public const string ConfirmEmail = "ConfirmEmail";
-            public const string ForgotPassword = "ForgotPassword";
-            public const string ForgotPasswordConfirmation = "ForgotPasswordConfirmation";
-            public const string ResetPassword = "ResetPassword";
-            public const string ResetPasswordConfirmation = "ResetPasswordConfirmation";
-            public const string ExternalLogin = "ExternalLogin";
-            public const string SendCode = "SendCode";
-            public const string ExternalLoginCallback = "ExternalLoginCallback";
-            public const string ExternalLoginConfirmation = "ExternalLoginConfirmation";
-            public const string LogOff = "LogOff";
-            public const string ExternalLoginFailure = "ExternalLoginFailure";
+            public const string LogOut = "LogOut";
+            public const string ValidateEmailUnique = "ValidateEmailUnique";
+            public const string ValidateUserNameUnique = "ValidateUserNameUnique";
         }
 
 
@@ -170,86 +117,30 @@ namespace Bicimad.Web.Controllers
             public readonly string returnUrl = "returnUrl";
             public readonly string model = "model";
         }
-        static readonly ActionParamsClass_VerifyCode s_params_VerifyCode = new ActionParamsClass_VerifyCode();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_VerifyCode VerifyCodeParams { get { return s_params_VerifyCode; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_VerifyCode
-        {
-            public readonly string provider = "provider";
-            public readonly string returnUrl = "returnUrl";
-            public readonly string rememberMe = "rememberMe";
-            public readonly string model = "model";
-        }
         static readonly ActionParamsClass_Register s_params_Register = new ActionParamsClass_Register();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionParamsClass_Register RegisterParams { get { return s_params_Register; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_Register
         {
+            public readonly string from = "from";
             public readonly string model = "model";
         }
-        static readonly ActionParamsClass_ConfirmEmail s_params_ConfirmEmail = new ActionParamsClass_ConfirmEmail();
+        static readonly ActionParamsClass_ValidateEmailUnique s_params_ValidateEmailUnique = new ActionParamsClass_ValidateEmailUnique();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_ConfirmEmail ConfirmEmailParams { get { return s_params_ConfirmEmail; } }
+        public ActionParamsClass_ValidateEmailUnique ValidateEmailUniqueParams { get { return s_params_ValidateEmailUnique; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_ConfirmEmail
+        public class ActionParamsClass_ValidateEmailUnique
         {
-            public readonly string userId = "userId";
-            public readonly string code = "code";
+            public readonly string email = "email";
         }
-        static readonly ActionParamsClass_ForgotPassword s_params_ForgotPassword = new ActionParamsClass_ForgotPassword();
+        static readonly ActionParamsClass_ValidateUserNameUnique s_params_ValidateUserNameUnique = new ActionParamsClass_ValidateUserNameUnique();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_ForgotPassword ForgotPasswordParams { get { return s_params_ForgotPassword; } }
+        public ActionParamsClass_ValidateUserNameUnique ValidateUserNameUniqueParams { get { return s_params_ValidateUserNameUnique; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_ForgotPassword
+        public class ActionParamsClass_ValidateUserNameUnique
         {
-            public readonly string model = "model";
-        }
-        static readonly ActionParamsClass_ResetPassword s_params_ResetPassword = new ActionParamsClass_ResetPassword();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_ResetPassword ResetPasswordParams { get { return s_params_ResetPassword; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_ResetPassword
-        {
-            public readonly string code = "code";
-            public readonly string model = "model";
-        }
-        static readonly ActionParamsClass_ExternalLogin s_params_ExternalLogin = new ActionParamsClass_ExternalLogin();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_ExternalLogin ExternalLoginParams { get { return s_params_ExternalLogin; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_ExternalLogin
-        {
-            public readonly string provider = "provider";
-            public readonly string returnUrl = "returnUrl";
-        }
-        static readonly ActionParamsClass_SendCode s_params_SendCode = new ActionParamsClass_SendCode();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_SendCode SendCodeParams { get { return s_params_SendCode; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_SendCode
-        {
-            public readonly string returnUrl = "returnUrl";
-            public readonly string rememberMe = "rememberMe";
-            public readonly string model = "model";
-        }
-        static readonly ActionParamsClass_ExternalLoginCallback s_params_ExternalLoginCallback = new ActionParamsClass_ExternalLoginCallback();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_ExternalLoginCallback ExternalLoginCallbackParams { get { return s_params_ExternalLoginCallback; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_ExternalLoginCallback
-        {
-            public readonly string returnUrl = "returnUrl";
-        }
-        static readonly ActionParamsClass_ExternalLoginConfirmation s_params_ExternalLoginConfirmation = new ActionParamsClass_ExternalLoginConfirmation();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_ExternalLoginConfirmation ExternalLoginConfirmationParams { get { return s_params_ExternalLoginConfirmation; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_ExternalLoginConfirmation
-        {
-            public readonly string model = "model";
-            public readonly string returnUrl = "returnUrl";
+            public readonly string userName = "userName";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -307,42 +198,16 @@ namespace Bicimad.Web.Controllers
         }
 
         [NonAction]
-        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.LoginViewModel model, string returnUrl);
+        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.AccountModels.LoginModel model, string returnUrl);
 
         [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> Login(Bicimad.Web.Models.LoginViewModel model, string returnUrl)
+        public override System.Web.Mvc.ActionResult Login(Bicimad.Web.Models.AccountModels.LoginModel model, string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
             LoginOverride(callInfo, model, returnUrl);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void VerifyCodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string provider, string returnUrl, bool rememberMe);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.VerifyCode);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "rememberMe", rememberMe);
-            VerifyCodeOverride(callInfo, provider, returnUrl, rememberMe);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void VerifyCodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.VerifyCodeViewModel model);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> VerifyCode(Bicimad.Web.Models.VerifyCodeViewModel model)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.VerifyCode);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
-            VerifyCodeOverride(callInfo, model);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
+            return callInfo;
         }
 
         [NonAction]
@@ -357,181 +222,50 @@ namespace Bicimad.Web.Controllers
         }
 
         [NonAction]
-        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.RegisterViewModel model);
+        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string from, Bicimad.Web.Models.AccountModels.RegisterModel model);
 
         [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> Register(Bicimad.Web.Models.RegisterViewModel model)
+        public override System.Web.Mvc.ActionResult Register(string from, Bicimad.Web.Models.AccountModels.RegisterModel model)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "from", from);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
-            RegisterOverride(callInfo, model);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void ConfirmEmailOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userId, string code);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ConfirmEmail(string userId, string code)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ConfirmEmail);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userId", userId);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "code", code);
-            ConfirmEmailOverride(callInfo, userId, code);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void ForgotPasswordOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult ForgotPassword()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ForgotPassword);
-            ForgotPasswordOverride(callInfo);
+            RegisterOverride(callInfo, from, model);
             return callInfo;
         }
 
         [NonAction]
-        partial void ForgotPasswordOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.ForgotPasswordViewModel model);
+        partial void LogOutOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ForgotPassword(Bicimad.Web.Models.ForgotPasswordViewModel model)
+        public override System.Web.Mvc.ActionResult LogOut()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ForgotPassword);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
-            ForgotPasswordOverride(callInfo, model);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void ForgotPasswordConfirmationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult ForgotPasswordConfirmation()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ForgotPasswordConfirmation);
-            ForgotPasswordConfirmationOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.LogOut);
+            LogOutOverride(callInfo);
             return callInfo;
         }
 
         [NonAction]
-        partial void ResetPasswordOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string code);
+        partial void ValidateEmailUniqueOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string email);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult ResetPassword(string code)
+        public override System.Web.Mvc.ActionResult ValidateEmailUnique(string email)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPassword);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "code", code);
-            ResetPasswordOverride(callInfo, code);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ValidateEmailUnique);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "email", email);
+            ValidateEmailUniqueOverride(callInfo, email);
             return callInfo;
         }
 
         [NonAction]
-        partial void ResetPasswordOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.ResetPasswordViewModel model);
+        partial void ValidateUserNameUniqueOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userName);
 
         [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ResetPassword(Bicimad.Web.Models.ResetPasswordViewModel model)
+        public override System.Web.Mvc.ActionResult ValidateUserNameUnique(string userName)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPassword);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
-            ResetPasswordOverride(callInfo, model);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void ResetPasswordConfirmationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult ResetPasswordConfirmation()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPasswordConfirmation);
-            ResetPasswordConfirmationOverride(callInfo);
-            return callInfo;
-        }
-
-        [NonAction]
-        partial void ExternalLoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string provider, string returnUrl);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult ExternalLogin(string provider, string returnUrl)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLogin);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
-            ExternalLoginOverride(callInfo, provider, returnUrl);
-            return callInfo;
-        }
-
-        [NonAction]
-        partial void SendCodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string returnUrl, bool rememberMe);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> SendCode(string returnUrl, bool rememberMe)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SendCode);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "rememberMe", rememberMe);
-            SendCodeOverride(callInfo, returnUrl, rememberMe);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void SendCodeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.SendCodeViewModel model);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> SendCode(Bicimad.Web.Models.SendCodeViewModel model)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SendCode);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
-            SendCodeOverride(callInfo, model);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void ExternalLoginCallbackOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string returnUrl);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ExternalLoginCallback(string returnUrl)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginCallback);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
-            ExternalLoginCallbackOverride(callInfo, returnUrl);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void ExternalLoginConfirmationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.ExternalLoginConfirmationViewModel model, string returnUrl);
-
-        [NonAction]
-        public override System.Threading.Tasks.Task<System.Web.Mvc.ActionResult> ExternalLoginConfirmation(Bicimad.Web.Models.ExternalLoginConfirmationViewModel model, string returnUrl)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginConfirmation);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
-            ExternalLoginConfirmationOverride(callInfo, model, returnUrl);
-            return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void LogOffOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult LogOff()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.LogOff);
-            LogOffOverride(callInfo);
-            return callInfo;
-        }
-
-        [NonAction]
-        partial void ExternalLoginFailureOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult ExternalLoginFailure()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginFailure);
-            ExternalLoginFailureOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ValidateUserNameUnique);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userName", userName);
+            ValidateUserNameUniqueOverride(callInfo, userName);
             return callInfo;
         }
 

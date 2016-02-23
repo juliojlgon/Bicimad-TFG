@@ -84,12 +84,6 @@ namespace Bicimad.Web.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ManageLogins);
             return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
         }
-        [NonAction]
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public virtual System.Web.Mvc.ActionResult LinkLogin()
-        {
-            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.LinkLogin);
-        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ManageController Actions { get { return MVC.Manage; } }
@@ -116,7 +110,6 @@ namespace Bicimad.Web.Controllers
             public readonly string ChangePassword = "ChangePassword";
             public readonly string SetPassword = "SetPassword";
             public readonly string ManageLogins = "ManageLogins";
-            public readonly string LinkLogin = "LinkLogin";
             public readonly string LinkLoginCallback = "LinkLoginCallback";
         }
 
@@ -133,7 +126,6 @@ namespace Bicimad.Web.Controllers
             public const string ChangePassword = "ChangePassword";
             public const string SetPassword = "SetPassword";
             public const string ManageLogins = "ManageLogins";
-            public const string LinkLogin = "LinkLogin";
             public const string LinkLoginCallback = "LinkLoginCallback";
         }
 
@@ -195,14 +187,6 @@ namespace Bicimad.Web.Controllers
         public class ActionParamsClass_ManageLogins
         {
             public readonly string message = "message";
-        }
-        static readonly ActionParamsClass_LinkLogin s_params_LinkLogin = new ActionParamsClass_LinkLogin();
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_LinkLogin LinkLoginParams { get { return s_params_LinkLogin; } }
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_LinkLogin
-        {
-            public readonly string provider = "provider";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -396,18 +380,6 @@ namespace Bicimad.Web.Controllers
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "message", message);
             ManageLoginsOverride(callInfo, message);
             return System.Threading.Tasks.Task.FromResult(callInfo as System.Web.Mvc.ActionResult);
-        }
-
-        [NonAction]
-        partial void LinkLoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string provider);
-
-        [NonAction]
-        public override System.Web.Mvc.ActionResult LinkLogin(string provider)
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.LinkLogin);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
-            LinkLoginOverride(callInfo, provider);
-            return callInfo;
         }
 
         [NonAction]

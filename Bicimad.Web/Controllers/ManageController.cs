@@ -11,7 +11,7 @@ using Bicimad.Web.Models;
 namespace Bicimad.Web.Controllers
 {
     [Authorize]
-    public partial class ManageController : Controller
+    public partial class ManageController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -297,16 +297,7 @@ namespace Bicimad.Web.Controllers
             });
         }
 
-        //
-        // POST: /Manage/LinkLogin
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public virtual ActionResult LinkLogin(string provider)
-        {
-            // Request a redirect to the external login provider to link a login for the current user
-            return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
-        }
-
+       
         //
         // GET: /Manage/LinkLoginCallback
         public virtual async Task<ActionResult> LinkLoginCallback()

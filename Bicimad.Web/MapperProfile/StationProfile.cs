@@ -5,6 +5,7 @@ using System.Web;
 using AutoMapper;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Services.Query.Dto.Station;
+using Bicimad.Services.Query.Dto.User;
 
 namespace Bicimad.Web.MapperProfile
 {
@@ -13,6 +14,7 @@ namespace Bicimad.Web.MapperProfile
         protected override void Configure()
         {
             CreateMap<Station, StationDto>();
+            CreateMap<User, UserDto>();
         }
     }
 }

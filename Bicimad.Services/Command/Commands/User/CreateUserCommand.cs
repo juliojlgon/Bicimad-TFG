@@ -2,7 +2,7 @@
 
 namespace Bicimad.Services.Command.Commands.User
 {
-    internal class CreateUserCommand : CommandBase
+    public class CreateUserCommand : CommandBase
     {
         [Required, MaxLength(64)]
         public string UserName { get; set; }
