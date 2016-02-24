@@ -5,10 +5,16 @@ namespace Bicimad.Web
 {
     public class BundleConfig
     {
+
+        public const string JQuery = "~/bundles/jquery";
+        public const string JQueryVal = "~/bundles/jqueryval";
+
+        public const string MdbExtra = "~/bundles/mdbextra";
+
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            bundles.Add(new ScriptBundle(JQuery).Include(
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -21,11 +27,12 @@ namespace Bicimad.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                       "~/Scripts/mdb.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/mdb.css"));
         }
     }
 }

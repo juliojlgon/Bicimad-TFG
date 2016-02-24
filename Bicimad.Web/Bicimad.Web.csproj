@@ -233,6 +233,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mdb.css" />
+    <Content Include="Content\mdb.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -247,11 +249,28 @@
     <Content Include="Scripts\jquery-2.2.0.min.js" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\mdb.js" />
+    <Content Include="Scripts\mdb.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\modules %28optional%29\buttons.js" />
+    <Content Include="Scripts\modules %28optional%29\chart.js" />
+    <Content Include="Scripts\modules %28optional%29\collapsible.js" />
+    <Content Include="Scripts\modules %28optional%29\dropdown.js" />
+    <Content Include="Scripts\modules %28optional%29\forms-basic.js" />
+    <Content Include="Scripts\modules %28optional%29\global.js" />
+    <Content Include="Scripts\modules %28optional%29\jquery-easing.js" />
+    <Content Include="Scripts\modules %28optional%29\mdb.js" />
+    <Content Include="Scripts\modules %28optional%29\mdb.min.js" />
+    <Content Include="Scripts\modules %28optional%29\scrolling-nav.js" />
+    <Content Include="Scripts\modules %28optional%29\velocity.js" />
+    <Content Include="Scripts\modules %28optional%29\video-bg.js" />
+    <Content Include="Scripts\modules %28optional%29\waves-effect.js" />
+    <Content Include="Scripts\modules %28optional%29\wow.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
