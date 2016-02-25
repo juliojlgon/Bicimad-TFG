@@ -14,7 +14,7 @@
     <!-- Bootstrap Core-->
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render(BundleConfig.Leaflet)
+    
 
 </head>
 <body>
@@ -73,7 +73,7 @@
                 <li>
                     <a href="#" class="waves-effect waves-light">Estaciones</a>
                 </li>
-                
+
             </ul>
             <div class="navbar-btn navbar-right">
                 @if (User.Identity.IsAuthenticated)
@@ -98,15 +98,17 @@
         <div class="footer-copyright text-center rgba-black-light">
             <div class="container-fluid">
                 <p>&copy; @DateTime.Now.Year - Bicimad-TFG - Julio López & Manuel Gómez</p>
-                @*http://www.MDBootstrap.com MDBootstrap.com*@ 
+                @*http://www.MDBootstrap.com MDBootstrap.com*@
             </div>
         </div>
-        
+
     </footer>
 </div>
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render(BundleConfig.JQuery)
+@Scripts.Render(BundleConfig.JQueryVal)
+@Scripts.Render(BundleConfig.Leaflet)
 @RenderSection("scripts", false)
 </body>
 </html>
+
