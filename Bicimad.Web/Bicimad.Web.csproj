@@ -233,6 +233,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\layers-2x.png" />
+    <Content Include="Content\images\layers.png" />
+    <Content Include="Content\images\marker-icon-2x.png" />
+    <Content Include="Content\images\marker-icon.png" />
+    <Content Include="Content\images\marker-shadow.png" />
+    <Content Include="Content\leaflet.css" />
     <Content Include="Content\mdb.css" />
     <Content Include="Content\mdb.min.css" />
     <Content Include="favicon.ico" />
@@ -254,6 +260,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet-src.js" />
+    <Content Include="Scripts\leaflet.js" />
     <Content Include="Scripts\mdb.js" />
     <Content Include="Scripts\mdb.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
