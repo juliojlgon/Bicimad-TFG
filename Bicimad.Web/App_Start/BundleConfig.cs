@@ -12,7 +12,7 @@ namespace Bicimad.Web
         public const string MdbExtra = "~/bundles/mdbextra";
 
         public const string Leaflet = "~/bundles/leaflet";
-        public const string LeafletAMarker = "~/bundles/leaflet";
+        public const string LeafletAMarker = "~/bundles/leafletmarker";
 
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
@@ -24,6 +24,8 @@ namespace Bicimad.Web
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle(Leaflet).Include("~/Scripts/leaflet.js"));
+
+            bundles.Add(new ScriptBundle(LeafletAMarker).Include("~/Scripts/leaflet.extra-markers.min.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -38,7 +40,8 @@ namespace Bicimad.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/mdb.css",
-                      "~/Content/leaflet.css"));
+                      "~/Content/leaflet.css",
+                      "~/Content/leaflet.extra-markers.min.css"));
         }
     }
 }
