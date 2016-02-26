@@ -18,6 +18,7 @@ namespace Bicimad.Web.Controllers
 
         public virtual ActionResult Index()
         {
+            var stations = _stationQueryService.GetStations();
             return View();
         }
 
@@ -35,6 +36,13 @@ namespace Bicimad.Web.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public virtual ActionResult FillMap()
+        {
+            var stations =_stationQueryService.GetStations();
+            var jsonStation = Json(stations);
+            return jsonStation;
         }
     }
 }
