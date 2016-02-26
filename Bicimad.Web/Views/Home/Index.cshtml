@@ -23,24 +23,8 @@
     @* TODO: CUANDO EL SCRIPT ESTE ACABADO METERLO EN UN SCRIPT APARTE y add locate *@
     <script>
         $(function() {
-            //TODO: Mirar como hacer la puta consulta ajax
-            //var _this = $(this);
-            //var url = $(this).attr("home/fillmap");
 
-            //$.ajax({
-            //    "url": url,
-            //    "type": "POST",
-            //    "data": "",
-            //    "dataType": "json",
-            //    "success": function(data) {
-
-
-            //    },
-            //    "error": function() {
-            //        console.log("Error calling " + url);
-            //    }
-            //});
-
+            
 
             var map = L.map('map').setView([40.420829, -3.704729], 13);
 
@@ -53,6 +37,32 @@
                 id: 'juliojlgon.p8hc8pdp'
             }).addTo(map);
 
+            
+            var url = "Home/FillMap";
+            var stations = [];
+            $.ajax({
+                "url": url,
+                "type": "POST",
+                "data": "",
+                "dataType": "json",
+                "success": function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        stations.push(data[i]);
+                        var lat = data[i].Latitude;
+                        var long = data[i].Longitude;
+                        var markertext = "<b class=\"text-center  center-block\">" + data[i].StationName + "</b><hr>" +
+                            "<b>Libres: </b>" + data[i].FreeBikes + "<br>" + 
+                            "<b>Metro: </b>" + data[i].Metro + "<br>" + 
+                            "<b>Bus: </b>" + data[i].Bus + "<br>";
+                        var marker = L.marker([lat, long]);
+                        marker.bindPopup(markertext);
+                        marker.addTo(map);
+                    }
+                },
+                "error": function () {
+                    console.log("Error calling " + url);
+                }
+            });
 
             //L.marker([51.5, -0.09]).addTo(map)
             //	.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
@@ -70,7 +80,7 @@
             //]).addTo(map).bindPopup("I am a polygon.");
 
 
-            //var popup = L.popup();
+            var popup = L.popup();
 
             function onMapClick(e) {
                 popup

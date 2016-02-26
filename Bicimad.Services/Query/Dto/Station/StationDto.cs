@@ -10,6 +10,8 @@ namespace Bicimad.Services.Query.Dto.Station
 
         public string BikeNum { get; set; }
 
+        public string FreeBikes { get; set; }
+
         public string StationName { get; set; }
 
         public string FriendlyUrlStationName { get; set; }

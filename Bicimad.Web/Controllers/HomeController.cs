@@ -37,7 +37,8 @@ namespace Bicimad.Web.Controllers
 
             return View();
         }
-
+        
+        [HttpPost]
         public virtual ActionResult FillMap()
         {
             var stations =_stationQueryService.GetStations();

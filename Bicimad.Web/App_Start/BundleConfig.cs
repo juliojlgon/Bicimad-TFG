@@ -12,6 +12,7 @@ namespace Bicimad.Web
         public const string MdbExtra = "~/bundles/mdbextra";
 
         public const string Leaflet = "~/bundles/leaflet";
+        public const string LeafletAMarker = "~/bundles/leaflet";
 
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
