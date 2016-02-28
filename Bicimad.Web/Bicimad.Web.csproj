@@ -213,9 +213,9 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="MapperProfile\StationProfile.cs" />
-    <Compile Include="Models\AccountModels\LoginModel.cs" />
-    <Compile Include="Models\AccountModels\RegisterModel.cs" />
-    <Compile Include="Models\AccountModels\UserLoggedModel.cs" />
+    <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Account\RegisterModel.cs" />
+    <Compile Include="Models\Account\UserLoggedModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
