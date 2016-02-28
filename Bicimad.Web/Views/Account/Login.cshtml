@@ -1,42 +1,50 @@
 ﻿@model Bicimad.Web.Models.AccountModels.LoginModel
 @{
-    ViewBag.Title = "Log in";
+    ViewBag.Title = "Comienza a pedalear";
 }
 
+<!--Form-->
+<div class="card-panel reply-section hoverable">
+    <div class="row">
+        <h5 class="text-center">@ViewBag.Title</h5>
+        <hr>
+        <form action="@Url.Action(MVC.Account.Login())?ReturnUrl=@ViewBag.ReturnUrl" role="form" method="POST" class="col-md-12">
 
-<div class="center-block">
-
-    <h1 class="h3">@ViewBag.Title</h1>
-    
-    <form action="@Url.Action(MVC.Account.Login())?ReturnUrl=@ViewBag.ReturnUrl" role="form" method="POST" class="btn-default">
-
-        <div class="form-group">
-            @Html.LabelFor(m => m.UserNameOrEmail)
-            @Html.ValidationMessageFor(m => m.UserNameOrEmail)
-            @Html.TextBoxFor(m => m.UserNameOrEmail, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(m => m.Password)
-            @Html.ValidationMessageFor(m => m.Password)
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            <label class="form-inline form-group">
-                @Html.CheckBoxFor(m => m.RememberMe) Recordarme?
-            </label>
-            <div class="btn-block pull-right bottom">
-                <input type="submit" class="btn btn-primary btn-info" value="Iniciar sesión" />
+            <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                @Html.LabelFor(m => m.UserNameOrEmail)
+                @Html.TextBoxFor(m => m.UserNameOrEmail, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.UserNameOrEmail)
             </div>
-            <div>                
+
+            <div class="input-field">
+                <i class="material-icons prefix">https</i>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+
+            <div class="input-field">
+                <label class="form-inline input-field">
+                    @Html.CheckBoxFor(m => m.RememberMe) Recordarme?
+                </label>
+
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary btn-info" value="Iniciar sesión"/>
+                </div>
                 <div>
-                    <a href="@Url.Action(MVC.Account.Register())">Regístrate</a>
+                    <div class="text-center">
+                        <a href="@Url.Action(MVC.Account.Register())">Regístrate</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+
+
+    </div>
 </div>
+<!--Reply section-->
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

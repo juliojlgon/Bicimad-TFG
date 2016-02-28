@@ -14,6 +14,9 @@ namespace Bicimad.Web
         public const string Leaflet = "~/bundles/leaflet";
         public const string LeafletAMarker = "~/bundles/leafletmarker";
 
+
+        public const string BootstrapJs = "~/bundles/bootstrap";
+
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
