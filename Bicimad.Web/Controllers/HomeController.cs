@@ -18,7 +18,6 @@ namespace Bicimad.Web.Controllers
 
         public virtual ActionResult Index()
         {
-            var stations = _stationQueryService.GetStations();
             return View();
         }
 

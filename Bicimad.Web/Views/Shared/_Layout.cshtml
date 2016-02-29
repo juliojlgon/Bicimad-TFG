@@ -63,20 +63,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand waves-effect waves-light" href="#">Bicimad-TFG</a>
+            <a class="navbar-brand waves-effect waves-light" href="@Url.Action(MVC.Home.Index())">Bicimad-TFG</a>
         </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="#" class="waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect waves-light">Estaciones</a>
-                </li>
-
-            </ul>
-            <div class="navbar-btn navbar-right">
+        <div class="row">
+            <div class="pull-right">
                 @if (User.Identity.IsAuthenticated)
                 {
                     //TODO: Buscar un icono por defecto para meter aquí
@@ -92,6 +82,21 @@
                 }
             </div>
         </div>
+        <div class="row">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="@Url.Action(MVC.Home.Index())" class="waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect waves-light">Estaciones</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
     </div>
 </nav>
 <div class="container body-content">

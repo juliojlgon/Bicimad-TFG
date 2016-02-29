@@ -31,7 +31,7 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
 
-            string id = GuidHelper.GenerateId();
+            var id = GuidHelper.GenerateId();
 
             Repository.Users.Add(new User
             {
