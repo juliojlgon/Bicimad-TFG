@@ -76,6 +76,18 @@ namespace Links
         public static readonly string _references_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/_references.min.js") ? Url("_references.min.js") : Url("_references.js");
         public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
         public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class images {
+            private const string URLPATH = "~/Scripts/images";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
+            public static readonly string layers_2x_png = Url("layers-2x.png");
+            public static readonly string layers_png = Url("layers.png");
+            public static readonly string marker_icon_2x_png = Url("marker-icon-2x.png");
+            public static readonly string marker_icon_png = Url("marker-icon.png");
+            public static readonly string marker_shadow_png = Url("marker-shadow.png");
+        }
+    
         public static readonly string jquery_2_2_0_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-2.2.0.intellisense.min.js") ? Url("jquery-2.2.0.intellisense.min.js") : Url("jquery-2.2.0.intellisense.js");
         public static readonly string jquery_2_2_0_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-2.2.0.min.js") ? Url("jquery-2.2.0.min.js") : Url("jquery-2.2.0.js");
         public static readonly string jquery_2_2_0_min_js = Url("jquery-2.2.0.min.js");
@@ -87,6 +99,7 @@ namespace Links
         public static readonly string jquery_validate_unobtrusive_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.validate.unobtrusive.min.js") ? Url("jquery.validate.unobtrusive.min.js") : Url("jquery.validate.unobtrusive.js");
         public static readonly string jquery_validate_unobtrusive_min_js = Url("jquery.validate.unobtrusive.min.js");
         public static readonly string leaflet_src_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/leaflet-src.min.js") ? Url("leaflet-src.min.js") : Url("leaflet-src.js");
+        public static readonly string leaflet_extra_markers_min_js = Url("leaflet.extra-markers.min.js");
         public static readonly string leaflet_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/leaflet.min.js") ? Url("leaflet.min.js") : Url("leaflet.js");
         public static readonly string mdb_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdb.min.js") ? Url("mdb.min.js") : Url("mdb.js");
         public static readonly string mdb_min_js = Url("mdb.min.js");
@@ -126,18 +139,18 @@ namespace Links
         public static readonly string bootstrap_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap.min.css") ? Url("bootstrap.min.css") : Url("bootstrap.css");
         public static readonly string bootstrap_min_css = Url("bootstrap.min.css");
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public static class images {
-            private const string URLPATH = "~/Content/images";
+        public static class img {
+            private const string URLPATH = "~/Content/img";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-            public static readonly string layers_2x_png = Url("layers-2x.png");
-            public static readonly string layers_png = Url("layers.png");
-            public static readonly string marker_icon_2x_png = Url("marker-icon-2x.png");
-            public static readonly string marker_icon_png = Url("marker-icon.png");
-            public static readonly string marker_shadow_png = Url("marker-shadow.png");
+            public static readonly string markers_default_png = Url("markers_default.png");
+            public static readonly string markers_default_2x_png = Url("markers_default@2x.png");
+            public static readonly string markers_shadow_png = Url("markers_shadow.png");
+            public static readonly string markers_shadow_2x_png = Url("markers_shadow@2x.png");
         }
     
         public static readonly string leaflet_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/leaflet.min.css") ? Url("leaflet.min.css") : Url("leaflet.css");
+        public static readonly string leaflet_extra_markers_min_css = Url("leaflet.extra-markers.min.css");
         public static readonly string mdb_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdb.min.css") ? Url("mdb.min.css") : Url("mdb.css");
         public static readonly string mdb_min_css = Url("mdb.min.css");
     }
@@ -148,6 +161,12 @@ namespace Links
     {
         public static partial class Scripts 
         {
+            public static partial class images 
+            {
+                public static class Assets
+                {
+                }
+            }
             public static partial class modules__optional_ 
             {
                 public static class Assets
@@ -182,6 +201,7 @@ namespace Links
                 public const string jquery_validate_unobtrusive_js = "~/Scripts/jquery.validate.unobtrusive.js"; 
                 public const string jquery_validate_unobtrusive_min_js = "~/Scripts/jquery.validate.unobtrusive.min.js"; 
                 public const string leaflet_src_js = "~/Scripts/leaflet-src.js"; 
+                public const string leaflet_extra_markers_min_js = "~/Scripts/leaflet.extra-markers.min.js"; 
                 public const string leaflet_js = "~/Scripts/leaflet.js"; 
                 public const string mdb_js = "~/Scripts/mdb.js"; 
                 public const string mdb_min_js = "~/Scripts/mdb.min.js"; 
@@ -194,7 +214,7 @@ namespace Links
         }
         public static partial class Content 
         {
-            public static partial class images 
+            public static partial class img 
             {
                 public static class Assets
                 {
@@ -205,6 +225,7 @@ namespace Links
                 public const string bootstrap_css = "~/Content/bootstrap.css";
                 public const string bootstrap_min_css = "~/Content/bootstrap.min.css";
                 public const string leaflet_css = "~/Content/leaflet.css";
+                public const string leaflet_extra_markers_min_css = "~/Content/leaflet.extra-markers.min.css";
                 public const string mdb_css = "~/Content/mdb.css";
                 public const string mdb_min_css = "~/Content/mdb.min.css";
             }

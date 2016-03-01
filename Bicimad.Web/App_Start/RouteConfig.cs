@@ -13,7 +13,7 @@ namespace Bicimad.Web
             //HOME
             routes.MapRoute("HomeStatic", "home/{action}",
                 new { controller = "Home", action = "" },
-                new[] { "Madaish.Web.Controllers" });
+                new[] { "Bicimad.Web.Controllers" });
 
             //ACOUNT
             routes.MapRoute("Account", "cuenta/{action}/{id}",

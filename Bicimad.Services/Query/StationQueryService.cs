@@ -10,24 +10,24 @@ namespace Bicimad.Services.Query
 {
     public class StationQueryService : IStationQueryService
     {
-        private readonly IRepository _repostory;
-        private IMapper _mapper;
+        private readonly IRepository _repository;
+        private readonly IMapper _mapper;
 
         public StationQueryService(IRepository repository, IMapper mapper)
         {
-            _repostory = repository;
+            _repository = repository;
             _mapper = mapper;
         }
 
         public StationDto GetStation(string stationId)
         {
             
-            return _mapper.Map<Station, StationDto>(_repostory.Stations.FirstOrDefault(s => s.Id == stationId));
+            return _mapper.Map<Station, StationDto>(_repository.Stations.FirstOrDefault(s => s.Id == stationId));
         }
 
         public List<StationDto> GetStations()
         {
-            var stations =  _repostory.Stations.ToList();
+            var stations =  _repository.Stations.ToList();
             return stations.Select(station => _mapper.Map<Station, StationDto>(station)).ToList();
         } 
     }
