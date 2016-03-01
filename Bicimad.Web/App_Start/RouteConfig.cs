@@ -8,6 +8,12 @@ namespace Bicimad.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.LowercaseUrls = true;
+
+            //HOME
+            routes.MapRoute("HomeStatic", "home/{action}",
+                new { controller = "Home", action = "" },
+                new[] { "Madaish.Web.Controllers" });
 
             //ACOUNT
             routes.MapRoute("Account", "cuenta/{action}/{id}",

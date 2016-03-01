@@ -1,12 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
-
-@*<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>*@
 
 <div class="panel text-center">
     <a class="btn btn-primary waves-effect blue">Coger Bicicleta</a>
@@ -17,6 +11,7 @@
     <div class="card default-color darken-1" style="margin: 1em">
         <div class="card-content white-text">
             <span class="card-title">Estadística</span>
+            <p>Bicis libres: </p>
             <p>Bicis en uso: </p>
             <p>Bicis averiadas: </p>
         </div>
@@ -54,19 +49,19 @@
             var redMarker = L.ExtraMarkers.icon({
                 icon: 'fa-bicycle',
                 markerColor: 'red',
-                shape: 'circle',
+                shape: 'square',
                 prefix: 'fa'
             });
             var orangeMarker = L.ExtraMarkers.icon({
                 icon: 'fa-bicycle',
                 markerColor: 'orange',
-                shape: 'circle',
+                shape: 'square',
                 prefix: 'fa'
             });
             
 
 
-            var url = "Home/FillMap";
+            var url = "/home/fillmap";
             var stations = [];
             $.ajax({
                 "url": url,
@@ -88,7 +83,7 @@
                             var greenMarker = L.ExtraMarkers.icon({
                                 icon: 'fa-number',
                                 markerColor: 'green',
-                                shape: 'circle',
+                                shape: 'square',
                                 number: data[i].FreeBikes,
                                 prefix: 'fa'
                             });

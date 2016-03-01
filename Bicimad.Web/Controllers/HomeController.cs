@@ -18,6 +18,7 @@ namespace Bicimad.Web.Controllers
 
         public virtual ActionResult Index()
         {
+            //TODO: MIRAR QUE DATOS DEVOLVER. Poder acceder tanto a la reserva como a los datos de estaciones y bicis en uso.
             return View();
         }
 
