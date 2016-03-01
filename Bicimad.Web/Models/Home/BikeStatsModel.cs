@@ -6,6 +6,6 @@
 
         public int FreeBikes;
 
-        public int TotalBikes;
+        public int ActiveBikes;
     }
 }

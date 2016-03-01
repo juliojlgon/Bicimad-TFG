@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using Bicimad.Services.Query.Dto.Bike;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Web.Models.Home;
 
@@ -11,9 +7,9 @@ namespace Bicimad.Web.Controllers
 {
     public partial class HomeController : BaseController
     {
-        private readonly IStationQueryService _stationQueryService;
         private readonly IBikeQueryService _bikeQueryService;
- 
+        private readonly IStationQueryService _stationQueryService;
+
         public HomeController(IStationQueryService stationQueryService, IBikeQueryService bikeQueryService)
         {
             _stationQueryService = stationQueryService;
@@ -29,16 +25,15 @@ namespace Bicimad.Web.Controllers
             {
                 BrokenBikes = bikes.Count(b => !b.IsWorking),
                 FreeBikes = bikes.Count(b => !b.IsActive && !b.IsBooked),
-                TotalBikes = bikes.Count
+                ActiveBikes = bikes.Count(b => b.IsActive && b.IsBooked)
             };
 
             //TODO: MIRAR QUE DATOS DEVOLVER. Poder acceder tanto a la reserva como a los datos de estaciones y bicis en uso.
-            return View(MVC.Home.Views.Index,model);
+            return View(MVC.Home.Views.Index, model);
         }
 
         public virtual ActionResult About()
         {
-
             _stationQueryService.GetStations();
             ViewBag.Message = "Your application description page.";
 
@@ -51,14 +46,14 @@ namespace Bicimad.Web.Controllers
 
             return View();
         }
-        
+
         [HttpPost]
         public virtual ActionResult FillMap()
         {
-            var stations =_stationQueryService.GetStations();
+            var stations = _stationQueryService.GetStations();
+            //TODO: MODELO CON TODO. AÑADIR LAS RESERVAS.
             var jsonStation = Json(stations);
             return jsonStation;
         }
-
     }
 }

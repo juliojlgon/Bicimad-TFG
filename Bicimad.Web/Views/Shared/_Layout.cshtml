@@ -81,16 +81,18 @@
                     <a href="@Url.Action(MVC.Account.Register())" class="btn btn-primary waves-effect waves-light" data-cat="Register" data-act="Click" data-lab="Menu">Registro</a>
                 }
             </div>
-        </div>
-        <div class="row">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav">
                     <li class="active">
                         <a href="@Url.Action(MVC.Home.Index())" class="waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect waves-light">Estaciones</a>
+                        <a href="#" class="waves-effect waves-light">Tarifas</a>
                     </li>
+                    <li>
+                        <a href="#" class="waves-effect waves-light">Promociones</a>
+                    </li>
+
 
                 </ul>
             </div>
@@ -100,8 +102,9 @@
     </div>
 </nav>
 <div class="container-fluid body-content">
-    @RenderBody()
-    <hr/>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
     <footer class="page-footer center-on-small-only">
         <div class="footer-copyright text-center rgba-black-light">
             <div class="container-fluid">

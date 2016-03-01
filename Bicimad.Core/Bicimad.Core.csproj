@@ -88,6 +88,10 @@
     <Compile Include="Migrations\201602182034055_StationReference.Designer.cs">
       <DependentUpon>201602182034055_StationReference.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603012204047_StationReserved.cs" />
+    <Compile Include="Migrations\201603012204047_StationReserved.Designer.cs">
+      <DependentUpon>201603012204047_StationReserved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -119,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602182034055_StationReference.resx">
       <DependentUpon>201602182034055_StationReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603012204047_StationReserved.resx">
+      <DependentUpon>201603012204047_StationReserved.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>
