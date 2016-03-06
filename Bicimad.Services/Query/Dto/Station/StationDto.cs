@@ -24,5 +24,7 @@ namespace Bicimad.Services.Query.Dto.Station
 
         public string Bus { get; set; }
 
+        public string ReservedSlots { get; set; }
+
     }
 }

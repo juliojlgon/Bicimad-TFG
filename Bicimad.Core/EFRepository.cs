@@ -12,6 +12,10 @@ namespace Bicimad.Core
 
         public DbSet<Station> Stations { get; set; }
 
+        public DbSet<Slot> Slots { get; set; } 
+
+        public DbSet<Reservation> Reservations { get; set; }
+
         public int Commit()
         {
             return SaveChanges();

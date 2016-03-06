@@ -94,6 +94,10 @@
     <Compile Include="Migrations\201603012204047_StationReserved.Designer.cs">
       <DependentUpon>201603012204047_StationReserved.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603050840568_ReservationYSlot.cs" />
+    <Compile Include="Migrations\201603050840568_ReservationYSlot.Designer.cs">
+      <DependentUpon>201603050840568_ReservationYSlot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603012204047_StationReserved.resx">
       <DependentUpon>201603012204047_StationReserved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603050840568_ReservationYSlot.resx">
+      <DependentUpon>201603050840568_ReservationYSlot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>

@@ -1,14 +1,18 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Bicimad.Core.DomainObjects.Interfaces;
-using Bicimad.Enums;
 
 namespace Bicimad.Core.DomainObjects
 {
     public class Reservation : IEntity
     {
         [Required]
-        public ReservationCategory Category { get; set; }
+        public bool Isbike { get; set; }
+
+        [Required]
+        public string UserId { get; set; }
+
+        public virtual User User { get; set; }
 
         [Required, MaxLength(13)]
         public string ItemId { get; set; }

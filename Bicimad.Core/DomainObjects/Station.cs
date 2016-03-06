@@ -12,8 +12,8 @@ namespace Bicimad.Core.DomainObjects
         [Required]
         public string FreeBikes { get; set; }
 
-        //[Required]
-        //public string ReservedSlots { get; set; }
+        [Required]
+        public string ReservedSlots { get; set; }
 
         [Required]
         public string StationNumber { get; set; }

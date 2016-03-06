@@ -9,6 +9,8 @@ namespace Bicimad.Core
         DbSet<User> Users { get; set; }
         DbSet<Bike> Bikes { get; set; }
         DbSet<Station> Stations { get; set; }
+        DbSet<Slot> Slots { get; set; }
+        DbSet<Reservation> Reservations { get; set; }
 
     }
 }

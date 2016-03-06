@@ -16,8 +16,6 @@ namespace Bicimad.Core.DomainObjects
         [Required, DefaultValue(false)]
         public bool IsBooked { get; set; }
 
-        //TODO: Tabla de reservas
-
         [Required, MaxLength(13)]
         public string StationId { get; set; }
 
@@ -29,6 +27,4 @@ namespace Bicimad.Core.DomainObjects
         [Required]
         public DateTime CreatedDate { get; set; }
     }
-}
-
 }
