@@ -11,6 +11,7 @@ namespace Bicimad.Core
         DbSet<Station> Stations { get; set; }
         DbSet<Slot> Slots { get; set; }
         DbSet<Reservation> Reservations { get; set; }
+        DbSet<UserHistory> UserHistories { get; set; }
 
     }
 }

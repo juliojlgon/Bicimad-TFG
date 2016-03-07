@@ -16,6 +16,8 @@ namespace Bicimad.Core
 
         public DbSet<Reservation> Reservations { get; set; }
 
+        public DbSet<UserHistory> UserHistories { get; set; }
+
         public int Commit()
         {
             return SaveChanges();

@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainObjects\UserHistory.cs" />
     <Compile Include="DomainObjects\Reservation.cs" />
     <Compile Include="DomainObjects\Slot.cs" />
     <Compile Include="DomainObjects\Station.cs" />
@@ -98,6 +99,10 @@
     <Compile Include="Migrations\201603050840568_ReservationYSlot.Designer.cs">
       <DependentUpon>201603050840568_ReservationYSlot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603072053222_UserHistory.cs" />
+    <Compile Include="Migrations\201603072053222_UserHistory.Designer.cs">
+      <DependentUpon>201603072053222_UserHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -135,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603050840568_ReservationYSlot.resx">
       <DependentUpon>201603050840568_ReservationYSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603072053222_UserHistory.resx">
+      <DependentUpon>201603072053222_UserHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>
