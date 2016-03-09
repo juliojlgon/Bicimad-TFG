@@ -53,10 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command\BaseCommandService.cs" />
+    <Compile Include="Command\BikeCommandService.cs" />
+    <Compile Include="Command\Commands\Bike\TakeBikeCommand.cs" />
     <Compile Include="Command\Commands\CommandBase.cs" />
     <Compile Include="Command\Commands\CommandResult.cs" />
     <Compile Include="Command\Commands\CommandValidationResult.cs" />
     <Compile Include="Command\Commands\User\CreateUserCommand.cs" />
+    <Compile Include="Command\Interface\IBikeCommandService.cs" />
     <Compile Include="Command\Interface\IUserCommandService.cs" />
     <Compile Include="Command\UserCommandService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
