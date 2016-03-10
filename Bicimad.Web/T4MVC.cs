@@ -29,6 +29,7 @@ public static partial class MVC
 {
     public static Bicimad.Web.Controllers.AccountController Account = new Bicimad.Web.Controllers.T4MVC_AccountController();
     public static Bicimad.Web.Controllers.BaseController Base = new Bicimad.Web.Controllers.T4MVC_BaseController();
+    public static Bicimad.Web.Controllers.BikeController Bike = new Bicimad.Web.Controllers.T4MVC_BikeController();
     public static Bicimad.Web.Controllers.HomeController Home = new Bicimad.Web.Controllers.T4MVC_HomeController();
     public static T4MVC.ManageController Manage = new T4MVC.ManageController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();

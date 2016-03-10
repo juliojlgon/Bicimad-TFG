@@ -30,13 +30,21 @@ namespace Bicimad.Services.Command
 
             var id = GuidHelper.GenerateId();
 
+            //Mark selected bike as active.
+            var bike = Repository.Bikes.First(b => b.Id == command.BikeId);
+            bike.IsActive = true;
+
+            //Add the action to the database.
             Repository.UserHistories.Add(new UserHistory
             {
+                Id = id,
+                CreatedDate = DateTimeHelper.SpanishNow,
                 BikeId = command.BikeId,
                 UserId = command.UserId,
                 StationId = command.StationId
             });
 
+            //Commit the changes to the database.
             Repository.Commit();
 
             commandResult.ItemId = id;

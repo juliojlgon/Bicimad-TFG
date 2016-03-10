@@ -20,7 +20,7 @@ namespace Bicimad.Web.Controllers
         {
             //TODO: Añadir un filtro a las estaciones, para pasarles todo desde ahí y hacer un solo metodo.
             var bikes = _bikeQueryService.GetBikes();
-            //TODO: Arreglar esto.
+            
             var model = new BikeStatsModel
             {
                 BrokenBikes = bikes.Count(b => !b.IsWorking),

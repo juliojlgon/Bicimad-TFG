@@ -1,0 +1,166 @@
+﻿@model Bicimad.Web.Models.Home.BikeStatsModel
+@{
+    ViewBag.Title = "Home";
+}
+
+<br/>
+
+<div class="col-md-2 center-block" style="margin-top: 5em">
+    <div class="card default-color darken-1 z-depth-3">
+        <div class="card-content white-text">
+            <span class="card-title">Estadística</span>
+            @if (Model != null)
+            {
+                <p>Bicis libres: @Model.FreeBikes </p>
+                <p>Bicis en uso: @Model.ActiveBikes</p>
+                <p>Bicis averiadas:@Model.BrokenBikes </p>
+            }
+
+        </div>
+    </div>
+
+    <div class="panel text-center">
+        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike">Coger Bicicleta</a>
+    </div>
+</div>
+
+<div class="card default-color darken-1 col-md-10">
+    <div class="card-content">
+        <span class="card-title">Estado de las estaciones</span>
+        <div id="map" style="height: 550px; max-height: 50%;">
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    @* TODO: CUANDO EL SCRIPT ESTE ACABADO METERLO EN UN SCRIPT APARTE y add locate *@
+    <script>
+        $(function() {
+
+            var map = L.map("map").setView([40.420829, -3.704729], 14);
+
+            var token = "pk.eyJ1IjoianVsaW9qbGdvbiIsImEiOiJjaWwycG13eDcwMGNmd25tMHljZnZocWg4In0.xCFNgIP46ccbU5bQ7cvyPg";
+            L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=" + token, {
+                maxZoom: 18,
+                attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, " +
+                    "<a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, " +
+                    "Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
+                id: "juliojlgon.p8hc8pdp"
+            }).addTo(map);
+
+            // Create Icons
+
+            var redMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "red",
+                shape: "square",
+                prefix: "fa"
+            });
+            var orangeMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "orange",
+                shape: "square",
+                prefix: "fa"
+            });
+            var greenMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "green",
+                shape: "square",
+                prefix: "fa"
+            });
+            var greyMarker = L.ExtraMarkers.icon({
+                icon: "fa-minus-square",
+                markerColor: "red",
+                shape: "square",
+                prefix: "fa"
+            });
+
+            var selectionMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "blue",
+                shape: "square",
+                prefix: "fa"
+            });
+
+
+            var highlight = null;
+            var icon = null;
+
+            // Function for removing highlight 
+            function removeHighlight() {
+                // Check for highlight
+                if (highlight !== null) {
+                    // Set default icon
+                    highlight.setIcon(icon);
+                    // Unset highlight
+                    highlight = null;
+                }
+            }
+
+
+            var selectedStation;
+
+            var url = "/home/fillmap";
+            var stations = [];
+
+            $.ajax({
+                "url": url,
+                "type": "POST",
+                "data": "",
+                "dataType": "json",
+                "success": function(data) {
+                    for (var i = 0; i < data.length; i++) {
+                        stations.push(data[i]);
+                        var lat = data[i].Latitude;
+                        var lon = data[i].Longitude;
+                        var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
+                        var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
+
+                        var marker;
+
+                        if (porc > 0.75) {
+                            marker = L.marker([lat, lon], { icon: greenMarker, title: data[i].FriendlyUrlStationName });
+                        } else if (porc < 0.25) {
+                            marker = L.marker([lat, lon], { icon: redMarker, title: data[i].FriendlyUrlStationName });
+                        } else if (porc <= 0) {
+                            marker = L.marker([lat, lon], { icon: greyMarker, title: data[i].FriendlyUrlStationName });
+                        } else {
+                            marker = L.marker([lat, lon], { icon: orangeMarker, title: data[i].FriendlyUrlStationName });
+                        }
+
+                        marker.on("click", function(e) {
+                            $("#takebike")["removeClass"]("disabled");
+                            selectedStation = e.target.options.title;
+                            //Save the icon for restore
+                            icon = e.target.options.icon;
+                            // Remove highlight
+                            removeHighlight();
+                            // Set highlight icon
+                            this.setIcon(selectionMarker);
+                            // Assign highlight
+                            highlight = this;
+                        });
+                        marker.addTo(map);
+                    }
+                },
+                "error": function() {
+                    console.log("Error calling " + url);
+                }
+            });
+
+            function onMapClick(e) {
+                removeHighlight();
+                selectedStation = "";
+
+                $("#takebike")["addClass"]("disabled");
+            }
+
+            map.on("click", onMapClick);
+
+        });
+
+    </script>
+
+}
