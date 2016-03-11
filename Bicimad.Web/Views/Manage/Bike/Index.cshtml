@@ -1,11 +1,14 @@
 ﻿@model Bicimad.Web.Models.Home.BikeStatsModel
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "Coger Bicicleta";
 }
 
 <br/>
 
-<div class="col-md-2 center-block" style="margin-top: 5em">
+<div class="text-center success-color" style="display: none" id="notify">
+</div>
+
+<div class="col-md-3 center-block" style="margin-top: 5em">
     <div class="card default-color darken-1 z-depth-3">
         <div class="card-content white-text">
             <span class="card-title">Estadística</span>
@@ -19,12 +22,19 @@
         </div>
     </div>
 
+    <div class="card default-color darken-1 z-depth-3 no-display" style="display: none">
+        <div class="card-content white-text">
+            <span class="card-title" id="station-title">Estación</span>
+            <div id="station"></div>
+        </div>
+    </div>
+
     <div class="panel text-center">
-        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike">Coger Bicicleta</a>
+        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Coger Bicicleta</a>
     </div>
 </div>
 
-<div class="card default-color darken-1 col-md-10">
+<div class="card default-color darken-1 col-md-9">
     <div class="card-content">
         <span class="card-title">Estado de las estaciones</span>
         <div id="map" style="height: 550px; max-height: 50%;">
@@ -37,7 +47,39 @@
 {
     @* TODO: CUANDO EL SCRIPT ESTE ACABADO METERLO EN UN SCRIPT APARTE y add locate *@
     <script>
+
         $(function() {
+
+            function showStation(id) {
+                var url = "station/GetStationByIdJson";
+                var param = $.param({ Id: id });
+                $.ajax({
+                    "url": url,
+                    "type": "POST",
+                    "data": param,
+                    "dataType": "json",
+                    "success": function(data) {
+                        var stationName = data.StationName;
+                        var freeBikes = data.FreeBikes;
+                        var metro = data.Metro;
+                        var bus = data.Bus;
+                        $("#station-title").text(stationName);
+                        $("#station").text("");
+                        $("<p class=\"flow-text\" style=\"font-size: 1.2vw\">"
+                                + "Bicis disponibles -> " + freeBikes + "<br/>"
+                                + "Metro -> " + metro + "<br/>"
+                                + "Bus -> " + bus + "</p>")
+                            .appendTo("#station");
+                        $(".no-display").show();
+                    },
+                    "error": function() {
+                        console.log("Error calling " + url);
+                        $("#station").text("Ha habido un error.");
+                    }
+                });
+
+            }
+
 
             var map = L.map("map").setView([40.420829, -3.704729], 14);
 
@@ -121,18 +163,23 @@
                         var marker;
 
                         if (porc > 0.75) {
-                            marker = L.marker([lat, lon], { icon: greenMarker, title: data[i].FriendlyUrlStationName });
+                            marker = L.marker([lat, lon], { icon: greenMarker, title: data[i].Id });
                         } else if (porc < 0.25) {
-                            marker = L.marker([lat, lon], { icon: redMarker, title: data[i].FriendlyUrlStationName });
+                            marker = L.marker([lat, lon], { icon: redMarker, title: data[i].Id });
                         } else if (porc <= 0) {
-                            marker = L.marker([lat, lon], { icon: greyMarker, title: data[i].FriendlyUrlStationName });
+                            marker = L.marker([lat, lon], { icon: greyMarker, title: data[i].Id });
                         } else {
-                            marker = L.marker([lat, lon], { icon: orangeMarker, title: data[i].FriendlyUrlStationName });
+                            marker = L.marker([lat, lon], { icon: orangeMarker, title: data[i].Id });
                         }
 
                         marker.on("click", function(e) {
                             $("#takebike")["removeClass"]("disabled");
+
                             selectedStation = e.target.options.title;
+
+                            $("#takebike").attr("data-station-id", selectedStation);
+
+                            showStation(selectedStation);
                             //Save the icon for restore
                             icon = e.target.options.icon;
                             // Remove highlight
@@ -153,13 +200,52 @@
             function onMapClick(e) {
                 removeHighlight();
                 selectedStation = "";
-
                 $("#takebike")["addClass"]("disabled");
+                $(".no-display").hide();
             }
 
             map.on("click", onMapClick);
 
+
         });
+
+        $(function () {
+
+            function takeBike(id, user) {
+                var url = "bike/takebike";
+                var userId = user;
+                var stationId = id;
+                var param = $.param({ UserId: userId, StationId: stationId });
+                $.ajax({
+                    "url": url,
+                    "type": "POST",
+                    "data": param,
+                    "dataType": "json",
+                    "success": function (data) {
+                        if (data.Success) {
+                            $("#notify").text("Has cogido la bicicleta con matricula " + data.BikeId );
+                            $("#notify").show();
+                        } else {
+                            $("#notify").text("Error: " + data.Error);
+                            $("#notify").show();
+                        }
+                    },
+                    "error": function () {
+                        console.log("Error calling " + url);
+                        $("#station").text("Ha habido un error.");
+                    }
+                });
+
+            }
+
+            $("#takebike").click(function () {
+                var userId = $(this).attr("data-user-id");
+                var stationId = $(this).attr("data-station-id");
+                takeBike(stationId, userId);
+            });
+
+        });
+       
 
     </script>
 

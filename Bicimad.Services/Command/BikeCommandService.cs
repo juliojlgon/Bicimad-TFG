@@ -14,13 +14,13 @@ namespace Bicimad.Services.Command
         {
         }
 
-        public CommandResult Create(TakeBikeCommand command)
+        public CommandResult TakeBike(string userId, string stationId, string bikeId)
         {
             //TODO: Probablemente haya que expandir el UserHistories para que contenga tambien la estacion de destino.
-            var commandResult = Validate(command);
-            if (!commandResult.Success) return commandResult;
-
-            if (Repository.UserHistories.Any(us => us.UserId == command.UserId))
+            var commandResult = new CommandResult();
+            
+            //TODO: Aqui habrá que comprobar por el IsFinished de la tabla también
+            if (Repository.UserHistories.Any(us => us.UserId == userId))
             {
                 commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
                 return commandResult;
@@ -31,7 +31,7 @@ namespace Bicimad.Services.Command
             var id = GuidHelper.GenerateId();
 
             //Mark selected bike as active.
-            var bike = Repository.Bikes.First(b => b.Id == command.BikeId);
+            var bike = Repository.Bikes.First(b => b.Id == bikeId);
             bike.IsActive = true;
 
             //Add the action to the database.
@@ -39,9 +39,9 @@ namespace Bicimad.Services.Command
             {
                 Id = id,
                 CreatedDate = DateTimeHelper.SpanishNow,
-                BikeId = command.BikeId,
-                UserId = command.UserId,
-                StationId = command.StationId
+                BikeId = bikeId,
+                UserId = userId,
+                StationId = stationId
             });
 
             //Commit the changes to the database.

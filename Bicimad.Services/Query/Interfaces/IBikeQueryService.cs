@@ -24,5 +24,12 @@ namespace Bicimad.Services.Query.Interfaces
         /// <param name="name"> name of the station</param>
         /// <returns>List of bikes from the station</returns>
         List<BikeDto> GetBikesByStationNameList(string name);
+
+        /// <summary>
+        /// Returns the first availiable bike of the station or null in case there is no availiable bike.
+        /// </summary>
+        /// <param name="stationId"></param>
+        /// <returns>BikeDto or Null</returns>
+        BikeDto GetFreeBike(string stationId);
     }
 }

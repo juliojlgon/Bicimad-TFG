@@ -10,6 +10,6 @@ namespace Bicimad.Services.Command.Interface
 {
     public  interface IBikeCommandService
     {
-        CommandResult Create(TakeBikeCommand command);
+        CommandResult TakeBike(string userId, string stationId, string bikeId);
     }
 }

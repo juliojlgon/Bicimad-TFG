@@ -25,7 +25,7 @@ namespace Bicimad.Web.Controllers
             {
                 BrokenBikes = bikes.Count(b => !b.IsWorking),
                 FreeBikes = bikes.Count(b => !b.IsActive && !b.IsBooked),
-                ActiveBikes = bikes.Count(b => b.IsActive && b.IsBooked)
+                ActiveBikes = bikes.Count(b => b.IsActive || b.IsBooked)
             };
 
             //TODO: MIRAR QUE DATOS DEVOLVER. Poder acceder tanto a la reserva como a los datos de estaciones y bicis en uso.

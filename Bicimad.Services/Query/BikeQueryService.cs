@@ -46,7 +46,7 @@ namespace Bicimad.Services.Query
         /// <returns>BikeDto or Null</returns>
         public BikeDto GetFreeBike(string stationId)
         {
-            return _repository.Bikes.Where(b => b.StationId == stationId && !b.IsActive && !b.IsBooked && b.IsWorking).Select(bike => _mapper.Map<Bike, BikeDto>(bike)).FirstOrDefault();
+            return _mapper.Map<Bike, BikeDto>(_repository.Bikes.FirstOrDefault(b => b.StationId == stationId && !b.IsActive && !b.IsBooked && b.IsWorking));
         }
     }
 }
