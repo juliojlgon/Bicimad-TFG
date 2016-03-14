@@ -34,6 +34,11 @@ namespace Bicimad.Services.Command
             var bike = Repository.Bikes.First(b => b.Id == bikeId);
             bike.IsActive = true;
 
+            var station = Repository.Stations.First(s => s.Id == stationId);
+            var freeB = int.Parse(station.FreeBikes) - 1;
+            
+            station.FreeBikes = freeB.ToString();
+
             //Add the action to the database.
             Repository.UserHistories.Add(new UserHistory
             {
@@ -44,6 +49,38 @@ namespace Bicimad.Services.Command
                 DepartureStationId = stationId,
                 Finished = false
             });
+
+            //Commit the changes to the database.
+            Repository.Commit();
+
+            commandResult.ItemId = id;
+            return commandResult;
+        }
+
+        public CommandResult returnBike(UserHistory transaction, string arrivalStationId)
+        {
+            var commandResult = new CommandResult();
+
+            var bike = transaction.Bike;
+            var station = Repository.Stations.First(s => s.Id == arrivalStationId);
+
+            if (transaction.Finished)
+            {
+                commandResult.AddValidationError("No Puedes entrgar la bicicleta dos veces");
+            }
+
+            var id = GuidHelper.GenerateId();
+
+            //Mark selected bike as not active.
+            //TODO: Comprobar si es true antes?
+            bike.IsActive = false;
+
+            //Add the bike to the station
+            var freeB = int.Parse(station.FreeBikes) + 1;
+            station.FreeBikes = freeB.ToString();
+
+            //Add the action to the database.
+            transaction.ArrivalStationId = arrivalStationId;
 
             //Commit the changes to the database.
             Repository.Commit();

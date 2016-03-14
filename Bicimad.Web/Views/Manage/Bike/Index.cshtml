@@ -160,6 +160,9 @@
                         var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
                         var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
 
+                        //var parentDiv = $("<div/>", { id: "kdjfkd", title: "fjsdpof" });
+                        //var img = $("<img/>", { id: "kdjfkd", title: "fjsdpof", src: "skdfjsdkljf" });
+
                         var marker;
 
                         if (porc > 0.75) {
@@ -209,7 +212,7 @@
 
         });
 
-        $(function () {
+        $(function() {
 
             function takeBike(id, user) {
                 var url = "bike/takebike";
@@ -221,16 +224,16 @@
                     "type": "POST",
                     "data": param,
                     "dataType": "json",
-                    "success": function (data) {
+                    "success": function(data) {
                         if (data.Success) {
-                            $("#notify").text("Has cogido la bicicleta con matricula " + data.BikeId );
+                            $("#notify").text("Has cogido la bicicleta con matricula " + data.BikeId);
                             $("#notify").show();
                         } else {
                             $("#notify").text("Error: " + data.Error);
                             $("#notify").show();
                         }
                     },
-                    "error": function () {
+                    "error": function() {
                         console.log("Error calling " + url);
                         $("#station").text("Ha habido un error.");
                     }
@@ -238,14 +241,14 @@
 
             }
 
-            $("#takebike").click(function () {
+            $("#takebike").click(function() {
                 var userId = $(this).attr("data-user-id");
                 var stationId = $(this).attr("data-station-id");
                 takeBike(stationId, userId);
             });
 
         });
-       
+
 
     </script>
 

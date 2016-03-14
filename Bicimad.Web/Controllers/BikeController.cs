@@ -75,7 +75,7 @@ namespace Bicimad.Web.Controllers
 
             return new JsonResult
             {
-                Data = new { Success = false, BikeId = "", Error =  action.ValidationErrors }
+                Data = new { Success = false, BikeId = "", Error =  action.ValidationErrors.First().ErrorMessage }
             };
         }
 
