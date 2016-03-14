@@ -36,7 +36,7 @@ namespace Bicimad.Web.Controllers
             {
                 BrokenBikes = bikes.Count(b => !b.IsWorking),
                 FreeBikes = bikes.Count(b => !b.IsActive && !b.IsBooked),
-                ActiveBikes = bikes.Count(b => b.IsActive && b.IsBooked)
+                ActiveBikes = bikes.Count(b => b.IsActive || b.IsBooked)
             };
 
             return View(MVC.Manage.Views.Bike.Index, model);

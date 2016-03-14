@@ -7,13 +7,13 @@ namespace Bicimad.Core.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UserHistory : IMigrationMetadata
+    public sealed partial class UserHistories : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UserHistory));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserHistories));
         
         string IMigrationMetadata.Id
         {
-            get { return "201603072053222_UserHistory"; }
+            get { return "201603141302591_UserHistories"; }
         }
         
         string IMigrationMetadata.Source

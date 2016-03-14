@@ -16,11 +16,11 @@ namespace Bicimad.Services.Command
 
         public CommandResult TakeBike(string userId, string stationId, string bikeId)
         {
-            //TODO: Probablemente haya que expandir el UserHistories para que contenga tambien la estacion de destino.
+            
             var commandResult = new CommandResult();
             
             //TODO: Aqui habrá que comprobar por el IsFinished de la tabla también
-            if (Repository.UserHistories.Any(us => us.UserId == userId))
+            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished))
             {
                 commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
                 return commandResult;
@@ -41,7 +41,8 @@ namespace Bicimad.Services.Command
                 CreatedDate = DateTimeHelper.SpanishNow,
                 BikeId = bikeId,
                 UserId = userId,
-                StationId = stationId
+                DepartureStationId = stationId,
+                Finished = false
             });
 
             //Commit the changes to the database.
