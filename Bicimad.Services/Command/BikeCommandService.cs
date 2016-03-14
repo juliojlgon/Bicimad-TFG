@@ -57,7 +57,7 @@ namespace Bicimad.Services.Command
             return commandResult;
         }
 
-        public CommandResult returnBike(UserHistory transaction, string arrivalStationId)
+        public CommandResult ReturnBike(UserHistory transaction, string arrivalStationId)
         {
             var commandResult = new CommandResult();
 
