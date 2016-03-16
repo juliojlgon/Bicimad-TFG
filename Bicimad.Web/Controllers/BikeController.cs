@@ -82,7 +82,7 @@ namespace Bicimad.Web.Controllers
         
         
 
-        //public virtual ActionResult LeaveBike()
+        //public virtual ActionResult ReturnBike()
         //{
             
         //}

@@ -88,5 +88,23 @@ namespace Bicimad.Services.Command
             commandResult.ItemId = id;
             return commandResult;
         }
+
+        public CommandResult InformBrokenBike(string bikeId)
+        {
+            var commandResult = new CommandResult();
+
+            var bike = Repository.Bikes.First(b => b.Id == bikeId);
+
+            //TODO: mirar que acciones se harían al poner que ser averiara la bici.
+
+            //Change status to broken
+            bike.IsWorking = false;
+
+            //Commit change to database
+            Repository.Commit();
+
+            return commandResult;
+
+        }
     }
 }
