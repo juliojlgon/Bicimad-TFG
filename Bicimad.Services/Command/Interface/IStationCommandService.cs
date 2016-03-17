@@ -9,6 +9,5 @@ namespace Bicimad.Services.Command.Interface
 {
     public interface IStationCommandService
     {
-        CommandResult BookItem(string userId, string stationId, string itemId, bool type);
     }
 }
