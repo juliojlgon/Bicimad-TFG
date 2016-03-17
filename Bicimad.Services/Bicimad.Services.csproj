@@ -60,8 +60,10 @@
     <Compile Include="Command\Commands\CommandValidationResult.cs" />
     <Compile Include="Command\Commands\User\CreateUserCommand.cs" />
     <Compile Include="Command\Interface\IBikeCommandService.cs" />
+    <Compile Include="Command\Interface\IReservationCommandService.cs" />
     <Compile Include="Command\Interface\IStationCommandService.cs" />
     <Compile Include="Command\Interface\IUserCommandService.cs" />
+    <Compile Include="Command\ReservationCommandService.cs" />
     <Compile Include="Command\StationCommandService.cs" />
     <Compile Include="Command\UserCommandService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
