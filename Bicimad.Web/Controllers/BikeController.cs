@@ -82,7 +82,7 @@ namespace Bicimad.Web.Controllers
         [HttpPost]
         public virtual ActionResult BookBike(string userId, string stationId)
         {
-            if (stationId == null)
+            if (stationId == "")
             {
                 return new JsonResult
                 {
