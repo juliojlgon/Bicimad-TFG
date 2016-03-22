@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Services.Query.Dto.Bike;
+using Bicimad.Services.Query.Dto.History;
 using Bicimad.Services.Query.Dto.Station;
 using Bicimad.Services.Query.Dto.User;
 
@@ -12,6 +13,7 @@ namespace Bicimad.Web.MapperProfile
         {
             CreateMap<Station, StationDto>();
             CreateMap<User, UserDto>();
+            CreateMap<UserHistory, UserHistoryDto>();
             CreateMap<Bike, BikeDto>();
         }
     }
