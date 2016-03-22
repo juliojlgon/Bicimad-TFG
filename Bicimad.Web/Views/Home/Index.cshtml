@@ -22,8 +22,8 @@
     <div class="panel text-center">
         <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">Coger Bicicleta</a>
         <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">Reservar Bicicleta</a>
-        <a class="btn btn-primary btn-block waves-effect default-color">Reservar Anclaje</a>
-        <a class="btn btn-primary btn-block waves-effect blue">Dejar Bicicleta</a>
+        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">Reservar Anclaje</a>
+        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">Dejar Bicicleta</a>
     </div>
 </div>
 
@@ -103,10 +103,10 @@
                         var marker;
                         if (porc > 0.75) {
                             marker = L.marker([lat, long], { icon: greenMarker });
+                        } else if (porc <= 0) {
+                            marker = L.marker([lat, long], { icon: greyMarker });
                         } else if (porc < 0.25) {
                             marker = L.marker([lat, long], { icon: redMarker });
-                        }else if (porc <= 0) {
-                            marker = L.marker([lat, long], { icon: greyMarker });
                         } else  {
                             marker = L.marker([lat, long], { icon: orangeMarker });
                         }

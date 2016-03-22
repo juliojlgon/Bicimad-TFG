@@ -1,6 +1,6 @@
 ﻿@model Bicimad.Web.Models.Home.BikeStatsModel
 @{
-    ViewBag.Title = "Coger Bicicleta";
+    ViewBag.Title = "Devolver Bicicleta";
 }
 
 <br/>
@@ -30,8 +30,8 @@
     </div>
 
     <div class="panel text-center">
-        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Coger Bicicleta</a>
-        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">Reservar Bicicleta</a>
+        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Dejar Bicicleta</a>
+        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">Reservar Anclaje</a>
     </div>
 </div>
 
@@ -52,7 +52,7 @@
         $(function() {
 
             function showStation(id) {
-                var url = "station/GetStationByIdJson";
+                var url = "/station/getstationbyidjson";
                 var param = $.param({ Id: id });
                 $.ajax({
                     "url": url,
@@ -158,8 +158,9 @@
                         stations.push(data[i]);
                         var lat = data[i].Latitude;
                         var lon = data[i].Longitude;
-                        var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
                         var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
+                        var porc = availSlots / parseInt(data[i].BikeNum);
+                        
 
                         //var parentDiv = $("<div/>", { id: "kdjfkd", title: "fjsdpof" });
                         //var img = $("<img/>", { id: "kdjfkd", title: "fjsdpof", src: "skdfjsdkljf" });
@@ -186,10 +187,10 @@
                             $("#bookbike").attr("data-station-id", selectedStation);
 
                             showStation(selectedStation);
-                            //Save the icon for restore
-                            icon = e.target.options.icon;
                             // Remove highlight
                             removeHighlight();
+                            //Save the icon for restore
+                            icon = e.target.options.icon;
                             // Set highlight icon
                             this.setIcon(selectionMarker);
                             // Assign highlight
@@ -219,7 +220,7 @@
         $(function() {
 
             function takeBike(id, user) {
-                var url = "bike/takebike";
+                var url = "/bike/returnbike";
                 var userId = user;
                 var stationId = id;
                 var param = $.param({ UserId: userId, StationId: stationId });
@@ -230,7 +231,7 @@
                     "dataType": "json",
                     "success": function(data) {
                         if (data.Success) {
-                            $("#notify").text("Has cogido la bicicleta con matricula " + data.BikeId);
+                            $("#notify").text("Has dejado la bicicleta con exito");
                             $("#notify").show();
                         } else {
                             $("#notify").text("Error: " + data.Error);
@@ -245,7 +246,7 @@
             }
 
             function bookBike(id, user) {
-                var url = "bike/bookbike";
+                var url = "/bike/bookbike";
                 var userId = user;
                 var stationId = id;
                 var param = $.param({ UserId: userId, StationId: stationId });

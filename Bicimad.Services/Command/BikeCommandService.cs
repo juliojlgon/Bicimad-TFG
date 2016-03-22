@@ -5,6 +5,7 @@ using Bicimad.Helpers;
 using Bicimad.Services.Command.Commands;
 using Bicimad.Services.Command.Commands.Bike;
 using Bicimad.Services.Command.Interface;
+using Bicimad.Services.Query.Dto.History;
 
 namespace Bicimad.Services.Command
 {
@@ -62,9 +63,17 @@ namespace Bicimad.Services.Command
             return commandResult;
         }
 
-        public CommandResult ReturnBike(UserHistory transaction, string arrivalStationId)
+        public CommandResult ReturnBike(string userId, string arrivalStationId)
         {
             var commandResult = new CommandResult();
+
+            var transaction = Repository.UserHistories.FirstOrDefault(u => u.UserId == userId && !u.Finished);
+
+            if (transaction == null)
+            {
+                commandResult.AddValidationError("Usuario no es valido");
+                return commandResult;
+            }
 
             var bike = transaction.Bike;
             var station = Repository.Stations.First(s => s.Id == arrivalStationId);
@@ -72,7 +81,17 @@ namespace Bicimad.Services.Command
             if (transaction.Finished)
             {
                 commandResult.AddValidationError("No Puedes entregar la bicicleta dos veces");
+                return commandResult;
             }
+            
+            var availSlots = int.Parse(station.BikeNum) - (int.Parse(station.FreeBikes) + int.Parse(station.ReservedSlots));
+            if (availSlots == 0)
+            {
+                commandResult.AddValidationError("No hay ningún anclaje disponible");
+                return commandResult;
+            }
+
+            //Si tiene un anclaje reservado?
 
             //TODO: Tener en cuenta la reserva de slot
 

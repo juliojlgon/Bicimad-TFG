@@ -335,6 +335,7 @@
       <LastGenOutput>T4MVC.cs</LastGenOutput>
     </None>
     <Content Include="Views\Manage\Bike\Index.cshtml" />
+    <Content Include="Views\Manage\Bike\ReturnBike.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

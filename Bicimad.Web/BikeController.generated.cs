@@ -64,6 +64,12 @@ namespace Bicimad.Web.Controllers
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult ReturnBike()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ReturnBike);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public virtual System.Web.Mvc.ActionResult BookBike()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.BookBike);
@@ -97,7 +103,9 @@ namespace Bicimad.Web.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string ReturnIndex = "ReturnIndex";
             public readonly string TakeBike = "TakeBike";
+            public readonly string ReturnBike = "ReturnBike";
             public readonly string BookBike = "BookBike";
             public readonly string RemoveBikeReservation = "RemoveBikeReservation";
             public readonly string InformBrokenBike = "InformBrokenBike";
@@ -107,7 +115,9 @@ namespace Bicimad.Web.Controllers
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string ReturnIndex = "ReturnIndex";
             public const string TakeBike = "TakeBike";
+            public const string ReturnBike = "ReturnBike";
             public const string BookBike = "BookBike";
             public const string RemoveBikeReservation = "RemoveBikeReservation";
             public const string InformBrokenBike = "InformBrokenBike";
@@ -119,6 +129,15 @@ namespace Bicimad.Web.Controllers
         public ActionParamsClass_TakeBike TakeBikeParams { get { return s_params_TakeBike; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_TakeBike
+        {
+            public readonly string userId = "userId";
+            public readonly string stationId = "stationId";
+        }
+        static readonly ActionParamsClass_ReturnBike s_params_ReturnBike = new ActionParamsClass_ReturnBike();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ReturnBike ReturnBikeParams { get { return s_params_ReturnBike; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ReturnBike
         {
             public readonly string userId = "userId";
             public readonly string stationId = "stationId";
@@ -180,6 +199,17 @@ namespace Bicimad.Web.Controllers
         }
 
         [NonAction]
+        partial void ReturnIndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ReturnIndex()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ReturnIndex);
+            ReturnIndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
         partial void TakeBikeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userId, string stationId);
 
         [NonAction]
@@ -189,6 +219,19 @@ namespace Bicimad.Web.Controllers
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userId", userId);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
             TakeBikeOverride(callInfo, userId, stationId);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ReturnBikeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userId, string stationId);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ReturnBike(string userId, string stationId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ReturnBike);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userId", userId);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
+            ReturnBikeOverride(callInfo, userId, stationId);
             return callInfo;
         }
 

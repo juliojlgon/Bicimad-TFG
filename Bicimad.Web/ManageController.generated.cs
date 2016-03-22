@@ -49,8 +49,10 @@ namespace T4MVC
                 public class _ViewNamesClass
                 {
                     public readonly string Index = "Index";
+                    public readonly string ReturnBike = "ReturnBike";
                 }
                 public readonly string Index = "~/Views/Manage/Bike/Index.cshtml";
+                public readonly string ReturnBike = "~/Views/Manage/Bike/ReturnBike.cshtml";
             }
         }
     }

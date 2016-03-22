@@ -26,5 +26,10 @@ namespace Bicimad.Services.Query
         {
             return _repository.UserHistories.Where(r => r.UserId == userId).Select(r => _mapper.Map<UserHistory, UserHistoryDto>(r)).ToList();
         }
+
+        public UserHistoryDto GetUserHistory(string userId)
+        {
+            return _mapper.Map<UserHistory, UserHistoryDto>(_repository.UserHistories.FirstOrDefault(u => u.UserId == userId && !u.Finished));
+        }
     }
 }

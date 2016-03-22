@@ -19,12 +19,14 @@ namespace Bicimad.Web.Controllers
         private readonly IBikeCommandService _bikeCommandService;
         private readonly IBikeQueryService _bikeQueryService;
         private readonly IReservationCommandService _reservationCommandService;
+        private readonly IUserHistoryQueryService _userHistoryQueryService;
 
-        public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService)
+        public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService)
         {
             _bikeCommandService = bikeCommandService;
             _bikeQueryService = bikeQueryService;
             _reservationCommandService = reservationCommandService;
+            _userHistoryQueryService = userHistoryQueryService;
         }
 
         public virtual ActionResult Index()
@@ -40,6 +42,21 @@ namespace Bicimad.Web.Controllers
             };
 
             return View(MVC.Manage.Views.Bike.Index, model);
+        }
+
+        public virtual ActionResult ReturnIndex()
+        {
+            //TODO: Añadir un filtro a las estaciones, para pasarles todo desde ahí y hacer un solo metodo.
+            var bikes = _bikeQueryService.GetBikes();
+
+            var model = new BikeStatsModel
+            {
+                BrokenBikes = bikes.Count(b => !b.IsWorking),
+                FreeBikes = bikes.Count(b => !b.IsActive && !b.IsBooked),
+                ActiveBikes = bikes.Count(b => b.IsActive || b.IsBooked)
+            };
+
+            return View(MVC.Manage.Views.Bike.ReturnBike, model);
         }
 
         [HttpPost]
@@ -76,6 +93,34 @@ namespace Bicimad.Web.Controllers
             return new JsonResult
             {
                 Data = new { Success = false, BikeId = "", Error =  action.ValidationErrors.First().ErrorMessage }
+            };
+        }
+
+        [HttpPost]
+        public virtual ActionResult ReturnBike(string userId, string stationId)
+        {
+            if (stationId == null)
+            {
+                return new JsonResult
+                {
+                    Data = new { Success = false, Error = "Estación no valida" }
+                };
+            }
+
+
+            var action = _bikeCommandService.ReturnBike(userId, stationId);
+
+            if (action.ItemId != null)
+            {
+                return new JsonResult
+                {
+                    Data = new { Success = true, Error = "" }
+                };
+            }
+
+            return new JsonResult
+            {
+                Data = new { Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage }
             };
         }
 
