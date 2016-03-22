@@ -69,17 +69,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\BikeQueryService.cs" />
     <Compile Include="Query\Dto\Bike\BikeDto.cs" />
+    <Compile Include="Query\Dto\History\UserHistoryDto.cs" />
+    <Compile Include="Query\Dto\Reservation\ReservationDto.cs" />
     <Compile Include="Query\Dto\Slot\SlotDto.cs" />
     <Compile Include="Query\Dto\Station\StationDto.cs" />
     <Compile Include="Query\Dto\User\UserLoginDto.cs" />
     <Compile Include="Query\Dto\User\UserDto.cs" />
     <Compile Include="Query\Interfaces\IBikeQueryService.cs" />
+    <Compile Include="Query\Interfaces\IReservationQueryService.cs" />
     <Compile Include="Query\Interfaces\ISlotQueryService.cs" />
     <Compile Include="Query\Interfaces\IStationQueryService.cs" />
+    <Compile Include="Query\Interfaces\IUserHistoryQueryService.cs" />
     <Compile Include="Query\Interfaces\IUserQueryService.cs" />
+    <Compile Include="Query\ReservationQueryService.cs" />
     <Compile Include="Query\SlotQueryService.cs" />
     <Compile Include="Query\StationQueryService.cs" />
     <Compile Include="Query\UserQueryService.cs" />
+    <Compile Include="Query\UserHistoryQueryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
