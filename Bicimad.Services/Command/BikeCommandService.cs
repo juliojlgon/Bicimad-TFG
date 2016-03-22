@@ -18,12 +18,17 @@ namespace Bicimad.Services.Command
         {
             
             var commandResult = new CommandResult();
-            
-            //TODO: Aqui habrá que comprobar por el IsFinished de la tabla también
             if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished))
             {
                 commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
                 return commandResult;
+            }
+
+            
+            var reservation = Repository.Reservations.FirstOrDefault(r => r.Id == userId && r.StationId == stationId);
+            if (reservation != null)
+            {
+                bikeId = reservation.ItemId;
             }
 
             //TODO: Buscar si hay mas errores de validación.
@@ -66,8 +71,10 @@ namespace Bicimad.Services.Command
 
             if (transaction.Finished)
             {
-                commandResult.AddValidationError("No Puedes entrgar la bicicleta dos veces");
+                commandResult.AddValidationError("No Puedes entregar la bicicleta dos veces");
             }
+
+            //TODO: Tener en cuenta la reserva de slot
 
             var id = GuidHelper.GenerateId();
 
@@ -81,6 +88,8 @@ namespace Bicimad.Services.Command
 
             //Add the action to the database.
             transaction.ArrivalStationId = arrivalStationId;
+            //Close the action
+            transaction.Finished = true;
 
             //Commit the changes to the database.
             Repository.Commit();

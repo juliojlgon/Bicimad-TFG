@@ -70,11 +70,11 @@ namespace Bicimad.Services.Command
             return commandResult;
         }
 
-        public CommandResult RemoveReservation(String id)
+        public CommandResult RemoveReservation(string id, string stationId)
         {
             var commandResult = new CommandResult();
 
-            var reservation = Repository.Reservations.FirstOrDefault(s => s.Id == id);
+            var reservation = Repository.Reservations.FirstOrDefault(s => s.Id == id && s.StationId == stationId);
 
             if (reservation == null)
             {
@@ -89,7 +89,7 @@ namespace Bicimad.Services.Command
             return commandResult;
         }
 
-        public CommandResult RemoveReservations(List<String> ids)
+        public CommandResult RemoveReservations(List<string> ids)
         {
             var commandResult = new CommandResult();
 
@@ -102,6 +102,7 @@ namespace Bicimad.Services.Command
             }
 
             Repository.Reservations.RemoveRange(reservations);
+            return commandResult ;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Bicimad.Services.Command.Interface
     public interface IReservationCommandService
     {
         CommandResult BookItem(string userId, string stationId, string itemId, bool type);
-        CommandResult RemoveReservation(String id);
-        CommandResult RemoveReservations(List<String> ids);
+        CommandResult RemoveReservation(string id,string stationId);
+        CommandResult RemoveReservations(List<string> ids);
     }
 }

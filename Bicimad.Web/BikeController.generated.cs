@@ -56,6 +56,30 @@ namespace Bicimad.Web.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult TakeBike()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.TakeBike);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult BookBike()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.BookBike);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult RemoveBikeReservation()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.RemoveBikeReservation);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult InformBrokenBike()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.InformBrokenBike);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public BikeController Actions { get { return MVC.Bike; } }
@@ -73,15 +97,58 @@ namespace Bicimad.Web.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string TakeBike = "TakeBike";
+            public readonly string BookBike = "BookBike";
+            public readonly string RemoveBikeReservation = "RemoveBikeReservation";
+            public readonly string InformBrokenBike = "InformBrokenBike";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string TakeBike = "TakeBike";
+            public const string BookBike = "BookBike";
+            public const string RemoveBikeReservation = "RemoveBikeReservation";
+            public const string InformBrokenBike = "InformBrokenBike";
         }
 
 
+        static readonly ActionParamsClass_TakeBike s_params_TakeBike = new ActionParamsClass_TakeBike();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_TakeBike TakeBikeParams { get { return s_params_TakeBike; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_TakeBike
+        {
+            public readonly string userId = "userId";
+            public readonly string stationId = "stationId";
+        }
+        static readonly ActionParamsClass_BookBike s_params_BookBike = new ActionParamsClass_BookBike();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_BookBike BookBikeParams { get { return s_params_BookBike; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_BookBike
+        {
+            public readonly string userId = "userId";
+            public readonly string stationId = "stationId";
+        }
+        static readonly ActionParamsClass_RemoveBikeReservation s_params_RemoveBikeReservation = new ActionParamsClass_RemoveBikeReservation();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_RemoveBikeReservation RemoveBikeReservationParams { get { return s_params_RemoveBikeReservation; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_RemoveBikeReservation
+        {
+            public readonly string userId = "userId";
+            public readonly string stationId = "stationId";
+        }
+        static readonly ActionParamsClass_InformBrokenBike s_params_InformBrokenBike = new ActionParamsClass_InformBrokenBike();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_InformBrokenBike InformBrokenBikeParams { get { return s_params_InformBrokenBike; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_InformBrokenBike
+        {
+            public readonly string bikeId = "bikeId";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -109,6 +176,57 @@ namespace Bicimad.Web.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void TakeBikeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userId, string stationId);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult TakeBike(string userId, string stationId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.TakeBike);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userId", userId);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
+            TakeBikeOverride(callInfo, userId, stationId);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void BookBikeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userId, string stationId);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult BookBike(string userId, string stationId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.BookBike);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userId", userId);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
+            BookBikeOverride(callInfo, userId, stationId);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void RemoveBikeReservationOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string userId, string stationId);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult RemoveBikeReservation(string userId, string stationId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.RemoveBikeReservation);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "userId", userId);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
+            RemoveBikeReservationOverride(callInfo, userId, stationId);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void InformBrokenBikeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string bikeId);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult InformBrokenBike(string bikeId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.InformBrokenBike);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "bikeId", bikeId);
+            InformBrokenBikeOverride(callInfo, bikeId);
             return callInfo;
         }
 

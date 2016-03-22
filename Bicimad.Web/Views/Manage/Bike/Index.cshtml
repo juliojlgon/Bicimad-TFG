@@ -31,6 +31,7 @@
 
     <div class="panel text-center">
         <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Coger Bicicleta</a>
+        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">Reservar Bicicleta</a>
     </div>
 </div>
 
@@ -238,13 +239,44 @@
                         $("#station").text("Ha habido un error.");
                     }
                 });
+            }
 
+            function bookBike(id, user) {
+                var url = "bike/bookbike";
+                var userId = user;
+                var stationId = id;
+                var param = $.param({ UserId: userId, StationId: stationId });
+                $.ajax({
+                    "url": url,
+                    "type": "POST",
+                    "data": param,
+                    "dataType": "json",
+                    "success": function(data) {
+                        if (data.Success) {
+                            $("#notify").text("Has Reservado la bicicleta con matricula " + data.BikeId);
+                            $("#notify").show();
+                        } else {
+                            $("#notify").text("Error: " + data.Error);
+                            $("#notify").show();
+                        }
+                    },
+                    "error": function() {
+                        console.log("Error calling " + url);
+                        $("#station").text("Ha habido un error.");
+                    }
+                });
             }
 
             $("#takebike").click(function() {
                 var userId = $(this).attr("data-user-id");
                 var stationId = $(this).attr("data-station-id");
                 takeBike(stationId, userId);
+            });
+
+            $("#bookbike").click(function () {
+                var userId = $(this).attr("data-user-id");
+                var stationId = $(this).attr("data-station-id");
+                bookBike(stationId, userId);
             });
 
         });
