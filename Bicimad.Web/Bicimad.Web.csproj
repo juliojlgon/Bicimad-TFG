@@ -273,6 +273,7 @@
     <Content Include="fonts\roboto\Roboto-Regular.woff2" />
     <Content Include="fonts\roboto\Roboto-Thin.woff" />
     <Content Include="fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="Content\mdsidebar.css" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -290,6 +291,7 @@
     <Content Include="Scripts\leaflet.js" />
     <Content Include="Scripts\mdb.js" />
     <Content Include="Scripts\mdb.min.js" />
+    <Content Include="Scripts\mdsidebar.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\modules %28optional%29\buttons.js" />
     <Content Include="Scripts\modules %28optional%29\chart.js" />
