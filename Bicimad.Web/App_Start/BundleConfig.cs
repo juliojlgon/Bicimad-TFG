@@ -17,6 +17,8 @@ namespace Bicimad.Web
 
         public const string BootstrapJs = "~/bundles/bootstrap";
 
+        public const string NavbarCss = "~/Content/Admin";
+
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
@@ -27,6 +29,8 @@ namespace Bicimad.Web
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle(Leaflet).Include("~/Scripts/leaflet.js"));
+
+            bundles.Add(new ScriptBundle(NavbarCss).Include("~/Content/AdminTweaks.css");
 
             bundles.Add(new ScriptBundle(LeafletAMarker).Include("~/Scripts/leaflet.extra-markers.min.js"));
 
@@ -45,6 +49,7 @@ namespace Bicimad.Web
                       "~/Content/mdb.css",
                       "~/Content/leaflet.css",
                       "~/Content/leaflet.extra-markers.min.css"));
+
         }
     }
 }
