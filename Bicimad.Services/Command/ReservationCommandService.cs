@@ -16,15 +16,21 @@ namespace Bicimad.Services.Command
         {
         }
 
-        public CommandResult BookItem(string userId, string stationId, string itemId, bool type)
+        public CommandResult BookItem(string userId, string stationId, string itemId, bool isBike)
         {
 
             var commandResult = new CommandResult();
 
 
-            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished))
+            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished && isBike))
             {
                 commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
+                return commandResult;
+            }
+            
+            if (Repository.Reservations.Any(r => !r.Isbike && r.StationId == stationId && r.UserId == userId))
+            {
+                commandResult.AddValidationError("No puedes reservar más de un anclaje a la vez.");
                 return commandResult;
             }
 
@@ -33,21 +39,21 @@ namespace Bicimad.Services.Command
             var id = GuidHelper.GenerateId();
 
             //Mark selected item as booked & add or delete from the station variable.
-            if (type)
+            if (isBike)
             {
                 var bike = Repository.Bikes.First(b => b.Id == itemId);
                 bike.IsBooked = true;
                 var station = Repository.Stations.First(s => s.Id == stationId);
-                var freeB = int.Parse(station.FreeBikes) - 1;
-                station.FreeBikes = freeB.ToString();
+                var freeB = station.FreeBikes - 1;
+                station.FreeBikes = freeB;
             }
             else
             {
                 var slot = Repository.Slots.First(s => s.Id == itemId);
                 slot.IsBooked = true;
                 var station = Repository.Stations.First(s => s.Id == stationId);
-                var resSlots = int.Parse(station.ReservedSlots) + 1;
-                station.ReservedSlots = resSlots.ToString();
+                var resSlots = station.ReservedSlots + 1;
+                station.ReservedSlots = resSlots;
             }
 
 
@@ -55,7 +61,7 @@ namespace Bicimad.Services.Command
             Repository.Reservations.Add(new Reservation
             {
                 Id = id,
-                Isbike = type,
+                Isbike = isBike,
                 CreatedDate = DateTimeHelper.SpanishNow,
                 ItemId = itemId,
                 UserId = userId,
@@ -73,12 +79,25 @@ namespace Bicimad.Services.Command
         {
             var commandResult = new CommandResult();
 
-            var reservation = Repository.Reservations.FirstOrDefault(s => s.Id == id && s.StationId == stationId);
+            var reservation = Repository.Reservations.FirstOrDefault(s => s.UserId == id && s.StationId == stationId);
 
             if (reservation == null)
             {
                 commandResult.AddValidationError("La reserva no es válida");
                 return commandResult;
+            }
+            
+            if (reservation.Isbike)
+            {
+                var bike = Repository.Bikes.First(b => b.Id == reservation.ItemId);
+                bike.IsBooked = false;
+                Repository.Stations.First(s => s.Id == stationId).FreeBikes++;
+            }
+            else
+            {
+                var slot = Repository.Slots.First(s => s.Id == reservation.ItemId);
+                slot.IsBooked = false;
+                Repository.Stations.First(s => s.Id == stationId).ReservedSlots--;
             }
 
             Repository.Reservations.Remove(reservation);
@@ -92,7 +111,7 @@ namespace Bicimad.Services.Command
         {
             var commandResult = new CommandResult();
 
-            var reservations = ids.Select(id => Repository.Reservations.FirstOrDefault(r => r.Id == id)).ToList();
+            var reservations = ids.Select(id => Repository.Reservations.FirstOrDefault(r => r.UserId == id)).ToList();
 
             if (reservations.Any(reservation => reservation == null))
             {

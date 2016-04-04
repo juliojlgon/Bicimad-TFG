@@ -7,7 +7,7 @@ namespace Bicimad.Core.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Stations", "FreeBikes", c => c.String(nullable: false));
+            AddColumn("dbo.Stations", "FreeBikes", c => c.Int(nullable: false));
             AddColumn("dbo.Stations", "Address", c => c.String(nullable: false, maxLength: 100));
             DropColumn("dbo.Stations", "Adress");
         }

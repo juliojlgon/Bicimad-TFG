@@ -64,10 +64,11 @@
                         var freeBikes = data.FreeBikes;
                         var metro = data.Metro;
                         var bus = data.Bus;
+                        var availSlots = parseInt(data.BikeNum) - (parseInt(data.FreeBikes) + parseInt(data.ReservedSlots));
                         $("#station-title").text(stationName);
                         $("#station").text("");
                         $("<p class=\"flow-text\" style=\"font-size: 1.2vw\">"
-                                + "Bicis disponibles -> " + freeBikes + "<br/>"
+                                + "Anclajes disponibles -> " + availSlots + "<br/>"
                                 + "Metro -> " + metro + "<br/>"
                                 + "Bus -> " + bus + "</p>")
                             .appendTo("#station");
@@ -246,7 +247,7 @@
             }
 
             function bookBike(id, user) {
-                var url = "/bike/bookbike";
+                var url = "/station/bookslot";
                 var userId = user;
                 var stationId = id;
                 var param = $.param({ UserId: userId, StationId: stationId });
@@ -257,7 +258,7 @@
                     "dataType": "json",
                     "success": function(data) {
                         if (data.Success) {
-                            $("#notify").text("Has Reservado la bicicleta con matricula " + data.BikeId);
+                            $("#notify").text("Has Reservado el anclaje número " + data.BikeId);
                             $("#notify").show();
                         } else {
                             $("#notify").text("Error: " + data.Error);

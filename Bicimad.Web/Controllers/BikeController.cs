@@ -19,21 +19,23 @@ namespace Bicimad.Web.Controllers
         private readonly IBikeCommandService _bikeCommandService;
         private readonly IBikeQueryService _bikeQueryService;
         private readonly IReservationCommandService _reservationCommandService;
+        private readonly IReservationQueryService _reservationQueryService;
         private readonly IUserHistoryQueryService _userHistoryQueryService;
 
-        public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService)
+        public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService, IReservationQueryService reservationQueryService)
         {
             _bikeCommandService = bikeCommandService;
             _bikeQueryService = bikeQueryService;
             _reservationCommandService = reservationCommandService;
             _userHistoryQueryService = userHistoryQueryService;
+            _reservationQueryService = reservationQueryService;
         }
 
         public virtual ActionResult Index()
         {
             //TODO: Añadir un filtro a las estaciones, para pasarles todo desde ahí y hacer un solo metodo.
             var bikes = _bikeQueryService.GetBikes();
-            
+
             var model = new BikeStatsModel
             {
                 BrokenBikes = bikes.Count(b => !b.IsWorking),
@@ -70,29 +72,41 @@ namespace Bicimad.Web.Controllers
                 };
             }
 
-            var bike = _bikeQueryService.GetFreeBike(stationId);
+            string bikeId;
 
-            if (bike == null)
+            var reservation = _reservationQueryService.GetReservation(userId, stationId, true);
+            if (reservation != null)
             {
-                return new JsonResult
+                bikeId = reservation.ItemId;
+                _reservationCommandService.RemoveReservation(userId, stationId);
+            }
+            else
+            {
+
+                var bike = _bikeQueryService.GetFreeBike(stationId);
+                if (bike == null)
                 {
-                    Data = new { Success = false, BikeId = "" , Error = "No hay bicicletas disponibles"}
-                };
+                    return new JsonResult
+                    {
+                        Data = new { Success = false, BikeId = "", Error = "No hay bicicletas disponibles" }
+                    };
+                }
+                bikeId = bike.Id;
             }
 
-            var action = _bikeCommandService.TakeBike(userId,stationId,bike.Id);
+            var action = _bikeCommandService.TakeBike(userId, stationId, bikeId);
 
             if (action.ItemId != null)
             {
                 return new JsonResult
                 {
-                    Data = new {Success = true, BikeId = bike.Id, Error=""}
+                    Data = new { Success = true, BikeId = bikeId, Error = "" }
                 };
             }
 
             return new JsonResult
             {
-                Data = new { Success = false, BikeId = "", Error =  action.ValidationErrors.First().ErrorMessage }
+                Data = new { Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage }
             };
         }
 
@@ -107,6 +121,11 @@ namespace Bicimad.Web.Controllers
                 };
             }
 
+            var reservation = _reservationQueryService.GetReservation(userId, stationId, false);
+            if (reservation != null)
+            {
+                 _reservationCommandService.RemoveReservation(userId, stationId);
+            }
 
             var action = _bikeCommandService.ReturnBike(userId, stationId);
 
@@ -145,7 +164,7 @@ namespace Bicimad.Web.Controllers
                 };
             }
 
-            var action = _reservationCommandService.BookItem(userId, stationId, bike.Id,true);
+            var action = _reservationCommandService.BookItem(userId, stationId, bike.Id, true);
 
             if (action.ItemId != null)
             {
@@ -172,7 +191,7 @@ namespace Bicimad.Web.Controllers
                 };
             }
 
-            
+
             var action = _reservationCommandService.RemoveReservation(userId, stationId);
 
             if (action.ItemId != null)
@@ -195,7 +214,7 @@ namespace Bicimad.Web.Controllers
             {
                 return new JsonResult
                 {
-                    Data = new {Success = false, Error = "Bicicleta no válida"}
+                    Data = new { Success = false, Error = "Bicicleta no válida" }
                 };
             }
             var action = _bikeCommandService.InformBrokenBike(bikeId);
@@ -207,15 +226,15 @@ namespace Bicimad.Web.Controllers
                     Data = new { Success = false, Error = "No se pudo enviar el aviso" }
                 };
             }
-            
+
             return new JsonResult
                 {
                     Data = new { Success = true, Error = "" }
                 };
-            }
         }
+    }
 
 
 
-    
+
 }

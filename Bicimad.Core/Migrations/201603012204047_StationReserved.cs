@@ -7,7 +7,7 @@ namespace Bicimad.Core.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Stations", "ReservedSlots", c => c.String(nullable: false));
+            AddColumn("dbo.Stations", "ReservedSlots", c => c.Int(nullable: false));
         }
         
         public override void Down()

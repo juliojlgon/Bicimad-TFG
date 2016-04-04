@@ -7,14 +7,14 @@ namespace Bicimad.Core.Migrations
     {
         public override void Up()
         {
-            AlterColumn("dbo.Stations", "BikeNum", c => c.String(nullable: false));
+            //AlterColumn("dbo.Stations", "BikeNum", c => c.String(nullable: false));
             AlterColumn("dbo.Stations", "Latitude", c => c.String(nullable: false));
             AlterColumn("dbo.Stations", "Longitude", c => c.String(nullable: false));
         }
         
         public override void Down()
         {
-            AlterColumn("dbo.Stations", "Longitude", c => c.Single(nullable: false));
+            //AlterColumn("dbo.Stations", "Longitude", c => c.Single(nullable: false));
             AlterColumn("dbo.Stations", "Latitude", c => c.Single(nullable: false));
             AlterColumn("dbo.Stations", "BikeNum", c => c.Int(nullable: false));
         }

@@ -41,9 +41,9 @@ namespace Bicimad.Services.Command
             bike.IsActive = true;
 
             var station = Repository.Stations.First(s => s.Id == stationId);
-            var freeB = int.Parse(station.FreeBikes) - 1;
-            
-            station.FreeBikes = freeB.ToString();
+            var freeB = station.FreeBikes - 1;
+
+            station.FreeBikes = freeB;
 
             //Add the action to the database.
             Repository.UserHistories.Add(new UserHistory
@@ -84,7 +84,7 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
             
-            var availSlots = int.Parse(station.BikeNum) - (int.Parse(station.FreeBikes) + int.Parse(station.ReservedSlots));
+            var availSlots = station.BikeNum - (station.FreeBikes +station.ReservedSlots);
             if (availSlots == 0)
             {
                 commandResult.AddValidationError("No hay ningún anclaje disponible");
@@ -102,8 +102,8 @@ namespace Bicimad.Services.Command
             bike.IsActive = false;
 
             //Add the bike to the station
-            var freeB = int.Parse(station.FreeBikes) + 1;
-            station.FreeBikes = freeB.ToString();
+            var freeB = station.FreeBikes + 1;
+            station.FreeBikes = freeB;
 
             //Add the action to the database.
             transaction.ArrivalStationId = arrivalStationId;

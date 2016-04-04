@@ -7,13 +7,13 @@ namespace Bicimad.Core.DomainObjects
     public class Station : IEntity
     {
         [Required]
-        public string BikeNum { get; set; }
+        public int BikeNum { get; set; }
 
         [Required]
-        public string FreeBikes { get; set; }
+        public int FreeBikes { get; set; }
 
         [Required]
-        public string ReservedSlots { get; set; }
+        public int ReservedSlots { get; set; }
 
         [Required]
         public string StationNumber { get; set; }

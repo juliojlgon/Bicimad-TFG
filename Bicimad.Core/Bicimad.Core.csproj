@@ -103,6 +103,10 @@
     <Compile Include="Migrations\201603141302591_UserHistories.Designer.cs">
       <DependentUpon>201603141302591_UserHistories.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604041800335_Hack.cs" />
+    <Compile Include="Migrations\201604041800335_Hack.Designer.cs">
+      <DependentUpon>201604041800335_Hack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -143,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603141302591_UserHistories.resx">
       <DependentUpon>201603141302591_UserHistories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604041800335_Hack.resx">
+      <DependentUpon>201604041800335_Hack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>

@@ -51,7 +51,7 @@ namespace Bicimad.Core.Migrations
         //            StationNumber = (string)x.Element("numero_estacion"),
         //            Longitude = (string)x.Element("longitud"),
         //            Latitude = (string)x.Element("latitud"),
-        //            ReservedSlots = "0"
+        //            ReservedSlots = 0
         //        }).ToArray();
 
         //    resourceName = "Bicimad.Core.Migrations.2.xml";
@@ -65,7 +65,7 @@ namespace Bicimad.Core.Migrations
         //            StationNumber = (string)x.Element("ESTACION"),
         //            Metro = (string)x.Element("METRO"),
         //            Bus = (string)x.Element("LINEAS_BUS"),
-        //            BikeNum = (string)x.Element("ANCLAJES")
+        //            BikeNum = (int)x.Element("ANCLAJES")
         //        }).ToArray();
 
         //    foreach (var country in countries)
@@ -93,7 +93,7 @@ namespace Bicimad.Core.Migrations
         //    foreach (var station in countries)
         //    {
 
-        //        for (int i = 0; i < int.Parse(station.BikeNum); i++)
+        //        for (int i = 0; i < station.BikeNum; i++)
         //        {
         //            var bike = new Bike
         //            {

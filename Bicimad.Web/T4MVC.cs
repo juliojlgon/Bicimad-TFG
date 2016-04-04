@@ -105,6 +105,7 @@ namespace Links
         public static readonly string leaflet_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/leaflet.min.js") ? Url("leaflet.min.js") : Url("leaflet.js");
         public static readonly string mdb_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdb.min.js") ? Url("mdb.min.js") : Url("mdb.js");
         public static readonly string mdb_min_js = Url("mdb.min.js");
+        public static readonly string mdsidebar_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdsidebar.min.js") ? Url("mdsidebar.min.js") : Url("mdsidebar.js");
         public static readonly string modernizr_2_8_3_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/modernizr-2.8.3.min.js") ? Url("modernizr-2.8.3.min.js") : Url("modernizr-2.8.3.js");
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class modules__optional_ {
@@ -155,6 +156,7 @@ namespace Links
         public static readonly string leaflet_extra_markers_min_css = Url("leaflet.extra-markers.min.css");
         public static readonly string mdb_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdb.min.css") ? Url("mdb.min.css") : Url("mdb.css");
         public static readonly string mdb_min_css = Url("mdb.min.css");
+        public static readonly string mdsidebar_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdsidebar.min.css") ? Url("mdsidebar.min.css") : Url("mdsidebar.css");
     }
 
     
@@ -207,6 +209,7 @@ namespace Links
                 public const string leaflet_js = "~/Scripts/leaflet.js"; 
                 public const string mdb_js = "~/Scripts/mdb.js"; 
                 public const string mdb_min_js = "~/Scripts/mdb.min.js"; 
+                public const string mdsidebar_js = "~/Scripts/mdsidebar.js"; 
                 public const string modernizr_2_8_3_js = "~/Scripts/modernizr-2.8.3.js"; 
                 public const string respond_js = "~/Scripts/respond.js"; 
                 public const string respond_matchmedia_addListener_js = "~/Scripts/respond.matchmedia.addListener.js"; 
@@ -230,6 +233,7 @@ namespace Links
                 public const string leaflet_extra_markers_min_css = "~/Content/leaflet.extra-markers.min.css";
                 public const string mdb_css = "~/Content/mdb.css";
                 public const string mdb_min_css = "~/Content/mdb.min.css";
+                public const string mdsidebar_css = "~/Content/mdsidebar.css";
             }
         }
     }
