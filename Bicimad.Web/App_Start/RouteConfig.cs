@@ -19,9 +19,11 @@ namespace Bicimad.Web
             routes.MapRoute("Account", "cuenta/{action}/{id}",
                 new {controller = "Account", action = "Index", id = UrlParameter.Optional});
 
+            //HOME
             routes.MapRoute("Default", "{controller}/{action}/{id}",
-                new {controller = "Home", action = "Index", id = UrlParameter.Optional}
-                );
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new[] { "Bicimad.Web.Controllers" });
+            
         }
     }
 }

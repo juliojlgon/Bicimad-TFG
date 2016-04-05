@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render(BundleConfig.NavbarCss)
+</head>
+
+<body>
+    <!-- Overlay for fixed sidebar -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
+    <!-- Sidebar header -->
+    <div class="sidebar-header header-cover green">
+        <!-- Top bar -->
+        <div class="top-bar"></div>
+        <!-- Sidebar toggle button -->
+        <button type="button" class="sidebar-toggle">
+            <i class="icon-material-sidebar-arrow"></i>
+        </button>
+        <!-- Sidebar brand image -->
+        @*<div class="sidebar-image">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53474/atom_profile_01.jpg">
+        </div>*@
+        <div class="h3-responsive green"><a class="sidebar-text" href="@Url.Action(MVC.Home.Index())">Bicimad-TFG</a></div>
+        
+        <!-- Sidebar brand name -->
+        <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+            @ViewBag.UserName
+            <b class="caret"></b>
+        </a>
+    </div>
+
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav">
+        <li class="dropdown">
+            <ul id="settings-dropdown" class="dropdown-menu">
+                <li>
+                    <a href="#" tabindex="-1">
+                        Coger Bici
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        Dejar Bici
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        Reservar bici
+                    </a>
+                </li>
+                <li>
+                    <a href="#" tabindex="-1">
+                        Reservar anclaje
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-history"></i>
+                Trayectos
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-star"></i>
+                Estaciones favoritas
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon  md-wallet"></i>
+                Saldo
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon md-reservations"></i>
+                Reservas activas
+            </a>
+        </li>
+        <li class="divider"></li>
+    </ul>
+    <!-- Sidebar divider -->
+    <!-- <div class="sidebar-divider"></div> -->
+    <!-- Sidebar text -->
+    <!-- <div class="sidebar-text">Text</div> -->
+</aside>
+<div class=" container-fluid navbar-fixed-bottom">
+    <footer class="page-footer center-on-small-only">
+        <div class="footer-copyright text-center rgba-black-light">
+            <div class="container-fluid">
+                <p>&copy; @DateTime.Now.Year - Bicimad-TFG - Julio López & Manuel Gómez</p>
+                @*http://www.MDBootstrap.com MDBootstrap.com*@
+            </div>
+        </div>
+
+    </footer>
+</div>
+    
+
+    <div class="wrapper">
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+    </div>
+
+    
+
+    @Scripts.Render(BundleConfig.JQuery)
+    @Scripts.Render(BundleConfig.BootstrapJs)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render(BundleConfig.NavbarJs)
+    @RenderSection("scripts", required: false)
+</body>
+</html>

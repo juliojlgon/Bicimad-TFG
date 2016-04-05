@@ -27,6 +27,8 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
+    static readonly UserClass s_User = new UserClass();
+    public static UserClass User { get { return s_User; } }
     public static Bicimad.Web.Controllers.AccountController Account = new Bicimad.Web.Controllers.T4MVC_AccountController();
     public static Bicimad.Web.Controllers.BaseController Base = new Bicimad.Web.Controllers.T4MVC_BaseController();
     public static Bicimad.Web.Controllers.BikeController Bike = new Bicimad.Web.Controllers.T4MVC_BikeController();
@@ -38,6 +40,14 @@ public static partial class MVC
 
 namespace T4MVC
 {
+    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+    public class UserClass
+    {
+        public readonly string Name = "User";
+        public Bicimad.Web.Areas.User.Controllers.HomeController Home = new Bicimad.Web.Areas.User.Controllers.T4MVC_HomeController();
+        public Bicimad.Web.Areas.User.Controllers.UserBaseController UserBase = new Bicimad.Web.Areas.User.Controllers.T4MVC_UserBaseController();
+        public T4MVC.User.SharedController Shared = new T4MVC.User.SharedController();
+    }
 }
 
 namespace T4MVC
@@ -157,6 +167,7 @@ namespace Links
         public static readonly string mdb_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdb.min.css") ? Url("mdb.min.css") : Url("mdb.css");
         public static readonly string mdb_min_css = Url("mdb.min.css");
         public static readonly string mdsidebar_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdsidebar.min.css") ? Url("mdsidebar.min.css") : Url("mdsidebar.css");
+        public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
     }
 
     
@@ -234,6 +245,7 @@ namespace Links
                 public const string mdb_css = "~/Content/mdb.css";
                 public const string mdb_min_css = "~/Content/mdb.min.css";
                 public const string mdsidebar_css = "~/Content/mdsidebar.css";
+                public const string Site_css = "~/Content/Site.css";
             }
         }
     }
