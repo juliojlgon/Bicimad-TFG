@@ -8,6 +8,7 @@ using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Services.Query.Dto.History;
 using Bicimad.Services.Query.Interfaces;
+using Bicimad.Services.Query.Queries;
 
 namespace Bicimad.Services.Query
 {
@@ -22,9 +23,18 @@ namespace Bicimad.Services.Query
             _repository = repostory;
         }
 
-        public List<UserHistoryDto> GetHistorial(string userId)
+        public List<UserHistoryDto> GetHistorial(ref UserHistoryQuery query)
         {
-            return _repository.UserHistories.Where(r => r.UserId == userId).Select(r => _mapper.Map<UserHistory, UserHistoryDto>(r)).ToList();
+            var userId = query.Id;
+            var userHistorical = _repository.UserHistories.Where(r => r.UserId == userId);
+
+            query.OutTotalCount = userHistorical.Count();
+
+            userHistorical = userHistorical.OrderByDescending(uh => uh.CreatedDate);
+
+            return query.PageSize == 0
+                ? userHistorical.Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList()
+                : userHistorical.Skip(query.PageIndex*query.PageSize).Take(query.PageSize).Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList();
         }
 
         public UserHistoryDto GetUserHistory(string userId)

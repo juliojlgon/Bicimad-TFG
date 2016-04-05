@@ -167,6 +167,7 @@ namespace Links
         public static readonly string mdb_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdb.min.css") ? Url("mdb.min.css") : Url("mdb.css");
         public static readonly string mdb_min_css = Url("mdb.min.css");
         public static readonly string mdsidebar_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdsidebar.min.css") ? Url("mdsidebar.min.css") : Url("mdsidebar.css");
+        public static readonly string PagedList_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/PagedList.min.css") ? Url("PagedList.min.css") : Url("PagedList.css");
         public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
     }
 
@@ -245,6 +246,7 @@ namespace Links
                 public const string mdb_css = "~/Content/mdb.css";
                 public const string mdb_min_css = "~/Content/mdb.min.css";
                 public const string mdsidebar_css = "~/Content/mdsidebar.css";
+                public const string PagedList_css = "~/Content/PagedList.css";
                 public const string Site_css = "~/Content/Site.css";
             }
         }

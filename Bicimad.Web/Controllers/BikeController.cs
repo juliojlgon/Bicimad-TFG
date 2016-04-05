@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.EnterpriseServices;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using Bicimad.Services.Command.Commands.Bike;
 using Bicimad.Services.Command.Interface;
-using Bicimad.Services.Query.Dto.Bike;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Web.Models.Home;
 
@@ -20,14 +14,13 @@ namespace Bicimad.Web.Controllers
         private readonly IBikeQueryService _bikeQueryService;
         private readonly IReservationCommandService _reservationCommandService;
         private readonly IReservationQueryService _reservationQueryService;
-        private readonly IUserHistoryQueryService _userHistoryQueryService;
+        
 
         public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService, IReservationQueryService reservationQueryService)
         {
             _bikeCommandService = bikeCommandService;
             _bikeQueryService = bikeQueryService;
             _reservationCommandService = reservationCommandService;
-            _userHistoryQueryService = userHistoryQueryService;
             _reservationQueryService = reservationQueryService;
         }
 
