@@ -26,7 +26,7 @@
         @*<div class="sidebar-image">
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53474/atom_profile_01.jpg">
         </div>*@
-        <div class="h3-responsive green"><a class="sidebar-text" href="@Url.Action(MVC.Home.Index())">Bicimad-TFG</a></div>
+        <a class="sidebar-colored black-text" href="@Url.Action(MVC.Home.Index())"><h3>Bicimad-TFG</h3></a>
         
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
@@ -68,7 +68,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="@MVC.User.Home.Index()">
                 <i class="sidebar-icon md-star"></i>
                 Estaciones favoritas
             </a>
@@ -106,7 +106,7 @@
     
 
     <div class="wrapper">
-        <div class="container body-content">
+        <div class="container">
             @RenderBody()
         </div>
     </div>

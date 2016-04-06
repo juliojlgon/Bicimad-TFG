@@ -14,9 +14,26 @@ namespace Bicimad.Web.MapperProfile
         {
             CreateMap<Station, StationDto>();
             CreateMap<User, UserDto>();
-            CreateMap<UserHistory, UserHistoryDto>();
+            CreateMap<UserHistory, UserHistoryDto>().ForMember(u => u.ArrivalStationUserName, opt => opt.ResolveUsing<ArrivalStationResolver>())
+                .ForMember(u => u.DepartureStationUserName, opt => opt.ResolveUsing<DepartureStationResolver>());
             CreateMap<UserHistoryDto, UserHistoriesModel>();
             CreateMap<Bike, BikeDto>();
+        }
+    }
+
+    public class ArrivalStationResolver : ValueResolver<UserHistory, string>
+    {
+        protected override string ResolveCore(UserHistory userHistory)
+        {
+            return userHistory.ArrivalStation.StationName;
+        }
+    }
+
+    public class DepartureStationResolver : ValueResolver<UserHistory, string>
+    {
+        protected override string ResolveCore(UserHistory userHistory)
+        {
+            return userHistory.DepartureStation.StationName;
         }
     }
 }

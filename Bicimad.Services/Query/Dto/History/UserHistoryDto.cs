@@ -14,7 +14,11 @@ namespace Bicimad.Services.Query.Dto.History
 
         public string ArrivalStationId { get; set; }
 
+        public string ArrivalStationUserName { get; set; }
+
         public string DepartureStationId { get; set; }
+
+        public string DepartureStationUserName { get; set; }
 
         public bool Finished { get; set; }
 

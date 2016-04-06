@@ -38,6 +38,9 @@
 .md-reservations:before {
   content: "\f1b4";
 }
+.md-bike:before {
+  content: "\f117";
+}
 /* -- You can use this sidebar in Bootstrap (v3) projects. HTML-markup like Navbar bootstrap component will make your work easier. -- */
 /* -- Box model ------------------------------- */
 *,
@@ -224,7 +227,7 @@ body {
   clear: both;
 }
 .sidebar .icon-material-sidebar-arrow:before {
-  content: "\e610";
+  content: "\f1e1";
 }
 .sidebar .sidebar-image img {
   width: 54px;
@@ -803,7 +806,7 @@ body {
   transform: translate3d(0, 0, 0);
 }
 .sidebar-fixed-right .icon-material-sidebar-arrow:before {
-  content: "\e614";
+  content: "\f1e1";
 }
 @media (max-width: 768px) {
   .sidebar.open {

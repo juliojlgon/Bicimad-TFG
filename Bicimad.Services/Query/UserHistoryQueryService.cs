@@ -33,13 +33,31 @@ namespace Bicimad.Services.Query
             userHistorical = userHistorical.OrderByDescending(uh => uh.CreatedDate);
 
             return query.PageSize == 0
-                ? userHistorical.Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList()
-                : userHistorical.Skip(query.PageIndex*query.PageSize).Take(query.PageSize).Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList();
+                ? userHistorical.ToList().Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList()
+                : userHistorical.ToList().Skip(query.PageIndex*query.PageSize).Take(query.PageSize).Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList();
         }
 
         public UserHistoryDto GetUserHistory(string userId)
         {
             return _mapper.Map<UserHistory, UserHistoryDto>(_repository.UserHistories.FirstOrDefault(u => u.UserId == userId && !u.Finished));
+        }
+
+        private UserHistoryDto toDto(UserHistory userHistory)
+        {
+            if (userHistory == null) return null;
+
+            return new UserHistoryDto()
+            {
+                CreatedDate = userHistory.CreatedDate,
+                Id = userHistory.Id,
+                ArrivalStationId = userHistory.ArrivalStationId,
+                ArrivalStationUserName = userHistory.ArrivalStation.StationName,
+                BikeId = userHistory.BikeId,
+                DepartureStationId = userHistory.DepartureStationId,
+                DepartureStationUserName = userHistory.DepartureStation.StationName,
+                Finished = userHistory.Finished,
+                UserId = userHistory.UserId
+            };
         }
     }
 }

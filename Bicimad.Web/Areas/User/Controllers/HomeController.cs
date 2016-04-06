@@ -30,7 +30,7 @@ namespace Bicimad.Web.Areas.User.Controllers
 
             var userHistorical = _userStoryQueryService.GetHistorial(ref query);
 
-            var pagedUsers = new StaticPagedList<UserHistoryDto>(userHistorical, pageSize, pageIndex + 1, query.OutTotalCount);
+            var pagedUsers = new StaticPagedList<UserHistoryDto>(userHistorical, pageIndex + 1, pageSize, query.OutTotalCount);
 
             return View(MVC.User.Home.Views.Index, pagedUsers);
         }

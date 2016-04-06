@@ -25,6 +25,13 @@ namespace Bicimad.Services.Query
             return _mapper.Map<Station, StationDto>(_repository.Stations.FirstOrDefault(s => s.Id == stationId));
         }
 
+        public List<string> GetStationNames(List<string> stationIds)
+        {
+            var ids = _repository.Stations.Where(s => stationIds.Contains(s.Id)).Select(s => s.StationName).ToList();
+
+            return ids;
+        } 
+
         public List<StationDto> GetStations()
         {
             var stations =  _repository.Stations.ToList();
