@@ -28,12 +28,31 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
             
-            if (Repository.Reservations.Any(r => !r.Isbike && r.StationId == stationId && r.UserId == userId))
+            if (Repository.Reservations.Any(r => !r.Isbike && r.UserId == userId))
             {
                 commandResult.AddValidationError("No puedes reservar más de un anclaje a la vez.");
                 return commandResult;
             }
+            
+            if (Repository.Reservations.Any(r => r.Isbike && r.UserId == userId))
+            {
+                commandResult.AddValidationError("No puedes reservar más de una bicicleta a la vez.");
+                return commandResult;
+            }
 
+            var station = Repository.Stations.First(s => s.Id == stationId);
+
+            if (isBike && station.FreeBikes == 0)
+            {
+                commandResult.AddValidationError("No hay bicicletas disponibles en la estación seleccionada.");
+                return commandResult;
+            }
+            var availSlots = station.BikeNum - (station.FreeBikes + station.ReservedSlots);
+            if (!isBike && availSlots == 0)
+            {
+                commandResult.AddValidationError("No hay anclajes disponibles en la estación seleccionada.");
+                return commandResult;
+            }
             //TODO: Buscar si hay mas errores de validación.
 
             var id = GuidHelper.GenerateId();
@@ -43,7 +62,6 @@ namespace Bicimad.Services.Command
             {
                 var bike = Repository.Bikes.First(b => b.Id == itemId);
                 bike.IsBooked = true;
-                var station = Repository.Stations.First(s => s.Id == stationId);
                 var freeB = station.FreeBikes - 1;
                 station.FreeBikes = freeB;
             }
@@ -51,7 +69,6 @@ namespace Bicimad.Services.Command
             {
                 var slot = Repository.Slots.First(s => s.Id == itemId);
                 slot.IsBooked = true;
-                var station = Repository.Stations.First(s => s.Id == stationId);
                 var resSlots = station.ReservedSlots + 1;
                 station.ReservedSlots = resSlots;
             }
