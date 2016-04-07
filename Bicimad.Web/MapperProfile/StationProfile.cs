@@ -25,7 +25,7 @@ namespace Bicimad.Web.MapperProfile
     {
         protected override string ResolveCore(UserHistory userHistory)
         {
-            return userHistory.ArrivalStation.StationName;
+            return !string.IsNullOrEmpty(userHistory.ArrivalStationId) ? userHistory.ArrivalStation.StationName : "-";
         }
     }
 
