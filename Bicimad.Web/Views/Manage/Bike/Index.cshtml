@@ -218,7 +218,7 @@
         $(function () {
 
             function paintAlert(msg, cls) {
-                var alertDiv = $("<div/>", { "class": "alert text-center " + cls, "style": "position: fixed;top: 5;left: 10;width: 95%;z-index:12;" });
+                var alertDiv = $("<div/>", { "class": "alert text-center " + cls});
                 var link = $("<a/>", { "class": "close", "href": "#", "data-dismiss": "alert", "aria-label": "close", "text": "Cerrar" });
                 var message = $("<p/>", { "title": msg, "text": msg });
                 alertDiv.append(link);
