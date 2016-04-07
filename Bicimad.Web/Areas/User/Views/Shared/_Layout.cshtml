@@ -41,22 +41,22 @@
         <li class="dropdown">
             <ul id="settings-dropdown" class="dropdown-menu">
                 <li>
-                    <a href="@MVC.Bike.TakeBike()" tabindex="-1">
+                    <a href="@Url.Action(MVC.Bike.Index())" tabindex="-1">
                         Coger Bici
                     </a>
                 </li>
                 <li>
-                    <a href="@MVC.Bike.ReturnBike()" tabindex="-1">
+                    <a href="@Url.Action(MVC.Bike.Index())" tabindex="-1">
                         Dejar Bici
                     </a>
                 </li>
                 <li>
-                    <a href="@MVC.Bike.BookBike()" tabindex="-1">
+                    <a href="@Url.Action(MVC.Bike.ReturnIndex())" tabindex="-1">
                         Reservar bici
                     </a>
                 </li>
                 <li>
-                    <a href="@MVC.Station.BookSlot()" tabindex="-1">
+                    <a href="@Url.Action(MVC.Bike.ReturnIndex())" tabindex="-1">
                         Reservar anclaje
                     </a>
                 </li>
@@ -69,7 +69,7 @@
             </a>
         </li>
         <li>
-            <a href="@MVC.User.Home.Index()">
+            <a href="@Url.Action(MVC.User.Home.Index())">
                 <i class="sidebar-icon md-star"></i>
                 Estaciones favoritas
             </a>

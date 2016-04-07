@@ -3,42 +3,42 @@
     ViewBag.Title = "Devolver Bicicleta";
 }
 
-<br/>
+<br />
 
-<div class="text-center success-color" style="display: none" id="notify">
-</div>
+<div class="j-alert" id="notify">
 
-<div class="col-md-3 center-block" style="margin-top: 5em">
-    <div class="card default-color darken-1 z-depth-3">
-        <div class="card-content white-text">
-            <span class="card-title">Estadística</span>
-            @if (Model != null)
-            {
-                <p>Bicis libres: @Model.FreeBikes </p>
-                <p>Bicis en uso: @Model.ActiveBikes</p>
-                <p>Bicis averiadas:@Model.BrokenBikes </p>
-            }
+    <div class="col-md-3 center-block" style="margin-top: 5em">
+        <div class="card default-color darken-1 z-depth-3">
+            <div class="card-content white-text">
+                <span class="card-title">Estadística</span>
+                @if (Model != null)
+                {
+                    <p>Bicis libres: @Model.FreeBikes </p>
+                    <p>Bicis en uso: @Model.ActiveBikes</p>
+                    <p>Bicis averiadas:@Model.BrokenBikes </p>
+                }
 
+            </div>
+        </div>
+
+        <div class="card default-color darken-1 z-depth-3 no-display" style="display: none">
+            <div class="card-content white-text">
+                <span class="card-title" id="station-title">Estación</span>
+                <div id="station"></div>
+            </div>
+        </div>
+
+        <div class="panel text-center">
+            <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Dejar Bicicleta</a>
+            <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">Reservar Anclaje</a>
         </div>
     </div>
 
-    <div class="card default-color darken-1 z-depth-3 no-display" style="display: none">
-        <div class="card-content white-text">
-            <span class="card-title" id="station-title">Estación</span>
-            <div id="station"></div>
-        </div>
-    </div>
-
-    <div class="panel text-center">
-        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Dejar Bicicleta</a>
-        <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">Reservar Anclaje</a>
-    </div>
-</div>
-
-<div class="card default-color darken-1 col-md-9">
-    <div class="card-content">
-        <span class="card-title">Estado de las estaciones</span>
-        <div id="map" style="height: 550px; max-height: 50%;">
+    <div class="card default-color darken-1 col-md-9">
+        <div class="card-content">
+            <span class="card-title">Estado de las estaciones</span>
+            <div id="map" style="height: 550px; max-height: 50%;">
+            </div>
         </div>
     </div>
 </div>
@@ -49,7 +49,7 @@
     @* TODO: CUANDO EL SCRIPT ESTE ACABADO METERLO EN UN SCRIPT APARTE y add locate *@
     <script>
 
-        $(function() {
+        $(function () {
 
             function showStation(id) {
                 var url = "/station/getstationbyidjson";
@@ -59,7 +59,7 @@
                     "type": "POST",
                     "data": param,
                     "dataType": "json",
-                    "success": function(data) {
+                    "success": function (data) {
                         var stationName = data.StationName;
                         var freeBikes = data.FreeBikes;
                         var metro = data.Metro;
@@ -74,7 +74,7 @@
                             .appendTo("#station");
                         $(".no-display").show();
                     },
-                    "error": function() {
+                    "error": function () {
                         console.log("Error calling " + url);
                         $("#station").text("Ha habido un error.");
                     }
@@ -132,7 +132,7 @@
             var highlight = null;
             var icon = null;
 
-            // Function for removing highlight 
+            // Function for removing highlight
             function removeHighlight() {
                 // Check for highlight
                 if (highlight !== null) {
@@ -154,14 +154,14 @@
                 "type": "POST",
                 "data": "",
                 "dataType": "json",
-                "success": function(data) {
+                "success": function (data) {
                     for (var i = 0; i < data.length; i++) {
                         stations.push(data[i]);
                         var lat = data[i].Latitude;
                         var lon = data[i].Longitude;
                         var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
                         var porc = availSlots / parseInt(data[i].BikeNum);
-                        
+
 
                         //var parentDiv = $("<div/>", { id: "kdjfkd", title: "fjsdpof" });
                         //var img = $("<img/>", { id: "kdjfkd", title: "fjsdpof", src: "skdfjsdkljf" });
@@ -178,7 +178,7 @@
                             marker = L.marker([lat, lon], { icon: orangeMarker, title: data[i].Id });
                         }
 
-                        marker.on("click", function(e) {
+                        marker.on("click", function (e) {
                             $("#takebike")["removeClass"]("disabled");
                             $("#bookbike")["removeClass"]("disabled");
 
@@ -200,7 +200,7 @@
                         marker.addTo(map);
                     }
                 },
-                "error": function() {
+                "error": function () {
                     console.log("Error calling " + url);
                 }
             });
@@ -218,7 +218,16 @@
 
         });
 
-        $(function() {
+        $(function () {
+
+            function paintAlert(msg, cls) {
+                var alertDiv = $("<div/>", { "class": "alert text-center " + cls, "style": "z-index:9;" });
+                var link = $("<a/>", { "class": "close", "href": "#", "data-dismiss": "alert", "aria-label": "close", "text": "Cerrar" });
+                var message = $("<p/>", { "title": msg, "text": msg });
+                alertDiv.append(link);
+                alertDiv.append(message);
+                $(".j-alert").prepend(alertDiv);
+            }
 
             function takeBike(id, user) {
                 var url = "/bike/returnbike";
@@ -230,16 +239,17 @@
                     "type": "POST",
                     "data": param,
                     "dataType": "json",
-                    "success": function(data) {
+                    "success": function (data) {
                         if (data.Success) {
-                            $("#notify").text("Has dejado la bicicleta con exito");
-                            $("#notify").show();
+
+                            var msg = "Has dejado la bicicleta con exito";
+                            paintAlert(msg, "green");
                         } else {
-                            $("#notify").text("Error: " + data.Error);
-                            $("#notify").show();
+                            msg = "Error: " + data.Error;
+                            paintAlert(msg, "red");
                         }
                     },
-                    "error": function() {
+                    "error": function () {
                         console.log("Error calling " + url);
                         $("#station").text("Ha habido un error.");
                     }
@@ -256,23 +266,23 @@
                     "type": "POST",
                     "data": param,
                     "dataType": "json",
-                    "success": function(data) {
+                    "success": function (data) {
                         if (data.Success) {
-                            $("#notify").text("Has Reservado el anclaje número " + data.BikeId);
-                            $("#notify").show();
+                            var msg = "Has Reservado el anclaje número " + data.BikeId;
+                            paintAlert(msg, "green");
                         } else {
-                            $("#notify").text("Error: " + data.Error);
-                            $("#notify").show();
+                            msg = "Error: " + data.Error;
+                            paintAlert(msg, "red");
                         }
                     },
-                    "error": function() {
+                    "error": function () {
                         console.log("Error calling " + url);
                         $("#station").text("Ha habido un error.");
                     }
                 });
             }
 
-            $("#takebike").click(function() {
+            $("#takebike").click(function () {
                 var userId = $(this).attr("data-user-id");
                 var stationId = $(this).attr("data-station-id");
                 takeBike(stationId, userId);
@@ -288,5 +298,4 @@
 
 
     </script>
-
 }
