@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Zona Privada</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render(BundleConfig.NavbarCss)
+    @Styles.Render(BundleConfig.Mdbootstrap)
+    @*@Styles.Render(BundleConfig.NavbarCss)*@
 </head>
 
 <body>
@@ -115,7 +116,7 @@
 
     @Scripts.Render(BundleConfig.JQuery)
     @Scripts.Render(BundleConfig.BootstrapJs)
-    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render(BundleConfig.ModernizerJs)
     @Scripts.Render(BundleConfig.NavbarJs)
     @RenderSection("scripts", required: false)
 </body>

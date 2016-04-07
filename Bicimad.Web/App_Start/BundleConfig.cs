@@ -16,9 +16,13 @@ namespace Bicimad.Web
 
         public const string BootstrapJs = "~/bundles/bootstrap";
 
-        public const string NavbarCss = "~/Content/mdsidebar";
+        public const string ModernizerJs = "~/bundles/modernizr";
+
+        //public const string NavbarCss = "~/Content/css/mdsidebarcss";
         public const string NavbarJs = "~/bundles/mdsidebar";
 
+        public const string Mdbootstrap = "~/Content/mdbootstrap";
+    
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
@@ -30,7 +34,7 @@ namespace Bicimad.Web
 
             bundles.Add(new ScriptBundle(Leaflet).Include("~/Scripts/leaflet.js"));
 
-            bundles.Add(new ScriptBundle(NavbarCss).Include("~/Content/mdsidebar.css"));
+            //bundles.Add(new ScriptBundle(NavbarCss).Include("~/Content/mdsidebarcss.css"));
             bundles.Add(new ScriptBundle(NavbarJs).Include("~/Scripts/mdsidebar.js"));
 
 
@@ -38,7 +42,7 @@ namespace Bicimad.Web
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            bundles.Add(new ScriptBundle(ModernizerJs).Include(
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
@@ -48,9 +52,12 @@ namespace Bicimad.Web
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/mdb.css",
                       "~/Content/leaflet.css",
                       "~/Content/leaflet.extra-markers.min.css"));
+
+            bundles.Add(new StyleBundle(Mdbootstrap).Include(
+                      "~/Content/mdb.css",
+                      "~/Content/mdsidebarcss.css"));
 
         }
     }
