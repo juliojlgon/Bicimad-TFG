@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Zona Privada</title>
     @Styles.Render("~/Content/css")
     @Styles.Render(BundleConfig.NavbarCss)
 </head>
@@ -62,7 +62,7 @@
             </ul>
         </li>
         <li>
-            <a href="#">
+            <a href="@Url.Action(MVC.User.Home.Index())">
                 <i class="sidebar-icon md-history"></i>
                 Trayectos
             </a>
@@ -80,7 +80,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="@Url.Action(MVC.User.Home.ActiveRerservations())">
                 <i class="sidebar-icon md-reservations"></i>
                 Reservas activas
             </a>

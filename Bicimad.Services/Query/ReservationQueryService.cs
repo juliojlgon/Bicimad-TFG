@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
-using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Dto.Reservation;
 using Bicimad.Services.Query.Interfaces;
+using Bicimad.Services.Query.Queries;
 
 namespace Bicimad.Services.Query
 {
@@ -23,9 +20,19 @@ namespace Bicimad.Services.Query
             _repository = repostory;
         }
 
-        public List<ReservationDto> GetReservations(string userId)
+        public List<ReservationDto> GetReservations(ref ReservationQuery query)
         {
-            return _repository.Reservations.Where(r => r.UserId == userId).Select(r => _mapper.Map<Reservation, ReservationDto>(r)).ToList();
+            var userId = query.Id;
+            var reservations = _repository.Reservations.Where(r => r.UserId == userId);
+
+            query.OutTotalCount = reservations.Count();
+
+            reservations = reservations.OrderByDescending(uh => uh.CreatedDate);
+
+            return query.PageSize == 0
+                ? reservations.ToList().Select(_mapper.Map<Reservation, ReservationDto>).ToList()
+                : reservations.ToList().Skip(query.PageIndex * query.PageSize).Take(query.PageSize).Select(_mapper.Map<Reservation, ReservationDto>).ToList();
+            
         }
 
         public ReservationDto GetReservation(string userId, string stationId, bool isBike)

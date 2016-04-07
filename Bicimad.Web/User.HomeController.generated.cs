@@ -73,12 +73,14 @@ namespace Bicimad.Web.Areas.User.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string ActiveRerservations = "ActiveRerservations";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string ActiveRerservations = "ActiveRerservations";
         }
 
 
@@ -87,6 +89,14 @@ namespace Bicimad.Web.Areas.User.Controllers
         public ActionParamsClass_Index IndexParams { get { return s_params_Index; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_Index
+        {
+            public readonly string page = "page";
+        }
+        static readonly ActionParamsClass_ActiveRerservations s_params_ActiveRerservations = new ActionParamsClass_ActiveRerservations();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ActiveRerservations ActiveRerservationsParams { get { return s_params_ActiveRerservations; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ActiveRerservations
         {
             public readonly string page = "page";
         }
@@ -101,8 +111,10 @@ namespace Bicimad.Web.Areas.User.Controllers
             public class _ViewNamesClass
             {
                 public readonly string Index = "Index";
+                public readonly string Reservations = "Reservations";
             }
             public readonly string Index = "~/Areas/User/Views/Home/Index.cshtml";
+            public readonly string Reservations = "~/Areas/User/Views/Home/Reservations.cshtml";
         }
     }
 
@@ -120,6 +132,18 @@ namespace Bicimad.Web.Areas.User.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "page", page);
             IndexOverride(callInfo, page);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ActiveRerservationsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int? page);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ActiveRerservations(int? page)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ActiveRerservations);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "page", page);
+            ActiveRerservationsOverride(callInfo, page);
             return callInfo;
         }
 

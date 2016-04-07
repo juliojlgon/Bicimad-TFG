@@ -13,6 +13,8 @@ namespace Bicimad.Services.Query.Dto.Reservation
 
         public string StationId { get; set; }
 
+        public string StationName { get; set; }
+
         public string Id { get; set; }
 
         public DateTime CreatedDate { get; set; }       

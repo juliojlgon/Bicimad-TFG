@@ -82,6 +82,7 @@
     <Compile Include="Query\Interfaces\IUserHistoryQueryService.cs" />
     <Compile Include="Query\Interfaces\IUserQueryService.cs" />
     <Compile Include="Query\Queries\PagedQuery.cs" />
+    <Compile Include="Query\Queries\ReservationQuery.cs" />
     <Compile Include="Query\Queries\UserHistoryQuery.cs" />
     <Compile Include="Query\ReservationQueryService.cs" />
     <Compile Include="Query\SlotQueryService.cs" />

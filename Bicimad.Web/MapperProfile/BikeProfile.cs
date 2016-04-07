@@ -12,7 +12,15 @@ namespace Bicimad.Web.MapperProfile
         {
             CreateMap<Bike, BikeDto>();
             CreateMap<Slot, SlotDto>();
-            CreateMap<Reservation, ReservationDto>();
+            CreateMap<Reservation, ReservationDto>().ForMember(r => r.StationName, opt => opt.ResolveUsing<ArrivalStationResolver>());
+        }
+
+        public class StationResolver : ValueResolver<Reservation, string>
+        {
+            protected override string ResolveCore(Reservation source)
+            {
+                return source.Station.StationName;
+            }
         }
     }
 

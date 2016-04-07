@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using Bicimad.Services.Query.Dto.Reservation;
+using Bicimad.Services.Query.Queries;
 
 namespace Bicimad.Services.Query.Interfaces
 {
     public interface IReservationQueryService
     {
-        List<ReservationDto> GetReservations(string userId);
+        List<ReservationDto> GetReservations(ref ReservationQuery query);
 
         /// <summary>
         /// Looks into the DB for a Reservation with parameters supplied.
