@@ -3,9 +3,7 @@ using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Helpers;
 using Bicimad.Services.Command.Commands;
-using Bicimad.Services.Command.Commands.Bike;
 using Bicimad.Services.Command.Interface;
-using Bicimad.Services.Query.Dto.History;
 
 namespace Bicimad.Services.Command
 {

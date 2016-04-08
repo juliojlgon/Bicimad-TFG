@@ -55,7 +55,7 @@ namespace Bicimad.Web.Controllers
                 };
             }
 
-            var action = _reservationCommandService.BookItem(userId, stationId, slot.Id,false);
+            var action = _reservationCommandService.BookItem(userId, stationId, slot.Id, false);
 
             if (action.ItemId != null)
             {

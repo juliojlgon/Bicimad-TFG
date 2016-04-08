@@ -21,25 +21,6 @@ namespace Bicimad.Services.Command
 
             var commandResult = new CommandResult();
 
-
-            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished && isBike))
-            {
-                commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
-                return commandResult;
-            }
-            
-            if (Repository.Reservations.Any(r => !r.Isbike && r.UserId == userId))
-            {
-                commandResult.AddValidationError("No puedes reservar más de un anclaje a la vez.");
-                return commandResult;
-            }
-            
-            if (Repository.Reservations.Any(r => r.Isbike && r.UserId == userId))
-            {
-                commandResult.AddValidationError("No puedes reservar más de una bicicleta a la vez.");
-                return commandResult;
-            }
-
             var station = Repository.Stations.First(s => s.Id == stationId);
 
             if (isBike && station.FreeBikes == 0)
@@ -53,6 +34,26 @@ namespace Bicimad.Services.Command
                 commandResult.AddValidationError("No hay anclajes disponibles en la estación seleccionada.");
                 return commandResult;
             }
+
+            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished && isBike))
+            {
+                commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
+                return commandResult;
+            }
+            
+            if (isBike && Repository.Reservations.Any(r => r.IsBike && r.UserId == userId))
+            {
+                var reserv = Repository.Reservations.First(r => isBike && r.UserId == userId);
+                RemoveReservationItem(stationId,reserv);
+            }
+            
+            if (!isBike && Repository.Reservations.Any(r => !r.IsBike && r.UserId == userId))
+            {
+                var reserv = Repository.Reservations.First(r => !isBike && r.UserId == userId);
+                RemoveReservationItem(stationId,reserv);
+            }
+
+            
             //TODO: Buscar si hay mas errores de validación.
 
             var id = GuidHelper.GenerateId();
@@ -78,7 +79,7 @@ namespace Bicimad.Services.Command
             Repository.Reservations.Add(new Reservation
             {
                 Id = id,
-                Isbike = isBike,
+                IsBike = isBike,
                 CreatedDate = DateTimeHelper.SpanishNow,
                 ItemId = itemId,
                 UserId = userId,
@@ -104,7 +105,14 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
             
-            if (reservation.Isbike)
+            RemoveReservationItem(stationId, reservation);
+
+            return commandResult;
+        }
+
+        private void RemoveReservationItem(string stationId, Reservation reservation)
+        {
+            if (reservation.IsBike)
             {
                 var bike = Repository.Bikes.First(b => b.Id == reservation.ItemId);
                 bike.IsBooked = false;
@@ -120,8 +128,6 @@ namespace Bicimad.Services.Command
             Repository.Reservations.Remove(reservation);
 
             Repository.Commit();
-
-            return commandResult;
         }
 
         public CommandResult RemoveReservations(List<string> ids)

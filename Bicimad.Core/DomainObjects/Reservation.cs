@@ -7,7 +7,7 @@ namespace Bicimad.Core.DomainObjects
     public class Reservation : IEntity
     {
         [Required]
-        public bool Isbike { get; set; }
+        public bool IsBike { get; set; }
 
         [Required]
         public string UserId { get; set; }

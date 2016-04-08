@@ -37,7 +37,7 @@ namespace Bicimad.Services.Query
 
         public ReservationDto GetReservation(string userId, string stationId, bool isBike)
         {
-            return _mapper.Map<Reservation, ReservationDto>(_repository.Reservations.FirstOrDefault(r => r.UserId == userId && r.StationId == stationId && r.Isbike == isBike));
+            return _mapper.Map<Reservation, ReservationDto>(_repository.Reservations.FirstOrDefault(r => r.UserId == userId && r.StationId == stationId && r.IsBike == isBike));
         }
     }
 }

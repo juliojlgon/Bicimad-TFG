@@ -12,7 +12,7 @@ namespace Bicimad.Core.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 13),
-                        Isbike = c.Boolean(nullable: false),
+                        IsBike = c.Boolean(nullable: false),
                         UserId = c.String(nullable: false, maxLength: 13),
                         ItemId = c.String(nullable: false, maxLength: 13),
                         StationId = c.String(nullable: false, maxLength: 13),
@@ -57,7 +57,7 @@ namespace Bicimad.Core.Migrations
 /*
 CREATE TABLE [dbo].[Reservations] (
     [Id] [nvarchar](13) NOT NULL,
-    [Isbike] [bit] NOT NULL,
+    [IsBike] [bit] NOT NULL,
     [UserId] [nvarchar](13) NOT NULL,
     [ItemId] [nvarchar](13) NOT NULL,
     [StationId] [nvarchar](13) NOT NULL,
