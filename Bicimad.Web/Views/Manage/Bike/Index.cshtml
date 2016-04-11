@@ -163,8 +163,8 @@
                     stations.push(data[i]);
                     var lat = data[i].Latitude;
                     var lon = data[i].Longitude;
-                    var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
-                    var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
+                    var porc = data[i].FreeBikes / data[i].BikeNum;
+                    var availSlots = data[i].AvailSlots;
                     var stationBooked = data[i].IsBikeBooked;
 
                     //var parentDiv = $("<div/>", { id: "kdjfkd", title: "fjsdpof" });

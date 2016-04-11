@@ -12,7 +12,7 @@ namespace Bicimad.Web.MapperProfile
                 Id = dto.Id,
                 CreatedDate = dto.CreatedDate,
                 FreeBikes = dto.FreeBikes,
-                BikeNum = dto.FreeBikes,
+                BikeNum = dto.BikeNum,
                 Bus = dto.Bus,
                 FriendlyUrlStationName = dto.FriendlyUrlStationName,
                 IsBikeBooked = isBikeBook,
@@ -21,7 +21,8 @@ namespace Bicimad.Web.MapperProfile
                 Longitude = dto.Longitude,
                 Metro = dto.Metro,
                 ReservedSlots = dto.ReservedSlots,
-                StationName = dto.StationName
+                StationName = dto.StationName,
+                AvailSlots = dto.BikeNum - (dto.FreeBikes + dto.ReservedSlots)
             };
             return model;
         }

@@ -8,9 +8,9 @@ namespace Bicimad.Services.Query.Dto.Station
 
         public DateTime CreatedDate { get; set; }
 
-        public string BikeNum { get; set; }
+        public int BikeNum { get; set; }
 
-        public string FreeBikes { get; set; }
+        public int FreeBikes { get; set; }
 
         public string StationName { get; set; }
 
@@ -24,7 +24,7 @@ namespace Bicimad.Services.Query.Dto.Station
 
         public string Bus { get; set; }
 
-        public string ReservedSlots { get; set; }
+        public int ReservedSlots { get; set; }
 
     }
 }

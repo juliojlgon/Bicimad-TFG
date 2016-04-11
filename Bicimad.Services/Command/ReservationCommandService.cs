@@ -124,7 +124,7 @@ namespace Bicimad.Services.Command
             {
                 var bike = Repository.Bikes.First(b => b.Id == reservation.ItemId);
                 bike.IsBooked = false;
-                Repository.Stations.First(s => s.Id == stationId).FreeBikes++;
+                //Repository.Stations.First(s => s.Id == stationId).FreeBikes++;
             }
             else
             {

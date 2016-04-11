@@ -98,9 +98,9 @@
                     for (var i = 0; i < data.length; i++) {
                         stations.push(data[i]);
                         var lat = data[i].Latitude;
-                        var long = data[i].Longitude;
-                        var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
-                        var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
+                        var lon = data[i].Longitude;
+                        var porc = data[i].FreeBikes / data[i].BikeNum;
+                        var availSlots = data[i].AvailSlots;
                         var stationBooked = data[i].IsBikeBooked;
                         var markertext = "<b class=\"text-center  center-block\">" + data[i].StationName + "</b><hr>" +
                             "<b>Bicicletas disponibles: </b>" + data[i].FreeBikes + "<br>" +
@@ -109,16 +109,16 @@
                             "<b>Bus: </b>" + data[i].Bus + "<br>";
                         var marker;
                         if (stationBooked) {
-                            marker = L.marker([lat, long], { icon: bookedMarker });
+                            marker = L.marker([lat, lon], { icon: bookedMarker });
                         }
                         else if (porc > 0.75) {
-                            marker = L.marker([lat, long], { icon: greenMarker });
+                            marker = L.marker([lat, lon], { icon: greenMarker });
                         } else if (porc <= 0) {
-                            marker = L.marker([lat, long], { icon: greyMarker });
+                            marker = L.marker([lat, lon], { icon: greyMarker });
                         } else if (porc < 0.25) {
-                            marker = L.marker([lat, long], { icon: redMarker });
+                            marker = L.marker([lat, lon], { icon: redMarker });
                         } else  {
-                            marker = L.marker([lat, long], { icon: orangeMarker });
+                            marker = L.marker([lat, lon], { icon: orangeMarker });
                         }
                         marker.bindPopup(markertext);
                         marker.addTo(map);

@@ -11,9 +11,9 @@ namespace Bicimad.Web.Models.Station
 
         public DateTime CreatedDate { get; set; }
 
-        public string BikeNum { get; set; }
+        public int BikeNum { get; set; }
 
-        public string FreeBikes { get; set; }
+        public int FreeBikes { get; set; }
 
         public string StationName { get; set; }
 
@@ -27,11 +27,13 @@ namespace Bicimad.Web.Models.Station
 
         public string Bus { get; set; }
 
-        public string ReservedSlots { get; set; }
+        public int ReservedSlots { get; set; }
 
         public bool IsBikeBooked { get; set; }
 
         public bool IsSlotBooked { get; set; }
+
+        public int AvailSlots { get; set; }
 
     }
 }
