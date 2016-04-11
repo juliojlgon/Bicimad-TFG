@@ -10,9 +10,10 @@ using Bicimad.Services.Command.Interface;
 
 namespace Bicimad.Services.Command
 {
-    public class ReservationCommandService: BaseCommandService, IReservationCommandService
+    public class ReservationCommandService : BaseCommandService, IReservationCommandService
     {
-        public ReservationCommandService(IRepository repository) : base(repository)
+        public ReservationCommandService(IRepository repository)
+            : base(repository)
         {
         }
 
@@ -35,25 +36,34 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
 
-            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished && isBike))
+            var userHistorical = Repository.UserHistories.Where(us => us.UserId == userId);
+
+            if (userHistorical.Any(us =>!us.Finished && isBike))
             {
                 commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
                 return commandResult;
             }
-            
+
+            if (userHistorical.All(us => us.Finished))
+            {
+
+                commandResult.AddValidationError("No puedes reservar un anclaje sin tener una bicicleta.");
+                return commandResult;
+            }
+
             if (isBike && Repository.Reservations.Any(r => r.IsBike && r.UserId == userId))
             {
                 var reserv = Repository.Reservations.First(r => isBike && r.UserId == userId);
-                RemoveReservationItem(stationId,reserv);
+                RemoveReservationItem(stationId, reserv);
             }
-            
+
             if (!isBike && Repository.Reservations.Any(r => !r.IsBike && r.UserId == userId))
             {
                 var reserv = Repository.Reservations.First(r => !isBike && r.UserId == userId);
-                RemoveReservationItem(stationId,reserv);
+                RemoveReservationItem(stationId, reserv);
             }
 
-            
+
             //TODO: Buscar si hay mas errores de validación.
 
             var id = GuidHelper.GenerateId();
@@ -104,7 +114,7 @@ namespace Bicimad.Services.Command
                 commandResult.AddValidationError("La reserva no es válida");
                 return commandResult;
             }
-            
+
             RemoveReservationItem(stationId, reservation);
 
             return commandResult;
@@ -143,7 +153,7 @@ namespace Bicimad.Services.Command
             }
 
             Repository.Reservations.RemoveRange(reservations);
-            return commandResult ;
+            return commandResult;
         }
     }
 }
