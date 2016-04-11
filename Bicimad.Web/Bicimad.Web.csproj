@@ -84,6 +84,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -232,6 +233,7 @@
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
+    <Compile Include="Extensions\TempDataExtension.cs" />
     <Compile Include="Extensions\HtmlHelperExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -409,6 +411,7 @@
     </None>
     <Content Include="Views\Manage\Bike\Index.cshtml" />
     <Content Include="Views\Manage\Bike\ReturnBike.cshtml" />
+    <Content Include="Views\Shared\_Message.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -425,6 +428,10 @@
     <ProjectReference Include="..\Bicimad.Core\Bicimad.Core.csproj">
       <Project>{636A6C20-8A44-464A-AF4C-626B64C6C02B}</Project>
       <Name>Bicimad.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bicimad.Enums\Bicimad.Enums.csproj">
+      <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
+      <Name>Bicimad.Enums</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bicimad.Services\Bicimad.Services.csproj">
       <Project>{66E10168-7502-4E07-A1AB-48AC99F03B83}</Project>

@@ -1,7 +1,9 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using Bicimad.Enums;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Interfaces;
+using Bicimad.Web.Extensions;
 using Bicimad.Web.Models.Home;
 
 namespace Bicimad.Web.Controllers
@@ -59,6 +61,7 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == null)
             {
+                TempData.SetMessage("Estación no valida.", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, BikeId = "", Error = "Estación no valida" }
@@ -79,6 +82,7 @@ namespace Bicimad.Web.Controllers
                 var bike = _bikeQueryService.GetFreeBike(stationId);
                 if (bike == null)
                 {
+                    TempData.SetMessage("No hay bicletas disponibles", MessageType.Error);
                     return new JsonResult
                     {
                         Data = new { Success = false, BikeId = "", Error = "No hay bicicletas disponibles" }
@@ -91,12 +95,14 @@ namespace Bicimad.Web.Controllers
 
             if (action.ItemId != null)
             {
+                TempData.SetMessage("Has cogido la bicicleta " + bikeId, MessageType.Success);
                 return new JsonResult
                 {
                     Data = new { Success = true, BikeId = bikeId, Error = "" }
                 };
             }
 
+            TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
             return new JsonResult
             {
                 Data = new { Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage }
@@ -108,6 +114,7 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == null)
             {
+                TempData.SetMessage("Estación no valida.", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, Error = "Estación no valida" }
@@ -124,12 +131,14 @@ namespace Bicimad.Web.Controllers
 
             if (action.ItemId != null)
             {
+                TempData.SetMessage("Has devuelto la bicicleta.", MessageType.Success);
                 return new JsonResult
                 {
                     Data = new { Success = true, Error = "" }
                 };
             }
 
+            TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
             return new JsonResult
             {
                 Data = new { Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage }
@@ -141,6 +150,7 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == "")
             {
+                TempData.SetMessage("Estación no valida.", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, BikeId = "", Error = "Estación no valida" }
@@ -151,6 +161,7 @@ namespace Bicimad.Web.Controllers
 
             if (bike == null)
             {
+                TempData.SetMessage("No hay bicicletas disponibles", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, BikeId = "", Error = "No hay bicicletas disponibles" }
@@ -161,12 +172,14 @@ namespace Bicimad.Web.Controllers
 
             if (action.ItemId != null)
             {
+                TempData.SetMessage("Has reservado la bicicleta " + bike.Id, MessageType.Success);
                 return new JsonResult
                 {
                     Data = new { Success = true, BikeId = bike.Id, Error = "" }
                 };
             }
 
+            TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
             return new JsonResult
             {
                 Data = new { Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage }
@@ -178,6 +191,7 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == null)
             {
+                TempData.SetMessage("Estación no válida.", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, Error = "Estación no valida" }
@@ -189,12 +203,14 @@ namespace Bicimad.Web.Controllers
 
             if (action.ItemId != null)
             {
+                TempData.SetMessage("Reserva e bicicleta eliminada.", MessageType.Success);
                 return new JsonResult
                 {
                     Data = new { Success = true, Error = "" }
                 };
             }
 
+            TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
             return new JsonResult
             {
                 Data = new { Success = false, Error = action.ValidationErrors.First().ErrorMessage }

@@ -2,9 +2,11 @@
 
 using System.Linq;
 using System.Web.Mvc;
+using Bicimad.Enums;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query;
 using Bicimad.Services.Query.Interfaces;
+using Bicimad.Web.Extensions;
 
 namespace Bicimad.Web.Controllers
 {
@@ -39,6 +41,7 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == null)
             {
+                TempData.SetMessage("Estación no valida", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, BikeId = "", Error = "Estación no valida" }
@@ -49,26 +52,33 @@ namespace Bicimad.Web.Controllers
 
             if (slot == null)
             {
+                TempData.SetMessage("No hay anclajes disponibles", MessageType.Error);
                 return new JsonResult
                 {
-                    Data = new { Success = false, BikeId = "", Error = "No hay bicicletas disponibles" }
+                    Data = new { Success = false, BikeId = "", Error = "No hay anclajes disponibles" }
                 };
+                
             }
 
             var action = _reservationCommandService.BookItem(userId, stationId, slot.Id, false);
 
             if (action.ItemId != null)
             {
+                TempData.SetMessage("Has reservado el anclaje" + slot.Id,MessageType.Success);
                 return new JsonResult
                 {
                     Data = new { Success = true, BikeId = slot.Id, Error = "" }
                 };
+                
             }
 
+            TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
             return new JsonResult
             {
                 Data = new { Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage }
             };
+            
+            
         }
 
         [HttpPost]
@@ -76,6 +86,7 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == null)
             {
+                TempData.SetMessage("Estación no valida", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = false, Error = "Estación no valida" }
@@ -87,12 +98,14 @@ namespace Bicimad.Web.Controllers
 
             if (action.ItemId != null)
             {
+                TempData.SetMessage("Reserva Eliminada", MessageType.Error);
                 return new JsonResult
                 {
                     Data = new { Success = true, Error = "" }
                 };
             }
 
+            TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
             return new JsonResult
             {
                 Data = new { Success = false, Error = action.ValidationErrors.First().ErrorMessage }

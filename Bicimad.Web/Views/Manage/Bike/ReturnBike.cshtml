@@ -243,11 +243,13 @@
                     "success": function (data) {
                         if (data.Success) {
 
-                            var msg = "Has dejado la bicicleta con exito";
-                            paintAlert(msg, "green");
+                            //var msg = "Has dejado la bicicleta con exito";
+                            //paintAlert(msg, "green");
+                            window.location = "@Url.Action(MVC.Home.Index())";
                         } else {
-                            msg = "Error: " + data.Error;
-                            paintAlert(msg, "red");
+                            //msg = "Error: " + data.Error;
+                            //paintAlert(msg, "red");
+                            window.location = "@Url.Action(MVC.Bike.ReturnIndex())";
                         }
                     },
                     "error": function () {
@@ -270,11 +272,13 @@
                     "dataType": "json",
                     "success": function (data) {
                         if (data.Success) {
-                            var msg = "Has Reservado el anclaje número " + data.BikeId;
-                            paintAlert(msg, "green");
+                            //var msg = "Has Reservado el anclaje número " + data.BikeId;
+                            //paintAlert(msg, "green");
+                            window.location =  "@Url.Action(MVC.Bike.ReturnIndex())";
                         } else {
-                            msg = "Error: " + data.Error;
-                            paintAlert(msg, "red");
+                            window.location = "@Url.Action(MVC.Bike.ReturnIndex())";
+                        //    msg = "Error: " + data.Error;
+                        //    paintAlert(msg, "red");
                         }
                     },
                     "error": function () {

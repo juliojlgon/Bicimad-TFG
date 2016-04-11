@@ -44,7 +44,7 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
 
-            if (userHistorical.All(us => us.Finished))
+            if (!isBike && userHistorical.All(us => us.Finished))
             {
 
                 commandResult.AddValidationError("No puedes reservar un anclaje sin tener una bicicleta.");
