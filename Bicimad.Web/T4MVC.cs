@@ -202,54 +202,6 @@ namespace Links
         public static readonly string mdb_min_css = Url("mdb.min.css");
         public static readonly string mdsidebarcss_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/mdsidebarcss.min.css") ? Url("mdsidebarcss.min.css") : Url("mdsidebarcss.css");
         public static readonly string PagedList_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/PagedList.min.css") ? Url("PagedList.min.css") : Url("PagedList.css");
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public static class sass {
-            private const string URLPATH = "~/Content/sass";
-            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
-            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-            public static class mdb {
-                private const string URLPATH = "~/Content/sass/mdb";
-                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
-                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-                [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-                public static class free {
-                    private const string URLPATH = "~/Content/sass/mdb/free";
-                    public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
-                    public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-                    public static readonly string _animations_scss = Url("_animations.scss");
-                    public static readonly string _buttons_scss = Url("_buttons.scss");
-                    public static readonly string _cards_scss = Url("_cards.scss");
-                    public static readonly string _carousel_scss = Url("_carousel.scss");
-                    public static readonly string _color_scss = Url("_color.scss");
-                    public static readonly string _dropdown_scss = Url("_dropdown.scss");
-                    public static readonly string _forms_basic_scss = Url("_forms-basic.scss");
-                    public static readonly string _global_scss = Url("_global.scss");
-                    public static readonly string _helpers_scss = Url("_helpers.scss");
-                    public static readonly string _hover_effects_scss = Url("_hover-effects.scss");
-                    public static readonly string _mixins_scss = Url("_mixins.scss");
-                    public static readonly string _navbar_scss = Url("_navbar.scss");
-                    public static readonly string _normalize_scss = Url("_normalize.scss");
-                    public static readonly string _pagination_scss = Url("_pagination.scss");
-                    public static readonly string _panel_scss = Url("_panel.scss");
-                    public static readonly string _parallax_scss = Url("_parallax.scss");
-                    public static readonly string _prefixer_scss = Url("_prefixer.scss");
-                    public static readonly string _roboto_scss = Url("_roboto.scss");
-                    public static readonly string _scrollspy_scss = Url("_scrollspy.scss");
-                    public static readonly string _sections_scss = Url("_sections.scss");
-                    public static readonly string _shadows_scss = Url("_shadows.scss");
-                    public static readonly string _tooltip_scss = Url("_tooltip.scss");
-                    public static readonly string _typography_scss = Url("_typography.scss");
-                    public static readonly string _variables_scss = Url("_variables.scss");
-                    public static readonly string _video_background_scss = Url("_video-background.scss");
-                    public static readonly string _waves_scss = Url("_waves.scss");
-                }
-            
-            }
-        
-            public static readonly string mdb_scss = Url("mdb.scss");
-        }
-    
         public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
     }
 
@@ -327,24 +279,6 @@ namespace Links
             }
             public static partial class img 
             {
-                public static class Assets
-                {
-                }
-            }
-            public static partial class sass 
-            {
-                public static partial class mdb 
-                {
-                    public static partial class free 
-                    {
-                        public static class Assets
-                        {
-                        }
-                    }
-                    public static class Assets
-                    {
-                    }
-                }
                 public static class Assets
                 {
                 }

@@ -7,8 +7,9 @@
 
 @if (Model != null && Model.Any())
 {
-    <table class="table table-striped table-responsive">
+    <table class="table table-striped">
         <tr>
+            <th></th>
             <th>Tipo</th>
             <th>Estacion</th>
             <th>Fecha</th>
@@ -16,16 +17,18 @@
             <th>#Bicicleta</th>
             @*<th>Finalizado</th>*@
         </tr>
-
+        @{string userId = ViewBag.UserId;}
         @foreach (var user in Model)
         {
             <tr>
                 @if (user.Isbike)
                 {
+                    <td><a href="@Url.Action(MVC.Bike.RemoveBikeReservation(userId, user.StationId))"><i class="material-icons left">delete</i></a></td>
                     <td>Bicicleta</td>
                 }
                 else
                 {
+                    <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId,user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
                     <td>Anclaje</td>
                 }
 

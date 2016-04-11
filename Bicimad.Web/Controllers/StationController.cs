@@ -81,35 +81,38 @@ namespace Bicimad.Web.Controllers
             
         }
 
-        [HttpPost]
+        
         public virtual ActionResult RemoveSlotReservation(string userId, string stationId)
         {
             if (stationId == null)
             {
                 TempData.SetMessage("Estación no valida", MessageType.Error);
-                return new JsonResult
-                {
-                    Data = new { Success = false, Error = "Estación no valida" }
-                };
+                return RedirectToAction(MVC.User.Home.ActiveRerservations());
+                //return new JsonResult
+                //{
+                //    Data = new { Success = false, Error = "Estación no valida" }
+                //};
             }
 
             
             var action = _reservationCommandService.RemoveReservation(userId, stationId);
 
-            if (action.ItemId != null)
+            if (action.Success)
             {
                 TempData.SetMessage("Reserva Eliminada", MessageType.Error);
-                return new JsonResult
-                {
-                    Data = new { Success = true, Error = "" }
-                };
+                return RedirectToAction(MVC.User.Home.ActiveRerservations());
+                //return new JsonResult
+                //{
+                //    Data = new { Success = true, Error = "" }
+                //};
             }
 
             TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
-            return new JsonResult
-            {
-                Data = new { Success = false, Error = action.ValidationErrors.First().ErrorMessage }
-            };
+            return RedirectToAction(MVC.User.Home.ActiveRerservations());
+            //return new JsonResult
+            //{
+            //    Data = new { Success = false, Error = action.ValidationErrors.First().ErrorMessage }
+            //};
         }
     }
 }

@@ -4,6 +4,12 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Zona Privada</title>
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     @Styles.Render("~/Content/css")
     @Styles.Render(BundleConfig.Mdbootstrap)
     @*@Styles.Render(BundleConfig.NavbarCss)*@
@@ -64,25 +70,25 @@
         </li>
         <li>
             <a href="@Url.Action(MVC.User.Home.Index())">
-                <i class="sidebar-icon md-history"></i>
+                <i class="material-icons left">navigation</i>
                 Trayectos
             </a>
         </li>
         <li>
             <a href="@Url.Action(MVC.User.Home.Index())">
-                <i class="sidebar-icon md-star"></i>
+                <i class="material-icons left">star</i>
                 Estaciones favoritas
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="sidebar-icon  md-wallet"></i>
+                <i class="material-icons left">account_balance_wallet</i>
                 Saldo
             </a>
         </li>
         <li>
             <a href="@Url.Action(MVC.User.Home.ActiveRerservations())">
-                <i class="sidebar-icon md-reservations"></i>
+                <i class="material-icons left">today</i>
                 Reservas activas
             </a>
         </li>
@@ -106,10 +112,10 @@
 </div>
     
 
-    <div class="wrapper">
-        <div class="container">
+    <div class="wrapper container">
+        
             @RenderBody()
-        </div>
+        
     </div>
 
     

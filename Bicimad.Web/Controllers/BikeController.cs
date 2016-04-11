@@ -186,35 +186,38 @@ namespace Bicimad.Web.Controllers
             };
         }
 
-        [HttpPost]
+        
         public virtual ActionResult RemoveBikeReservation(string userId, string stationId)
         {
             if (stationId == null)
             {
                 TempData.SetMessage("Estación no válida.", MessageType.Error);
-                return new JsonResult
-                {
-                    Data = new { Success = false, Error = "Estación no valida" }
-                };
+                //return new JsonResult
+                //{
+                //    Data = new { Success = false, Error = "Estación no valida" }
+                //};
+                return RedirectToAction(MVC.User.Home.ActiveRerservations());
             }
 
 
             var action = _reservationCommandService.RemoveReservation(userId, stationId);
 
-            if (action.ItemId != null)
+            if (action.Success)
             {
                 TempData.SetMessage("Reserva e bicicleta eliminada.", MessageType.Success);
-                return new JsonResult
-                {
-                    Data = new { Success = true, Error = "" }
-                };
+                return RedirectToAction(MVC.User.Home.ActiveRerservations());
+                //return new JsonResult
+                //{
+                //    Data = new { Success = true, Error = "" }
+                //};
             }
 
             TempData.SetMessage(action.ValidationErrors.First().ErrorMessage, MessageType.Error);
-            return new JsonResult
-            {
-                Data = new { Success = false, Error = action.ValidationErrors.First().ErrorMessage }
-            };
+            return RedirectToAction(MVC.User.Home.ActiveRerservations());
+            //return new JsonResult
+            //{
+            //    Data = new { Success = false, Error = action.ValidationErrors.First().ErrorMessage }
+            //};
         }
 
         public virtual ActionResult InformBrokenBike(string bikeId)

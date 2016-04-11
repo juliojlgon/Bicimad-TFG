@@ -21,7 +21,7 @@ namespace Bicimad.Web
         //public const string NavbarCss = "~/Content/css/mdsidebarcss";
         public const string NavbarJs = "~/bundles/mdsidebar";
 
-        public const string Mdbootstrap = "~/Content/css/mdbootstrap";
+        public const string Mdbootstrap = "~/Content/mdbootstrap";
     
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
