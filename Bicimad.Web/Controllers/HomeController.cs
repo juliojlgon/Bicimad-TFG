@@ -1,7 +1,12 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
+using Bicimad.Services.Query.Dto.Station;
 using Bicimad.Services.Query.Interfaces;
+using Bicimad.Services.Query.Queries;
+using Bicimad.Web.MapperProfile;
 using Bicimad.Web.Models.Home;
+using Bicimad.Web.Models.Station;
 
 namespace Bicimad.Web.Controllers
 {
@@ -9,11 +14,13 @@ namespace Bicimad.Web.Controllers
     {
         private readonly IBikeQueryService _bikeQueryService;
         private readonly IStationQueryService _stationQueryService;
+        private readonly IReservationQueryService _reservationQueryService;
 
-        public HomeController(IStationQueryService stationQueryService, IBikeQueryService bikeQueryService)
+        public HomeController(IStationQueryService stationQueryService, IBikeQueryService bikeQueryService, IReservationQueryService reservationQueryService)
         {
             _stationQueryService = stationQueryService;
             _bikeQueryService = bikeQueryService;
+            _reservationQueryService = reservationQueryService;
         }
 
         public virtual ActionResult Index()
@@ -51,9 +58,37 @@ namespace Bicimad.Web.Controllers
         public virtual ActionResult FillMap()
         {
             var stations = _stationQueryService.GetStations();
-            //TODO: MODELO CON TODO. AÑADIR LAS RESERVAS.
-            var jsonStation = Json(stations);
-            return jsonStation;
+            var mapModel = new List<MapReservStationModel>();
+            if (User.Identity.IsAuthenticated)
+            {
+                var query = new ReservationQuery {Id = CurrentUser.Id};
+                var reservations = _reservationQueryService.GetReservations(ref query);
+                //As we can just have two active as much at the same time.
+                var bikeReservation = reservations.FirstOrDefault(r => r.Isbike);
+                var slotReservation = reservations.FirstOrDefault(r => !r.Isbike);
+
+                foreach (var station in stations)
+                {
+                    var bike = false;
+                    var slot = false;
+                    if (bikeReservation != null && station.Id == bikeReservation.StationId)
+                        bike = true;
+                    
+                    if (slotReservation != null && station.Id == slotReservation.StationId)
+                        slot = true;
+                    mapModel.Add(station.ToModel(bike, slot));
+                }
+
+            }
+            else
+            {
+                mapModel = stations.Select(u => u.ToModel(false, false)).ToList();
+            }
+            
+            var jsonStationModel = Json(mapModel);
+            return jsonStationModel;
         }
+
+        
     }
 }

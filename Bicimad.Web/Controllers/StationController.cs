@@ -48,7 +48,7 @@ namespace Bicimad.Web.Controllers
                 };
             }
 
-            var slot = _slotQueryService.GetFreeBike(stationId);
+            var slot = _slotQueryService.GetFreeSlot(stationId);
 
             if (slot == null)
             {

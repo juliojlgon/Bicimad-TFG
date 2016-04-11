@@ -19,7 +19,7 @@ namespace Bicimad.Services.Query
             _repository = repostory;
         }
 
-        public SlotDto GetFreeBike(string stationId)
+        public SlotDto GetFreeSlot(string stationId)
         {
             return _mapper.Map<Slot, SlotDto>(_repository.Slots.FirstOrDefault(b => b.StationId == stationId && !b.InUse && !b.IsBooked && b.IsWorking));
         }

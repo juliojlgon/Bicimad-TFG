@@ -125,6 +125,12 @@
             shape: "square",
             prefix: "fa"
         });
+        var bookedMarker = L.ExtraMarkers.icon({
+            icon: "fa-bicycle",
+            markerColor: "violet",
+            shape: "square",
+            prefix: "fa"
+        });
 
 
         var highlight = null;
@@ -159,13 +165,15 @@
                     var lon = data[i].Longitude;
                     var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
                     var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
+                    var stationBooked = data[i].IsBikeBooked;
 
                     //var parentDiv = $("<div/>", { id: "kdjfkd", title: "fjsdpof" });
                     //var img = $("<img/>", { id: "kdjfkd", title: "fjsdpof", src: "skdfjsdkljf" });
 
                     var marker;
-
-                    if (porc > 0.75) {
+                    if (stationBooked) {
+                        marker = L.marker([lat, lon], { icon: bookedMarker });
+                    }else if (porc > 0.75) {
                         marker = L.marker([lat, lon], { icon: greenMarker, title: data[i].Id });
                     } else if (porc <= 0) {
                         marker = L.marker([lat, lon], { icon: greyMarker, title: data[i].Id });

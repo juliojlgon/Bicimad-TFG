@@ -73,8 +73,6 @@ namespace Bicimad.Services.Command
             {
                 var bike = Repository.Bikes.First(b => b.Id == itemId);
                 bike.IsBooked = true;
-                var freeB = station.FreeBikes - 1;
-                station.FreeBikes = freeB;
             }
             else
             {

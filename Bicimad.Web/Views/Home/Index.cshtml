@@ -79,6 +79,12 @@
                 shape: "square",
                 prefix: "fa"
             });
+            var bookedMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "violet",
+                shape: "square",
+                prefix: "fa"
+            });
 
 
             var url = "/home/fillmap";
@@ -95,13 +101,17 @@
                         var long = data[i].Longitude;
                         var porc = parseInt(data[i].FreeBikes) / parseInt(data[i].BikeNum);
                         var availSlots = parseInt(data[i].BikeNum) - (parseInt(data[i].FreeBikes) + parseInt(data[i].ReservedSlots));
+                        var stationBooked = data[i].IsBikeBooked;
                         var markertext = "<b class=\"text-center  center-block\">" + data[i].StationName + "</b><hr>" +
                             "<b>Bicicletas disponibles: </b>" + data[i].FreeBikes + "<br>" +
                             "<b>Anclajes disponibles: </b>" + availSlots + "<br>" +
                             "<b>Metro: </b>" + data[i].Metro + "<br>" +
                             "<b>Bus: </b>" + data[i].Bus + "<br>";
                         var marker;
-                        if (porc > 0.75) {
+                        if (stationBooked) {
+                            marker = L.marker([lat, long], { icon: bookedMarker });
+                        }
+                        else if (porc > 0.75) {
                             marker = L.marker([lat, long], { icon: greenMarker });
                         } else if (porc <= 0) {
                             marker = L.marker([lat, long], { icon: greyMarker });

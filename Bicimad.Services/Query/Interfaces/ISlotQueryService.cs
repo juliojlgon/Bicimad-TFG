@@ -4,6 +4,6 @@ namespace Bicimad.Services.Query.Interfaces
 {
     public interface ISlotQueryService
     {
-        SlotDto GetFreeBike(string stationId);
+        SlotDto GetFreeSlot(string stationId);
     }
 }

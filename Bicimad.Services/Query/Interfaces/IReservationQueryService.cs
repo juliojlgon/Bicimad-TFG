@@ -16,5 +16,7 @@ namespace Bicimad.Services.Query.Interfaces
         /// <param name="isBike"></param>
         /// <returns>Reservation if it exist</returns>
         ReservationDto GetReservation(string userId, string stationId, bool isBike);
+
+       
     }
 }
