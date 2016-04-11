@@ -175,7 +175,7 @@
 
                         var marker;
                         if (stationBooked) {
-                            marker = L.marker([lat, lon], { icon: bookedMarker });
+                            marker = L.marker([lat, lon], { icon: bookedMarker, title: data[i].Id });
                         }else if (porc > 0.75) {
                             marker = L.marker([lat, lon], { icon: greenMarker, title: data[i].Id });
                         } else if (porc <= 0) {
