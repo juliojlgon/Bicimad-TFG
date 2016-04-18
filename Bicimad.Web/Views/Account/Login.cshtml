@@ -1,6 +1,7 @@
-﻿@model Bicimad.Web.Models.AccountModels.LoginModel
+﻿@using Bicimad.Resources
+@model Bicimad.Web.Models.Account.LoginModel
 @{
-    ViewBag.Title = "Comienza a pedalear";
+    ViewBag.Title = Resources.LoginTitle;
 }
 
 <!--Form-->
@@ -26,7 +27,7 @@
 
             <div class="input-field">
                 <label class="form-inline input-field">
-                    @Html.CheckBoxFor(m => m.RememberMe) Remember me?
+                    @Html.CheckBoxFor(m => m.RememberMe) @Resources.RememberMe
                 </label>
 
                 <div class="text-center">
@@ -34,7 +35,7 @@
                 </div>
                 <div>
                     <div class="text-center">
-                        <a href="@Url.Action(MVC.Account.Register())">Submit</a>
+                        <a href="@Url.Action(MVC.Account.Register())">@Resources.Submit</a>
                     </div>
                 </div>
             </div>

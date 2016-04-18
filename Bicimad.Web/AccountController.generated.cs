@@ -178,10 +178,10 @@ namespace Bicimad.Web.Controllers
         }
 
         [NonAction]
-        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.AccountModels.LoginModel model, string returnUrl);
+        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Bicimad.Web.Models.Account.LoginModel model, string returnUrl);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Login(Bicimad.Web.Models.AccountModels.LoginModel model, string returnUrl)
+        public override System.Web.Mvc.ActionResult Login(Bicimad.Web.Models.Account.LoginModel model, string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);

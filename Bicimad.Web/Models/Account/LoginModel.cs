@@ -1,16 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Bicimad.Web.Models.AccountModels
+namespace Bicimad.Web.Models.Account
 {
     public class LoginModel
     {
-        [Required(ErrorMessage = "Field can't be empty.")]
-        [Display(Name = "Username or email")]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+              ErrorMessageResourceName = "Required")]
+        [Display(Name = "DisplayUsername", ResourceType = typeof(Resources.Resources))]
         public string UserNameOrEmail { get; set; }
 
-        [Required(ErrorMessage = "Field can't be empty.")]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+              ErrorMessageResourceName = "Required")]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "DisplayPassword", ResourceType = typeof(Resources.Resources))]
         public string Password { get; set; }
 
         public bool RememberMe { get; set; }

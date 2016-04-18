@@ -1,4 +1,5 @@
-﻿@model Bicimad.Web.Models.Home.BikeStatsModel
+﻿@using Bicimad.Resources
+@model Bicimad.Web.Models.Home.BikeStatsModel
 @{
     ViewBag.Title = "Home";
 }
@@ -8,28 +9,28 @@
 <div class="col-md-2 center-block" style="margin-top: 5em">
     <div class="card default-color darken-1 z-depth-3">
         <div class="card-content white-text">
-            <span class="card-title">Statistics</span>
+            <span class="card-title">@Resources.Statistic</span>
             @if (Model != null)
             {
-                <p>Free Bikes: @Model.FreeBikes </p>
-                <p>Active Bikes: @Model.ActiveBikes</p>
-                <p>Broken Bikes:@Model.BrokenBikes </p>
+                <p>@Resources.FreeBikes: @Model.FreeBikes </p>
+                <p>@Resources.ActiveBikes: @Model.ActiveBikes</p>
+                <p>@Resources.BrokenBikes:@Model.BrokenBikes </p>
             }
 
         </div>
     </div>
 
     <div class="panel text-center">
-        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">Take Bike</a>
-        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">Return Bike</a>
-        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">Book slot</a>
-        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">Return Bike</a>
+        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">@Resources.TakeBike</a>
+        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookBike</a>
+        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookSlot</a>
+        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">@Resources.ReturnBike</a>
     </div>
 </div>
 
 <div class="card default-color darken-1 col-md-10">
     <div class="card-content">
-        <span class="card-title">Status</span>
+        <span class="card-title">@Resources.Status</span>
         <div id="map" style="height: 550px;
                                       max-height: 50%;">
         </div>
@@ -103,8 +104,8 @@
                         var availSlots = data[i].AvailSlots;
                         var stationBooked = data[i].IsBikeBooked;
                         var markertext = "<b class=\"text-center  center-block\">" + data[i].StationName + "</b><hr>" +
-                            "<b>Free Bikes: </b>" + data[i].FreeBikes + "<br>" +
-                            "<b>Free Slots: </b>" + availSlots + "<br>" +
+                            "<b>@Resources.FreeBikes: </b>" + data[i].FreeBikes + "<br>" +
+                            "<b>@Resources.FreeSlots: </b>" + availSlots + "<br>" +
                             "<b>Metro: </b>" + data[i].Metro + "<br>" +
                             "<b>Bus: </b>" + data[i].Bus + "<br>";
                         var marker;

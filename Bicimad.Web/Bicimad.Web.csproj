@@ -408,6 +408,10 @@
       <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
       <Name>Bicimad.Enums</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Bicimad.Resources\Bicimad.Resources.csproj">
+      <Project>{11bcac89-25fd-4744-8a6b-c1b2886f823f}</Project>
+      <Name>Bicimad.Resources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bicimad.Services\Bicimad.Services.csproj">
       <Project>{66E10168-7502-4E07-A1AB-48AC99F03B83}</Project>
       <Name>Bicimad.Services</Name>

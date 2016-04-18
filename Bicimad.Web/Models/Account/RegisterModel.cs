@@ -21,14 +21,16 @@ namespace Bicimad.Web.Models.AccountModels
         [MaxLength(64)]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "Mandatory")]
-        [StringLength(100, ErrorMessage = "Password must be at least {2} Characters", MinimumLength = 6)]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+              ErrorMessageResourceName = "Required")]
+        [StringLength(100, ErrorMessageResourceType = typeof(Resources.Resources),
+              ErrorMessageResourceName = "MinLength")]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "DisplayPassword", ResourceType = typeof(Resources.Resources))]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm your password:")]
+        [Display(Name = "RePassword", ResourceType = typeof(Resources.Resources))]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Password do not match")]
         public string ConfirmPassword { get; set; }
 

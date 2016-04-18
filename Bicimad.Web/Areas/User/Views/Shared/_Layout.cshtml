@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Bicimad.Resources
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -48,12 +49,12 @@
             <ul id="settings-dropdown" class="dropdown-menu ">
                 <li>
                     <a href="@Url.Action(MVC.Bike.Index())" tabindex="-1">
-                        Take Bike
+                        @Resources.TakeBike
                     </a>
                 </li>
                 <li>
                     <a href="@Url.Action(MVC.Bike.ReturnIndex())" tabindex="-1">
-                        Return Bike
+                        @Resources.ReturnBike
                     </a>
                 </li>
                 <li>
@@ -63,7 +64,7 @@
                 </li>
                 <li>
                     <a href="@Url.Action(MVC.Bike.ReturnIndex())" tabindex="-1">
-                        Book Slot
+                        @Resources.BookSlot
                     </a>
                 </li>
             </ul>

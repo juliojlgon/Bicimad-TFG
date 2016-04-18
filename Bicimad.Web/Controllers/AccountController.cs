@@ -5,6 +5,7 @@ using Bicimad.Services.Command.Commands.User;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Dto.User;
 using Bicimad.Services.Query.Interfaces;
+using Bicimad.Web.Models.Account;
 using Bicimad.Web.Models.AccountModels;
 
 namespace Bicimad.Web.Controllers

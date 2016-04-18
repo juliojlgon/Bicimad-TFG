@@ -1,4 +1,5 @@
-﻿@model Bicimad.Web.Models.Home.BikeStatsModel
+﻿@using Bicimad.Resources
+@model Bicimad.Web.Models.Home.BikeStatsModel
 @{
     ViewBag.Title = "Coger Bicicleta";
 }
@@ -12,9 +13,9 @@
                 <span class="card-title">Statistics</span>
                 @if (Model != null)
                 {
-                    <p>Bicis libres: @Model.FreeBikes </p>
-                    <p>Bicis en uso: @Model.ActiveBikes</p>
-                    <p>Bicis averiadas:@Model.BrokenBikes </p>
+                    <p>@Resources.FreeBikes: @Model.FreeBikes </p>
+                    <p>@Resources.ActiveBikes: @Model.ActiveBikes</p>
+                    <p>@Resources.BrokenBikes:@Model.BrokenBikes </p>
                 }
 
             </div>
@@ -28,14 +29,14 @@
         </div>
 
         <div class="panel text-center">
-            <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">Take Bike</a>
+            <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">@Resources.TakeBike</a>
             <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">Book Bike</a>
         </div>
     </div>
 
     <div class="card default-color darken-1 col-md-9 ">
         <div class="card-content">
-            <span class="card-title">Status</span>
+            <span class="card-title">@Resources.Status</span>
             <div id="map" style="height: 550px; max-height: 50%;">
             </div>
         </div>
@@ -66,7 +67,7 @@
                     $("#station-title").text(stationName);
                     $("#station").text("");
                     $("<p class=\"flow-text\" style=\"font-size: 1.2vw\">"
-                            + "Free Bikes -> " + freeBikes + "<br/>"
+                            + "@Resources.FreeBikes -> " + freeBikes + "<br/>"
                             + "Metro -> " + metro + "<br/>"
                             + "Bus -> " + bus + "</p>")
                         .appendTo("#station");
