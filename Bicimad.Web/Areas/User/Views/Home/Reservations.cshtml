@@ -1,4 +1,5 @@
-﻿@using Bicimad.Web.Extensions
+﻿@using Bicimad.Resources
+@using Bicimad.Web.Extensions
 @model PagedList.StaticPagedList<Bicimad.Services.Query.Dto.Reservation.ReservationDto>
 
 @{
@@ -10,11 +11,11 @@
     <table class="table table-striped">
         <tr>
             <th></th>
-            <th>Type</th>
-            <th>Station</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Bike#</th>
+            <th>@Resources.Type</th>
+            <th>@Resources.Station</th>
+            <th>@Resources.Date</th>
+            <th>@Resources.Time</th>
+            <th>@Resources.BikeId</th>
             @*<th>Finalizado</th>*@
         </tr>
         @{string userId = ViewBag.UserId;}
@@ -24,12 +25,12 @@
                 @if (user.Isbike)
                 {
                     <td><a href="@Url.Action(MVC.Bike.RemoveBikeReservation(userId, user.StationId))"><i class="material-icons left">delete</i></a></td>
-                    <td>Bike</td>
+                    <td>@Resources.Bike</td>
                 }
                 else
                 {
                     <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId,user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
-                    <td>Slot</td>
+                    <td>@Resources.Slot</td>
                 }
 
                 <td>
@@ -71,5 +72,5 @@
 }
 else
 {
-    <h2 class="h2-responsive">No active reservations.</h2>
+    <h2 class="h2-responsive">@Resources.NoReservation</h2>
 }

@@ -183,4 +183,67 @@
   <data name="TakeBike" xml:space="preserve">
     <value>Take Bike</value>
   </data>
+  <data name="ActiveReservations" xml:space="preserve">
+    <value>Active Reservations</value>
+  </data>
+  <data name="ArrivalStation" xml:space="preserve">
+    <value>Arrival Station</value>
+  </data>
+  <data name="Bike" xml:space="preserve">
+    <value>Bike</value>
+  </data>
+  <data name="BikeId" xml:space="preserve">
+    <value>Bike #</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DepartStation" xml:space="preserve">
+    <value>Departure Station</value>
+  </data>
+  <data name="isFinished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="LoginLink" xml:space="preserve">
+    <value>Are you already a biker?</value>
+  </data>
+  <data name="Money" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="NoReservation" xml:space="preserve">
+    <value>No active Reservations.</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Create your acount</value>
+  </data>
+  <data name="RegistrationButton" xml:space="preserve">
+    <value>Let's go!</value>
+  </data>
+  <data name="ReturnActions" xml:space="preserve">
+    <value>Return Actions</value>
+  </data>
+  <data name="ReturnBikeTitle" xml:space="preserve">
+    <value>Return your bike</value>
+  </data>
+  <data name="Slot" xml:space="preserve">
+    <value>Slot</value>
+  </data>
+  <data name="Station" xml:space="preserve">
+    <value>Station</value>
+  </data>
+  <data name="TakeActions" xml:space="preserve">
+    <value>Take Actions</value>
+  </data>
+  <data name="TakeBikeTitle" xml:space="preserve">
+    <value>Take a bike!</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
 </root>

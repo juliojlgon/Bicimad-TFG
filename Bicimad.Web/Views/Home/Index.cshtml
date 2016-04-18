@@ -1,7 +1,7 @@
 ﻿@using Bicimad.Resources
 @model Bicimad.Web.Models.Home.BikeStatsModel
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "Home"; //No resource -> No debería cambiar.
 }
 
 <br/>
@@ -21,10 +21,10 @@
     </div>
 
     <div class="panel text-center">
-        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">@Resources.TakeBike</a>
-        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookBike</a>
-        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookSlot</a>
-        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">@Resources.ReturnBike</a>
+        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">@Resources.TakeActions</a>
+        @*<a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookBike</a>*@
+        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">@Resources.ReturnActions</a>
+        @*<a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">@Resources.ReturnBike</a>*@
     </div>
 </div>
 

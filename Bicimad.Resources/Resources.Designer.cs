@@ -70,6 +70,42 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active Reservations.
+        /// </summary>
+        public static string ActiveReservations {
+            get {
+                return ResourceManager.GetString("ActiveReservations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrival Station.
+        /// </summary>
+        public static string ArrivalStation {
+            get {
+                return ResourceManager.GetString("ArrivalStation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bike.
+        /// </summary>
+        public static string Bike {
+            get {
+                return ResourceManager.GetString("Bike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bike #.
+        /// </summary>
+        public static string BikeId {
+            get {
+                return ResourceManager.GetString("BikeId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book Bike.
         /// </summary>
         public static string BookBike {
@@ -93,6 +129,24 @@ namespace Bicimad.Resources {
         public static string BrokenBikes {
             get {
                 return ResourceManager.GetString("BrokenBikes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Departure Station.
+        /// </summary>
+        public static string DepartStation {
+            get {
+                return ResourceManager.GetString("DepartStation", resourceCulture);
             }
         }
         
@@ -133,11 +187,29 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Finished.
+        /// </summary>
+        public static string isFinished {
+            get {
+                return ResourceManager.GetString("isFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you already a biker?.
+        /// </summary>
+        public static string LoginLink {
+            get {
+                return ResourceManager.GetString("LoginLink", resourceCulture);
             }
         }
         
@@ -169,6 +241,24 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Money.
+        /// </summary>
+        public static string Money {
+            get {
+                return ResourceManager.GetString("Money", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No active Reservations..
+        /// </summary>
+        public static string NoReservation {
+            get {
+                return ResourceManager.GetString("NoReservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prices.
         /// </summary>
         public static string Prices {
@@ -183,6 +273,33 @@ namespace Bicimad.Resources {
         public static string Promotions {
             get {
                 return ResourceManager.GetString("Promotions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign in.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create your acount.
+        /// </summary>
+        public static string RegisterTitle {
+            get {
+                return ResourceManager.GetString("RegisterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s go!.
+        /// </summary>
+        public static string RegistrationButton {
+            get {
+                return ResourceManager.GetString("RegistrationButton", resourceCulture);
             }
         }
         
@@ -214,11 +331,47 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Return Actions.
+        /// </summary>
+        public static string ReturnActions {
+            get {
+                return ResourceManager.GetString("ReturnActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Return Bike.
         /// </summary>
         public static string ReturnBike {
             get {
                 return ResourceManager.GetString("ReturnBike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return your bike.
+        /// </summary>
+        public static string ReturnBikeTitle {
+            get {
+                return ResourceManager.GetString("ReturnBikeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slot.
+        /// </summary>
+        public static string Slot {
+            get {
+                return ResourceManager.GetString("Slot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Station.
+        /// </summary>
+        public static string Station {
+            get {
+                return ResourceManager.GetString("Station", resourceCulture);
             }
         }
         
@@ -250,11 +403,47 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Take Actions.
+        /// </summary>
+        public static string TakeActions {
+            get {
+                return ResourceManager.GetString("TakeActions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Take Bike.
         /// </summary>
         public static string TakeBike {
             get {
                 return ResourceManager.GetString("TakeBike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Take a bike!.
+        /// </summary>
+        public static string TakeBikeTitle {
+            get {
+                return ResourceManager.GetString("TakeBikeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
             }
         }
     }

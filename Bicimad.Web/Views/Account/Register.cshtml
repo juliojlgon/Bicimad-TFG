@@ -1,6 +1,7 @@
-﻿@model Bicimad.Web.Models.AccountModels.RegisterModel
+﻿@using Bicimad.Resources
+@model Bicimad.Web.Models.AccountModels.RegisterModel
 @{
-    ViewBag.Title = "Registrarse";
+    ViewBag.Title = @Resources.RegisterTitle;
 }
 
 @*<h2>@ViewBag.Title.</h2>*@
@@ -40,11 +41,11 @@
             </div>
 
             <div class="text-center">
-                <input type="submit" class="btn btn-primary" value="Empezar!" data-cat="Register" data-act="Submit" data-lab="Regular" />
+                <input type="submit" class="btn btn-primary" value="@Resources.RegistrationButton" data-cat="Register" data-act="Submit" data-lab="Regular" />
             </div>
             <div class="text-center">
 
-                ¿Ya tienes cuenta? <a href="@Url.Action(MVC.Account.Login())">Login</a>
+                @Resources.LoginLink <a href="@Url.Action(MVC.Account.Login())">@Resources.Login</a>
 
             </div>
         </form>
