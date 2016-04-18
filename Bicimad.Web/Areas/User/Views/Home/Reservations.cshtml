@@ -10,11 +10,11 @@
     <table class="table table-striped">
         <tr>
             <th></th>
-            <th>Tipo</th>
-            <th>Estacion</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>#Bicicleta</th>
+            <th>Type</th>
+            <th>Station</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Bike#</th>
             @*<th>Finalizado</th>*@
         </tr>
         @{string userId = ViewBag.UserId;}
@@ -24,12 +24,12 @@
                 @if (user.Isbike)
                 {
                     <td><a href="@Url.Action(MVC.Bike.RemoveBikeReservation(userId, user.StationId))"><i class="material-icons left">delete</i></a></td>
-                    <td>Bicicleta</td>
+                    <td>Bike</td>
                 }
                 else
                 {
                     <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId,user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
-                    <td>Anclaje</td>
+                    <td>Slot</td>
                 }
 
                 <td>
@@ -71,5 +71,5 @@
 }
 else
 {
-    <h2 class="h2-responsive">No tienes ninguna reserva activa.</h2>
+    <h2 class="h2-responsive">No active reservations.</h2>
 }
