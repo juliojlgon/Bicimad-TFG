@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Enums", "Bicimad.En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Resources", "Bicimad.Resources\Bicimad.Resources.csproj", "{11BCAC89-25FD-4744-8A6B-C1B2886F823F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Api", "Bicimad.Api\Bicimad.Api.csproj", "{65C42317-B55E-4636-A3E6-16078A3CFD77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
