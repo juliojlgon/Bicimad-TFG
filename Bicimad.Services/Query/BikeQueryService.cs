@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
@@ -13,7 +10,6 @@ namespace Bicimad.Services.Query
 {
     public class BikeQueryService: IBikeQueryService
     {
-
         private readonly IRepository _repository;
         private readonly IMapper _mapper;
 

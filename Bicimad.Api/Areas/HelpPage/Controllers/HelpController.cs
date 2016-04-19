@@ -9,7 +9,7 @@ namespace Bicimad.Api.Areas.HelpPage.Controllers
     /// <summary>
     /// The controller that will handle requests for the help page.
     /// </summary>
-    public partial class HelpController : Controller
+    public class HelpController : Controller
     {
         private const string ErrorViewName = "Error";
 
@@ -25,13 +25,13 @@ namespace Bicimad.Api.Areas.HelpPage.Controllers
 
         public HttpConfiguration Configuration { get; private set; }
 
-        public virtual ActionResult Index()
+        public ActionResult Index()
         {
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
             return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
         }
 
-        public virtual ActionResult Api(string apiId)
+        public ActionResult Api(string apiId)
         {
             if (!String.IsNullOrEmpty(apiId))
             {
@@ -45,7 +45,7 @@ namespace Bicimad.Api.Areas.HelpPage.Controllers
             return View(ErrorViewName);
         }
 
-        public virtual ActionResult ResourceModel(string modelName)
+        public ActionResult ResourceModel(string modelName)
         {
             if (!String.IsNullOrEmpty(modelName))
             {

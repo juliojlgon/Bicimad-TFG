@@ -77,6 +77,7 @@
     <Compile Include="Query\Dto\User\UserDto.cs" />
     <Compile Include="Query\Interfaces\IBikeQueryService.cs" />
     <Compile Include="Query\Interfaces\IReservationQueryService.cs" />
+    <Compile Include="Query\Interfaces\ISecurityQueryService.cs" />
     <Compile Include="Query\Interfaces\ISlotQueryService.cs" />
     <Compile Include="Query\Interfaces\IStationQueryService.cs" />
     <Compile Include="Query\Interfaces\IUserHistoryQueryService.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Query\Queries\ReservationQuery.cs" />
     <Compile Include="Query\Queries\UserHistoryQuery.cs" />
     <Compile Include="Query\ReservationQueryService.cs" />
+    <Compile Include="Query\SecurityQueryService.cs" />
     <Compile Include="Query\SlotQueryService.cs" />
     <Compile Include="Query\StationQueryService.cs" />
     <Compile Include="Query\UserQueryService.cs" />
