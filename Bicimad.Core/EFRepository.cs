@@ -18,7 +18,7 @@ namespace Bicimad.Core
 
         public DbSet<UserHistory> UserHistories { get; set; }
 
-        public DbSet<ApiUser> ApiUsers { get; set; }
+        //public DbSet<ApiUser> ApiUsers { get; set; }
 
         public int Commit()
         {

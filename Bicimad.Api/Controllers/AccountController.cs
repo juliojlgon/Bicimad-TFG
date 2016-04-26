@@ -1,8 +1,6 @@
-﻿using System.Web.Helpers;
-using System.Web.Mvc;
-using System.Web.Security;
-using System.Web.UI.WebControls;
+﻿using System.Web.Http;
 using Bicimad.Api.Models.Account;
+using Bicimad.Helpers;
 using Bicimad.Services.Command.Commands.User;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Dto.User;
@@ -22,8 +20,8 @@ namespace Bicimad.Api.Controllers
         }
         
 
-        [HttpPost]
-        public virtual ActionResult Login(LoginModel model)
+        [System.Web.Mvc.HttpPost]
+        public virtual IHttpActionResult Login(LoginModel model)
         {
             if (ModelState.IsValid)
             {
@@ -31,18 +29,16 @@ namespace Bicimad.Api.Controllers
                 var loginResult = _userQueryService.TryLogin(model.UserNameOrEmail, model.Password, out userDto);
                 if (loginResult)
                 {
-                    LogUser(userDto, model.RememberMe);
+                    var token = LogUser(userDto, model.RememberMe);
                     
-                    //TODO: REDIRIGIR A LA PAGINA ADECUADA
-                    return RedirectToAction(MVC.Home.Index());
+                    return Json(token);
                 }
             }
 
-            ViewBag.ReturnUrl = returnUrl;
-            return System.Web.UI.WebControls.View(MVC.Account.Views.Login, model);
+            return NotFound();
         }
 
-        private void LogUser(UserLoginDto userDto, bool remember)
+        private string LogUser(UserLoginDto userDto, bool remember)
         {
             CurrentUser = new UserLoggedModel
             {
@@ -54,16 +50,13 @@ namespace Bicimad.Api.Controllers
                 FriendlyUrlName = userDto.FriendlyUrlUserName
             };
 
-            FormsAuthentication.SetAuthCookie(CurrentUser.SerializeForCookie(), remember);
-        }
+            return HashHelper.GenerateToken(userDto.UserName, userDto.Password);
 
-        public virtual ActionResult Register()
-        {
-            return System.Web.UI.WebControls.View(MVC.Account.Views.Register, new RegisterModel());
-        }
 
-        [HttpPost]
-        public virtual ActionResult Register(string from, RegisterModel model)
+        }
+       
+        [System.Web.Mvc.HttpPost]
+        public virtual IHttpActionResult Register(string from, RegisterModel model)
         {
             if (ModelState.IsValid)
             {
@@ -78,17 +71,17 @@ namespace Bicimad.Api.Controllers
 
                 if (createUserResult.Success)
                 {
-                    return RedirectToAction(MVC.Account.Login());
+                    return Ok();
                 }
             }
 
-            return System.Web.UI.WebControls.View(MVC.Account.Views.Register, model);
+            return BadRequest();
         }
 
-        public virtual ActionResult LogOut()
+        public virtual IHttpActionResult LogOut()
         {
-            FormsAuthentication.SignOut();
-            return RedirectToAction(MVC.Home.Index());
+            //Borrar el Token y regenerarlo en el siguiente login.
+            return Ok();
         }
 
         /// <summary>
@@ -96,10 +89,10 @@ namespace Bicimad.Api.Controllers
         /// </summary>
         /// <param name="email"></param>
         /// <returns></returns>
-        public virtual ActionResult ValidateEmailUnique(string email)
+        public virtual IHttpActionResult ValidateEmailUnique(string email)
         {
             var exists = _userQueryService.ExistsEmail(email);
-            return Json(!exists, JsonRequestBehavior.AllowGet);
+            return Json(!exists);
         }
 
         /// <summary>
@@ -107,10 +100,10 @@ namespace Bicimad.Api.Controllers
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
-        public virtual ActionResult ValidateUserNameUnique(string userName)
+        public virtual IHttpActionResult ValidateUserNameUnique(string userName)
         {
             var exists = _userQueryService.ExistsUserName(userName);
-            return Json(!exists, JsonRequestBehavior.AllowGet);
+            return Json(!exists);
         }
     }
 }

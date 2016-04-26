@@ -57,7 +57,7 @@ namespace Bicimad.Services.Query
                             var password = user.Password;
 
                             // Hash the message with the key to generate a token.
-                            var computedToken = HashHelper.GenerateToken(username, password,ticks);
+                            var computedToken = HashHelper.GenerateToken(username, password);
 
                             // Compare the computed token with the one supplied and ensure they match.
                             result = (token == computedToken);

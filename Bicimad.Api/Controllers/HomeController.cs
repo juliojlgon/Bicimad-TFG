@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace Bicimad.Api.Controllers
 {
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             ViewBag.Title = "Home Page";
 

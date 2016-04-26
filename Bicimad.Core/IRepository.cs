@@ -12,7 +12,7 @@ namespace Bicimad.Core
         DbSet<Slot> Slots { get; set; }
         DbSet<Reservation> Reservations { get; set; }
         DbSet<UserHistory> UserHistories { get; set; }
-        DbSet<ApiUser> ApiUsers { get; set; }
+        //DbSet<ApiUser> ApiUsers { get; set; }
 
     }
 }
