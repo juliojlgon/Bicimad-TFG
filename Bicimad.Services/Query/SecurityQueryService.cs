@@ -20,12 +20,6 @@ namespace Bicimad.Services.Query
             _repository = repostory;
         }
 
-        public SecurityQueryService(EFRepository repository)
-        {
-            throw new NotImplementedException();
-        }
-
-
         public bool IsTokenValid(string token)
         {
             var result = false;

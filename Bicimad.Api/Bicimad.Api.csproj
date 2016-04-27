@@ -191,9 +191,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Attributes\ApiAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StationController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -258,6 +260,10 @@
     <ProjectReference Include="..\Bicimad.Core\Bicimad.Core.csproj">
       <Project>{636A6C20-8A44-464A-AF4C-626B64C6C02B}</Project>
       <Name>Bicimad.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bicimad.Enums\Bicimad.Enums.csproj">
+      <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
+      <Name>Bicimad.Enums</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bicimad.Resources\Bicimad.Resources.csproj">
       <Project>{11BCAC89-25FD-4744-8A6B-C1B2886F823F}</Project>

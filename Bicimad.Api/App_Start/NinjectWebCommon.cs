@@ -89,6 +89,10 @@ namespace Bicimad.Api.App_Start
             kernel.Bind<IUserCommandService>().To<UserCommandService>();
             kernel.Bind<IUserQueryService>().To<UserQueryService>();
             kernel.Bind<ISecurityQueryService>().To<SecurityQueryService>();
+            kernel.Bind<IStationQueryService>().To<StationQueryService>();
+            kernel.Bind<IReservationQueryService>().To<ReservationQueryService>();
+            kernel.Bind<IReservationCommandService>().To<ReservationCommandService>();
+            kernel.Bind<ISlotQueryService>().To<SlotQueryService>();
         }        
     }
 }
