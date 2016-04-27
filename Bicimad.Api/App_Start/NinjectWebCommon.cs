@@ -88,6 +88,7 @@ namespace Bicimad.Api.App_Start
             kernel.Bind<IRepository>().To<EFRepository>();
             kernel.Bind<IUserCommandService>().To<UserCommandService>();
             kernel.Bind<IUserQueryService>().To<UserQueryService>();
+            kernel.Bind<ISecurityQueryService>().To<SecurityQueryService>();
         }        
     }
 }

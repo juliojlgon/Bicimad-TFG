@@ -11,34 +11,44 @@ namespace Bicimad.Api.Controllers
     public class AccountController : BaseController
     {
         private readonly IUserCommandService _userCommandService;
+        private readonly ISecurityQueryService _securityQueryService;
         private readonly IUserQueryService _userQueryService;
 
-        public AccountController(IUserQueryService userQueryService, IUserCommandService userCommandService)
+
+        public AccountController(IUserQueryService userQueryService, IUserCommandService userCommandService, ISecurityQueryService securityQueryService)
         {
             _userQueryService = userQueryService;
             _userCommandService = userCommandService;
+            _securityQueryService = securityQueryService;
         }
-        
 
+        // POST: api/login
         [System.Web.Mvc.HttpPost]
-        public virtual IHttpActionResult Login(LoginModel model)
+        public virtual IHttpActionResult Login(string username, string password)
         {
+            var model = new LoginModel
+            {
+                Password = password,
+                RememberMe = false,
+                UserNameOrEmail = username
+            };
             if (ModelState.IsValid)
             {
                 UserLoginDto userDto;
                 var loginResult = _userQueryService.TryLogin(model.UserNameOrEmail, model.Password, out userDto);
                 if (loginResult)
                 {
-                    var token = LogUser(userDto, model.RememberMe);
-                    
-                    return Json(token);
+                    var token = LogUser(userDto, password, model.RememberMe);
+                    _securityQueryService.IsTokenValid(token);
+
+                    return Json(new { Success = true, Token = token });
                 }
             }
 
-            return NotFound();
+            return Json(new { Success = false, Token = "" });
         }
 
-        private string LogUser(UserLoginDto userDto, bool remember)
+        private string LogUser(UserLoginDto userDto, string password, bool remember)
         {
             CurrentUser = new UserLoggedModel
             {
@@ -50,7 +60,7 @@ namespace Bicimad.Api.Controllers
                 FriendlyUrlName = userDto.FriendlyUrlUserName
             };
 
-            return HashHelper.GenerateToken(userDto.UserName, userDto.Password);
+            return HashHelper.GenerateToken(userDto.Id, userDto.UserName, password, DateTimeHelper.SpanishNow.Ticks);
 
 
         }

@@ -25,19 +25,19 @@ namespace Bicimad.Helpers
         /// 3. Hash the username:ip:userAgent:timeStamp with the key of password:salt to compute a token.
         /// 4. Compare the computed token with the one supplied and ensure they match.
         /// </summary>
-        public static string GenerateToken(string username, string password)
+        public static string GenerateToken(string id, string username, string password, long ticks)
         {
-            string hash = string.Join(":", username);
+            string hash = string.Join(":", id, username, ticks);
             string hashLeft = "";
             string hashRight = "";
 
-            using (HMAC hmac = HMAC.Create(Alg))
+            using (var hmac = HMAC.Create(Alg))
             {
                 hmac.Key = Encoding.UTF8.GetBytes(Hash(password));
                 hmac.ComputeHash(Encoding.UTF8.GetBytes(hash));
 
                 hashLeft = Convert.ToBase64String(hmac.Hash);
-                hashRight = string.Join(":", new string[] { username});
+                hashRight = string.Join(":", id, username, ticks);
             }
 
             return Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Join(":", hashLeft, hashRight)));

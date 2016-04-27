@@ -10,12 +10,12 @@ using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Services.Query
 {
-    public class SecurityQueryService: ISecurityQueryService
+    public class SecurityQueryService : ISecurityQueryService
     {
         private readonly IRepository _repository;
         private const int ExpirationMinutes = 10080;
 
-        public SecurityQueryService( IRepository repostory)
+        public SecurityQueryService(IRepository repostory)
         {
             _repository = repostory;
         }
@@ -36,12 +36,13 @@ namespace Bicimad.Services.Query
 
                 // Split the parts.
                 var parts = key.Split(':');
-                if (parts.Length == 3)
+                if (parts.Length == 4)
                 {
                     // Get the hash message, username, and timestamp.
                     var hash = parts[0];
-                    var username = parts[1];
-                    var ticks = long.Parse(parts[2]);
+                    var userId = parts[1];
+                    var username = parts[2];
+                    var ticks = long.Parse(parts[3]);
                     var timeStamp = new DateTime(ticks);
 
                     // Ensure the timestamp is valid.
@@ -52,17 +53,9 @@ namespace Bicimad.Services.Query
                         //
                         // Lookup the user's account from the db.
                         //
-                        if (user != null)
-                        {
-                            var password = user.Password;
-
-                            // Hash the message with the key to generate a token.
-                            var computedToken = HashHelper.GenerateToken(username, password);
-
-                            // Compare the computed token with the one supplied and ensure they match.
-                            result = (token == computedToken);
-                        }
+                        result = (user != null);
                     }
+
                 }
             }
             catch (Exception)
