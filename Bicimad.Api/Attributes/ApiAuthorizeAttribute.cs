@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http.Controllers;
 using System.Web.Mvc;
 using Bicimad.Core;
 using Bicimad.Services.Query;
 using Bicimad.Services.Query.Interfaces;
+using AuthorizeAttribute = System.Web.Http.AuthorizeAttribute;
 
 namespace Bicimad.Api.Attributes
 {
@@ -12,21 +16,32 @@ namespace Bicimad.Api.Attributes
         private static readonly EFRepository Repository = new EFRepository();
         private readonly ISecurityQueryService _securityQueryService = new SecurityQueryService(Repository);
 
-        public override void OnAuthorization(AuthorizationContext filterContext)
+         public override void OnAuthorization(System.Web.Http.Controllers.HttpActionContext actionContext)
+
         {
-            if (Authorize(filterContext))
+
+            if (AuthorizeRequest(actionContext))
+
             {
+
                 return;
+
             }
-            filterContext.Result = new HttpUnauthorizedResult();
+
+            HandleUnauthorizedRequest(actionContext);
+
         }
 
-        private bool Authorize(ControllerContext actionContext)
+        private bool AuthorizeRequest(HttpActionContext actionContext)
+
         {
+
             try
             {
-                var request = actionContext.RequestContext.HttpContext.Request;
-                var token = request.Params[SecurityToken];
+                var request = actionContext.Request;
+                IEnumerable<string> headerValues;
+                request.Headers.TryGetValues("token", out headerValues);
+                var token = headerValues.First();
 
                 return _securityQueryService.IsTokenValid(token);
             }
@@ -34,6 +49,8 @@ namespace Bicimad.Api.Attributes
             {
                 return false;
             }
+
         }
+        
     }
 }
