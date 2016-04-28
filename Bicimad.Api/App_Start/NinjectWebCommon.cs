@@ -1,7 +1,5 @@
 using System;
-using System.Linq;
 using System.Web;
-using AutoMapper;
 using Bicimad.Api.App_Start;
 using Bicimad.Core;
 using Bicimad.Services.Command;
