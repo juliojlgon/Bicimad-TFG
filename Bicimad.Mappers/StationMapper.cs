@@ -1,7 +1,7 @@
-﻿using Bicimad.Services.Query.Dto.Station;
-using Bicimad.Web.Models.Station;
+﻿using Bicimad.Models.Station;
+using Bicimad.Services.Query.Dto.Station;
 
-namespace Bicimad.Web.MapperProfile
+namespace Bicimad.Mappers
 {
     public static class StationMapper
     {

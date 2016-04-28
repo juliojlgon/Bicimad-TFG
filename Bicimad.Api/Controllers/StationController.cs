@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Bicimad.Api.Attributes;
+using Bicimad.Mappers;
+using Bicimad.Models.Station;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Services.Query.Queries;
-using Bicimad.Web.MapperProfile;
-using Bicimad.Web.Models.Station;
+
 
 
 namespace Bicimad.Api.Controllers

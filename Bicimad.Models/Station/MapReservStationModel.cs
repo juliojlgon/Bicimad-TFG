@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace Bicimad.Web.Models.Station
+namespace Bicimad.Models.Station
 {
     public class MapReservStationModel
     {

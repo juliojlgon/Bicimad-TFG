@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Services.Query.Dto.History;
@@ -12,11 +11,10 @@ namespace Bicimad.Services.Query
     public class UserHistoryQueryService: IUserHistoryQueryService
     {
         private readonly IRepository _repository;
-        private readonly IMapper _mapper;
 
-        public UserHistoryQueryService(IMapper mapper, IRepository repostory)
+
+        public UserHistoryQueryService(IRepository repostory)
         {
-            _mapper = mapper;
             _repository = repostory;
         }
 
@@ -30,16 +28,16 @@ namespace Bicimad.Services.Query
             userHistorical = userHistorical.OrderByDescending(uh => uh.CreatedDate);
 
             return query.PageSize == 0
-                ? userHistorical.ToList().Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList()
-                : userHistorical.ToList().Skip(query.PageIndex*query.PageSize).Take(query.PageSize).Select(_mapper.Map<UserHistory, UserHistoryDto>).ToList();
+                ? userHistorical.ToList().Select(ToDto).ToList()
+                : userHistorical.ToList().Skip(query.PageIndex*query.PageSize).Take(query.PageSize).Select(ToDto).ToList();
         }
 
         public UserHistoryDto GetUserHistory(string userId)
         {
-            return _mapper.Map<UserHistory, UserHistoryDto>(_repository.UserHistories.FirstOrDefault(u => u.UserId == userId && !u.Finished));
+            return ToDto(_repository.UserHistories.FirstOrDefault(u => u.UserId == userId && !u.Finished));
         }
 
-        private UserHistoryDto toDto(UserHistory userHistory)
+        private static UserHistoryDto ToDto(UserHistory userHistory)
         {
             if (userHistory == null) return null;
 
@@ -48,7 +46,7 @@ namespace Bicimad.Services.Query
                 CreatedDate = userHistory.CreatedDate,
                 Id = userHistory.Id,
                 ArrivalStationId = userHistory.ArrivalStationId,
-                ArrivalStationUserName = userHistory.ArrivalStation.StationName,
+                ArrivalStationUserName = !string.IsNullOrEmpty(userHistory.ArrivalStationId) ? userHistory.ArrivalStation.StationName : "-",
                 BikeId = userHistory.BikeId,
                 DepartureStationId = userHistory.DepartureStationId,
                 DepartureStationUserName = userHistory.DepartureStation.StationName,

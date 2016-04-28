@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Bicimad.Services.Query.Dto.Station;
+using Bicimad.Mappers;
+using Bicimad.Models.Station;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Services.Query.Queries;
-using Bicimad.Web.MapperProfile;
 using Bicimad.Web.Models.Home;
-using Bicimad.Web.Models.Station;
 
 namespace Bicimad.Web.Controllers
 {

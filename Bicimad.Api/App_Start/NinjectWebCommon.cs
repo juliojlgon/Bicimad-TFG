@@ -1,25 +1,23 @@
+using System;
 using System.Linq;
+using System.Web;
 using AutoMapper;
+using Bicimad.Api.App_Start;
 using Bicimad.Core;
 using Bicimad.Services.Command;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query;
 using Bicimad.Services.Query.Interfaces;
-using Bicimad.Web.DependencyResolution;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Web.Common;
+using WebActivatorEx;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Bicimad.Api.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Bicimad.Api.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
+[assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
 
 namespace Bicimad.Api.App_Start
 {
-    using System;
-    using System.Web;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -70,21 +68,6 @@ namespace Bicimad.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            var profiles =
-               from t in typeof(DefaultRegistry).Assembly.GetTypes()
-               where typeof(Profile).IsAssignableFrom(t)
-               select (Profile)Activator.CreateInstance(t);
-
-            var config = new MapperConfiguration(cfg =>
-            {
-                foreach (var profile in profiles)
-                {
-                    cfg.AddProfile(profile);
-                }
-            });
-            var mapper = config.CreateMapper();
-            kernel.Bind<IMapper>().ToConstant(mapper);
-
             kernel.Bind<IRepository>().To<EFRepository>();
             kernel.Bind<IUserCommandService>().To<UserCommandService>();
             kernel.Bind<IUserQueryService>().To<UserQueryService>();

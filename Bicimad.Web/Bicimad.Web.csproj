@@ -43,10 +43,6 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -246,17 +242,10 @@
     <Compile Include="ManageController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
-    <Compile Include="MapperProfile\BikeProfile.cs" />
-    <Compile Include="MapperProfile\StationMapper.cs" />
-    <Compile Include="MapperProfile\StationProfile.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
     <Compile Include="Models\Account\RegisterModel.cs" />
     <Compile Include="Models\Account\UserLoggedModel.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Home\BikeStatsModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Station\MapReservStationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
@@ -400,13 +389,17 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bicimad.Core\Bicimad.Core.csproj">
-      <Project>{636A6C20-8A44-464A-AF4C-626B64C6C02B}</Project>
-      <Name>Bicimad.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Bicimad.Enums\Bicimad.Enums.csproj">
       <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
       <Name>Bicimad.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bicimad.Mappers\Bicimad.Mappers.csproj">
+      <Project>{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}</Project>
+      <Name>Bicimad.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bicimad.Models\Bicimad.Models.csproj">
+      <Project>{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}</Project>
+      <Name>Bicimad.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Bicimad.Resources\Bicimad.Resources.csproj">
       <Project>{11bcac89-25fd-4744-8a6b-c1b2886f823f}</Project>

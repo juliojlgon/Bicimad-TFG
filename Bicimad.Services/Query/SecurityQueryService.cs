@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
 using Bicimad.Core;
-using Bicimad.Helpers;
 using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Services.Query
 {
     public class SecurityQueryService : ISecurityQueryService
     {
-        private readonly IRepository _repository;
         private const int ExpirationMinutes = 10080;
+        private readonly IRepository _repository;
 
         public SecurityQueryService(IRepository repostory)
         {
@@ -49,7 +45,6 @@ namespace Bicimad.Services.Query
                         //
                         result = (user != null);
                     }
-
                 }
             }
             catch (Exception)

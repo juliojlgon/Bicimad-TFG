@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Services.Query.Dto.Station;
@@ -11,18 +10,16 @@ namespace Bicimad.Services.Query
     public class StationQueryService : IStationQueryService
     {
         private readonly IRepository _repository;
-        private readonly IMapper _mapper;
 
-        public StationQueryService(IRepository repository, IMapper mapper)
+        public StationQueryService(IRepository repository)
         {
             _repository = repository;
-            _mapper = mapper;
         }
 
         public StationDto GetStation(string stationId)
         {
             
-            return _mapper.Map<Station, StationDto>(_repository.Stations.FirstOrDefault(s => s.Id == stationId));
+            return ToDto(_repository.Stations.FirstOrDefault(s => s.Id == stationId));
         }
 
         public List<string> GetStationNames(List<string> stationIds)
@@ -35,7 +32,29 @@ namespace Bicimad.Services.Query
         public List<StationDto> GetStations()
         {
             var stations =  _repository.Stations.ToList();
-            return stations.Select(station => _mapper.Map<Station, StationDto>(station)).ToList();
-        } 
+            return stations.Select(ToDto).ToList();
+        }
+
+        private static StationDto ToDto(Station station)
+        {
+            if (station == null) return null;
+
+            var dto = new StationDto
+            {
+                BikeNum = station.BikeNum,
+                CreatedDate = station.CreatedDate,
+                Id = station.Id,
+                ReservedSlots = station.ReservedSlots,
+                Bus = station.Bus,
+                FriendlyUrlStationName = station.FriendlyUrlStationName,
+                Latitude = station.Latitude,
+                Longitude = station.Longitude,
+                Metro = station.Metro,
+                StationName = station.StationName,
+                FreeBikes = station.FreeBikes
+            };
+
+            return dto;
+        }
     }
 }

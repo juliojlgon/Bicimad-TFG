@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Services.Query.Dto.Bike;
@@ -11,28 +10,26 @@ namespace Bicimad.Services.Query
     public class BikeQueryService: IBikeQueryService
     {
         private readonly IRepository _repository;
-        private readonly IMapper _mapper;
 
-        public BikeQueryService(IMapper mapper, IRepository repostory)
+        public BikeQueryService(IRepository repostory)
         {
-            _mapper = mapper;
             _repository = repostory;
         }
 
         public List<BikeDto> GetBikes()
         {
             var bikes = _repository.Bikes.ToList();
-            return bikes.Select(bike => _mapper.Map<Bike, BikeDto>(bike)).ToList();
+            return bikes.Select(ToDto).ToList();
         }
 
         public List<BikeDto> GetBikesByStationId(string id)
         {
-            return _repository.Bikes.Where(b => b.StationId == id).Select(bike => _mapper.Map<Bike, BikeDto>(bike)).ToList();
+            return _repository.Bikes.Where(b => b.StationId == id).Select(ToDto).ToList();
         }
 
         public List<BikeDto> GetBikesByStationNameList(string name)
         {
-            return _repository.Bikes.Where(b => b.Station.StationName == name).Select(bike => _mapper.Map<Bike, BikeDto>(bike)).ToList(); 
+            return _repository.Bikes.Where(b => b.Station.StationName == name).Select(ToDto).ToList(); 
         }
 
         /// <summary>
@@ -42,7 +39,24 @@ namespace Bicimad.Services.Query
         /// <returns>BikeDto or Null</returns>
         public BikeDto GetFreeBike(string stationId)
         {
-            return _mapper.Map<Bike, BikeDto>(_repository.Bikes.FirstOrDefault(b => b.StationId == stationId && !b.IsActive && !b.IsBooked && b.IsWorking));
+            return ToDto(_repository.Bikes.FirstOrDefault(b => b.StationId == stationId && !b.IsActive && !b.IsBooked && b.IsWorking));
+        }
+
+        private static BikeDto ToDto(Bike bike)
+        {
+            if (bike == null) return null;
+
+            var dto = new BikeDto
+            {
+                Id = bike.Id,
+                IsWorking = bike.IsWorking,
+                CreatedDate = bike.CreatedDate,
+                IsBooked = bike.IsBooked,
+                IsActive = bike.IsActive,
+                StationId = bike.StationId
+            };
+
+            return dto;
         }
     }
 }
