@@ -35,10 +35,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -77,6 +73,7 @@
     <Compile Include="Query\Dto\User\UserDto.cs" />
     <Compile Include="Query\Interfaces\IBikeQueryService.cs" />
     <Compile Include="Query\Interfaces\IReservationQueryService.cs" />
+    <Compile Include="Query\Interfaces\ISecurityQueryService.cs" />
     <Compile Include="Query\Interfaces\ISlotQueryService.cs" />
     <Compile Include="Query\Interfaces\IStationQueryService.cs" />
     <Compile Include="Query\Interfaces\IUserHistoryQueryService.cs" />
@@ -85,6 +82,7 @@
     <Compile Include="Query\Queries\ReservationQuery.cs" />
     <Compile Include="Query\Queries\UserHistoryQuery.cs" />
     <Compile Include="Query\ReservationQueryService.cs" />
+    <Compile Include="Query\SecurityQueryService.cs" />
     <Compile Include="Query\SlotQueryService.cs" />
     <Compile Include="Query\StationQueryService.cs" />
     <Compile Include="Query\UserQueryService.cs" />

@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using Bicimad.Enums;
+using Bicimad.Models.Home;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Web.Extensions;
-using Bicimad.Web.Models.Home;
 
 namespace Bicimad.Web.Controllers
 {

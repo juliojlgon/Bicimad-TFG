@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Bicimad.Api;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(Bicimad.Api.Startup))]
-
+[assembly: OwinStartup(typeof(Startup))]
 namespace Bicimad.Api
 {
-    public partial class Startup
+    public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
         }
     }
 }

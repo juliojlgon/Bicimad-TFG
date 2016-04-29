@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using AutoMapper;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Helpers;
@@ -10,13 +9,11 @@ namespace Bicimad.Services.Query
 {
     public class UserQueryService : IUserQueryService
     {
-        private readonly IMapper _mapper;
         private readonly IRepository _repository;
 
-        public UserQueryService(IRepository repository, IMapper mapper)
+        public UserQueryService(IRepository repository)
         {
             _repository = repository;
-            _mapper = mapper;
         }
 
         public bool TryLogin(string userNameOrEmail, string password, out UserLoginDto outUser)
@@ -37,7 +34,7 @@ namespace Bicimad.Services.Query
 
         public UserDto GetUser(string userId)
         {
-            return _mapper.Map<User, UserDto>(_repository.Users.FirstOrDefault(u => u.Id == userId));
+            return ToDto(_repository.Users.FirstOrDefault(u => u.Id == userId));
         }
 
         public bool ExistsEmail(string email)
@@ -70,6 +67,27 @@ namespace Bicimad.Services.Query
             };
 
             return true;
+        }
+
+        private static UserDto ToDto(User user)
+        {
+            if (user == null) return null;
+
+            var dto = new UserDto
+            {
+                CreatedDate = user.CreatedDate,
+                Id = user.Id,
+                IsActive = user.IsActive,
+                Avatar = user.Avatar,
+                Email = user.Email,
+                FriendlyUrlUserName = user.FriendlyUrlUserName,
+                UserName = user.UserName,
+                Name = user.UserName,
+                IsAdmin = user.IsAdmin,
+                Password = user.Password
+            };
+
+            return dto;
         }
     }
 }

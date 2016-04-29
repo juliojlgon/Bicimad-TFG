@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Web", "Bicimad.Web\Bicimad.Web.csproj", "{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Api", "Bicimad.Api\Bicimad.Api.csproj", "{3D546CB2-4E64-4123-BC53-B5107F102AA1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Core", "Bicimad.Core\Bicimad.Core.csproj", "{636A6C20-8A44-464A-AF4C-626B64C6C02B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Services", "Bicimad.Services\Bicimad.Services.csproj", "{66E10168-7502-4E07-A1AB-48AC99F03B83}"
@@ -19,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Enums", "Bicimad.En
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Resources", "Bicimad.Resources\Bicimad.Resources.csproj", "{11BCAC89-25FD-4744-8A6B-C1B2886F823F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Api", "Bicimad.Api\Bicimad.Api.csproj", "{65C42317-B55E-4636-A3E6-16078A3CFD77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Mappers", "Bicimad.Mappers\Bicimad.Mappers.csproj", "{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Models", "Bicimad.Models\Bicimad.Models.csproj", "{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +33,6 @@ Global
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D546CB2-4E64-4123-BC53-B5107F102AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D546CB2-4E64-4123-BC53-B5107F102AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D546CB2-4E64-4123-BC53-B5107F102AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D546CB2-4E64-4123-BC53-B5107F102AA1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +53,18 @@ Global
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +73,7 @@ Global
 		{1589AD50-1C09-4C11-A917-B1799DE1C805} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 		{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
+		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
+		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 	EndGlobalSection
 EndGlobal
