@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Linq;
+using System.Web.Http;
+using Bicimad.Api.Attributes;
 using Bicimad.Api.Models.Account;
 using Bicimad.Helpers;
 using Bicimad.Services.Command.Commands.User;
@@ -65,29 +67,35 @@ namespace Bicimad.Api.Controllers
 
         }
        
-        [System.Web.Mvc.HttpPost]
-        public virtual IHttpActionResult Register(string from, RegisterModel model)
+        [HttpPost]
+        public virtual IHttpActionResult Register(string username, string email, string password, string rePass)
         {
-            if (ModelState.IsValid)
+            var model = new RegisterModel
             {
-                var createUserResult = _userCommandService.Create(new CreateUserCommand
-                {
-                    UserName = model.UserName,
-                    FriendlyUrlUserName = model.UserName.Sanitize(),
-                    Email = model.Email,
-                    Password = model.Password,
-                    IsActive = true
-                });
+                UserName = username,
+                Password = password,
+                Email = email,
+                ConfirmPassword = rePass
+            };
+            if (!ModelState.IsValid) return Json(new {Success = false});
+            var createUserResult = _userCommandService.Create(new CreateUserCommand
+            {
+                UserName = model.UserName,
+                FriendlyUrlUserName = model.UserName.Sanitize(),
+                Email = model.Email,
+                Password = model.Password,
+                IsActive = true
+            });
 
-                if (createUserResult.Success)
-                {
-                    return Ok();
-                }
+            if (createUserResult.Success)
+            {
+                return Ok( new {Success = true});
             }
 
-            return BadRequest();
+            return Json(new { Success = false, Response = createUserResult.ValidationErrors.Select(e => e.ErrorMessage).First()});
         }
 
+        [ApiAuthorize]
         public virtual IHttpActionResult LogOut()
         {
             //Borrar el Token y regenerarlo en el siguiente login.

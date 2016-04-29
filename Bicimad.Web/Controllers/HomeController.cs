@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Web.Mvc;
 using Bicimad.Mappers;
+using Bicimad.Models.Home;
 using Bicimad.Models.Station;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Services.Query.Queries;
-using Bicimad.Web.Models.Home;
 
 namespace Bicimad.Web.Controllers
 {

@@ -1,4 +1,4 @@
-﻿namespace Bicimad.Web.Models.Home
+﻿namespace Bicimad.Models.Home
 {
     public class BikeStatsModel
     {
