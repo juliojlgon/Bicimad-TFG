@@ -16,7 +16,7 @@ namespace Bicimad.Api.Controllers
         private readonly IReservationQueryService _reservationQueryService;
 
         public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService,
-            IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService,
+            IReservationCommandService reservationCommandService,
             IReservationQueryService reservationQueryService)
         {
             _bikeCommandService = bikeCommandService;
