@@ -95,6 +95,14 @@ namespace Bicimad.Api.Controllers
             return Json(new { Success = false, Response = createUserResult.ValidationErrors.Select(e => e.ErrorMessage).First()});
         }
 
+        [HttpGet]
+        public virtual IHttpActionResult IsTokenValid(string token)
+        {
+           var valid = _securityQueryService.IsTokenValid(token);
+
+            return Json(new {Token = token, Valid = valid});
+        }
+
         [ApiAuthorize]
         public virtual IHttpActionResult LogOut()
         {
