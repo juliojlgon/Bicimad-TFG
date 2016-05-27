@@ -23,4 +23,7 @@
     <!-- SharedPrefencesKeys -->
     <string name="SharedPrefences_Key">Preferencias</string>
     <string name="TokenKey">Token</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
