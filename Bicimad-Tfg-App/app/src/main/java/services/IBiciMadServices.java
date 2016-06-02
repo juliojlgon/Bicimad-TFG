@@ -4,6 +4,8 @@ package services;
 
 import models.IndexResult;
 import models.LoginResult;
+import models.ValidResult;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -18,4 +20,7 @@ public interface IBiciMadServices {
 
     @POST("Account/login")
     Observable<LoginResult> logUser(@Query("UserName") String username, @Query("Password") String password);
+
+    @GET("Account/istokenvalid")
+    Observable<ValidResult> isTokenValid(@Query("token") String token);
 }

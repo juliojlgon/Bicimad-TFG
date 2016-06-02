@@ -9,11 +9,7 @@
     tools:context="com.bicis_tfg.bicimad_tfg_app.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Mail"
-        android:layout_centerInParent="true"/>
+    <include layout="@layout/fragment_map"/>
 
 
 </RelativeLayout>

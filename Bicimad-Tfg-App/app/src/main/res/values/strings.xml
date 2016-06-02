@@ -4,6 +4,9 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">Sign in</string>
 
+    <!-- MAP API -->
+    <string name="google_api_key">AIzaSyAyJyXfrjOVuyvXdxdl7EP8snSm0wkG9a0</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -20,4 +23,7 @@
     <!-- SharedPrefencesKeys -->
     <string name="SharedPrefences_Key">Preferencias</string>
     <string name="TokenKey">Token</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
