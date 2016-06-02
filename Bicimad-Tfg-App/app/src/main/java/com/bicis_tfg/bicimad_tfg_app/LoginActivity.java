@@ -2,6 +2,7 @@ package com.bicis_tfg.bicimad_tfg_app;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.bicis_tfg.bicimad_tfg_app.models.User;
+import com.google.gson.Gson;
 
 import javax.inject.Inject;
 
@@ -40,6 +44,10 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
     @Inject
     IBiciMadServices apiService;
+    @Inject
+    Resources resources;
+
+
 
 
     @Override
@@ -81,11 +89,19 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         Observable<LoginResult> result = apiService.logUser(mEmailView.getText().toString(), mPasswordView.getText().toString());
 
+        //TODO: Devolver el usuario entero.
         result.subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(r -> {
                     if (r.getSuccess()) {
                         editor.putString(getResources().getString(R.string.TokenKey), r.getToken());
+                        editor.commit();
+                        //Save the user for later access.
+                        User user = new User();
+                        user.setUsername(mEmailView.getText().toString());
+                        Gson gson = new Gson();
+                        String json = gson.toJson(user);
+                        editor.putString(resources.getString(R.string.UserKey),json);
                         editor.commit();
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(intent);

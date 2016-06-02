@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
@@ -67,6 +68,8 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
     SharedPreferences sharedPref;
     @Inject
     IBiciMadServices apiService;
+    @Inject
+    Resources resources;
 
 
     @Override
@@ -166,13 +169,13 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
                 info.setOrientation(LinearLayout.VERTICAL);
 
                 TextView title = new TextView(context);
-                title.setTextColor(Color.BLACK);
+                title.setTextColor(resources.getColor(R.color.primaryText));
                 title.setGravity(Gravity.CENTER);
                 title.setTypeface(null, Typeface.BOLD);
                 title.setText(marker.getTitle());
 
                 TextView snippet = new TextView(context);
-                snippet.setTextColor(Color.GRAY);
+                snippet.setTextColor(resources.getColor(R.color.secondaryText));
                 snippet.setText(marker.getSnippet());
 
                 info.addView(title);
