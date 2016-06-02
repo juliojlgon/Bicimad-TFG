@@ -66,8 +66,7 @@ namespace Bicimad.Api.Controllers
         {
             var stations = _stationQueryService.GetStations();
             var mapModel = new List<MapReservStationModel>();
-            if (User.Identity.IsAuthenticated)
-            {
+            
                 var query = new ReservationQuery {Id = CurrentUser.Id};
                 var reservations = _reservationQueryService.GetReservations(ref query);
                 //As we can just have two active as much at the same time.
@@ -85,11 +84,6 @@ namespace Bicimad.Api.Controllers
                         slot = true;
                     mapModel.Add(station.ToModel(bike, slot));
                 }
-            }
-            else
-            {
-                mapModel = stations.Select(u => u.ToModel(false, false)).ToList();
-            }
 
             var jsonStationModel = Json(mapModel);
             return jsonStationModel;
