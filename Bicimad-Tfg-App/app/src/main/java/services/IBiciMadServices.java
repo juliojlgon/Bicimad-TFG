@@ -2,8 +2,11 @@ package services;
 
 
 
+import java.util.List;
+
 import models.IndexResult;
 import models.LoginResult;
+import models.Station;
 import models.ValidResult;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -23,4 +26,7 @@ public interface IBiciMadServices {
 
     @GET("Account/istokenvalid")
     Observable<ValidResult> isTokenValid(@Query("token") String token);
+
+    @POST("station/fillmap")
+    Observable<List<Station>> getStations();
 }

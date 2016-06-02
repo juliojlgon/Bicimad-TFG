@@ -42,7 +42,13 @@ public class AppModule {
     @Provides
     @Singleton
     IBiciMadServices providesServiceClient(){
-        return ServiceFactory.createRetrofitClient();
+        String token = PreferenceManager.getDefaultSharedPreferences(mApp).getString("Token","");
+        if(token == null || token.isEmpty()){
+            return ServiceFactory.createRetrofitClient();
+        }else{
+            return ServiceFactory.createRetrofitClient(token);
+        }
+
     }
 
 
