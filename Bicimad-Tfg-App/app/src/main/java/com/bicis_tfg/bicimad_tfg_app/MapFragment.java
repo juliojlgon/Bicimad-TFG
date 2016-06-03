@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Bundle;
@@ -21,6 +20,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.annimon.stream.Optional;
+import com.annimon.stream.Stream;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
@@ -70,6 +71,10 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
     IBiciMadServices apiService;
     @Inject
     Resources resources;
+
+    private List<Station> stations;
+    private Station station;
+    private Marker previousMarker;
 
 
     @Override
@@ -198,6 +203,7 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
         Observable<List<Station>> stationsObs = apiService.getStations();
         stationsObs.doOnError(throwable -> throwable.printStackTrace() ).subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(stations -> {
+                    this.stations = stations;
                     for (Station station : stations) {
                         googleMap.addMarker(
                                 new MarkerOptions()
@@ -212,6 +218,7 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
                     }
                 });
 
+        googleMap.setOnMarkerClickListener(this);
         initCamera(mCurrentLocation);
 
 
@@ -239,7 +246,24 @@ public class MapFragment extends com.google.android.gms.maps.MapFragment impleme
     }
     @Override
     public boolean onMarkerClick(Marker marker) {
+        //If we selected a icon before return to its original state.
+        if(previousMarker != null){
+            Station station = getStationByName(previousMarker.getTitle());
+            BitmapDescriptor oldIcon = getIcon(station.getIsBikeBooked(),station.getFreeBikes()/(double)station.getBikeNum());
+            previousMarker.setIcon(oldIcon);
+        }
+        previousMarker = marker;
+        String name = marker.getTitle();
+        station = getStationByName(name);
+        BitmapDescriptor mIcon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW);
+        marker.setIcon(mIcon);
         return false;
+    }
+
+    private Station getStationByName(String name){
+        Optional<Station> op = Stream.of(stations).filter(s-> s.getStationName().equals(name)).findFirst();
+        station = (op.isPresent())?op.get():null;
+        return station;
     }
 
     @Override

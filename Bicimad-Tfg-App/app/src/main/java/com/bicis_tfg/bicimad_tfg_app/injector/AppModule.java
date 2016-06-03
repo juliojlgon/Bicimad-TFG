@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.preference.PreferenceManager;
 
 import com.bicis_tfg.bicimad_tfg_app.BicimadApplication;
+import com.bicis_tfg.bicimad_tfg_app.helpers.ResourcesHelper;
 
 import javax.inject.Singleton;
 
@@ -26,6 +27,11 @@ public class AppModule {
     @Provides
     Resources provideResources() {
         return mApp.getResources();
+    }
+
+    @Provides
+    ResourcesHelper provideResourcesHelper(){
+        return new ResourcesHelper(mApp);
     }
 
     @Provides

@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Bicimad");
+        actionBar.setTitle("ecoBike");
 
         //Set the Username in the NavigationView.
         View nView = navigationView.getHeaderView(0);

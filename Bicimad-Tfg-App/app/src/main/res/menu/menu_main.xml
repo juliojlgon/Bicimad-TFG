@@ -7,4 +7,14 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/signout_settings"
+        android:title="@string/signout_settings"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/report_settings"
+        android:title="@string/report_settings"
+        android:icon="@drawable/ic_feedback_black_24dp"
+        app:showAsAction="ifRoom|withText" />
 </menu>
