@@ -1,30 +1,33 @@
-package models;
+package com.bicis_tfg.bicimad_tfg_app.models;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginResult {
+/**
+ * Created by JulioLopez on 26/5/16.
+ */
+public class ValidResult {
 
-    private Boolean Success;
+    private Boolean Valid;
     private String Token;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      *
      * @return
-     * The Success
+     * The Valid
      */
-    public Boolean getSuccess() {
-        return Success;
+    public Boolean getValid() {
+        return Valid;
     }
 
     /**
      *
-     * @param Success
-     * The Success
+     * @param Valid
+     * The Valid
      */
-    public void setSuccess(Boolean Success) {
-        this.Success = Success;
+    public void setValid(Boolean Valid) {
+        this.Valid = Valid;
     }
 
     /**
@@ -52,5 +55,4 @@ public class LoginResult {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
 }

@@ -1,13 +1,11 @@
 package com.bicis_tfg.bicimad_tfg_app;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.TextViewCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bicis_tfg.bicimad_tfg_app.models.User;
+import com.bicis_tfg.bicimad_tfg_app.helpers.ResourcesHelper;
+import com.bicis_tfg.bicimad_tfg_app.models.CurrentUser;
 import com.google.gson.Gson;
 
 import javax.inject.Inject;
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
 
     @Inject
-    Resources resources;
+    ResourcesHelper resources;
 
     @Inject
     SharedPreferences sharedPref;
@@ -59,11 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Set the Username in the NavigationView.
         View nView = navigationView.getHeaderView(0);
-        TextView textView = (TextView) nView.findViewById(R.id.username);
-        String json = sharedPref.getString(resources.getString(R.string.UserKey),"");
+        TextView userTextView = (TextView) nView.findViewById(R.id.username);
+        TextView nameTextView = (TextView) nView.findViewById(R.id.email);
+        String json = sharedPref.getString(resources.getUserKey(), "");
         Gson gson = new Gson();
-        User user= gson.fromJson(json, User.class);
-        textView.setText(user.getUsername());
+        CurrentUser user = gson.fromJson(json, CurrentUser.class);
+        userTextView.setText(user.getName());
+        String mail = (user.getEmail() != null) ? user.getEmail().toString() : "";
+        nameTextView.setText(mail);
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openDrawer, R.string.closeDrawer) {
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer) {
 
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -111,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         };
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
 
 
 //        IBiciMadServices apiService = ServiceFactory.createRetrofitClient();
@@ -142,5 +143,21 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.signout_settings: {
+                SharedPreferences.Editor edit = sharedPref.edit();
+                edit.putString(resources.getTokenKey(),"");
+                edit.commit();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+                finish();
 
+            }default:
+                return super.onOptionsItemSelected(item);
+
+        }
+
+    }
 }

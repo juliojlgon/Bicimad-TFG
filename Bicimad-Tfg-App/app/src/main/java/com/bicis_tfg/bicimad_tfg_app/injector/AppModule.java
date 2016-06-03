@@ -46,7 +46,6 @@ public class AppModule {
     }
 
     @Provides
-    @Singleton
     IBiciMadServices providesServiceClient(){
         String token = PreferenceManager.getDefaultSharedPreferences(mApp).getString("Token","");
         if(token == null || token.isEmpty()){

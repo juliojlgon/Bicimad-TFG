@@ -41,7 +41,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import models.Station;
+import com.bicis_tfg.bicimad_tfg_app.models.Station;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.plugins.RxJavaErrorHandler;

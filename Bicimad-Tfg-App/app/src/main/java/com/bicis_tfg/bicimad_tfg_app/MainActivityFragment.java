@@ -8,7 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bicis_tfg.bicimad_tfg_app.helpers.ResourcesHelper;
+
 import javax.inject.Inject;
+
+import services.IBiciMadServices;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -18,6 +22,12 @@ public class MainActivityFragment extends Fragment {
     @Inject
     SharedPreferences sharedPreferences;
 
+    @Inject
+    ResourcesHelper rHelper;
+
+    @Inject
+    IBiciMadServices apiService;
+
     public MainActivityFragment() {
     }
 
@@ -25,6 +35,7 @@ public class MainActivityFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         BicimadApplication.inject(this);
+
     }
 
     @Override

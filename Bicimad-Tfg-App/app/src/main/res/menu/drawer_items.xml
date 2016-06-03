@@ -16,7 +16,7 @@
             app:showAsAction="ifRoom"/>
         <item
             android:id="@+id/mmoney_drawer"
-            android:title="Money"
+            android:title="Balance"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             app:showAsAction="ifRoom"/>
         <item

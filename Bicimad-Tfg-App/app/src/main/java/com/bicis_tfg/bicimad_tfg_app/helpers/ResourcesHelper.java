@@ -28,4 +28,8 @@ public class ResourcesHelper {
         return resources.getString(R.string.StationKey);
     }
 
+    public String getTokenKey(){
+        return resources.getString(R.string.TokenKey);
+    }
+
 }

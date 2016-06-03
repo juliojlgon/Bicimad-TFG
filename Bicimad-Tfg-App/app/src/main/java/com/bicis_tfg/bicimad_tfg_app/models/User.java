@@ -1,44 +1,33 @@
+
 package com.bicis_tfg.bicimad_tfg_app.models;
 
-import java.io.Serializable;
+import javax.annotation.Generated;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by JulioLopez on 2/6/16.
- */
+@Generated("org.jsonschema2pojo")
 public class User {
 
-    private String Username;
-    private String Name;
-    private String Avatar;
-    private String email;
+    @SerializedName("CurrentUser")
+    @Expose
+    private CurrentUser currentUser;
 
-    public User(){}
-
-    public String getUsername() {
-        return Username;
+    /**
+     * 
+     * @return
+     *     The currentUser
+     */
+    public CurrentUser getCurrentUser() {
+        return currentUser;
     }
 
-    public void setUsername(String username) {
-        Username = username;
+    /**
+     * 
+     * @param currentUser
+     *     The CurrentUser
+     */
+    public void setCurrentUser(CurrentUser currentUser) {
+        this.currentUser = currentUser;
     }
 
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getAvatar() {
-        return Avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        Avatar = avatar;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 }

@@ -1,4 +1,4 @@
-package models;
+package com.bicis_tfg.bicimad_tfg_app.models;
 
 
     import java.util.HashMap;

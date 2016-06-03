@@ -11,7 +11,7 @@
         android:id="@+id/signout_settings"
         android:title="@string/signout_settings"
         android:icon="@drawable/ic_power_settings_new_black_24dp"
-        app:showAsAction="ifRoom|withText" />
+        app:showAsAction="withText|ifRoom" />
     <item
         android:id="@+id/report_settings"
         android:title="@string/report_settings"

@@ -2,12 +2,14 @@ package services;
 
 
 
+import com.bicis_tfg.bicimad_tfg_app.models.User;
+
 import java.util.List;
 
-import models.IndexResult;
-import models.LoginResult;
-import models.Station;
-import models.ValidResult;
+import com.bicis_tfg.bicimad_tfg_app.models.IndexResult;
+import com.bicis_tfg.bicimad_tfg_app.models.LoginResult;
+import com.bicis_tfg.bicimad_tfg_app.models.Station;
+import com.bicis_tfg.bicimad_tfg_app.models.ValidResult;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -20,6 +22,9 @@ public interface IBiciMadServices {
 
     @POST("bike/returnindex")
     Observable<IndexResult> getSummaryData();
+
+    @POST("account/getuserdata")
+    Observable<User> getUserData();
 
     @POST("Account/login")
     Observable<LoginResult> logUser(@Query("UserName") String username, @Query("Password") String password);
