@@ -43,12 +43,13 @@ namespace Bicimad.Api.Controllers
                     var token = LogUser(userDto, password, model.RememberMe);
                     _securityQueryService.IsTokenValid(token);
 
-                    return Json(new { Success = true, Token = token });
+                    return Json(new { Success = true, Token = token , User = userDto});
                 }
             }
 
-            return Json(new { Success = false, Token = "" });
+            return Json(new { Success = false, Token = "" , User = new UserDto()});
         }
+
 
         private string LogUser(UserLoginDto userDto, string password, bool remember)
         {
