@@ -25,7 +25,7 @@ namespace Bicimad.Api.Controllers
         }
 
         // POST: api/login
-        [System.Web.Mvc.HttpPost]
+        [HttpPost]
         public virtual IHttpActionResult Login(string username, string password)
         {
             var model = new LoginModel
@@ -43,11 +43,17 @@ namespace Bicimad.Api.Controllers
                     var token = LogUser(userDto, password, model.RememberMe);
                     _securityQueryService.IsTokenValid(token);
 
-                    return Json(new { Success = true, Token = token , User = userDto});
+                    return Json(new { Success = true, Token = token , CurrentUser});
                 }
             }
 
-            return Json(new { Success = false, Token = "" , User = new UserDto()});
+            return Json(new { Success = false, Token = "" });
+        }
+
+        [ApiAuthorize, HttpPost]
+        public virtual IHttpActionResult GetUserData()
+        {
+            return Json(new {CurrentUser});
         }
 
 
