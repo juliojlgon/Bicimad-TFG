@@ -7,10 +7,11 @@
 
     <fragment
         android:id="@+id/map"
-        android:name="com.bicis_tfg.bicimad_tfg_app.MapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/TakeBike" />
+        android:layout_above="@+id/TakeBike"
+        tools:context="com.bicis_tfg.bicimad_tfg_app.MapFragment"/>
 
     <View
         android:id="@+id/view"

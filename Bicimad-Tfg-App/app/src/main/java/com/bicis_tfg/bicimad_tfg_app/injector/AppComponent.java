@@ -1,5 +1,6 @@
 package com.bicis_tfg.bicimad_tfg_app.injector;
 
+import com.bicis_tfg.bicimad_tfg_app.HistoryFragment;
 import com.bicis_tfg.bicimad_tfg_app.LoginActivity;
 import com.bicis_tfg.bicimad_tfg_app.MainActivity;
 import com.bicis_tfg.bicimad_tfg_app.MainActivityFragment;
@@ -17,4 +18,5 @@ public interface AppComponent {
     void inject(LoginActivity loginActivity);
     void inject(MainActivityFragment mainActivityFragment);
     void inject(MapFragment mapFragment);
+    void inject(HistoryFragment historyFragment);
 }

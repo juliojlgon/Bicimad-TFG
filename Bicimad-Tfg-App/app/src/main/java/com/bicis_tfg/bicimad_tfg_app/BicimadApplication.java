@@ -6,6 +6,8 @@ import com.bicis_tfg.bicimad_tfg_app.helpers.Dagger2Helper;
 import com.bicis_tfg.bicimad_tfg_app.injector.AppComponent;
 import com.bicis_tfg.bicimad_tfg_app.injector.AppModule;
 
+import net.danlew.android.joda.JodaTimeAndroid;
+
 /**
  * Created by JulioLopez on 24/5/16.
  */
@@ -24,6 +26,7 @@ public class BicimadApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        JodaTimeAndroid.init(this);
 
 //        // Dagger%COMPONENT_NAME%
 //        mAppComponent = DaggerAppComponent.builder()

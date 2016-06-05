@@ -9,7 +9,10 @@
     tools:context="com.bicis_tfg.bicimad_tfg_app.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <include layout="@layout/fragment_map"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentcontainer"></FrameLayout>
 
 
 </RelativeLayout>

@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -56,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("ecoBike");
 
+
+
+
+
         //Set the Username in the NavigationView.
         View nView = navigationView.getHeaderView(0);
         TextView userTextView = (TextView) nView.findViewById(R.id.username);
@@ -70,6 +76,19 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             switch (itemId) {
+                case (R.id.mhistorial_drawer): {
+                    Snackbar.make(getCurrentFocus(), item.getTitle(), Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    item.setChecked(true);
+                    HistoryFragment fragment = new HistoryFragment();
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragmentcontainer , fragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    drawerLayout.closeDrawers();
+                    return true;
+                }
+
                 case (R.id.mmoney_drawer): {
                     Snackbar.make(getCurrentFocus(), item.getTitle(), Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -151,8 +170,9 @@ public class MainActivity extends AppCompatActivity {
                 edit.putString(resources.getTokenKey(),"");
                 edit.commit();
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
-                finish();
+
 
             }default:
                 return super.onOptionsItemSelected(item);
