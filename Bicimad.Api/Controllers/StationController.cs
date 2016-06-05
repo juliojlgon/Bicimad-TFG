@@ -107,7 +107,7 @@ namespace Bicimad.Api.Controllers
             return Json(userHistorical);
         }
 
-        public virtual IHttpActionResult GetActiveRerservations()
+        public virtual IHttpActionResult GetActiveReservations()
         {
 
             
