@@ -61,15 +61,17 @@ public class HistoricRenderer extends Renderer<History> {
     @Override
     public void render() {
         History historial = getContent();
-        this.arrivalSText.setText(historial.getArrivalStationName());
-        this.departureSText.setText(historial.getDepartureStationName());
-        this.bikeIdText.setText(historial.getBikeId());
-        this.dateText.setText(formatTimeToString(historial.getCreatedAt()));
+        this.arrivalSText.setText(historial.getArrivalStationUserName());
+        this.departureSText.setText(historial.getDepartureStationUserName());
+        this.bikeIdText.setText("Ident: " + historial.getBikeId());
+        this.dateText.setText(formatTimeToString(historial.getCreatedDate()));
     }
 
-    private String formatTimeToString(DateTime time){
-        DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyyMMdd").withLocale(Locale.FRANCE);
-        return time.toString(fmt);
+    private String formatTimeToString(String time){
+        time = time.substring(0,10);
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-MM-dd").withLocale(Locale.FRANCE);
+        DateTime t = fmt.parseDateTime(time);
+        return t.toString(fmt);
 
     }
 }

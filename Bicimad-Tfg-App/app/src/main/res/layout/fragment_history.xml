@@ -8,12 +8,23 @@
     tools:showIn="@layout/content_main"
     tools:context="com.bicis_tfg.bicimad_tfg_app.MainActivityFragment">
 
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/swipe_layout">
+
+    <com.bicis_tfg.bicimad_tfg_app.helpers.EmptyRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+</android.support.v4.widget.SwipeRefreshLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="50dp"
-        android:layout_centerInParent="true"
-        android:text="HOLA"/>
+        android:id="@+id/empty_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No items to display"
+        android:visibility="gone" />
 
 </RelativeLayout>

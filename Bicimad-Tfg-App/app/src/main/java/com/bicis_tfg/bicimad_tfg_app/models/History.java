@@ -1,104 +1,202 @@
 package com.bicis_tfg.bicimad_tfg_app.models;
 
-import net.danlew.android.joda.JodaTimeAndroid;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-import org.joda.time.DateTime;
+import javax.annotation.Generated;
 
-/**
- * Created by JulioLopez on 4/6/16.
- */
+@Generated("org.jsonschema2pojo")
 public class History {
-    private String UserId;
-    private String BikeId;
-    private String ArrivalStationId;
-    private String ArrivalStationName;
-    private String DepartureStationId;
-    private String DepartureStationName;
-    private boolean Finished;
-    private String Id;
-    private DateTime CreatedAt;
 
-    public History(String bikeId, String userId, String arrivalStationName, String arrivalStationId, String departureStationName, String departureStationId, boolean finished, String id, DateTime createdAt) {
-        setBikeId(bikeId);
-        setUserId(userId);
-        setArrivalStationName(arrivalStationName);
-        setArrivalStationId(arrivalStationId);
-        setDepartureStationName(departureStationName);
-        setDepartureStationId(departureStationId);
-        setFinished(finished);
-        setId(id);
-        setCreatedAt(createdAt);
-    }
+    @SerializedName("UserId")
+    @Expose
+    private String userId;
+    @SerializedName("BikeId")
+    @Expose
+    private String bikeId;
+    @SerializedName("ArrivalStationId")
+    @Expose
+    private String arrivalStationId;
+    @SerializedName("ArrivalStationUserName")
+    @Expose
+    private String arrivalStationUserName;
+    @SerializedName("DepartureStationId")
+    @Expose
+    private String departureStationId;
+    @SerializedName("DepartureStationUserName")
+    @Expose
+    private String departureStationUserName;
+    @SerializedName("Finished")
+    @Expose
+    private boolean finished;
+    @SerializedName("Id")
+    @Expose
+    private String id;
+    @SerializedName("CreatedDate")
+    @Expose
+    private String createdDate;
 
+    /**
+     *
+     * @return
+     * The userId
+     */
     public String getUserId() {
-        return UserId;
+        return userId;
     }
 
+    /**
+     *
+     * @param userId
+     * The UserId
+     */
     public void setUserId(String userId) {
-        UserId = userId;
+        this.userId = userId;
     }
 
+    /**
+     *
+     * @return
+     * The bikeId
+     */
     public String getBikeId() {
-        return BikeId;
+        return bikeId;
     }
 
+    /**
+     *
+     * @param bikeId
+     * The BikeId
+     */
     public void setBikeId(String bikeId) {
-        BikeId = bikeId;
+        this.bikeId = bikeId;
     }
 
+    /**
+     *
+     * @return
+     * The arrivalStationId
+     */
     public String getArrivalStationId() {
-        return ArrivalStationId;
+        return arrivalStationId;
     }
 
+    /**
+     *
+     * @param arrivalStationId
+     * The ArrivalStationId
+     */
     public void setArrivalStationId(String arrivalStationId) {
-        ArrivalStationId = arrivalStationId;
+        this.arrivalStationId = arrivalStationId;
     }
 
-    public String getArrivalStationName() {
-        return ArrivalStationName;
+    /**
+     *
+     * @return
+     * The arrivalStationUserName
+     */
+    public String getArrivalStationUserName() {
+        return arrivalStationUserName;
     }
 
-    public void setArrivalStationName(String arrivalStationName) {
-        ArrivalStationName = arrivalStationName;
+    /**
+     *
+     * @param arrivalStationUserName
+     * The ArrivalStationUserName
+     */
+    public void setArrivalStationUserName(String arrivalStationUserName) {
+        this.arrivalStationUserName = arrivalStationUserName;
     }
 
+    /**
+     *
+     * @return
+     * The departureStationId
+     */
     public String getDepartureStationId() {
-        return DepartureStationId;
+        return departureStationId;
     }
 
+    /**
+     *
+     * @param departureStationId
+     * The DepartureStationId
+     */
     public void setDepartureStationId(String departureStationId) {
-        DepartureStationId = departureStationId;
+        this.departureStationId = departureStationId;
     }
 
-    public String getDepartureStationName() {
-        return DepartureStationName;
+    /**
+     *
+     * @return
+     * The departureStationUserName
+     */
+    public String getDepartureStationUserName() {
+        return departureStationUserName;
     }
 
-    public void setDepartureStationName(String departureStationName) {
-        DepartureStationName = departureStationName;
+    /**
+     *
+     * @param departureStationUserName
+     * The DepartureStationUserName
+     */
+    public void setDepartureStationUserName(String departureStationUserName) {
+        this.departureStationUserName = departureStationUserName;
     }
 
+    /**
+     *
+     * @return
+     * The finished
+     */
     public boolean isFinished() {
-        return Finished;
+        return finished;
     }
 
+    /**
+     *
+     * @param finished
+     * The Finished
+     */
     public void setFinished(boolean finished) {
-        Finished = finished;
+        this.finished = finished;
     }
 
+    /**
+     *
+     * @return
+     * The id
+     */
     public String getId() {
-        return Id;
+        return id;
     }
 
+    /**
+     *
+     * @param id
+     * The Id
+     */
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
 
-    public DateTime getCreatedAt() {
-        return CreatedAt;
+    /**
+     *
+     * @return
+     * The createdDate
+     */
+    public String getCreatedDate() {
+        return createdDate;
     }
 
-    public void setCreatedAt(DateTime createdAt) {
-        CreatedAt = createdAt;
+    /**
+     *
+     * @param createdDate
+     * The CreatedDate
+     */
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
     }
+
+
 }
