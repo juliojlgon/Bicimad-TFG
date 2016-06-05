@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.UI.WebControls;
 using Bicimad.Api.Attributes;
 using Bicimad.Mappers;
 using Bicimad.Models.Station;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query;
+using Bicimad.Services.Query.Dto.History;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Services.Query.Queries;
 
@@ -18,15 +20,18 @@ namespace Bicimad.Api.Controllers
         private readonly IReservationQueryService _reservationQueryService;
         private readonly ISlotQueryService _slotQueryService;
         private readonly StationQueryService _stationQueryService;
+        private readonly UserHistoryQueryService _userStoryQueryService;
+        
 
         public StationController(StationQueryService stationQueryService,
             IReservationCommandService reservationCommandService, ISlotQueryService slotQueryService,
-            IReservationQueryService reservationQueryService)
+            IReservationQueryService reservationQueryService, UserHistoryQueryService userStoryQueryService)
         {
             _stationQueryService = stationQueryService;
             _reservationCommandService = reservationCommandService;
             _slotQueryService = slotQueryService;
             _reservationQueryService = reservationQueryService;
+            _userStoryQueryService = userStoryQueryService;
         }
 
         [HttpPost]
@@ -87,6 +92,33 @@ namespace Bicimad.Api.Controllers
 
             var jsonStationModel = Json(mapModel);
             return jsonStationModel;
+        }
+
+        public virtual IHttpActionResult GetHistory()
+        {
+
+            var query = new UserHistoryQuery
+            {
+                Id = CurrentUser.Id
+            };
+
+            var userHistorical = _userStoryQueryService.GetHistorial(ref query);
+
+            return Json(userHistorical);
+        }
+
+        public virtual IHttpActionResult GetActiveRerservations()
+        {
+
+            
+           var query = new ReservationQuery
+            {
+                Id = CurrentUser.Id,
+            };
+
+            var reservationHistorical = _reservationQueryService.GetReservations(ref query);
+
+            return Json(reservationHistorical);
         }
 
         [HttpPost]
