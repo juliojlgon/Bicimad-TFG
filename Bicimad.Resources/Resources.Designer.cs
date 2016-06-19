@@ -187,6 +187,15 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string Historic {
+            get {
+                return ResourceManager.GetString("Historic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Finished.
         /// </summary>
         public static string isFinished {
