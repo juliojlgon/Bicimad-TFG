@@ -221,9 +221,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                         googleMap.addMarker(
                                 new MarkerOptions()
                                         .position(new LatLng(Double.parseDouble(station.getLatitude()), Double.parseDouble(station.getLongitude())))
-                                        .title(station.getStationName() + appendTitle(station.getIsBikeBooked()))
+                                        .title(station.getStationName())
                                         .icon(getIcon(station.getIsBikeBooked(), station.getFreeBikes() / (double) station.getBikeNum()))
-                                        .snippet(new StringBuilder().append("Free Bikes: ").append(station.getFreeBikes())
+                                        .snippet(new StringBuilder().append(appendTitle(station.getIsBikeBooked())).append("Free Bikes: ").append(station.getFreeBikes())
                                                 .append("\nFree Slots: ").append(station.getAvailSlots())
                                                 .append("\nMetro: ").append(station.getMetro())
                                                 .append("\nBus lines: ").append(station.getBus()).toString())
@@ -239,7 +239,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
     private String appendTitle(boolean isBooked) {
         if (isBooked)
-            return "*Reserva*";
+            return "You have a reservation here.\n";
         else
             return "";
     }

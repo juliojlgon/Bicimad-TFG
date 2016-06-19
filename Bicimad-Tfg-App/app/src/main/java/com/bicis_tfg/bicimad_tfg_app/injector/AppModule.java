@@ -8,6 +8,8 @@ import android.preference.PreferenceManager;
 
 import com.bicis_tfg.bicimad_tfg_app.BicimadApplication;
 import com.bicis_tfg.bicimad_tfg_app.helpers.ResourcesHelper;
+import com.bicis_tfg.bicimad_tfg_app.models.CurrentUser;
+import com.google.gson.Gson;
 
 import javax.inject.Singleton;
 
@@ -54,6 +56,13 @@ public class AppModule {
             return ServiceFactory.createRetrofitClient(token);
         }
 
+    }
+    @Provides
+    CurrentUser providesCurrentUser(){
+        String json = PreferenceManager.getDefaultSharedPreferences(mApp).getString("User", "");
+        Gson gson = new Gson();
+        CurrentUser user = gson.fromJson(json, CurrentUser.class);
+        return user;
     }
 
 

@@ -2,6 +2,9 @@ package services;
 
 
 
+import com.bicis_tfg.bicimad_tfg_app.models.History;
+import com.bicis_tfg.bicimad_tfg_app.models.Reservation;
+import com.bicis_tfg.bicimad_tfg_app.models.ReservationResult;
 import com.bicis_tfg.bicimad_tfg_app.models.User;
 
 import java.util.List;
@@ -34,4 +37,16 @@ public interface IBiciMadServices {
 
     @POST("station/fillmap")
     Observable<List<Station>> getStations();
+
+    @GET("station/gethistory")
+    Observable<List<History>> getHistory();
+
+    @GET("station/GetActiveReservations")
+    Observable<List<Reservation>> getActiveReservations();
+
+    @POST("station/RemoveSlotReservation")
+    Observable<ReservationResult> removeSlotReservation(@Query("UserId") String userId, @Query("stationId") String stationId);
+
+    @POST("bike/RemoveBikeReservation")
+    Observable<ReservationResult> removeBikeReservation(@Query("UserId") String userId, @Query("stationId") String stationId);
 }

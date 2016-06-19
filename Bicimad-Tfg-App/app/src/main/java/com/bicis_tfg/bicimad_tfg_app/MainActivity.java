@@ -100,6 +100,13 @@ public class MainActivity extends AppCompatActivity {
                 case (R.id.mreservations_drawer): {
                     Snackbar.make(getCurrentFocus(), item.getTitle(), Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+
+                    ReservationFragment fragment = new ReservationFragment();
+                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.fragmentcontainer , fragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+
                     item.setChecked(true);
                     drawerLayout.closeDrawers();
                     return true;
