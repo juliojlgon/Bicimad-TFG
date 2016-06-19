@@ -41,12 +41,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.plugins.RxJavaErrorHandler;
@@ -61,8 +63,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private static int MY_PERMISSIONS_REQUEST_ACESS_FINE_LOCATION;
     @BindView(R.id.TakeBike)
     Button mTakeActionButton;
-    @BindView(R.id.ReturnBike)
+    @BindView(R.id.BookBike)
     Button mBookActionButton;
+    @BindView(R.id.changeView)
+    Button mChangeViewActionButton;
     @Inject
     BicimadApplication mApp;
     @Inject
@@ -79,6 +83,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private Marker previousMarker;
 
     private View root;
+
+    private boolean isTakeState = true;
+
+    private ArrayList<Marker> markerList = new ArrayList<>();
 
 
     @Override
@@ -218,7 +226,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 .subscribe(stations -> {
                     this.stations = stations;
                     for (Station station : stations) {
-                        googleMap.addMarker(
+                        //TODO: AÑADIR LOS MARKER A UNA LISTA PARA QUE CUANDO SE CAMBIE LA VISTA NO HAGA FALTA RELLAMAR A LA FUNCION DE LA API.
+                        markerList.add(googleMap.addMarker(
                                 new MarkerOptions()
                                         .position(new LatLng(Double.parseDouble(station.getLatitude()), Double.parseDouble(station.getLongitude())))
                                         .title(station.getStationName())
@@ -227,7 +236,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                                                 .append("\nFree Slots: ").append(station.getAvailSlots())
                                                 .append("\nMetro: ").append(station.getMetro())
                                                 .append("\nBus lines: ").append(station.getBus()).toString())
-                        );
+                        ));
                     }
                 });
 
@@ -246,6 +255,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
     @NonNull
     private BitmapDescriptor getIcon(boolean b, double numero) {
+        //TODO: Try to change the Cyan for a grey when it's full.
         if (b)
             return BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET);
         else if (numero > 0.75)
@@ -334,5 +344,43 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     }
 
 
+    @OnClick(R.id.BookBike)
+    void bookBikeOrSlot(){
+        //TODO: Crear un dialog con el texto de reservar bici o slot. al aceptar se ejecuta la acción.
+        Log.i("BOOKACTION", "BookBikeOrSlot: ");
+
+    }
+
+    @OnClick(R.id.TakeBike)
+    void takeOrReturnBike(){
+        //TODO: Crear un dialog con el texto de coger o dejar bici. al aceptar se ejecuta la acción.
+        Log.i("TAKEACTION", "takeOrReturnBike: ");
+    }
+
+    @OnClick(R.id.changeView)
+    void changeView(){
+        Double percent;
+        boolean booked = false;
+        for(Marker marker: markerList){
+            Station s = getStationByName(marker.getTitle());
+            if(isTakeState) {
+                percent = s.getAvailSlots() / (double) s.getBikeNum();
+                booked = s.getIsSlotBooked();
+                mTakeActionButton.setText(resources.getString(R.string.return_bike));
+                mBookActionButton.setText(resources.getString(R.string.book_slot));
+            }else {
+                percent = s.getFreeBikes() / (double) s.getBikeNum();
+                booked = s.getIsBikeBooked();
+                mTakeActionButton.setText(resources.getString(R.string.take_bike));
+                mBookActionButton.setText(resources.getString(R.string.book_bike));
+            }
+
+            marker.setIcon(getIcon(booked,percent));
+        }
+        isTakeState = !isTakeState;
+
+
+    }
 }
+
 

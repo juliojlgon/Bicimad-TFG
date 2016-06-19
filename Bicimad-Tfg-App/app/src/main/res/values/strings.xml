@@ -19,6 +19,11 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="take_bike">Take Bike</string>
+    <string name="return_bike">Return Bike</string>
+    <string name="book_bike">Book Bike</string>
+    <string name="book_slot">Book Slot</string>
+    <string name="change_view">Change View</string>
     <string name="openDrawer"></string>
     <string name="closeDrawer"></string>
 
