@@ -11,6 +11,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -26,6 +27,13 @@
     <string name="change_view">Change View</string>
     <string name="openDrawer"></string>
     <string name="closeDrawer"></string>
+
+    <!-- PermissionString -->
+    <string name="permission_location_rationale">We need to know your location for make you have the best experience possible.</string>
+    <string name="permission_location_denied">Location permission was denied. Please consider granting it in order to use your own location on the map</string>
+    <string name="permission_location_never_askagain">Location permission was denied with never ask again.</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_deny">Deny</string>
 
     <!-- SharedPrefencesKeys -->
     <string name="SharedPrefences_Key">Preferencias</string>

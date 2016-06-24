@@ -10,10 +10,11 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.InflateException;
@@ -49,6 +50,12 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import permissions.dispatcher.NeedsPermission;
+import permissions.dispatcher.OnNeverAskAgain;
+import permissions.dispatcher.OnPermissionDenied;
+import permissions.dispatcher.OnShowRationale;
+import permissions.dispatcher.PermissionRequest;
+import permissions.dispatcher.RuntimePermissions;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.plugins.RxJavaErrorHandler;
@@ -56,7 +63,7 @@ import rx.plugins.RxJavaPlugins;
 import rx.schedulers.Schedulers;
 import services.IBiciMadServices;
 
-
+@RuntimePermissions
 public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener,
         GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
@@ -87,6 +94,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private boolean isTakeState = true;
 
     private ArrayList<Marker> markerList = new ArrayList<>();
+
+
 
 
     @Override
@@ -138,7 +147,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
     }
 
-    private void initCamera(Location location) {
+    @NeedsPermission({Manifest.permission.ACCESS_FINE_LOCATION})
+    public void initCamera(Location location) {
         CameraPosition position = CameraPosition.builder()
                 .target(new LatLng(location.getLatitude(),
                         location.getLongitude()))
@@ -163,16 +173,12 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Log.v(getClass().getSimpleName(), "app before butterinjection: " + mTakeActionButton);
         ButterKnife.bind(this, getActivity());
         Log.v(getClass().getSimpleName(), "app after butterinjection: " + mTakeActionButton);
         this.googleMap = googleMap;
-
-        if (!hasPermission(Manifest.permission.ACCESS_FINE_LOCATION))
-            askPermission();
 
         if (mCurrentLocation == null) {
             mCurrentLocation = new Location("");
@@ -241,7 +247,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 });
 
         googleMap.setOnMarkerClickListener(this);
-        initCamera(mCurrentLocation);
+        MapFragmentPermissionsDispatcher.initCameraWithCheck(this, mCurrentLocation);
 
 
     }
@@ -261,7 +267,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         else if (numero > 0.75)
             return BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN);
         else if (numero <= 0)
-            return BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN);
+            return BitmapDescriptorFactory.defaultMarker(230f);
         else if (numero < 0.25)
             return BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED);
         else
@@ -321,28 +327,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         super.onStop();
     }
 
-    private void askPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
-                Manifest.permission.ACCESS_FINE_LOCATION)) {
-
-            Snackbar.make(this.getView(), "We need location for Biking stuff", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-
-        } else {
-            ActivityCompat.requestPermissions(getActivity(),
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    MY_PERMISSIONS_REQUEST_ACESS_FINE_LOCATION);
-
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putBoolean("Manifest.permission.ACCESS_FINE_LOCATION", true);
-
-        }
-    }
-
-    private boolean hasPermission(String permission) {
-        return (ContextCompat.checkSelfPermission(getContext(), permission) == PackageManager.PERMISSION_GRANTED);
-    }
-
 
     @OnClick(R.id.BookBike)
     void bookBikeOrSlot(){
@@ -378,8 +362,46 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
             marker.setIcon(getIcon(booked,percent));
         }
         isTakeState = !isTakeState;
+    }
 
 
+    @OnShowRationale({Manifest.permission.ACCESS_FINE_LOCATION})
+    void showRationaleForContact(PermissionRequest request) {
+        // NOTE: Show a rationale to explain why the permission is needed, e.g. with a dialog.
+        // Call proceed() or cancel() on the provided PermissionRequest to continue or abort
+        showRationaleDialog(R.string.permission_location_rationale, request);
+    }
+    @OnPermissionDenied(Manifest.permission.ACCESS_FINE_LOCATION)
+    void onLocationDenied() {
+        // NOTE: Deal with a denied permission, e.g. by showing specific UI
+        // or disabling certain functionality
+        Snackbar.make(root, R.string.permission_location_denied, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+    }
+
+    @OnNeverAskAgain(Manifest.permission.ACCESS_FINE_LOCATION)
+    void onLocationNeverAskAgain() {
+        Snackbar.make(root, R.string.permission_location_never_askagain, Snackbar.LENGTH_LONG)
+                       .setAction("Action", null).show();
+    }
+
+    private void showRationaleDialog(@StringRes int messageResId, final PermissionRequest request) {
+        new AlertDialog.Builder(getContext())
+                .setPositiveButton(R.string.button_allow, (dialog, which) -> {
+                    request.proceed();
+                })
+                .setNegativeButton(R.string.button_deny, (dialog, which) -> {
+                    request.cancel();
+                })
+                .setCancelable(false)
+                .setMessage(messageResId)
+                .show();
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        // NOTE: delegate the permission handling to generated method
+        MapFragmentPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
     }
 }
 
