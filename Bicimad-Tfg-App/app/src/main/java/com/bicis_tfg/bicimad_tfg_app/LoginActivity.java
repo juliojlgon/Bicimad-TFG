@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //TODO: Devolver el usuario entero.
         result.subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread()).doOnError(Throwable::printStackTrace)
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(r -> {
                     if (r.isSuccess()) {
                         editor.putString(getResources().getString(R.string.TokenKey), r.getToken());
@@ -105,6 +105,9 @@ public class LoginActivity extends AppCompatActivity {
                         Snackbar.make(linearLayout, "Something was wrong", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
                     }
+
+                },throwable -> {
+                    Snackbar.make(linearLayout, "There was a network error. Try again.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 });
 
     }
