@@ -66,6 +66,8 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
+                },throwable -> {
+                    Snackbar.make(linearLayout, "There was a network error. Try again.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 });
 
         mPasswordView.setOnEditorActionListener((textView, id, keyEvent) -> {
