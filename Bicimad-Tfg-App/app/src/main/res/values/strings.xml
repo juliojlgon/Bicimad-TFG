@@ -10,7 +10,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in">Login</string>
     <string name="action_register">Register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -20,6 +20,17 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- String related to Sign in -->
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="repass_hint">Confirm password</string>
+    <string name="btn_link_to_login">Already registered? Start biking!</string>
+    <string name="btn_link_to_register">Not a member? Sign up now!</string>
+
+
+
     <string name="take_bike">Take Bike</string>
     <string name="return_bike">Return Bike</string>
     <string name="book_bike">Book Bike</string>
