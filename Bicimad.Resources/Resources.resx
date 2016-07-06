@@ -214,7 +214,7 @@
     <value>No active Reservations.</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Sign in</value>
+    <value>Sign up</value>
   </data>
   <data name="RegisterTitle" xml:space="preserve">
     <value>Create your acount</value>
@@ -247,6 +247,6 @@
     <value>Type</value>
   </data>
   <data name="Historic" xml:space="preserve">
-    <value />
+    <value>History</value>
   </data>
 </root>

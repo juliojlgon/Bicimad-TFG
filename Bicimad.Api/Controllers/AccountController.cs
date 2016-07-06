@@ -96,10 +96,10 @@ namespace Bicimad.Api.Controllers
 
             if (createUserResult.Success)
             {
-                return Ok( new {Success = true});
+                return Ok( new {Success = true, Error = ""});
             }
 
-            return Json(new { Success = false, Response = createUserResult.ValidationErrors.Select(e => e.ErrorMessage).First()});
+            return Json(new { Success = false, Error = createUserResult.ValidationErrors.Select(e => e.ErrorMessage).First()});
         }
 
         [HttpGet]

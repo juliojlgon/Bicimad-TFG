@@ -187,7 +187,7 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to History.
         /// </summary>
         public static string Historic {
             get {
@@ -286,7 +286,7 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sign in.
+        ///   Looks up a localized string similar to Sign up.
         /// </summary>
         public static string Register {
             get {
