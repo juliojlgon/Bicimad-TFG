@@ -6,6 +6,7 @@ import com.bicis_tfg.bicimad_tfg_app.LoginFragment;
 import com.bicis_tfg.bicimad_tfg_app.MainActivity;
 import com.bicis_tfg.bicimad_tfg_app.MainActivityFragment;
 import com.bicis_tfg.bicimad_tfg_app.MapFragment;
+import com.bicis_tfg.bicimad_tfg_app.RegisterFragment;
 import com.bicis_tfg.bicimad_tfg_app.ReservationFragment;
 import com.bicis_tfg.bicimad_tfg_app.renderers.ReservationRenderer;
 
@@ -19,6 +20,7 @@ import dagger.Component;
 public interface AppComponent {
     void inject(MainActivity activity);
     void inject(LoginFragment loginFragment);
+    void inject(RegisterFragment registerFragment);
     void inject(LoginActivity loginActivity);
     void inject(MainActivityFragment mainActivityFragment);
     void inject(MapFragment mapFragment);

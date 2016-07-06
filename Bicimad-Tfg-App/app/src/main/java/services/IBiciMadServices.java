@@ -3,6 +3,7 @@ package services;
 
 
 import com.bicis_tfg.bicimad_tfg_app.models.History;
+import com.bicis_tfg.bicimad_tfg_app.models.RegisterModel;
 import com.bicis_tfg.bicimad_tfg_app.models.Reservation;
 import com.bicis_tfg.bicimad_tfg_app.models.ReservationResult;
 import com.bicis_tfg.bicimad_tfg_app.models.User;
@@ -31,6 +32,10 @@ public interface IBiciMadServices {
 
     @POST("Account/login")
     Observable<LoginResult> logUser(@Query("UserName") String username, @Query("Password") String password);
+
+    @POST("Account/register")
+    Observable<RegisterModel> registerUser(@Query("username") String username, @Query("email") String email, @Query("password") String password,
+                                           @Query("repass") String repass);
 
     @GET("Account/istokenvalid")
     Observable<ValidResult> isTokenValid(@Query("token") String token);
