@@ -2,6 +2,7 @@ package services;
 
 
 
+import com.bicis_tfg.bicimad_tfg_app.models.BookResult;
 import com.bicis_tfg.bicimad_tfg_app.models.History;
 import com.bicis_tfg.bicimad_tfg_app.models.RegisterModel;
 import com.bicis_tfg.bicimad_tfg_app.models.Reservation;
@@ -54,4 +55,16 @@ public interface IBiciMadServices {
 
     @POST("bike/RemoveBikeReservation")
     Observable<ReservationResult> removeBikeReservation(@Query("UserId") String userId, @Query("stationId") String stationId);
+
+    @POST("bike/Takebike")
+    Observable<BookResult> takeBike(@Query("UserId") String userId, @Query("stationId") String stationId);
+
+    @POST("bike/Bookbike")
+    Observable<BookResult> bookBike(@Query("UserId") String userId, @Query("stationId") String stationId);
+
+    @POST("bike/ReturnBike")
+    Observable<ReservationResult> returnBike(@Query("UserId") String userId, @Query("stationId") String stationId);
+
+    @POST("station/BookSlot")
+    Observable<BookResult> bookSlot(@Query("UserId") String userId, @Query("stationId") String stationId);
 }

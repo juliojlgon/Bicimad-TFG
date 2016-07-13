@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Bundle;
@@ -27,6 +28,9 @@ import android.widget.TextView;
 
 import com.annimon.stream.Optional;
 import com.annimon.stream.Stream;
+import com.bicis_tfg.bicimad_tfg_app.models.BookResult;
+import com.bicis_tfg.bicimad_tfg_app.models.CurrentUser;
+import com.bicis_tfg.bicimad_tfg_app.models.ReservationResult;
 import com.bicis_tfg.bicimad_tfg_app.models.Station;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -82,6 +86,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     IBiciMadServices apiService;
     @Inject
     Resources resources;
+    @Inject
+    CurrentUser currentUser;
     private GoogleApiClient mGoogleApiClient;
     private GoogleMap googleMap;
     private Location mCurrentLocation;
@@ -232,7 +238,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 .subscribe(stations -> {
                     this.stations = stations;
                     for (Station station : stations) {
-                        //TODO: AÑADIR LOS MARKER A UNA LISTA PARA QUE CUANDO SE CAMBIE LA VISTA NO HAGA FALTA RELLAMAR A LA FUNCION DE LA API.
                         markerList.add(googleMap.addMarker(
                                 new MarkerOptions()
                                         .position(new LatLng(Double.parseDouble(station.getLatitude()), Double.parseDouble(station.getLongitude())))
@@ -331,6 +336,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     @OnClick(R.id.BookBike)
     void bookBikeOrSlot(){
         //TODO: Crear un dialog con el texto de reservar bici o slot. al aceptar se ejecuta la acción.
+        if(isTakeState){
+            bookBike();
+        }else{
+            bookSlot();
+        }
         Log.i("BOOKACTION", "BookBikeOrSlot: ");
 
     }
@@ -338,6 +348,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     @OnClick(R.id.TakeBike)
     void takeOrReturnBike(){
         //TODO: Crear un dialog con el texto de coger o dejar bici. al aceptar se ejecuta la acción.
+        if(isTakeState){
+            takeBike();
+        }else{
+            returnBike();
+        }
         Log.i("TAKEACTION", "takeOrReturnBike: ");
     }
 
@@ -363,6 +378,85 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         }
         isTakeState = !isTakeState;
     }
+
+    private void takeBike(){
+        Observable<BookResult> result = apiService.takeBike(currentUser.getId(),station.getId());
+        result.subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(bookResult -> {
+                    if(bookResult.isSuccess()){
+                        Snackbar snackbar = Snackbar.make(getView(), "Bike successful taken. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        snackbar.show();
+                    }else{
+                        Snackbar snackbar = Snackbar.make(getView(), "There was a problem taking the bike. Try again.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        View snackbarView = snackbar.getView();
+                        TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.RED);
+                        snackbar.show();
+                    }
+                });
+    }
+
+    private void bookBike(){
+        Observable<BookResult> result = apiService.bookBike(currentUser.getId(),station.getId());
+        result.subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(bookResult -> {
+                    if(bookResult.isSuccess()){
+                        Snackbar snackbar = Snackbar.make(getView(), "Bike successful booked. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        snackbar.show();
+                    }else{
+                        Snackbar snackbar = Snackbar.make(getView(), "There was a problem booking the bike. Try again.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        View snackbarView = snackbar.getView();
+                        TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.RED);
+                        snackbar.show();
+                    }
+                });
+    }
+
+    private void bookSlot(){
+        Observable<BookResult> result = apiService.bookSlot(currentUser.getId(),station.getId());
+        result.subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(bookResult -> {
+                    if(bookResult.isSuccess()){
+                        Snackbar snackbar = Snackbar.make(getView(), "Slot successful booked. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        snackbar.show();
+                    }else{
+                        Snackbar snackbar = Snackbar.make(getView(), "There was a problem booking the slot. Try again.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        View snackbarView = snackbar.getView();
+                        TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.RED);
+                        snackbar.show();
+                    }
+                });
+    }
+
+    private void returnBike(){
+        Observable<ReservationResult> result = apiService.returnBike(currentUser.getId(),station.getId());
+        result.subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(bookResult -> {
+                    if(bookResult.isSuccess()){
+                        Snackbar snackbar = Snackbar.make(getView(), "Bike successful returned.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        snackbar.show();
+                    }else{
+                        Snackbar snackbar = Snackbar.make(getView(), "There was a problem returning the bike. Try again.", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null);
+                        View snackbarView = snackbar.getView();
+                        TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                        textView.setTextColor(Color.RED);
+                        snackbar.show();
+                    }
+                });
+    }
+
+
+
 
 
     @OnShowRationale({Manifest.permission.ACCESS_FINE_LOCATION})
