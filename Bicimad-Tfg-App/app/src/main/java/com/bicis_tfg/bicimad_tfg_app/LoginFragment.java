@@ -98,6 +98,7 @@ public class LoginFragment extends Fragment {
             public void onAnimationEnd(Animation animation) {
                 loadingScreen.setVisibility(View.GONE);
                 wheel.setVisibility(View.GONE);
+                wheel.setAlpha(0f);
             }
 
             @Override
@@ -164,6 +165,8 @@ public class LoginFragment extends Fragment {
 
                         linearLayout.setVisibility(View.VISIBLE);
                         loadingScreen.startAnimation(fadeOutAnim);
+                        wheel.setVisibility(View.GONE);
+
                     }
                 },throwable -> {
                     Snackbar.make(linearLayout, "There was a network error. Try again.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
