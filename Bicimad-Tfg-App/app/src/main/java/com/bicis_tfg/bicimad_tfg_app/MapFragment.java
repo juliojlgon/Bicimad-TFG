@@ -341,6 +341,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         }else{
             bookSlot();
         }
+        //TODO: Actualizar el marker de la bicicleta que coges.
         Log.i("BOOKACTION", "BookBikeOrSlot: ");
 
     }

@@ -179,8 +179,6 @@ public class LoginFragment extends Fragment {
         SharedPreferences.Editor editor = sharedPref.edit();
         Observable<LoginResult> result = apiService.logUser(mEmailView.getText().toString(), mPasswordView.getText().toString());
 
-
-        //TODO: Devolver el usuario entero.
         result.subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(r -> {
