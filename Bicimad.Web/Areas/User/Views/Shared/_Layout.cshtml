@@ -34,11 +34,11 @@
         @*<div class="sidebar-image">
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53474/atom_profile_01.jpg">
         </div>*@
-        <a class="sidebar-colored username" href="@Url.Action(MVC.Home.Index())"><h3><strong>@ViewBag.UserName</strong></h3></a>
+        <a class="sidebar-colored" href="@Url.Action(MVC.Home.Index())"><h3 class="username"><strong>@ViewBag.UserName</strong></h3></a>
         
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-            Actions
+            <p class="white-text">Actions</p>
             <b class="caret"></b>
         </a>
     </div>
