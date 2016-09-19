@@ -34,11 +34,11 @@
         @*<div class="sidebar-image">
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53474/atom_profile_01.jpg">
         </div>*@
-        <a class="sidebar-colored black-text" href="@Url.Action(MVC.Home.Index())"><h3>Bicimad-TFG</h3></a>
+        <a class="sidebar-colored username" href="@Url.Action(MVC.Home.Index())"><h3><strong>@ViewBag.UserName</strong></h3></a>
         
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-            @ViewBag.UserName
+            Actions
             <b class="caret"></b>
         </a>
     </div>
@@ -71,25 +71,25 @@
         </li>
         <li>
             <a href="@Url.Action(MVC.User.Home.Index())">
-                <i class="material-icons left">navigation</i>
+                <i class="material-icons left" style="line-height: 48px">navigation</i>
                 @Resources.Historic
             </a>
         </li>
         <li>
             <a href="@Url.Action(MVC.User.Home.Index())">
-                <i class="material-icons left">star</i>
+                <i class="material-icons left" style="line-height: 48px">star</i>
                 Favourite stations
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="material-icons left">account_balance_wallet</i>
+                <i class="material-icons left" style="line-height: 48px">account_balance_wallet</i>
                 @Resources.Money
             </a>
         </li>
         <li>
             <a href="@Url.Action(MVC.User.Home.ActiveRerservations())">
-                <i class="material-icons left">today</i>
+                <i class="material-icons left" style="line-height: 48px">today</i>
                 @Resources.ActiveReservations
             </a>
         </li>

@@ -821,3 +821,9 @@ body {
     height: 44px;
   }
 }
+
+.username {
+    font-size: 0.8em;
+    color: white;
+    padding-left: 10px;
+}
