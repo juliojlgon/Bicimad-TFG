@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <!-- Overlay for fixed sidebar -->
-    <div class="sidebar-overlay"></div>
+<!-- Overlay for fixed sidebar -->
+<div class="sidebar-overlay"></div>
 
-    <!-- Material sidebar -->
+<!-- Material sidebar -->
 <aside id="sidebar" class="sidebar sidebar-default open" role="navigation">
     <!-- Sidebar header -->
     <div class="sidebar-header header-cover green">
@@ -34,8 +34,13 @@
         @*<div class="sidebar-image">
             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53474/atom_profile_01.jpg">
         </div>*@
-        <a class="sidebar-colored" href="@Url.Action(MVC.Home.Index())"><h3 class="username"><strong>@ViewBag.UserName</strong></h3></a>
-        
+        <a class="sidebar-colored" href="@Url.Action(MVC.Home.Index())">
+
+            <h3 class="username" style="margin-top: 10px">
+                <strong>@ViewBag.UserName</strong>
+            </h3>
+        </a>
+
         <!-- Sidebar brand name -->
         <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
             <p class="white-text" style="line-height: 48px">Actions</p>
@@ -111,20 +116,19 @@
 
     </footer>
 </div>
-    
 
-    <div class="wrapper container">
-            @Html.Partial(MVC.Shared.Views._Message)
-            @RenderBody()
-        
-    </div>
 
-    
+<div class="wrapper container">
+    @Html.Partial(MVC.Shared.Views._Message)
+    @RenderBody()
 
-    @Scripts.Render(BundleConfig.JQuery)
-    @Scripts.Render(BundleConfig.BootstrapJs)
-    @Scripts.Render(BundleConfig.ModernizerJs)
-    @Scripts.Render(BundleConfig.NavbarJs)
-    @RenderSection("scripts", required: false)
+</div>
+
+
+@Scripts.Render(BundleConfig.JQuery)
+@Scripts.Render(BundleConfig.BootstrapJs)
+@Scripts.Render(BundleConfig.ModernizerJs)
+@Scripts.Render(BundleConfig.NavbarJs)
+@RenderSection("scripts", false)
 </body>
 </html>
