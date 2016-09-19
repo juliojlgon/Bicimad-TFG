@@ -826,4 +826,6 @@ body {
     font-size: 3em;
     color: white;
     padding-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white
 }
