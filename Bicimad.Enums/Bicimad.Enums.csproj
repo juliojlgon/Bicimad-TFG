@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscountType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MessageType.cs" />
     <Compile Include="ReservationCategory.cs" />

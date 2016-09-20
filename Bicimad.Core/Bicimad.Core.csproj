@@ -107,6 +107,10 @@
     <Compile Include="Migrations\201604041800335_Hack.Designer.cs">
       <DependentUpon>201604041800335_Hack.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609202223235_StationPrice.cs" />
+    <Compile Include="Migrations\201609202223235_StationPrice.Designer.cs">
+      <DependentUpon>201609202223235_StationPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -150,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604041800335_Hack.resx">
       <DependentUpon>201604041800335_Hack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609202223235_StationPrice.resx">
+      <DependentUpon>201609202223235_StationPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>
