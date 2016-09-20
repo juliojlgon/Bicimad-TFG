@@ -9,10 +9,10 @@ namespace Bicimad.Core.DomainObjects
     public class Station : IEntity
     {
         [Required,DefaultValue(0)]
-        public int DiscPorc { get; set; }
+        public double DiscPorc { get; set; }
 
         [Required, DefaultValue(0)]
-        public int DiscConst { get; set; }
+        public double DiscConst { get; set; }
 
         [Required, DefaultValue(0)]
         public DiscountType DiscType { get; set; }
