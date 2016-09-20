@@ -53,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainObjects\ApiUser.cs" />
     <Compile Include="DomainObjects\UserHistory.cs" />
     <Compile Include="DomainObjects\Reservation.cs" />
     <Compile Include="DomainObjects\Slot.cs" />
