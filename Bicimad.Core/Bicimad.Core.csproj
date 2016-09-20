@@ -111,6 +111,10 @@
     <Compile Include="Migrations\201609202223235_StationPrice.Designer.cs">
       <DependentUpon>201609202223235_StationPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609202239335_UserHistoryPrice.cs" />
+    <Compile Include="Migrations\201609202239335_UserHistoryPrice.Designer.cs">
+      <DependentUpon>201609202239335_UserHistoryPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -157,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609202223235_StationPrice.resx">
       <DependentUpon>201609202223235_StationPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609202239335_UserHistoryPrice.resx">
+      <DependentUpon>201609202239335_UserHistoryPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>
