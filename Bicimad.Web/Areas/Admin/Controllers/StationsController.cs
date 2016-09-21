@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
 using Bicimad.Enums;
 using Bicimad.Helpers;
-using Bicimad.Services.Command.Commands;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Web.Areas.Admin.Models;
@@ -14,7 +13,6 @@ namespace Bicimad.Web.Areas.Admin.Controllers
 {
     public partial class StationsController : AdminBaseController
     {
-
         private readonly IStationCommandService _stationCommandService;
         private readonly IStationQueryService _stationQueryService;
 
@@ -27,7 +25,6 @@ namespace Bicimad.Web.Areas.Admin.Controllers
         // GET: Admin/Station
         public virtual ActionResult Index()
         {
-
             var stations = _stationQueryService.GetStations().ToList();
 
             var model = new AdminStationModel
@@ -39,7 +36,7 @@ namespace Bicimad.Web.Areas.Admin.Controllers
                 DiscPorc = "0",
                 DiscountType = DiscountType.Constant
             };
-            return View(MVC.Admin.Stations.Views.Index,model);
+            return View(MVC.Admin.Stations.Views.Index, model);
         }
 
         public virtual ActionResult SetBasePrice(double? basePrice)
@@ -49,18 +46,19 @@ namespace Bicimad.Web.Areas.Admin.Controllers
             else
                 BicimadMetadata.BasePrice = basePrice.Value;
 
-            TempData.SetMessage("Base price changed.",MessageType.Success);
+            TempData.SetMessage("Base price changed.", MessageType.Success);
 
             return RedirectToAction(MVC.Admin.Stations.Index());
         }
 
         [HttpPost]
-        public virtual ActionResult SetDiscounts(List<string> stationIds, DiscountType discountType, string discConst, string discPorc)
+        public virtual ActionResult SetDiscounts(List<string> stationIds, DiscountType discountType, string discConst,
+            string discPorc)
         {
             if (discConst == null) discConst = "0";
             if (discPorc == null) discPorc = "0";
-            var c = double.Parse(discConst, System.Globalization.NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo);
-            var p = double.Parse(discPorc, System.Globalization.NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo);
+            var c = double.Parse(discConst, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
+            var p = double.Parse(discPorc, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
 
             var result = _stationCommandService.SetDiscounts(stationIds, discountType, c, p);
 
@@ -69,7 +67,7 @@ namespace Bicimad.Web.Areas.Admin.Controllers
                 TempData.SetMessage("Stations updated.", MessageType.Success);
                 return RedirectToAction(MVC.Admin.Stations.Index());
             }
-            
+
             TempData.SetMessage(result.FirstErrorMessage, MessageType.Error);
             return RedirectToAction(MVC.Admin.Stations.Index());
         }
