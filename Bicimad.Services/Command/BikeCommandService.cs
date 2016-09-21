@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
+using Bicimad.Enums;
 using Bicimad.Helpers;
 using Bicimad.Services.Command.Commands;
 using Bicimad.Services.Command.Interface;
@@ -51,6 +52,7 @@ namespace Bicimad.Services.Command
                 BikeId = bikeId,
                 UserId = userId,
                 DepartureStationId = stationId,
+                TotalDiscount = (station.DiscType == DiscountType.Constant)?string.Format("{0}€", station.DiscConst):string.Format("{0}%", station.DiscPorc),
                 Finished = false
             });
 
@@ -102,6 +104,46 @@ namespace Bicimad.Services.Command
             //Add the bike to the station
             var freeB = station.FreeBikes + 1;
             station.FreeBikes = freeB;
+
+            //Update the price and discount
+            var totalprice = BicimadMetadata.BasePrice*(transaction.CreatedDate.Hour - DateTimeHelper.SpanishNow.Hour);
+            
+            //if same type, apply the highest one.
+            if (transaction.DepartureStation.DiscType == station.DiscType)
+            {
+                if (transaction.DepartureStation.DiscType == DiscountType.Constant)
+                {
+                    var totalDiscount = (station.DiscConst > transaction.DepartureStation.DiscConst)
+                        ? station.DiscConst
+                        : transaction.DepartureStation.DiscConst;
+                    transaction.FinalPrice = totalprice - totalDiscount;
+                }
+                else
+                {
+                    var totalDiscount = (station.DiscPorc > transaction.DepartureStation.DiscPorc)
+                        ? station.DiscPorc
+                        : transaction.DepartureStation.DiscPorc;
+                    transaction.FinalPrice = totalprice*(1 - totalDiscount);
+                }
+
+            }
+            else
+            {
+                if (transaction.DepartureStation.DiscType == DiscountType.Constant)
+                {
+                    transaction.FinalPrice = (totalprice - transaction.DepartureStation.DiscConst)*
+                                             (1 - station.DiscPorc);
+                }
+                else
+                {
+                    transaction.FinalPrice = (totalprice - station.DiscConst)*
+                                             (1 - transaction.DepartureStation.DiscPorc);               
+                }
+            }
+
+
+            transaction.TotalDiscount = string.Format("{0}", totalprice - transaction.FinalPrice);            
+            
 
             //Add the action to the database.
             transaction.ArrivalStationId = arrivalStationId;
