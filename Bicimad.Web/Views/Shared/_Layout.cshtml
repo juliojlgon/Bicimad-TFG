@@ -85,14 +85,19 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="@Url.Action(MVC.Home.Index())" class="waves-effect waves-light">Home <span class="sr-only">(current)</span></a>
+                    @{
+                        if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="@(Request.Url.AbsolutePath.StartsWith("/home/index") ? "active" : "")">
+                                <a href="@Url.Action(MVC.Home.Index())" class="waves-effect waves-light">Home</a>
+                            </li>
+                        }
+                    }
+                        <li class="@(Request.Url.AbsolutePath.Equals("/bike") ? "active" : "")">
+                        <a href="@Url.Action(MVC.Bike.Index())" class="waves-effect waves-light">@Resources.TakeActions</a>
                     </li>
-                    <li>
-                        <a href="#" class="waves-effect waves-light">@Resources.Prices</a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect waves-light">@Resources.Promotions</a>
+                    <li class="@(Request.Url.AbsolutePath.StartsWith("/bike/returnindex") ? "active" : "")">
+                        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="waves-effect waves-light">@Resources.ReturnActions</a>
                     </li>
 
 

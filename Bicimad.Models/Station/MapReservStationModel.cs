@@ -1,4 +1,5 @@
 ﻿using System;
+using Bicimad.Enums;
 
 namespace Bicimad.Models.Station
 {
@@ -31,6 +32,12 @@ namespace Bicimad.Models.Station
         public bool IsSlotBooked { get; set; }
 
         public int AvailSlots { get; set; }
+
+        public double DiscPorc { get; set; }
+
+        public double DiscConst { get; set; }
+
+        public DiscountType DiscType { get; set; }
 
     }
 }

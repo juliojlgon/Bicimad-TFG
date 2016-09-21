@@ -151,6 +151,24 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Discount.
+        /// </summary>
+        public static string DiscApplied {
+            get {
+                return ResourceManager.GetString("DiscApplied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Discount.
+        /// </summary>
+        public static string Discount {
+            get {
+                return ResourceManager.GetString("Discount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string DisplayPassword {
@@ -444,6 +462,15 @@ namespace Bicimad.Resources {
         public static string Time {
             get {
                 return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string TotPrice {
+            get {
+                return ResourceManager.GetString("TotPrice", resourceCulture);
             }
         }
         

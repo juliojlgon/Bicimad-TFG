@@ -43,6 +43,10 @@
     <Compile Include="StationMapper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bicimad.Enums\Bicimad.Enums.csproj">
+      <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
+      <Name>Bicimad.Enums</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bicimad.Models\Bicimad.Models.csproj">
       <Project>{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}</Project>
       <Name>Bicimad.Models</Name>

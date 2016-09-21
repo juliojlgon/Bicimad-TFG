@@ -14,34 +14,48 @@
                 <th>@Resources.Date</th>
                 <th>@Resources.Time</th>
                 <th>@Resources.BikeId</th>
+                <th>@Resources.Discount</th>
+                <th>@Resources.TotPrice</th>
                 <th>@Resources.isFinished</th>
             </tr>
             
-            @foreach (var user in Model)
+            @foreach (var historyDto in Model)
             {
                 <tr>
                     <td>
-                        @user.DepartureStationUserName
+                        @historyDto.DepartureStationUserName
                     </td>
 
                     <td>
-                        @user.ArrivalStationUserName
+                        @historyDto.ArrivalStationUserName
                     </td>
 
                     <td>
-                        @user.CreatedDate.ToShortDateString()
+                        @historyDto.CreatedDate.ToShortDateString()
                     </td>
 
                     <td>
-                        @user.CreatedDate.ToShortTimeString()
+                        @historyDto.CreatedDate.ToShortTimeString()
                     </td>
 
                     <td>
-                        @user.BikeId
+                        @historyDto.BikeId
                     </td>
 
                     <td>
-                        @if (user.Finished)
+                        @{
+                           var disc= (historyDto.TotalDiscount.IsEmpty()) ? "-" :
+                                historyDto.TotalDiscount + "€";
+                        }
+                        @disc
+                    </td>
+
+                    <td>
+                        @historyDto.FinalPrice €
+                    </td>
+
+                    <td>
+                        @if (historyDto.Finished)
                         {
                             <label>
                                 <input type="checkbox" checked disabled>

@@ -1,4 +1,5 @@
 ﻿using System;
+using Bicimad.Enums;
 
 namespace Bicimad.Services.Query.Dto.Station
 {
@@ -25,6 +26,12 @@ namespace Bicimad.Services.Query.Dto.Station
         public string Bus { get; set; }
 
         public int ReservedSlots { get; set; }
+
+        public double DiscPorc { get; set; }
+
+        public double DiscConst { get; set; }
+
+        public DiscountType DiscType { get; set; }
 
     }
 }

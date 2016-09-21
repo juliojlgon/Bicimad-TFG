@@ -51,7 +51,9 @@ namespace Bicimad.Services.Query
                 DepartureStationId = userHistory.DepartureStationId,
                 DepartureStationUserName = userHistory.DepartureStation.StationName,
                 Finished = userHistory.Finished,
-                UserId = userHistory.UserId
+                UserId = userHistory.UserId,
+                FinalPrice = userHistory.FinalPrice,
+                TotalDiscount = userHistory.TotalDiscount
             };
         }
     }

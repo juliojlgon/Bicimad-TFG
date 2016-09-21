@@ -1,11 +1,22 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Bicimad.Core.DomainObjects.Interfaces;
+using Bicimad.Enums;
 
 namespace Bicimad.Core.DomainObjects
 {
     public class Station : IEntity
     {
+        [Required,DefaultValue(0)]
+        public double DiscPorc { get; set; }
+
+        [Required, DefaultValue(0)]
+        public double DiscConst { get; set; }
+
+        [Required, DefaultValue(0)]
+        public DiscountType DiscType { get; set; }
+
         [Required]
         public int BikeNum { get; set; }
 

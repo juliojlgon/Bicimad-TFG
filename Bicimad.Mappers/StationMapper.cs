@@ -22,7 +22,10 @@ namespace Bicimad.Mappers
                 Metro = dto.Metro,
                 ReservedSlots = dto.ReservedSlots,
                 StationName = dto.StationName,
-                AvailSlots = dto.BikeNum - (dto.FreeBikes + dto.ReservedSlots)
+                AvailSlots = dto.BikeNum - (dto.FreeBikes + dto.ReservedSlots),
+                DiscConst = dto.DiscConst,
+                DiscPorc = dto.DiscPorc,
+                DiscType = dto.DiscType
             };
             return model;
         }

@@ -30,6 +30,9 @@ namespace Bicimad.Core.DomainObjects
         [Required, DefaultValue(false)]
         public bool Finished { get; set; }
 
+        public string TotalDiscount { get; set; }
+        public double FinalPrice { get; set; }
+
         [Key, StringLength(13)]
         public string Id { get; set; }
 
