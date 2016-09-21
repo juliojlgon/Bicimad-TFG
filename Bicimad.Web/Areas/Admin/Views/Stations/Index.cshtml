@@ -1,0 +1,47 @@
+﻿@model List<Bicimad.Services.Query.Dto.Station.StationDto>
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<div class="row" style="margin: 15px 0;">
+    <div class="col-md-2">
+        <h3 style="margin: 0;">@Model.Count Estaciones</h3>
+    </div>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Discount Type</th>
+            <th>% Discount</th>
+            <th>Money Discount</th>
+        </tr>
+        @foreach (var station in Model)
+        {
+            <tr>
+
+                <td>
+                    @station.StationName
+                </td>
+
+                <td>
+                    @station.DiscType.ToString()
+                </td>
+
+                <td>
+                    @station.DiscPorc %
+                </td>
+
+                <td>
+                    @station.DiscConst €
+                </td>
+
+            </tr>
+        }
+
+
+    </table>
+}

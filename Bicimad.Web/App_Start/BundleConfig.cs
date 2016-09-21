@@ -22,6 +22,8 @@ namespace Bicimad.Web
         public const string NavbarJs = "~/bundles/mdsidebar";
 
         public const string Mdbootstrap = "~/Content/mdbootstrap";
+
+        public const string Contents = "~/Content/css";
     
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
@@ -50,7 +52,7 @@ namespace Bicimad.Web
                       "~/Scripts/respond.js",
                        "~/Scripts/mdb.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle(Contents).Include(
                       "~/Content/bootstrap.css",
                       "~/Content/leaflet.css",
                       "~/Content/leaflet.extra-markers.min.css"));
