@@ -27,6 +27,8 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
+    static readonly AdminClass s_Admin = new AdminClass();
+    public static AdminClass Admin { get { return s_Admin; } }
     static readonly UserClass s_User = new UserClass();
     public static UserClass User { get { return s_User; } }
     public static Bicimad.Web.Controllers.AccountController Account = new Bicimad.Web.Controllers.T4MVC_AccountController();
@@ -40,6 +42,14 @@ public static partial class MVC
 
 namespace T4MVC
 {
+    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+    public class AdminClass
+    {
+        public readonly string Name = "Admin";
+        public Bicimad.Web.Areas.Admin.Controllers.AdminBaseController AdminBase = new Bicimad.Web.Areas.Admin.Controllers.T4MVC_AdminBaseController();
+        public Bicimad.Web.Areas.Admin.Controllers.StationsController Stations = new Bicimad.Web.Areas.Admin.Controllers.T4MVC_StationsController();
+        public T4MVC.Admin.SharedController Shared = new T4MVC.Admin.SharedController();
+    }
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
     public class UserClass
     {

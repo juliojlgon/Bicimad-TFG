@@ -258,4 +258,10 @@
   <data name="TotPrice" xml:space="preserve">
     <value>Price</value>
   </data>
+  <data name="PriceModel_DiscConst_Porcentual" xml:space="preserve">
+    <value>Porcentual</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
 </root>

@@ -2,14 +2,9 @@
 {
     public static class BicimadMetadata
     {
-        private static int _basePrice = 5;
+        private static double _basePrice = 5;
 
-        public static int BicimadBasePrice
-        {
-            get { return BasePrice; }
-        }
-
-        public static int BasePrice
+       public static double BasePrice
         {
             get { return _basePrice; }
             set { _basePrice = value; }
