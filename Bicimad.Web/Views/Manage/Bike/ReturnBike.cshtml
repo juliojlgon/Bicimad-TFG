@@ -22,14 +22,14 @@
             </div>
         </div>
 
-        <div class="card default-color darken-1 z-depth-3 no-display" style="display: none">
+        <div class="card default-color darken-4 no-display" style="display: none">
             <div class="card-content white-text">
                 <span class="card-title" id="station-title">@Resources.Station</span>
                 <div id="station"></div>
             </div>
         </div>
 
-        <div class="panel text-center">
+        <div class="panel transparent text-center">
             <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">@Resources.ReturnBike</a>
             <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">@Resources.BookSlot</a>
         </div>
@@ -66,10 +66,13 @@
                         var metro = data.Metro;
                         var bus = data.Bus;
                         var availSlots = parseInt(data.BikeNum) - (parseInt(data.FreeBikes) + parseInt(data.ReservedSlots));
+                        var discType = (data.DiscType == 0);
+                        var discStr = (discType) ? data.DiscConst + "€" : data.DiscPorc + "%";
                         $("#station-title").text(stationName);
                         $("#station").text("");
                         $("<p class=\"flow-text\" style=\"font-size: 1.2vw\">"
                                 + "@Resources.FreeSlots -> " + availSlots + "<br/>"
+                                + "@Resources.Discount -> " + discStr + "<br>"
                                 + "Metro -> " + metro + "<br/>"
                                 + "Bus -> " + bus + "</p>")
                             .appendTo("#station");
@@ -169,7 +172,6 @@
                         var availSlots = data[i].AvailSlots;
                         var porc = availSlots / data[i].BikeNum;
                         var stationBooked = data[i].IsSlotBooked;
-
 
                         //var parentDiv = $("<div/>", { id: "kdjfkd", title: "fjsdpof" });
                         //var img = $("<img/>", { id: "kdjfkd", title: "fjsdpof", src: "skdfjsdkljf" });
