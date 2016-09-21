@@ -252,4 +252,10 @@
   <data name="Discount" xml:space="preserve">
     <value>Discount</value>
   </data>
+  <data name="DiscApplied" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="TotPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
 </root>
