@@ -32,7 +32,7 @@ namespace Bicimad.Services.Command
             return commandResult;
         }
 
-        public CommandResult SetDiscount(List<string> stationIds, double discount)
+        public CommandResult SetDiscounts(List<string> stationIds, DiscountType discountType, double discountConst, double discountPorc)
         {
             var commandResult = new CommandResult();
 
@@ -42,9 +42,14 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
 
-            if (discount < 0)
+            if (discountConst < 0)
             {
                 commandResult.AddValidationError("Only use positive numbers");
+                return commandResult;
+            }
+            if (discountPorc < 0 || discountPorc > 100)
+            {
+                commandResult.AddValidationError("It has to be a number between 0 and 100.");
                 return commandResult;
             }
 
@@ -52,16 +57,17 @@ namespace Bicimad.Services.Command
 
             foreach (var station in stations)
             {
+                station.DiscType = discountType;
                 switch (station.DiscType)
                 {
                     case DiscountType.Constant:
                     {
-                        station.DiscConst = discount;
+                        station.DiscConst = discountConst;
                         break;
                     }
                     case DiscountType.Porcentual:
                     {
-                        station.DiscPorc = discount;
+                        station.DiscPorc = discountPorc;
                         break;
                     }
                 }

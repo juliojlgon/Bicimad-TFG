@@ -11,6 +11,6 @@ namespace Bicimad.Services.Command.Interface
     public interface IStationCommandService
     {
         CommandResult SetDiscountType(List<string> stationIds, DiscountType discountType);
-        CommandResult SetDiscount(List<string> stationIds, double discount);
+        CommandResult SetDiscounts(List<string> stationIds, DiscountType discountType, double discountConst, double discountPorc);
     }
 }
