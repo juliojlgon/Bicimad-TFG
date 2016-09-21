@@ -51,7 +51,10 @@ namespace Bicimad.Services.Query
                 Longitude = station.Longitude,
                 Metro = station.Metro,
                 StationName = station.StationName,
-                FreeBikes = station.FreeBikes
+                FreeBikes = station.FreeBikes,
+                DiscConst = station.DiscConst,
+                DiscPorc = station.DiscPorc,
+                DiscType = station.DiscType
             };
 
             return dto;

@@ -25,5 +25,9 @@ namespace Bicimad.Services.Query.Dto.History
         public string Id { get; set; }
         
         public DateTime CreatedDate { get; set; }
+
+        public string TotalDiscount { get; set; }
+
+        public double FinalPrice { get; set; }
     }
 }
