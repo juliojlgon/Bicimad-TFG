@@ -3,6 +3,7 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+.idea
 .DS_Store
 /build
 /captures
@@ -72,3 +73,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+app/libs/
+app/src/main/java/com/bicis_tfg/bicimad_tfg_app/services/
+app/src/main/res/drawable-hdpi/
+app/src/main/res/drawable-mdpi/
+app/src/main/res/drawable-xhdpi/
+app/src/main/res/drawable-xxhdpi/
+app/src/main/res/layout/Fragment/
+projectFilesBackup/
