@@ -43,6 +43,7 @@
     <Compile Include="BicimadMetadata.cs" />
     <Compile Include="CultureHelper.cs" />
     <Compile Include="DateTimeHelper.cs" />
+    <Compile Include="EnumHelper.cs" />
     <Compile Include="GuidHelper.cs" />
     <Compile Include="HashHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

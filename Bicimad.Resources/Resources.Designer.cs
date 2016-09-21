@@ -286,6 +286,15 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Porcentual.
+        /// </summary>
+        public static string PriceModel_DiscConst_Porcentual {
+            get {
+                return ResourceManager.GetString("PriceModel_DiscConst_Porcentual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prices.
         /// </summary>
         public static string Prices {
@@ -381,6 +390,15 @@ namespace Bicimad.Resources {
         public static string ReturnBikeTitle {
             get {
                 return ResourceManager.GetString("ReturnBikeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select All.
+        /// </summary>
+        public static string SelectAll {
+            get {
+                return ResourceManager.GetString("SelectAll", resourceCulture);
             }
         }
         

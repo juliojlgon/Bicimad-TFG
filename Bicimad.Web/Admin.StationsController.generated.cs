@@ -56,6 +56,18 @@ namespace Bicimad.Web.Areas.Admin.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult SetBasePrice()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SetBasePrice);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult SetDiscounts()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SetDiscounts);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public StationsController Actions { get { return MVC.Admin.Stations; } }
@@ -73,15 +85,38 @@ namespace Bicimad.Web.Areas.Admin.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string SetBasePrice = "SetBasePrice";
+            public readonly string SetDiscounts = "SetDiscounts";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string SetBasePrice = "SetBasePrice";
+            public const string SetDiscounts = "SetDiscounts";
         }
 
 
+        static readonly ActionParamsClass_SetBasePrice s_params_SetBasePrice = new ActionParamsClass_SetBasePrice();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_SetBasePrice SetBasePriceParams { get { return s_params_SetBasePrice; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_SetBasePrice
+        {
+            public readonly string basePrice = "basePrice";
+        }
+        static readonly ActionParamsClass_SetDiscounts s_params_SetDiscounts = new ActionParamsClass_SetDiscounts();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_SetDiscounts SetDiscountsParams { get { return s_params_SetDiscounts; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_SetDiscounts
+        {
+            public readonly string stationIds = "stationIds";
+            public readonly string discountType = "discountType";
+            public readonly string discConst = "discConst";
+            public readonly string discPorc = "discPorc";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -111,6 +146,33 @@ namespace Bicimad.Web.Areas.Admin.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void SetBasePriceOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, double? basePrice);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult SetBasePrice(double? basePrice)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SetBasePrice);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "basePrice", basePrice);
+            SetBasePriceOverride(callInfo, basePrice);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void SetDiscountsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, System.Collections.Generic.List<string> stationIds, Bicimad.Enums.DiscountType discountType, string discConst, string discPorc);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult SetDiscounts(System.Collections.Generic.List<string> stationIds, Bicimad.Enums.DiscountType discountType, string discConst, string discPorc)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SetDiscounts);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationIds", stationIds);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "discountType", discountType);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "discConst", discConst);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "discPorc", discPorc);
+            SetDiscountsOverride(callInfo, stationIds, discountType, discConst, discPorc);
             return callInfo;
         }
 

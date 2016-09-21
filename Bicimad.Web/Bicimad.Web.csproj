@@ -223,6 +223,8 @@
     <Compile Include="Areas\Admin\Controllers\AdminBaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\StationsController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Models\AdminStationModel.cs" />
+    <Compile Include="Areas\Admin\Models\PriceModel.cs" />
     <Compile Include="Areas\User\Controllers\UserBaseController.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
     <Compile Include="Areas\User\Models\UserHistoriesModel.cs" />
@@ -395,7 +397,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Views\Station\" />
   </ItemGroup>
   <ItemGroup>
