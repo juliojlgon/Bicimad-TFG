@@ -238,6 +238,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 .subscribe(stations -> {
                     this.stations = stations;
                     for (Station station : stations) {
+                        boolean type = (station.getDiscType() == 0);
+                        String discount = (type)? String.format("%s€", station.getDiscConst()) : String.format("%s%%", station.getDiscPorc());
                         markerList.add(googleMap.addMarker(
                                 new MarkerOptions()
                                         .position(new LatLng(Double.parseDouble(station.getLatitude()), Double.parseDouble(station.getLongitude())))
@@ -245,6 +247,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                                         .icon(getIcon(station.getIsBikeBooked(), station.getFreeBikes() / (double) station.getBikeNum()))
                                         .snippet(new StringBuilder().append(appendTitle(station.getIsBikeBooked())).append("Free Bikes: ").append(station.getFreeBikes())
                                                 .append("\nFree Slots: ").append(station.getAvailSlots())
+                                                .append("\nDiscount: ").append(discount)
                                                 .append("\nMetro: ").append(station.getMetro())
                                                 .append("\nBus lines: ").append(station.getBus()).toString())
                         ));

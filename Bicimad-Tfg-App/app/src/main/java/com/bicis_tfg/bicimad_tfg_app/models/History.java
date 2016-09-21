@@ -35,6 +35,12 @@ public class History {
     @SerializedName("CreatedDate")
     @Expose
     private String createdDate;
+    @SerializedName("TotalDiscount")
+    @Expose
+    private String totaldiscount;
+    @SerializedName("FinalPrice")
+    @Expose
+    private Double finalprice;
 
     /**
      *
@@ -199,4 +205,19 @@ public class History {
     }
 
 
+    public String getTotaldiscount() {
+        return totaldiscount;
+    }
+
+    public void setTotaldiscount(String totaldiscount) {
+        this.totaldiscount = totaldiscount;
+    }
+
+    public Double getFinalprice() {
+        return finalprice;
+    }
+
+    public void setFinalprice(Double finalprice) {
+        this.finalprice = finalprice;
+    }
 }

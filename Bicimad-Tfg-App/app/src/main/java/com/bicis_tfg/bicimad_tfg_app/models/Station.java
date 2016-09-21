@@ -19,6 +19,9 @@ public class Station {
     private Boolean IsBikeBooked;
     private Boolean IsSlotBooked;
     private Integer AvailSlots;
+    private Double DiscPorc;
+    private Double DiscConst;
+    private Integer DiscType;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -281,4 +284,27 @@ public class Station {
         this.additionalProperties.put(name, value);
     }
 
+    public Double getDiscPorc() {
+        return DiscPorc;
+    }
+
+    public Double getDiscConst() {
+        return DiscConst;
+    }
+
+    public Integer getDiscType() {
+        return DiscType;
+    }
+
+    public void setDiscPorc(Double discPorc) {
+        DiscPorc = discPorc;
+    }
+
+    public void setDiscConst(Double discConst) {
+        DiscConst = discConst;
+    }
+
+    public void setDiscType(Integer discType) {
+        DiscType = discType;
+    }
 }
