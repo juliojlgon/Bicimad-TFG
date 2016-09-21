@@ -249,4 +249,7 @@
   <data name="Historic" xml:space="preserve">
     <value>History</value>
   </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
 </root>

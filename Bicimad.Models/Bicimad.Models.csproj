@@ -43,6 +43,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Station\MapReservStationModel.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bicimad.Enums\Bicimad.Enums.csproj">
+      <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
+      <Name>Bicimad.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

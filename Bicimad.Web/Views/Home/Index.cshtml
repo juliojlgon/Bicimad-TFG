@@ -20,15 +20,15 @@
         </div>
     </div>
 
-    <div class="panel text-center">
-        <a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">@Resources.TakeActions</a>
+    @*<div class="panel text-center">*@
+        @*<a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">@Resources.TakeActions</a>*@
         @*<a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookBike</a>*@
-        <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">@Resources.ReturnActions</a>
+        @*<a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">@Resources.ReturnActions</a>*@
         @*<a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">@Resources.ReturnBike</a>*@
-    </div>
+    @*</div>*@
 </div>
 
-<div class="card default-color darken-1 col-md-10">
+<div class="card default-color col-md-10">
     <div class="card-content">
         <span class="card-title">@Resources.Status</span>
         <div id="map" style="height: 550px;
@@ -103,9 +103,12 @@
                         var porc = data[i].FreeBikes / data[i].BikeNum;
                         var availSlots = data[i].AvailSlots;
                         var stationBooked = data[i].IsBikeBooked;
+                        var discType = (data[i].DiscType == 0);
+                        var discStr = (discType) ? data[i].DiscConst + "€" : data[i].DiscPorc + "%";
                         var markertext = "<b class=\"text-center  center-block\">" + data[i].StationName + "</b><hr>" +
                             "<b>@Resources.FreeBikes: </b>" + data[i].FreeBikes + "<br>" +
                             "<b>@Resources.FreeSlots: </b>" + availSlots + "<br>" +
+                            "<b>@Resources.Discount: </b>" + discStr + "<br>" +
                             "<b>Metro: </b>" + data[i].Metro + "<br>" +
                             "<b>Bus: </b>" + data[i].Bus + "<br>";
                         var marker;
@@ -118,14 +121,14 @@
                             marker = L.marker([lat, lon], { icon: greyMarker });
                         } else if (porc < 0.25) {
                             marker = L.marker([lat, lon], { icon: redMarker });
-                        } else  {
+                        } else {
                             marker = L.marker([lat, lon], { icon: orangeMarker });
                         }
                         marker.bindPopup(markertext);
                         marker.addTo(map);
                     }
                 },
-                "error": function() {
+                "error": function () {
                     console.log("Error calling " + url);
                 }
             });
