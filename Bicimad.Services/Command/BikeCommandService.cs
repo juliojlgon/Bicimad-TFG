@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
 using Bicimad.Core;
 using Bicimad.Core.DomainObjects;
 using Bicimad.Enums;
@@ -106,7 +107,9 @@ namespace Bicimad.Services.Command
             station.FreeBikes = freeB;
 
             //Update the price and discount
-            var totalprice = BicimadMetadata.BasePrice*(transaction.CreatedDate.Hour - DateTimeHelper.SpanishNow.Hour);
+            var metaBasePrice = Repository.MetaConfigs.Where(c => c.MetaKey == MetaConfigKey.BasePrice).Select(c=> c.MetaValue).First();
+            var basePrice = double.Parse(metaBasePrice, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
+            var totalprice = basePrice*(transaction.CreatedDate.Hour - DateTimeHelper.SpanishNow.Hour);
             
             //if same type, apply the highest one.
             if (transaction.DepartureStation.DiscType == station.DiscType)
