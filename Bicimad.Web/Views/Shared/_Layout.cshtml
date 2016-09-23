@@ -99,6 +99,15 @@
                     <li class="@(Request.Url.AbsolutePath.StartsWith("/bike/returnindex") ? "active" : "")">
                         <a href="@Url.Action(MVC.Bike.ReturnIndex())" class="waves-effect waves-light">@Resources.ReturnActions</a>
                     </li>
+                    @{
+                        var b = (bool) ViewBag.UserIsAdmin;
+                        if (User.Identity.IsAuthenticated && b)
+                        {
+                            <li>
+                                <a href="@Url.Action(MVC.Admin.Stations.Index())" class="waves-effect waves-light">Admin</a>
+                            </li>
+                        }
+                    }
 
 
                 </ul>
