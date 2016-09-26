@@ -16,7 +16,7 @@ namespace Bicimad.Api.Attributes
         private static readonly EFRepository Repository = new EFRepository();
         private readonly ISecurityQueryService _securityQueryService = new SecurityQueryService(Repository);
 
-         public override void OnAuthorization(System.Web.Http.Controllers.HttpActionContext actionContext)
+         public override void OnAuthorization(HttpActionContext actionContext)
 
         {
 
