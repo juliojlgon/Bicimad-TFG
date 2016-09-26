@@ -71,12 +71,15 @@ namespace Bicimad.Api.App_Start
             kernel.Bind<IUserQueryService>().To<UserQueryService>();
             kernel.Bind<ISecurityQueryService>().To<SecurityQueryService>();
             kernel.Bind<IStationQueryService>().To<StationQueryService>();
+            kernel.Bind<IStationCommandService>().To<StationCommandService>();
             kernel.Bind<IReservationQueryService>().To<ReservationQueryService>();
             kernel.Bind<IReservationCommandService>().To<ReservationCommandService>();
             kernel.Bind<ISlotQueryService>().To<SlotQueryService>();
             kernel.Bind<IBikeCommandService>().To<BikeCommandService>();
             kernel.Bind<IBikeQueryService>().To<BikeQueryService>();
             kernel.Bind<IUserHistoryQueryService>().To<UserHistoryQueryService>();
+            kernel.Bind<IMetaConfigQueryService>().To<MetaConfigQueryService>();
+            kernel.Bind<IMetaConfigCommandService>().To<MetaConfigCommandService>();
         }        
     }
 }

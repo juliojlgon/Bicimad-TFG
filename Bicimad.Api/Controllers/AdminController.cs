@@ -30,8 +30,8 @@ namespace Bicimad.Api.Controllers
         }
 
         /// <summary>
-        /// Return a list with all data relative station admin.
-        /// Admin required.
+        ///     Return a list with all data relative station admin.
+        ///     Admin required.
         /// </summary>
         /// <returns>Json of stations.</returns>
         public virtual IHttpActionResult GetAdminStationList()
@@ -54,8 +54,8 @@ namespace Bicimad.Api.Controllers
         }
 
         /// <summary>
-        /// Change the base price that rest of application use
-        /// for calculate the price-
+        ///     Change the base price that rest of application use
+        ///     for calculate the price-
         /// </summary>
         /// <param name="basePrice"></param>
         /// <returns>Ok if everything is correct otherwise BadRequest</returns>
@@ -81,7 +81,7 @@ namespace Bicimad.Api.Controllers
         }
 
         /// <summary>
-        /// Change the discount type and or the discount values of selected stations.
+        ///     Change the discount type and or the discount values of selected stations.
         /// </summary>
         /// <param name="stationIds">List of stationId's</param>
         /// <param name="discountType">0 for constant value. 1 for percent</param>

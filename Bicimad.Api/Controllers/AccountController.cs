@@ -69,7 +69,7 @@ namespace Bicimad.Api.Controllers
                 FriendlyUrlName = userDto.FriendlyUrlUserName
             };
 
-            return HashHelper.GenerateToken(userDto.Id, userDto.UserName, password, DateTimeHelper.SpanishNow.Ticks);
+            return HashHelper.GenerateToken(userDto.Id, userDto.UserName, password, DateTimeHelper.SpanishNow.Ticks,userDto.IsAdmin);
 
 
         }
