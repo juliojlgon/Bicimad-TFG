@@ -13,6 +13,10 @@ using Bicimad.Services.Query.Queries;
 
 namespace Bicimad.Api.Controllers
 {
+    /// <summary>
+    /// Requires a token to work.
+    /// It manages the methods relate to stations.
+    /// </summary>
     [ApiAuthorize]
     public class StationController : BaseController
     {
@@ -34,6 +38,11 @@ namespace Bicimad.Api.Controllers
             _userStoryQueryService = userStoryQueryService;
         }
 
+        /// <summary>
+        /// Search a station by its Id
+        /// </summary>
+        /// <param name="id">The id of the station.</param>
+        /// <returns>A station object as Json.</returns>
         [HttpPost]
         public virtual IHttpActionResult GetStationByIdJson(string id)
         {
@@ -42,6 +51,12 @@ namespace Bicimad.Api.Controllers
             return jsonStation;
         }
 
+        /// <summary>
+        /// Book a slot in a desired station.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="stationId"></param>
+        /// <returns>Json with bool value "Success" and a "BikeId" for the slot.</returns>
         [HttpPost]
         public virtual IHttpActionResult BookSlot(string userId, string stationId)
         {
@@ -67,6 +82,10 @@ namespace Bicimad.Api.Controllers
             return Json(new {Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage});
         }
 
+        /// <summary>
+        /// Method used for filling up a GoogleMaps map. but It can be used to fill any other object.
+        /// </summary>
+        /// <returns>List of the status of all stations, with information about reservations.</returns>
         public virtual IHttpActionResult FillMap()
         {
             var stations = _stationQueryService.GetStations();
@@ -94,6 +113,10 @@ namespace Bicimad.Api.Controllers
             return jsonStationModel;
         }
 
+        /// <summary>
+        /// Get all the trips, completed or not, that the user did.
+        /// </summary>
+        /// <returns>Json with a list of UserHistoryDto </returns>
         public virtual IHttpActionResult GetHistory()
         {
 
@@ -107,6 +130,10 @@ namespace Bicimad.Api.Controllers
             return Json(userHistorical);
         }
 
+        /// <summary>
+        /// Get all the active reservations for the current user.
+        /// </summary>
+        /// <returns>List of ReservationDto</returns>
         public virtual IHttpActionResult GetActiveReservations()
         {
 
@@ -121,6 +148,12 @@ namespace Bicimad.Api.Controllers
             return Json(reservationHistorical);
         }
 
+        /// <summary>
+        /// Remove the slot reservation
+        /// </summary>
+        /// <param name="userId">currentUser Id</param>
+        /// <param name="stationId">Id of the station</param>
+        /// <returns>boolean value to show result</returns>
         [HttpPost]
         public virtual IHttpActionResult RemoveSlotReservation(string userId, string stationId)
         {

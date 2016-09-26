@@ -11,6 +11,10 @@ using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Api.Controllers
 {
+    /// <summary>
+    /// Requires to be admin in order to use this methods.
+    /// This controller take care of all Admin methods.
+    /// </summary>
     [AdminAuthorize]
     public class AdminController : BaseController
     {

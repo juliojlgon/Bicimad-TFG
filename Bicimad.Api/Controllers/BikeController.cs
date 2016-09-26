@@ -7,6 +7,10 @@ using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Api.Controllers
 {
+    /// <summary>
+    /// Requires a token to work. 
+    /// It has all the methods required for managing bikes.
+    /// </summary>
     [ApiAuthorize]
     public class BikeController : BaseController
     {
@@ -25,6 +29,10 @@ namespace Bicimad.Api.Controllers
             _reservationQueryService = reservationQueryService;
         }
 
+        /// <summary>
+        /// Values insteresting for returning a bike
+        /// </summary>
+        /// <returns>Returns a Json with data useful to show while returning objetcs.</returns>
         public virtual IHttpActionResult ReturnIndex()
         {
             //TODO: Añadir un filtro a las estaciones, para pasarles todo desde ahí y hacer un solo metodo.
@@ -40,6 +48,12 @@ namespace Bicimad.Api.Controllers
             return Json(model);
         }
 
+        /// <summary>
+        /// Method for taking a Bike.
+        /// </summary>
+        /// <param name="userId">The actual userId</param>
+        /// <param name="stationId">The stationId of the station where the user is taking the bike.</param>
+        /// <returns>A Json object with a bool value and a BikeId</returns>
         [HttpPost]
         public virtual IHttpActionResult TakeBike(string userId, string stationId)
         {
@@ -76,6 +90,12 @@ namespace Bicimad.Api.Controllers
             return Json(new {Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage});
         }
 
+        /// <summary>
+        /// Method for return a Bike.
+        /// </summary>
+        /// <param name="userId">The actual userId</param>
+        /// <param name="stationId">The stationId of the station where the user is taking the bike.</param>
+        /// <returns>A Json object with a bool value and a BikeId</returns>
         [HttpPost]
         public virtual IHttpActionResult ReturnBike(string userId, string stationId)
         {
@@ -100,6 +120,12 @@ namespace Bicimad.Api.Controllers
             return Json(new {Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage});
         }
 
+        /// <summary>
+        /// Method for book a Bike.
+        /// </summary>
+        /// <param name="userId">The actual userId</param>
+        /// <param name="stationId">The stationId of the station where the user is taking the bike.</param>
+        /// <returns>A Json object with a bool value and a BikeId</returns>
         [HttpPost]
         public virtual IHttpActionResult BookBike(string userId, string stationId)
         {
@@ -125,6 +151,12 @@ namespace Bicimad.Api.Controllers
             return Json(new {Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage});
         }
 
+        /// <summary>
+        /// Method for remove a Bike reservation.
+        /// </summary>
+        /// <param name="userId">The actual userId</param>
+        /// <param name="stationId">The stationId of the station where the user is taking the bike.</param>
+        /// <returns>A Json object with a bool value</returns>
         public virtual IHttpActionResult RemoveBikeReservation(string userId, string stationId)
         {
             if (stationId == null)
@@ -143,17 +175,22 @@ namespace Bicimad.Api.Controllers
             return Json(new {Success = false, Error = action.ValidationErrors.First().ErrorMessage});
         }
 
+        /// <summary>
+        /// Method for set a bike as broken.
+        /// </summary>
+        /// <param name="bikeId">The bikeId you wanna set as broken.</param>
+        /// <returns>Json with a bool.</returns>
         public virtual IHttpActionResult InformBrokenBike(string bikeId)
         {
             if (bikeId == null)
             {
-                return Json(new {Success = false, Error = "Bicicleta no válida"});
+                return Json(new {Success = false, Error = "Bike not valid"});
             }
             var action = _bikeCommandService.InformBrokenBike(bikeId);
 
             if (action == null)
             {
-                return Json(new {Success = false, Error = "No se pudo enviar el aviso"});
+                return Json(new {Success = false, Error = "There was a problem updating bike status"});
             }
 
             return Json(new {Success = true, Error = ""});
