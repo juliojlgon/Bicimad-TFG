@@ -54,13 +54,13 @@ namespace Bicimad.Services.Command
             if (isBike && Repository.Reservations.Any(r => r.IsBike && r.UserId == userId))
             {
                 var reserv = Repository.Reservations.First(r => isBike && r.UserId == userId);
-                RemoveReservationItem(stationId, reserv);
+                RemoveReservationItem(reserv.StationId, reserv);
             }
 
             if (!isBike && Repository.Reservations.Any(r => !r.IsBike && r.UserId == userId))
             {
                 var reserv = Repository.Reservations.First(r => !isBike && r.UserId == userId);
-                RemoveReservationItem(stationId, reserv);
+                RemoveReservationItem(reserv.StationId, reserv);
             }
 
 
