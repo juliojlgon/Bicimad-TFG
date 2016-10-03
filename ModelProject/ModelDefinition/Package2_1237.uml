@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1c73a99f-3e4d-4704-95f3-a2febebbef8a"
+  name="Dto"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="5c6487d2-c7bf-4193-a8aa-7d3611af31df"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Query.Dto"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="57f7b224-61af-4f5f-892d-d41f8805d2d4"
+        LastKnownName="Bike"
+        LastKnownLocation="Package3_1237.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3959e840-f3fc-41d8-9e7f-b804c81c5b67"
+        LastKnownName="History"
+        LastKnownLocation="Package4_1237.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="808d6d21-6770-4634-9f40-cc7f337dfbed"
+        LastKnownName="MetaConfig"
+        LastKnownLocation="Package5_1237.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="711fa71e-7b50-4d00-82f6-58c594d3fd66"
+        LastKnownName="Reservation"
+        LastKnownLocation="Package_1238.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d51c5337-f787-4724-8c7e-f5291fde7df3"
+        LastKnownName="Slot"
+        LastKnownLocation="Package1_1238.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b3518399-195e-4c0b-852a-49bd7fe688bf"
+        LastKnownName="Station"
+        LastKnownLocation="Package2_1238.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9c2b8c3a-de80-459c-a770-a2ac4d5e400d"
+        LastKnownName="User"
+        LastKnownLocation="Package_1305.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

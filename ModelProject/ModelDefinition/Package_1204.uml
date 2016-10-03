@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="320d5fff-6492-42a0-b2bf-b12dbb8c7ee6"
+  name="Bicimad"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b51fe200-42e2-4267-8cb6-4c05bf05b120"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="618889b6-781b-4494-9c82-131ca466dce2"
+        LastKnownName="Core"
+        LastKnownLocation="Package1_1204.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8b62f4a4-38fd-401b-b517-8e9bff3252ed"
+        LastKnownName="Enums"
+        LastKnownLocation="Package_1205.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="44bca8b1-38d1-4d73-8cbc-9c4b115f515d"
+        LastKnownName="System"
+        LastKnownLocation="Package3_1204.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="87c65eb3-f00f-4e38-a4e7-ed9e6324f06d"
+        LastKnownName="Services"
+        LastKnownLocation="Package_1222.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

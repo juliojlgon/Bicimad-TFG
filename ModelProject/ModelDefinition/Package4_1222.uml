@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="268c3401-1b9f-4031-861f-92cea6aadfb9"
+  name="MetaConfig"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="aeeca567-5f57-4132-b0d9-f3c6789ccde1"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Command.Commands.MetaConfig"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="04623915-7abf-475e-9b49-e750be1eef4c"
+        name="CreateMetaConfigCommand"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5522cb12-832f-4616-9f57-6cec343a6259"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands.MetaConfig Type%3DCreateMetaConfigCommand"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="97350fd4-2b55-45d4-baac-3dbc35c49d0e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99b6e15c-1378-4a11-b231-9537b0e5e69b">
+                <propertyInstance
+                  Id="9c5247e7-b772-4714-9eea-75fa9ad0ed58"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4aba7ba0-a49f-42b0-b0c4-d7ccae0b2382">
+                <propertyInstance
+                  Id="4f25190f-2733-49c2-bb3f-d30a0f4f47f6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c8ab5cd3-c3e0-458c-8876-ac7f35e0601b">
+                <propertyInstance
+                  Id="40e5944d-d6ee-4381-8186-270f276ff390"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b7e2b08c-a4f5-4e24-b056-f57217ba73e9">
+                <propertyInstance
+                  Id="41b964a8-733c-4035-aac1-ceee8cbe5280"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9fe08b8-854e-412e-b6a2-3e373ad2e124">
+                <propertyInstance
+                  Id="f4cc2930-40a9-4b11-880a-95db5f47d619"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="fde7c2c0-fed4-4bdc-9a62-a245e5bdd975"
+            isSubstitutable="false">
+            <classMoniker
+              Id="da5bbfcd-b47a-428b-a131-69c78db05903"
+              LastKnownName="CommandBase"
+              LastKnownLocation="Package2_1222.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

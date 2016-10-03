@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8b62f4a4-38fd-401b-b517-8e9bff3252ed"
+  name="Enums"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="27e52347-6715-4404-b2dc-cd4ed65463a4"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Enums"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="bef0c77f-1ebc-407d-906e-d5defaaba089"
+        name="MetaConfigKey"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="eddccb23-d9bd-480f-8209-ff851238dc9a"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DMetaConfigKey"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2f2798ba-279f-4669-86d0-d827d15b00b8"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="815cd8e0-bc2e-408a-9889-6c3d8916b5c4">
+                <propertyInstance
+                  Id="3389e6b2-0554-40b5-9656-b62bdf3f93a7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6bef20e1-effb-4517-8dbe-aad4ef339c31">
+                <propertyInstance
+                  Id="643e495d-abed-46c6-844d-68d8a99b7c5f"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f23e321-f2b0-48b6-bb7c-e6819c89622d">
+                <propertyInstance
+                  Id="89f99289-f0b7-40b9-b38c-17e19b886b80"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="45ad6c41-4e13-4188-829f-a0f84e1e75a6"
+        name="DiscountType"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="3a6ae5ed-3643-46a6-8121-7cf93f406a68"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f9511504-6564-4d77-87c6-bf92af70067f"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d87c7a43-d4ad-4e17-9177-2c6afe0c0ec8">
+                <propertyInstance
+                  Id="2e32698a-1936-42af-8885-8f1b828eb547"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e8f18586-2348-4b14-92e2-bbb63032a406">
+                <propertyInstance
+                  Id="5ac5b137-f398-400b-b02c-25a670e14423"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5e74edb5-c7d3-4060-9170-bc7902b4085f">
+                <propertyInstance
+                  Id="a0a36956-a1bf-49fa-aa65-63ea95f11197"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

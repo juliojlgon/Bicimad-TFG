@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6fab8591-5956-431e-ab7e-aceb5cfcc067"
+  name="Query"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="51291bfc-4c5b-480c-bc4e-883d0a19563c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Query"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1c73a99f-3e4d-4704-95f3-a2febebbef8a"
+        LastKnownName="Dto"
+        LastKnownLocation="Package2_1237.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5c085f9f-200c-4bcc-8c0f-81703fd01321"
+        LastKnownName="Interfaces"
+        LastKnownLocation="Package_1304.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5a22ecc3-3e73-4e26-bb2b-5d759e933d35"
+        LastKnownName="Queries"
+        LastKnownLocation="Package1_1304.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

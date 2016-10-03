@@ -1,0 +1,2453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3f1a636a-ca9e-4159-b4a8-924f085e5337"
+  name="Command" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f61ed019-6ddd-4ea2-88eb-dc3f9ab2a6fb"
+        LastKnownName="Commands"
+        LastKnownLocation="Package1_1221.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dc832ba6-e89b-4b6a-b1ca-382cddf3fc32"
+        LastKnownName="Interface"
+        LastKnownLocation="Package2_1221.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="96cb1376-c65d-416b-8bc1-e9651e5ee8d0"
+        name="BikeCommandService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cc1bba08-9a62-4aa2-b615-2d69b3595fa3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a2fa0f76-8dfc-459a-8847-cf467de2e8c5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b7c0688c-f73e-4b62-837e-4364111f6cd7">
+                <propertyInstance
+                  Id="7ee6143e-ef3b-45d8-9a91-ec77a9230c2a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b1cb6bd7-b3e7-496b-9091-d78a1a9d13c0">
+                <propertyInstance
+                  Id="223405f3-01d0-4c3c-9bee-705a0fc58b45"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1210604b-f1b8-440c-9aad-5913f3735235">
+                <propertyInstance
+                  Id="ae91e15c-7c83-4669-8a9a-1b42d46482c0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9d637f15-3cba-49e4-b508-394811a49bf8">
+                <propertyInstance
+                  Id="24a47f2e-d8b2-4197-9d51-52bd36448109"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e0e9c753-cbf9-4894-8a8a-afc9ce05080e">
+                <propertyInstance
+                  Id="52ebd04c-dceb-4ba0-ae5d-3307ed12d1e9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="b388f393-61a0-46d3-8bc3-4323da893cc8">
+            <interfaceMoniker
+              Id="c3abdbd3-65ad-4ea1-980b-9d1da8c2ffa8"
+              LastKnownName="IBikeCommandService"
+              LastKnownLocation="Package2_1221.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="260009d5-9a15-4d84-8ab9-7ff7c2342ecb"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a042fed0-0d81-45d1-ad3f-4d446c7d827d"
+              LastKnownName="BaseCommandService"
+              LastKnownLocation="Package_1221.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7d8f29f6-31f7-40bc-84c4-5f1b426bc051"
+            name="BikeCommandService"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4422878b-7cb9-42cd-8637-c65b6a8c41d5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0d0318bd-4514-472c-8e04-87e309a159b7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f72f513-cf31-4d09-ad31-9fb472fecd0e">
+                    <propertyInstance
+                      Id="e420e7df-c275-429d-af9b-9dfb633d371a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fed32f9e-506e-448b-ab52-de41d47f61ad">
+                    <propertyInstance
+                      Id="42d6ad93-3312-403a-b34f-99fb44bfa6c8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1870b849-da29-4ea4-b037-14318a3f5e17">
+                    <propertyInstance
+                      Id="b8f44827-ee7d-4c73-8a2d-7b381b367f00"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f06d850-22bc-4215-aa42-544d184877d9">
+                    <propertyInstance
+                      Id="8bc67326-6bc2-494a-932c-115f09919214"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89d50d8a-846b-4044-8d9f-22ba0e11e6f6">
+                    <propertyInstance
+                      Id="b5c8dd65-7b6b-4dfd-9157-434ed453a392"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2583ec6-192c-440e-bad7-490465b1429a">
+                    <propertyInstance
+                      Id="1ce749f9-fd31-4622-9f30-ca1ab1ae2ac2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a009f520-9b84-4642-b4b7-ab82a643c383"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1ef591f3-584f-4f5c-8379-b4d07e364466"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)]) ParameterIdentifier%3Drepository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                      LastKnownName="IRepository"
+                      LastKnownLocation="Package1_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e90a92e2-a5a7-43f9-bcd7-83e92b347fe4"
+            name="TakeBike"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f9d6907c-f0ae-4b3b-b36b-61eac3855a51"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DTakeBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2d3fa327-eabe-4882-9bd4-df283eeffdfb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6d86adb-b915-4511-8ad4-cea63c11c522">
+                    <propertyInstance
+                      Id="304087ff-a972-4b15-8e60-59ba8928cbfc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e125f68a-3bbc-4c6d-a4aa-5b0a00b9054f">
+                    <propertyInstance
+                      Id="8d44cb9f-c7d9-45c3-ad22-4cb94b1c7a27"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88224122-0db8-4205-a3d9-9c96bdb18519">
+                    <propertyInstance
+                      Id="28c5ca2d-d891-43a3-8570-91bb5aec278f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d779513-5e1d-4979-8a57-141d3032ca11">
+                    <propertyInstance
+                      Id="44143828-646a-4ee1-b0be-0b7f77d261a0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99eec001-da77-47e9-a22f-de4225c55cb7">
+                    <propertyInstance
+                      Id="f3e9fc16-af0b-40c7-bfcc-d4743004f2ad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ed53855-6a82-464e-b556-44c67f71e116">
+                    <propertyInstance
+                      Id="7567e34d-f019-416c-b0e8-bef2d04c61ab"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7d8d1fcd-e086-41cf-88b6-b7a0b27dd9be"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ecd3cda-e14b-49bd-b51c-52720a41d9b7"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="bdc95ef2-a7cb-4303-8d2b-a996f92ffb81"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DTakeBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="528e0af6-7b20-4294-90d1-8c475ea13db3"
+                  name="stationId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9df569c4-cbb5-4dbd-9765-7a400f633565"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DTakeBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstationId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ce2acce0-b087-4163-ae5c-ab92437d08b7"
+                  name="bikeId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="76fd6e48-5712-4e41-bbae-ec9670ee8b35"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DTakeBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DbikeId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e495dcd3-eeed-4ce0-857f-aad9833af37a"
+            name="ReturnBike"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="76300bda-1b6d-4b00-9266-df62f03b7a81"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DReturnBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6c3167d8-97bb-4223-b70c-9ad5eb3b1173"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3b46e06-2f18-4bf5-9a83-969bd3b74c53">
+                    <propertyInstance
+                      Id="3def2c43-180d-4d68-aa36-2e033e27ead5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddc614c6-1b25-4525-a1f6-0cb708bccffc">
+                    <propertyInstance
+                      Id="029d0e77-f6b1-44b8-814b-a11d31245b6f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="407e5502-8aa6-4b5c-af6a-cdcae8543e69">
+                    <propertyInstance
+                      Id="1a53354c-a4e1-46f1-90b0-3ac16b2599f4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d610749e-1f56-42a0-b228-7fd7dff0614d">
+                    <propertyInstance
+                      Id="cae06be4-379f-48db-a5a6-bdcf604fa8cd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96afaee4-d0d8-4623-b583-6caba2451112">
+                    <propertyInstance
+                      Id="f42c9001-1739-4b8b-b50a-eb7db19eb850"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d15e28bb-b4ed-4324-859e-56ee7930eab8">
+                    <propertyInstance
+                      Id="281c9d24-b75d-46aa-ae69-0d3c90a8df39"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ca218c4-92fc-4fc0-96e3-fef8fb3bdf32"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c8503b70-a711-4847-a738-030d779a03a5"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9944a5df-14b5-4a4c-a4e8-b1acee89375a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DReturnBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7b3781ed-7e31-4bf3-9b22-a7c9fec7e31a"
+                  name="arrivalStationId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c61f3863-ef76-4c54-8425-674fa219280b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DReturnBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DarrivalStationId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4a0dc2d9-004b-4095-bd62-dc6551cff144"
+            name="InformBrokenBike"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="995e4d84-3201-411b-b9d0-e65218e69738"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DInformBrokenBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e9370f79-aa3f-425a-a4a8-5c5a9a9d2660"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edf7321b-0e5a-470f-aedc-89ddbf173124">
+                    <propertyInstance
+                      Id="f31c37de-dd86-4c80-840d-6dbcb17578ee"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2ccb53d-dbf8-4760-ab92-88065506bb12">
+                    <propertyInstance
+                      Id="2294f76c-374e-41cb-b283-ccd520e063fa"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88a39a12-e442-44ba-9395-1be50650d092">
+                    <propertyInstance
+                      Id="0457fbc3-87ba-4f92-a034-a9cc13fb22ee"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="608ae51c-7382-4506-84c2-5803a8e79031">
+                    <propertyInstance
+                      Id="06c5d235-8f76-477f-90fb-296e16665987"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e998f96d-0317-4a13-b846-2918eb2de27b">
+                    <propertyInstance
+                      Id="7be3cdf7-d934-4d7a-9776-826516faa317"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d8e10b1-e806-48ae-867c-764417109cc1">
+                    <propertyInstance
+                      Id="df4dfd02-56ae-4e9c-8bd9-77b4442af0d8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad169891-5742-4974-8789-65c1bf88bb54"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8f9a9608-84da-47d3-8230-dc06e033730b"
+                  name="bikeId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ab0629d2-92f9-4768-bc9e-ddf670e01923"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBikeCommandService Member%3D(Name%3DInformBrokenBike OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DbikeId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="192dadfc-6b8b-4bf3-9c14-7ed92d4f8dbe"
+        name="MetaConfigCommandService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4772e1e9-401b-4942-ad5a-5ff08479e914"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DMetaConfigCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="099da9d8-6cb1-4c38-8e1c-584d71170a4e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aeee755d-d088-454c-a883-3d873e8ad915">
+                <propertyInstance
+                  Id="ab7a5e6e-d356-477f-82a1-49c7c70b1b44"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="47f58203-1b5a-414c-9ae7-5bf258f9ce34">
+                <propertyInstance
+                  Id="922c3c09-fc5c-4ade-8bc0-5297c21adbdf"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc7d7849-ad8e-450a-9201-8ad73bbd9d37">
+                <propertyInstance
+                  Id="5706601c-df7b-4382-b446-45350a50c90d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5bca0a78-5840-4db2-a48d-69616260ff2d">
+                <propertyInstance
+                  Id="54a3f601-116d-431d-8409-101632cea262"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4cd6844b-cf5f-4c69-a5b3-af0d73aad87a">
+                <propertyInstance
+                  Id="f5988a0e-1d46-486c-820f-30a6a7a612eb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0d3178e5-14a1-468f-b730-dc66f606851b">
+            <interfaceMoniker
+              Id="465ca9f6-9b1f-4faa-8855-bfbbaad5f3be"
+              LastKnownName="IMetaConfigCommandService"
+              LastKnownLocation="Package2_1221.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="e095d431-48e0-4850-a185-9dcc005ef268"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a042fed0-0d81-45d1-ad3f-4d446c7d827d"
+              LastKnownName="BaseCommandService"
+              LastKnownLocation="Package_1221.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="22d40deb-ad51-4e69-9c5d-82454fdb0edc"
+            name="MetaConfigCommandService"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="823d7c4c-e245-47ef-b826-8f4808146086"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DMetaConfigCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="db7dc727-57ce-4e92-9bc8-3b543fa47b57"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="480bc8e8-f3b4-48f8-87ed-8aa271235656">
+                    <propertyInstance
+                      Id="2c338058-4cf0-4e4f-9ca6-a856f42cb33b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afeec9f9-cfa1-4b18-bdce-8978d6cea566">
+                    <propertyInstance
+                      Id="5b315801-447d-45d8-a840-64c896d3eb9c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f545f451-9389-4b80-8891-6664a8edb120">
+                    <propertyInstance
+                      Id="b3e4b156-06f5-4436-a7c7-00209f3dcecd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5f4d725-3070-4a5f-9ebb-a5cb1a5fd004">
+                    <propertyInstance
+                      Id="8cdec02f-331c-408d-bd3e-5c3ebbb6efc2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42f49597-f710-4dcc-90b3-438ef1dbe4f7">
+                    <propertyInstance
+                      Id="fa394ed3-2d27-499b-a0c1-08373c78bd1f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2d85231-9755-4eb3-9bb5-763bdcb2fed4">
+                    <propertyInstance
+                      Id="c491c1b6-6e2e-4c74-8378-c4352c97c0cd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="992f63a4-5e4f-4fc0-8fd9-935000c26368"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5ee67454-be17-4edc-93f0-91675b4b93cc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DMetaConfigCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)]) ParameterIdentifier%3Drepository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                      LastKnownName="IRepository"
+                      LastKnownLocation="Package1_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="acb7bf0c-4bb6-4755-92d9-6a2d43cb3155"
+            name="Create"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5b9baf24-1b4e-4f4b-a5c5-9fcda846b578"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DMetaConfigCommandService Member%3D(Name%3DCreate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands.MetaConfig Type%3DCreateMetaConfigCommand)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2a1b1e90-f305-493f-88dc-dfbbd0df1cf8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf658fa0-711a-4d34-9434-c2653d94318b">
+                    <propertyInstance
+                      Id="087e6b42-ac94-4822-8198-ff6f8bb04567"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61f0ac7c-a2fb-4a41-b1b1-8ea2fb58ca55">
+                    <propertyInstance
+                      Id="880c2af6-fffb-4eaa-99d7-a9e1522e173a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dadddefc-e0ca-4b6d-a893-9642e910328b">
+                    <propertyInstance
+                      Id="2e1b6767-2d28-4960-a053-d28884278cc8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85dea147-d242-4541-80e1-3a29d76227dc">
+                    <propertyInstance
+                      Id="5ff7875f-4bdf-4317-a5fc-a08cedc629b9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="495a95b4-95a7-441d-92d3-d5a865028e93">
+                    <propertyInstance
+                      Id="006e3658-8b95-469f-979c-dfb5aeb768e7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="322b788c-2463-4885-a134-1c76ac8ca5da">
+                    <propertyInstance
+                      Id="3b32c663-710c-4cec-be76-077c2dfae212"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8dd9f689-149c-4679-bf5c-cbd303510e5e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a251ba8e-cd66-4aa0-a047-83fe32fd23bd"
+                  name="command"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="aa72b569-6128-46c7-8321-86159fb5b228"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DMetaConfigCommandService Member%3D(Name%3DCreate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands.MetaConfig Type%3DCreateMetaConfigCommand)]) ParameterIdentifier%3Dcommand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="04623915-7abf-475e-9b49-e750be1eef4c"
+                      LastKnownName="CreateMetaConfigCommand"
+                      LastKnownLocation="Package4_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1e1db5fe-8dc3-4d44-91d9-9f1f0cf469af"
+        name="ReservationCommandService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="38814c9c-7540-4480-89ab-d2e647890b2e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5f982ac8-5dfc-48ba-9b69-bea924c3e0a4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="68f1aa02-2c52-4e8b-bde2-1bd7fa461c9b">
+                <propertyInstance
+                  Id="9628a192-936a-440d-911f-9e94adc00890"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="85722094-abb7-4306-8729-d25b1eb363df">
+                <propertyInstance
+                  Id="25dd14ba-20ec-4f66-be2a-dc48b8d96afd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1be73c44-abaa-4834-9b95-63b7fe2c3408">
+                <propertyInstance
+                  Id="f5552367-4360-424e-a8ed-bb6d8e06fdc7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c3a74ee-03c6-4263-ade0-bfa6b49a2436">
+                <propertyInstance
+                  Id="2afe1020-0238-4339-b189-1b403abdcdd0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f519164c-6645-431e-a7d7-492c28a39c68">
+                <propertyInstance
+                  Id="196dd4c6-048a-42dd-b73a-47503d8a63b6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="f8f249ad-cabe-40b8-9f6e-78239167a160">
+            <interfaceMoniker
+              Id="261cf877-2aeb-456d-96bc-a874c1db9f24"
+              LastKnownName="IReservationCommandService"
+              LastKnownLocation="Package2_1221.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="c41f6184-bf8c-4def-8f5d-05697fad85ba"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a042fed0-0d81-45d1-ad3f-4d446c7d827d"
+              LastKnownName="BaseCommandService"
+              LastKnownLocation="Package_1221.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f10333bd-f6c1-4881-b8ea-e14601b65370"
+            name="ReservationCommandService"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="eef38224-dd53-4094-a94f-f29644919ab9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6f54c4fa-d586-450a-bd9b-5da2175735c4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbcf36d0-32ee-4015-86c8-08d7a132fea4">
+                    <propertyInstance
+                      Id="c2a2ca3f-9a3e-41d8-9cde-1477a1ffc2c1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7916d61-26f1-496e-9210-bc4799f8a03b">
+                    <propertyInstance
+                      Id="9c18440b-2ad7-4ef6-91a8-00d510c1ceac"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea9662b3-daa7-42d0-a5dd-b94a9b707ac4">
+                    <propertyInstance
+                      Id="e5bd534a-8ad8-439b-9e9d-98d35de3d080"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29f3264d-475a-42c4-9302-d050d68c7c95">
+                    <propertyInstance
+                      Id="c1fd19b5-8d25-4142-8815-6779fc916cca"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="acbd727d-84e2-4585-a493-a8e2477d034f">
+                    <propertyInstance
+                      Id="570a182a-2868-46e8-b5f8-46dd95ce83f8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc2a858e-0f4e-4618-a068-116fb1992f7e">
+                    <propertyInstance
+                      Id="23c5405e-48c4-4a61-b821-40a008de6df5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c118111d-61af-46f1-add4-c407779814ab"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ea8cf27f-152b-4246-ac3c-36ff9ca134a7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)]) ParameterIdentifier%3Drepository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                      LastKnownName="IRepository"
+                      LastKnownLocation="Package1_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c8fdf457-b4e5-4c0d-a500-31070b0bbce9"
+            name="BookItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3b651347-57e4-4891-9ca4-116751844d88"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DBookItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="51448553-70cf-4ce5-944a-b8f353bf3db7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bac774ec-bc81-4f5a-b7dc-924d4f03ab12">
+                    <propertyInstance
+                      Id="a72eff48-9bef-4ee0-ac91-2fe646754400"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e653390a-83ec-499d-b48a-6c165083e956">
+                    <propertyInstance
+                      Id="38c6b31f-380a-442b-a608-395cd09df1af"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4db8d5c1-9144-4d48-9d65-ae31ca549ddb">
+                    <propertyInstance
+                      Id="b67bf06c-4922-4b05-b5a8-d6ff24ebca2d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d80cdf1-0bfa-498c-8bd8-898b66d35e54">
+                    <propertyInstance
+                      Id="aa9c7afe-a4ae-4025-9888-2c2085ee783a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0dee9d90-8cea-4119-a328-06288d9d054d">
+                    <propertyInstance
+                      Id="99e083af-2ed2-4b4f-8d1a-0d57f77bfae1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aaeaccd5-b0fb-4a4b-8330-f1ea8319b0a3">
+                    <propertyInstance
+                      Id="e998e736-ec17-4b50-af7d-b95ea0b9e2bc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dcbb3404-d3fe-4922-b008-1dcf7e637e5b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e2ff9ba-a5aa-4930-a8a9-4b20301989de"
+                  name="userId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e2a175c7-2478-45c2-bf21-08c8c2722f75"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DBookItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DuserId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="63e340b7-f487-4f7e-9184-73cf94e9aa3b"
+                  name="stationId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3eb626bf-36af-4d87-9ca5-a5a7122ed14a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DBookItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DstationId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="37f7d103-fc87-4113-a03b-8b59c0d2730a"
+                  name="itemId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3305e31e-2c2f-405f-a976-9a32e0a879aa"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DBookItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DitemId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a02595ea-fd7f-4704-a260-6b7178b62e78"
+                  name="isBike"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="84b7715d-ff99-4125-90e5-b0d69a62423d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DBookItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DisBike"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9bd376af-507b-40b0-b102-4344165e9040"
+            name="RemoveReservation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fcbd3725-8f88-4e23-828e-2b77914ec7b7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c85cd8d8-5cda-4102-a73e-b3a4c443bd0c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc6f9aef-f2e6-40c6-83ec-b3097e56625d">
+                    <propertyInstance
+                      Id="68592792-bea5-4720-a46d-0cf393c606f1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f45a9fe-1112-44d4-a9af-1d443853a76a">
+                    <propertyInstance
+                      Id="189c7a34-cc81-4669-9478-3e84aa6bae2a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="598437f7-a8ec-44f6-88a4-2f49a98fbba0">
+                    <propertyInstance
+                      Id="1b508388-1a91-47f8-ab91-dfef4f94772c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1ada16d3-1aa9-4696-ac0d-d029fa8c321e">
+                    <propertyInstance
+                      Id="2adfedd7-6a09-4928-86b9-9634627463e9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="beab21f9-03d9-491a-948e-a4053db47b38">
+                    <propertyInstance
+                      Id="444baaf4-a4e4-4b34-b8e5-e9e61281dfd5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92e7b866-acdb-49af-a216-70dd5f3e6baf">
+                    <propertyInstance
+                      Id="844029d6-7fcb-4557-b3cb-ae4538a277ab"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0ba4dc2-3285-4a64-987e-9a86723181e5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78569bbd-6257-4327-92ce-159b86b7b78c"
+                  name="id"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="663b1408-bffe-4ba4-b2f8-5568817671b4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Did"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15f31f6a-816e-4929-99ea-7b61b516018c"
+                  name="stationId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="63b1b35d-0312-4b9a-a48d-2424bdfc5638"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DstationId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1fa0f9fe-66af-4e3f-b20a-934b71f43373"
+            name="RemoveReservationItem"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="915a8f96-7888-4254-b746-adfa1e87496d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservationItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core.DomainObjects Type%3DReservation)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b9bdd63d-c67d-4a88-91af-afe0fe2a4e06"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6557e226-b6c7-478c-a9ff-5c3b7ab654de">
+                    <propertyInstance
+                      Id="d9ba75ea-2e2b-4c0b-b880-b106d7a0f75b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="788f434b-59fe-40d4-9df8-3fa2abe47ea2">
+                    <propertyInstance
+                      Id="1a15093d-c595-4dcb-a836-b6b948156a95"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1127c414-a547-49a1-bad8-9aad5385e5af">
+                    <propertyInstance
+                      Id="dd88abbc-5be3-4e8f-a08e-730081627ace"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4730dfac-bf99-4fb5-bf97-d3b23e76218f">
+                    <propertyInstance
+                      Id="727e1a85-b137-41e5-8233-6784cce62c9e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="969adb52-3e32-4874-95d8-4326520178bb">
+                    <propertyInstance
+                      Id="4c92dfec-b0d5-46a9-86a7-4ac0336bdc43"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71e51e41-e857-4979-905b-d64abe78609b">
+                    <propertyInstance
+                      Id="bc243bd3-86a6-4c3c-ac1b-cbee3e5c288f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="09d89c32-8207-4446-8b67-430f893e1de1"
+                  name="stationId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b7c8983c-462c-40de-bf07-e3bf1a26db47"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservationItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core.DomainObjects Type%3DReservation)]) ParameterIdentifier%3DstationId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a840eaef-8ceb-4118-a9ad-470eb1f62180"
+                  name="reservation"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9f1a0944-8b7f-47d3-87bc-a8851f1805e5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservationItem OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core.DomainObjects Type%3DReservation)]) ParameterIdentifier%3Dreservation"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dacaf1e0-bd01-4f32-8735-aa904a512c1b"
+                      LastKnownName="Reservation"
+                      LastKnownLocation="Package2_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="845d3d3e-9689-4851-a100-6e276dd3c12b"
+            name="RemoveReservations"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c1e6ff48-5b97-46d2-8693-110520130da1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservations OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="38d17e1c-0cc2-436a-985b-30c17886ea0f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="050b1e0e-7ea1-4613-981f-302432b688f4">
+                    <propertyInstance
+                      Id="f5bd8efc-ed25-42c6-81bb-2fa4860b9df7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c95857e-3cff-4a46-9e7f-ee88e9b72cbd">
+                    <propertyInstance
+                      Id="6a5e7a8e-8108-4a18-b15e-426586d373e4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40827f7c-39e2-4b2a-9037-f8f41a9cc1f3">
+                    <propertyInstance
+                      Id="590d865b-c1c5-492f-8eb4-682bdfaabdf3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be95b3af-4f2d-4c2e-b9c8-f7793dc9a660">
+                    <propertyInstance
+                      Id="c235695e-823a-45b5-a770-802a48ff67a9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="332bee18-d6d9-46de-8ef9-083a5700e628">
+                    <propertyInstance
+                      Id="0e3a97f7-dbc3-4f86-bc7c-ec6106bf03f3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ebb3fac-657e-4b20-ae76-b08fd7334da6">
+                    <propertyInstance
+                      Id="8b5b1522-02df-4b04-89a5-1312583f78ba"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="492fd310-fb94-423e-bc10-dfc9d09ffa33"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="024e8d58-e536-4ddf-aa1b-2fb532fc0c76"
+                  name="ids"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7d5258b8-9acc-43aa-ad64-0e90c9e2169f"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DReservationCommandService Member%3D(Name%3DRemoveReservations OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))]) ParameterIdentifier%3Dids"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86fa9865-172d-4035-937f-bea5a0232c52"
+                      LastKnownName="List&lt;String‎&gt;"
+                      LastKnownLocation="Package3_1223.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="389784ce-c3f2-4187-a50d-a36080c318f6"
+        name="StationCommandService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0bcca72e-c536-4540-b2a7-d964a6cb4f46"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c94c4a1d-261a-4f7c-90cc-eba8f7002c6f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46c21d81-c5d6-45ba-9f59-822bf1a8bd17">
+                <propertyInstance
+                  Id="09fd474a-6a21-4a8b-aa62-0c6404019c77"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="55ad5302-c5ae-4bd8-97ab-731e7151e026">
+                <propertyInstance
+                  Id="60b08f10-8c37-4a74-a071-f4dc2f64521d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="590891bd-b818-4dfc-98b2-b1390107a147">
+                <propertyInstance
+                  Id="6a62603c-9e8e-4c98-bcd6-f6a4ff765270"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06f2e3a9-376a-402c-b8b6-8d83de808378">
+                <propertyInstance
+                  Id="b08d20f7-c3d6-42a9-a586-5149dd8777df"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ad0bd74e-102d-48eb-9e5d-200528064f5a">
+                <propertyInstance
+                  Id="86277b34-10cd-4c5b-ae74-366f22fa6afc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="2eb64ae2-1dc3-4b9d-8b28-c664a54bf0c1">
+            <interfaceMoniker
+              Id="86a7edef-51e6-41a2-9da3-8dcd60a0789a"
+              LastKnownName="IStationCommandService"
+              LastKnownLocation="Package2_1221.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="a73a8acb-d3b7-4556-92ee-b7c9ecccdc54"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a042fed0-0d81-45d1-ad3f-4d446c7d827d"
+              LastKnownName="BaseCommandService"
+              LastKnownLocation="Package_1221.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8931f705-f36c-4c75-a3f6-613f7fd54573"
+            name="StationCommandService"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4331be09-7f0e-48ff-a5d8-bc4791da215f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="20e1871a-3edc-465e-b92a-616b33c52684"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea4449c0-fcec-4566-ba01-c8bbf11873f2">
+                    <propertyInstance
+                      Id="6589f45b-5be4-4de5-89bf-962df943c72d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc070805-8bb2-4701-8d0f-bf3b9b83943b">
+                    <propertyInstance
+                      Id="73a9d3cc-8106-497d-b8df-cd0fec320420"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e0a9962e-4bad-4256-82a9-ad4072a0cd8f">
+                    <propertyInstance
+                      Id="18d539dd-f488-4ca3-b68e-25578c380cb8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8286628-0015-4910-8272-77b34b698856">
+                    <propertyInstance
+                      Id="340fe6cb-95ad-436c-960e-0945a3dcf304"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="913916ec-86e9-4d01-bf90-ee50ef3c3103">
+                    <propertyInstance
+                      Id="1fa1c9a4-4491-44a2-b928-4b5de3f4a384"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="844d885c-fde0-4d9d-be0d-52eae5b8d08b">
+                    <propertyInstance
+                      Id="26903a6b-e99b-4254-a336-71c10422d986"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="704b3a4b-ecb3-418e-9583-ffbe30a8bb58"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1ffbf32a-58d4-4774-aff6-514f6ab26494"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)]) ParameterIdentifier%3Drepository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                      LastKnownName="IRepository"
+                      LastKnownLocation="Package1_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e81c0768-a73e-4b24-8bd4-94ba8c775193"
+            name="SetDiscountType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="acd6f7e5-950c-4dff-b7c3-7030451a7127"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscountType OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6667dc77-62cb-49b2-b4b2-c75bd7ac0fe3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2199b87-62cd-4fbc-87e2-74197875a3a1">
+                    <propertyInstance
+                      Id="0e2ac99a-0f63-4176-867f-403cb25914a1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfba81bc-d6d6-4ef0-a98f-bfcf51a8d5ac">
+                    <propertyInstance
+                      Id="13a83394-891d-47cd-b7c7-638347051d36"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75cc9761-80a6-450f-a1f2-e651453aefc2">
+                    <propertyInstance
+                      Id="701e4aea-1a14-4d96-8315-f675b9bcfbde"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f365e4b1-823b-423a-a2e8-3ab0e92023e2">
+                    <propertyInstance
+                      Id="eb7e61c4-cb22-4db0-829c-651eb96a7415"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52c12763-67de-47cc-9e8d-26ebd0254bae">
+                    <propertyInstance
+                      Id="089a237c-4f7a-4beb-9627-aec857e45c53"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2a2b707-d08b-47a5-aa26-a147db723bb2">
+                    <propertyInstance
+                      Id="a1280eb3-eb64-46a5-bfd1-5484dfd0aa10"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="501efdfb-2a82-4a50-bb1f-8371679bf32c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4201a569-6484-4c97-bd2e-03e0d99de495"
+                  name="stationIds"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="baf32330-ccd8-4502-978a-bfb372d06c65"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscountType OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)]) ParameterIdentifier%3DstationIds"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86fa9865-172d-4035-937f-bea5a0232c52"
+                      LastKnownName="List&lt;String‎&gt;"
+                      LastKnownLocation="Package3_1223.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="98851533-7126-470b-8627-b6d0813876b0"
+                  name="discountType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1ed32459-15c5-40e1-b6bb-e061f45a276c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscountType OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)]) ParameterIdentifier%3DdiscountType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="45ad6c41-4e13-4188-829f-a0f84e1e75a6"
+                      LastKnownName="DiscountType"
+                      LastKnownLocation="Package_1205.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f8f831dd-812f-4348-a571-20084c25eee9"
+            name="SetDiscounts"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="254a62cd-9697-4a5a-97ac-a466fd21f1f8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscounts OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0ffa030f-db5e-40ab-b28a-557effcf6934"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="670c1ce9-4cdc-4e4a-8667-6184c0c2101e">
+                    <propertyInstance
+                      Id="e6809ef9-29e9-4904-a602-1637ed2ec820"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ebae72d-16ba-4cd2-9e9b-c00a34cdebf2">
+                    <propertyInstance
+                      Id="d13405c5-e250-4e2b-a58b-58f49298659f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea316338-63dd-4d2b-b917-631daaea97d0">
+                    <propertyInstance
+                      Id="aaf6bfdc-b51e-43b0-8f56-a7f77d94452e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5a075e1e-a896-4308-94a9-53376639a7ce">
+                    <propertyInstance
+                      Id="20130c63-ceab-414f-81c7-3077f5defb20"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="394b1f44-9d9e-494f-af1a-567869f89779">
+                    <propertyInstance
+                      Id="ed33e833-846f-44f0-aed4-d1b63b59d9d0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ab70d98-1665-4797-a48c-c5cde68530d5">
+                    <propertyInstance
+                      Id="49ee6994-f74a-4000-9e73-0c36968c0b24"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a758adb4-b128-43ce-8a4c-b897e6ca02ff"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf8a0bc6-905b-4ded-bb24-3a9dafca9c51"
+                  name="stationIds"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="420ad362-dcca-473e-8e88-f28e305d41d5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscounts OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DstationIds"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86fa9865-172d-4035-937f-bea5a0232c52"
+                      LastKnownName="List&lt;String‎&gt;"
+                      LastKnownLocation="Package3_1223.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0ca42729-9030-4a25-b419-0d708a060967"
+                  name="discountType"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9b6990da-3095-4d25-99d9-fd523ac514b2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscounts OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DdiscountType"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="45ad6c41-4e13-4188-829f-a0f84e1e75a6"
+                      LastKnownName="DiscountType"
+                      LastKnownLocation="Package_1205.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5bc1bc99-16ef-4c1f-bf02-9593d8791983"
+                  name="discountConst"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4c1de0f9-048c-48cf-8029-9e778b6a94a1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscounts OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DdiscountConst"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1ec928e9-d7b7-4517-95a0-11e8015c72e4"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package_1210.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cff5dcd8-3448-4541-a27a-27fc45448241"
+                  name="discountPorc"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5e838fb3-5583-4345-91bb-674f92b8360a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DStationCommandService Member%3D(Name%3DSetDiscounts OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Enums%2Fbin%2FDebug%2FBicimad.Enums.dll&quot; Namespace%3DBicimad.Enums Type%3DDiscountType)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DdiscountPorc"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1ec928e9-d7b7-4517-95a0-11e8015c72e4"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package_1210.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="818242a9-f04d-47a7-9422-534c59bd1752"
+        name="UserCommandService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="35b8b507-6c51-45b9-bae6-ae274163191c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DUserCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8f964dea-26c0-4b4d-977f-c40166665905"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0d367727-61d5-4ea3-baf2-7a49e0a211af">
+                <propertyInstance
+                  Id="37c31759-dc5b-4eeb-aab9-e5a4cd579b46"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c35c0cb-1876-4134-9704-a3e32ffbfc03">
+                <propertyInstance
+                  Id="0899be7d-3658-42ba-99e0-c136c2f4b291"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bc415ac4-9763-4c85-9718-f44d5a4729e7">
+                <propertyInstance
+                  Id="c58574a8-7b05-4555-8a10-4822491f6526"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb7d0400-5717-4bbb-9968-4bc386640fff">
+                <propertyInstance
+                  Id="a2119f85-a70d-4a41-abad-1798440ebd01"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bd809a59-cf14-40b7-a822-29eaf689af9f">
+                <propertyInstance
+                  Id="cced4b1e-ae79-4eef-89bf-9cbeb0a9ded2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1534bba9-e949-4ced-b23a-102804fa0e36">
+            <interfaceMoniker
+              Id="718eb339-5034-471b-b349-774f434fe808"
+              LastKnownName="IUserCommandService"
+              LastKnownLocation="Package2_1221.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="31f63331-3123-4dba-ab20-70f3b5d88689"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a042fed0-0d81-45d1-ad3f-4d446c7d827d"
+              LastKnownName="BaseCommandService"
+              LastKnownLocation="Package_1221.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="97786c34-45f3-40c1-afe9-a3098ec56d6a"
+            name="UserCommandService"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d06971f5-6a9b-4839-acc2-0c48ec7e8f62"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DUserCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="81e604ac-2f28-4150-9e38-bc93ef77c485"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4afb006-5355-4b13-8f75-6ec8285d8b21">
+                    <propertyInstance
+                      Id="d27bd7ed-d9ba-400b-9041-8f2230f9d582"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64ec2ade-8e6f-4396-90ed-cf489dd809d2">
+                    <propertyInstance
+                      Id="6d346fe6-75d5-4c3e-b8e9-879631f211c2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5d68d05-0fb7-4a5f-8ca7-b2123b37addc">
+                    <propertyInstance
+                      Id="bfb1cd9f-f787-4d07-b3c9-f92119b0e144"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f46e620d-bb9b-4ab8-8cea-945d7c2d79a7">
+                    <propertyInstance
+                      Id="abecd308-3e88-47a1-ac41-e7939024c953"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbd95a65-ac82-4d44-9a2a-dc0465a3f523">
+                    <propertyInstance
+                      Id="f912210d-b3f5-406d-8468-1a8cf95110ef"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c53575b9-6421-40bf-9970-e5f5bb07271b">
+                    <propertyInstance
+                      Id="2fc56c73-921b-44e1-9b99-b7ad02de8907"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11c04b10-e215-465b-b247-1d06764474d6"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0b6e64c7-c654-4aba-8f05-253853665ac3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DUserCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)]) ParameterIdentifier%3Drepository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                      LastKnownName="IRepository"
+                      LastKnownLocation="Package1_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e4dc9aca-25d2-4a26-ae22-ac419dde11e7"
+            name="Create"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="917b0737-1dca-44cb-9d22-a45402d826cb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DUserCommandService Member%3D(Name%3DCreate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands.User Type%3DCreateUserCommand)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2f84699-3c1b-4102-b0d1-d8996ea8bb4e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62639093-0123-4ba6-9f33-936fa8c8f1cf">
+                    <propertyInstance
+                      Id="5d3d939d-7479-47df-b0ac-38712e4743f2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04690d26-7882-4d87-8ff2-3bc98e51dcaf">
+                    <propertyInstance
+                      Id="c1da80d5-20af-4b48-acc7-8d82848dffc1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7aaba166-bf9e-4fad-b5a4-251422f2f743">
+                    <propertyInstance
+                      Id="8b43a5e9-1b16-4e15-bfc4-971a505baf4d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7c28205-9bcc-4b7d-a865-3549ec94662d">
+                    <propertyInstance
+                      Id="3007d32b-beea-4dff-8acd-8d92385f00d4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c06abbde-7395-4719-a171-eba1b3f8848a">
+                    <propertyInstance
+                      Id="99510c63-07c7-431c-9afb-c47ec8e50eb8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87ec00bb-1cc7-4740-aa82-b771c76f06e1">
+                    <propertyInstance
+                      Id="f5dc6147-97ae-4f1d-8075-d85d50af5368"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7ebc679b-d6ae-4716-8c84-d4a0f9731e7d"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e033260f-3dc7-4811-9953-bac17116fa02"
+                  name="command"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="550b7b72-dc2b-498b-ac9a-a975b99a5032"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DUserCommandService Member%3D(Name%3DCreate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands.User Type%3DCreateUserCommand)]) ParameterIdentifier%3Dcommand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="70c43503-3734-40fb-84d3-867c3646f60e"
+                      LastKnownName="CreateUserCommand"
+                      LastKnownLocation="Package5_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a042fed0-0d81-45d1-ad3f-4d446c7d827d"
+        name="BaseCommandService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="49abd9ec-f5ab-4fcd-a23d-6c6550a2c558"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBaseCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7f3fefe7-35bf-45a6-9160-df0097c13c16"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ce7a078-4f07-4e7b-82cd-687d09559876">
+                <propertyInstance
+                  Id="7fc3f1e6-9859-4b4c-bab9-56f00e022cfd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9b9be9fe-329c-48c7-99fe-2bdf0eb2865e">
+                <propertyInstance
+                  Id="5afefdc1-bb25-4bc0-84ef-73111c8e307f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46b6ecc1-de96-47ac-89f1-52100c8f564c">
+                <propertyInstance
+                  Id="7007d620-92ce-4061-8e98-853cea170208"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6589f80c-d51d-4286-97a2-4c2fcc6b6ff3">
+                <propertyInstance
+                  Id="709b5c0f-309a-4135-9383-7258a02ddf92"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb456947-6ebc-4ca3-b781-c9e9d7cbcc5d">
+                <propertyInstance
+                  Id="876c1f3d-a767-4f96-93b8-30f745431c82"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7fb2219a-8719-4f8a-902d-a3aacc6575d7"
+            name="Repository"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e4b95d94-ede7-461b-bacf-32722db63dbd"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBaseCommandService Member%3DRepository"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f4b30d0e-3b10-428a-95c0-f7ccde6e843c"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04198241-bf36-40a3-a967-288906ccb22f">
+                    <propertyInstance
+                      Id="a83d916d-6087-4158-b284-17edc4123359"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9a43724-cbcf-4d29-b9c9-6aea2bcb345a">
+                    <propertyInstance
+                      Id="f1e18ace-0601-409d-8ef4-8225562283bd"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4414f8f-0fd4-455c-8089-3ef81428747e">
+                    <propertyInstance
+                      Id="1c634e94-2ec9-4f32-b0e6-71aed877eb38"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="77cd23bd-f8b2-428c-a1d5-17199888dce0">
+                    <propertyInstance
+                      Id="50812ed3-41d5-4ea7-8d2c-8e5394670ecf"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2049a1c9-fd8e-443d-8b78-5995fc20608f">
+                    <propertyInstance
+                      Id="aa5dc976-78e3-42b1-beb6-093981468073"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                LastKnownName="IRepository"
+                LastKnownLocation="Package1_1204.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="57a1c1da-3e55-4b36-aa37-63472baab6d3"
+            name="BaseCommandService"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0959c491-2607-410b-9245-4b77fb62e6d3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBaseCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dbe9e280-fbc5-40ce-894c-bf4dab833cfb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8c2d7e4-8f54-4ab6-befb-b441bef595fc">
+                    <propertyInstance
+                      Id="b6008345-afdb-43b9-9c20-03291d68f911"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b46bfeaf-8cb3-4b3f-afbb-459559f63fbe">
+                    <propertyInstance
+                      Id="6a1484dc-09b6-4486-8e67-d29aed543e20"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca1a8b58-3be2-405e-864a-a4e4660c7a1e">
+                    <propertyInstance
+                      Id="ad14de49-207d-4a2d-9afa-f6949244f333"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="138d17fc-237b-406c-b0d7-f0698bf33084">
+                    <propertyInstance
+                      Id="6024e23f-ffa9-4ace-a5db-27d88accaa5a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="720a9d8e-bf4d-45a2-8a92-e5fa9f39205e">
+                    <propertyInstance
+                      Id="d9dd2262-692a-40f7-824f-7e558096338f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25f5b6a0-eeab-49ab-9a5e-83b501c56d05">
+                    <propertyInstance
+                      Id="45369b3b-8499-49de-b71c-6f6de3b5fc31"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d1568cc7-5364-4279-8481-e1ec89aaca7c"
+                  name="repository"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9d79a4b4-0a49-4cd5-8884-96def7564d06"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBaseCommandService Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Core%2Fbin%2FDebug%2FBicimad.Core.dll&quot; Namespace%3DBicimad.Core Type%3DIRepository)]) ParameterIdentifier%3Drepository"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="60c7a6fe-9622-4fa5-a734-b53290ff9ed0"
+                      LastKnownName="IRepository"
+                      LastKnownLocation="Package1_1204.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="26d34495-a758-4617-b77a-f1f2c0905bc1"
+            name="Validate"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fca5bd7f-d569-4126-ae7d-a760c1db7dc4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBaseCommandService Member%3D(Name%3DValidate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands Type%3DCommandBase)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c302a291-ddb5-43c3-b40b-79b59cd75588"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82d9c211-b280-4d6e-99d9-246b0597db36">
+                    <propertyInstance
+                      Id="f0e2985a-60a1-4473-9ccf-6ab0a204bae1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="722bd02e-bf73-4b4d-b785-1edf14ae5069">
+                    <propertyInstance
+                      Id="2377a0cd-1005-4c18-8b29-e242398502e5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d2e64de-b5e5-44c7-a1a5-bcaf55d1f0e9">
+                    <propertyInstance
+                      Id="353773bc-b7a6-439d-b397-de6fb6f8e8c2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f787e089-cec9-4be2-9049-f7e88319d2c7">
+                    <propertyInstance
+                      Id="9cd2b41b-1cc2-45e3-aa0c-0dd0b20bfb1f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e710e9f7-aebc-456f-9c41-05331de4d8d9">
+                    <propertyInstance
+                      Id="06c0e339-caf1-4ea5-a50b-e169b14ff3c7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b74b5f62-a137-4028-bee1-8d773abbc13c">
+                    <propertyInstance
+                      Id="2ba8b3fb-6e1f-436b-9b84-91999c53d403"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="19fb436f-8fb8-43b4-ab10-cdb12a404f54"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="c6e74085-3b40-46e7-9624-cc1b90615f87"
+                      LastKnownName="CommandResult"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b8512495-b073-4ae5-aa82-ba639b52b878"
+                  name="command"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c8f30417-52c1-4cd4-ad51-0017b10737f3"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command Type%3DBaseCommandService Member%3D(Name%3DValidate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FPcCom%2FDocuments%2FGII -TFG%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll&quot; Namespace%3DBicimad.Services.Command.Commands Type%3DCommandBase)]) ParameterIdentifier%3Dcommand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="da5bbfcd-b47a-428b-a131-69c78db05903"
+                      LastKnownName="CommandBase"
+                      LastKnownLocation="Package2_1222.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
