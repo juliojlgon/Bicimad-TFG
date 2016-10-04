@@ -22,6 +22,34 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="AcountControllerLogin.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AcountControllerLogin.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AcountControllerLogin.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ApiClassDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ApiClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ApiClassDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="BikeController_ReturnBike.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BikeController_ReturnBike.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BikeController_ReturnBike.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="BikeController_TakeBike.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BikeController_TakeBike.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BikeController_TakeBike.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1204.uml">
       <SubType>Content</SubType>
     </Content>
@@ -43,7 +71,25 @@
     <Content Include="ModelDefinition\Package1_1238.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_1304.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1317.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1318.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1319.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_1204.uml">
@@ -67,6 +113,21 @@
     <Content Include="ModelDefinition\Package2_1238.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package2_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1317.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1319.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package3_1204.uml">
       <SubType>Content</SubType>
     </Content>
@@ -79,6 +140,15 @@
     <Content Include="ModelDefinition\Package3_1237.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package3_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package4_1204.uml">
       <SubType>Content</SubType>
     </Content>
@@ -88,10 +158,46 @@
     <Content Include="ModelDefinition\Package4_1237.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package4_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package5_1222.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package5_1237.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package6_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package7_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package8_1314.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1204.uml">
@@ -121,10 +227,31 @@
     <Content Include="ModelDefinition\Package_1238.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1300.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1304.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package_1305.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1315.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1317.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1318.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1319.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ServicesClassDiagram.classdiagram">
@@ -133,6 +260,20 @@
     <Content Include="ServicesClassDiagram.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>ServicesClassDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="StationController_BookSlot.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="StationController_BookSlot.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>StationController_BookSlot.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="WebClassDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WebClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>WebClassDiagram.classdiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ClassDiagram.classdiagram">

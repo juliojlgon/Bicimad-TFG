@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="9c2b8c3a-de80-459c-a770-a2ac4d5e400d"
   name="User"
@@ -10,4 +10,64 @@
       handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Query.Dto.User"
       tag="ViewCode" />
   </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="fc866119-eb26-470a-9352-0640debe9be7"
+        name="UserLoginDto"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4fff2c6f-936e-4b67-bfdb-555dd37e6d47"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Query.Dto.User Type%3DUserLoginDto"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="421d3636-1f56-4642-a493-2b5dec13646d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ecfc3ec-3eb1-4c7f-9d4b-0194dd5b6192">
+                <propertyInstance
+                  Id="4d30d3cc-9dda-4de9-99cf-87f61254da80"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6edceecf-0f05-4630-a64d-3a715bcb0345">
+                <propertyInstance
+                  Id="a2464d16-e577-41af-ac9b-c7bc13d1b254"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9a04470d-3911-4892-aa9c-fd8a1c371d6f">
+                <propertyInstance
+                  Id="fdd6b209-2cef-4650-bc7d-44d4dffeb8d7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7fb2a18b-a09b-403c-8764-0be029ab4517">
+                <propertyInstance
+                  Id="1aa22776-2460-4230-b301-1a78b2c1b268"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="784866fa-d69f-47dd-8888-66c99ddf11a8">
+                <propertyInstance
+                  Id="d7093481-fe01-41cd-b0f0-46fd5ea6ca89"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
 </package>

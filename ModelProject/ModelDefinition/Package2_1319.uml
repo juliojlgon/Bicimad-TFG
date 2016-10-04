@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="7a0e137e-5bc3-42f6-91a7-5712f029d803"
+  name="AccountModels"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0e866def-38ac-4c7b-aeb5-3b19ef38ed5b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Web.Models.AccountModels"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7b784e57-b8cd-4f92-94a8-9bc5840152d5"
+        name="RegisterModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b76893ba-0730-464c-92c8-ee10820a650f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Models.AccountModels Type%3DRegisterModel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dee13ffc-a993-4694-bd2d-064c50427097"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5d4de523-ae37-4cfd-bf33-a2ec2db62ccf">
+                <propertyInstance
+                  Id="7b10d4a0-ea98-426f-bd54-cc3b5b767105"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69deab05-3b87-420d-8ba0-646e4bf26b3f">
+                <propertyInstance
+                  Id="4cda1055-bf6a-44e4-bd48-10e7719aac18"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ece6419e-8742-4be2-af65-ed177efea31d">
+                <propertyInstance
+                  Id="3e83bad5-4eee-409d-83d7-16816209fd36"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8bd561e5-0c95-4e67-a7fd-27bdcf17febf">
+                <propertyInstance
+                  Id="eac4d635-e7a9-4ec0-a635-391590c8603d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c0e7243-a5ed-4041-a8c8-53f8836a5dcd">
+                <propertyInstance
+                  Id="bdace305-3eec-4651-9700-0dceace8b21c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="de78dbdb-3634-4786-8253-d488bcf7a64f"
+        name="UserLoggedModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e7c666cc-7f77-49a6-9854-db067808c153"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Models.AccountModels Type%3DUserLoggedModel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6dfb7406-a00f-46e1-bdab-ee6a7d954fa4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2a1de8e0-0489-42cc-865c-b2ade1f849d2">
+                <propertyInstance
+                  Id="07cd0e30-023b-4299-acf2-daa046aea2cc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="250a889d-424d-4a86-a05c-304c1840d1c5">
+                <propertyInstance
+                  Id="888cac8a-d008-41d3-9b2a-17b764ace81c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92c1193b-9e99-441d-ae66-f5c1a05f8bea">
+                <propertyInstance
+                  Id="cc84779b-7edb-4a08-a133-41b23d8dbf86"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="15201178-3ad2-4dce-8e8d-b9971e2721f6">
+                <propertyInstance
+                  Id="e111ae7c-ac3d-493b-9c2c-c1227f27fc93"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cee8ada5-158e-4dac-9cb4-dacc6cbdef19">
+                <propertyInstance
+                  Id="902b815b-d690-4c0e-aa50-df8ce71b2bf5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

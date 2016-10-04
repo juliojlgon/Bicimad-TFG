@@ -1,51 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="320d5fff-6492-42a0-b2bf-b12dbb8c7ee6"
-  name="Bicimad"
+  Id="6cc6325c-8839-4a72-89c4-fa561b79cdf8"
+  name="Web"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="b51fe200-42e2-4267-8cb6-4c05bf05b120"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad"
+      Id="4e905b60-f1b2-42b2-801d-1b939a29279e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <packageMoniker
-        Id="618889b6-781b-4494-9c82-131ca466dce2"
-        LastKnownName="Core"
-        LastKnownLocation="Package1_1204.uml" />
+        Id="5a68cf2e-9fe8-4bd7-b03a-6d22dfa9c33e"
+        LastKnownName="Http"
+        LastKnownLocation="Package3_1259.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="8b62f4a4-38fd-401b-b517-8e9bff3252ed"
-        LastKnownName="Enums"
-        LastKnownLocation="Package_1205.uml" />
+        Id="786838b8-44dc-4279-9b51-3d568336a75d"
+        LastKnownName="Mvc"
+        LastKnownLocation="Package7_1259.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="44bca8b1-38d1-4d73-8cbc-9c4b115f515d"
-        LastKnownName="System"
-        LastKnownLocation="Package3_1204.uml" />
+        Id="b57eb7b5-6203-478c-9c87-a0651d234a1b"
+        LastKnownName="Routing"
+        LastKnownLocation="Package1_1300.uml" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="87c65eb3-f00f-4e38-a4e7-ed9e6324f06d"
-        LastKnownName="Services"
-        LastKnownLocation="Package_1222.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="64a3066e-53e7-4dbd-aacd-b1159e7203a0"
-        LastKnownName="Api"
-        LastKnownLocation="Package_1259.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="0dc9065b-b616-438e-ba94-70170b698883"
-        LastKnownName="Web"
-        LastKnownLocation="Package_1314.uml" />
+        Id="b1f4ecc4-2d58-43eb-a3cc-980a89c1cbbb"
+        LastKnownName="Optimization"
+        LastKnownLocation="Package6_1300.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

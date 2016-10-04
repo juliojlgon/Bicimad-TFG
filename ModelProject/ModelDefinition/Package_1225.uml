@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="7fae7353-3905-4db1-9c21-d4460b45287a"
   name="Interface"
@@ -10,4 +10,256 @@
       handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Command.Interface"
       tag="ViewCode" />
   </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="0de6628d-557b-4970-aa29-452eeba6f1eb"
+        name="IUserCommandService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="c5626116-1403-4e78-bbf3-2174d06d7b2e"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Command.Interface Type%3DIUserCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="04b96404-4243-4a47-85d8-87f9832eb12c"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d7eda0f-c28a-4d3e-a752-c5c3dc84f693">
+                <propertyInstance
+                  Id="fd281d5b-7a23-415f-ab94-28214037ebfc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6d846c25-7aeb-49e9-8bf2-1252ffa98e15">
+                <propertyInstance
+                  Id="e23708a7-7d57-4c06-a42a-25386e8c1e77"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5a3a1af3-5c4e-40dc-85fb-6e36008f9d71">
+                <propertyInstance
+                  Id="a8835aea-dde5-44a9-9d8e-d34543358534"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="378344c4-e59e-4101-99ea-452474801797">
+                <propertyInstance
+                  Id="966e661d-e706-4b5f-9fde-59b311f4e7de"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4cfd24e0-8d42-4a61-8811-3a858bf13394"
+        name="IMetaConfigCommandService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f42b323d-3d62-4e3c-960a-736ece6479d5"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Command.Interface Type%3DIMetaConfigCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5ca0b572-9256-4952-affb-d5f61ac39cb6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b1814e78-110d-4151-b85b-9bdc1760dd18">
+                <propertyInstance
+                  Id="bb055fac-dfa0-4e50-b794-4f65cd664df6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="75e6263a-5fa0-41fe-8274-97b1ab586759">
+                <propertyInstance
+                  Id="f666501b-a4b0-41bd-bd8f-a1f0639c1a07"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2125d1b3-bbeb-4176-ad9d-034cdd1acefd">
+                <propertyInstance
+                  Id="bb041b43-9906-4614-8ce9-133d05e9475a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="14fb8d56-5219-4bbf-bdeb-79d1571a0c1e">
+                <propertyInstance
+                  Id="65931036-719b-4ac4-8bb8-087cce1177b4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f36903b0-585d-4204-a6bb-68c36160d431"
+        name="IStationCommandService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="2425f7f9-25ab-4cb3-b032-1886f0ba40f4"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Command.Interface Type%3DIStationCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9a0abfe1-3489-44dd-b5d8-dea32b2decc8"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0a89beb4-5945-4d31-b0cd-6f32393ed238">
+                <propertyInstance
+                  Id="98fb00b3-cb43-43f5-870f-0e83750e5fb0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f63c9ec5-ea31-4f45-9d7f-3b6509a6edd9">
+                <propertyInstance
+                  Id="74b3fab7-2163-4c11-b24c-a66df299bc14"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a45bf133-9a16-416e-827c-243eda11ebcc">
+                <propertyInstance
+                  Id="11ba361e-2f46-4af9-a906-6c76a59ea8da"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a205bdb1-30f6-46db-bc1c-a1a021dcb7c2">
+                <propertyInstance
+                  Id="39a3a1fc-7edf-4de7-915a-e8870441b49f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7421a26b-0107-4617-ba92-4395f8a9eab2"
+        name="IBikeCommandService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="708d204f-84fa-40a1-a603-e0890c30cb83"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Command.Interface Type%3DIBikeCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="35182a26-7277-4e5c-b625-873176520a91"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9f9a5fba-ea01-42c9-8815-839c93a91c08">
+                <propertyInstance
+                  Id="718d42b9-9f58-47d8-a97c-2bd1facb3f5f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2c9a8a08-15ca-4026-a66a-971526a60b0d">
+                <propertyInstance
+                  Id="4920e3c0-ccd8-4a27-8022-8995e4279072"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ffe5c999-064e-4864-9519-2568faf875f8">
+                <propertyInstance
+                  Id="c2749767-517f-4678-8238-c5a8709463be"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3374f49d-eef6-4ae8-93f1-d41c46f6991c">
+                <propertyInstance
+                  Id="8650363f-876b-4263-bc2f-c20295a55139"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="507756a9-253a-4684-9a64-32008c1d4d9e"
+        name="IReservationCommandService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="74c0418e-ebd9-4854-ac7a-a4764f96370c"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Command.Interface Type%3DIReservationCommandService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f8df1e1a-5689-4e97-b444-5d2563e17cfb"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="609b732f-a36c-42a2-a9b0-4a9ed4e5b9af">
+                <propertyInstance
+                  Id="f3aad4d7-1fdb-46b1-97c9-a3b417118914"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9c0179a-8994-498f-9b57-3721f4260832">
+                <propertyInstance
+                  Id="df4582e8-4f25-4808-9499-3ef36654bea9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0ae522f6-d1be-4b4d-8b9c-38380b732732">
+                <propertyInstance
+                  Id="7e7b1a73-b796-4665-ab98-6ef70bc125b2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42512182-5f29-41bd-8635-9e1e3e8ad0df">
+                <propertyInstance
+                  Id="0f6df733-d116-4a52-ab7e-5f67c5e24dcc"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
 </package>

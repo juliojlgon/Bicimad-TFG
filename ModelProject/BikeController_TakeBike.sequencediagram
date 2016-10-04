@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="e5d60da4-0720-474c-950f-99eaccdc6cb8" name="BikeController_TakeBike" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="0b399b7c-aec2-4906-8a58-a68e01a1e059" name="BikeController_TakeBike" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="fc0ce193-2212-449a-86c5-48683e340d40" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="aead9dd9-8b9d-44dc-9ab6-3d9f5de8a770" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="6d8333dd-ce29-4e95-86cb-8655eb41c42c" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="f5884057-dda4-406e-8f6e-eeee0ece06cf" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4d148751-0bdf-456b-91f4-bb832393be48" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="d84ef300-f697-4dfc-8d03-af48a8e9bbf3" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="9ab536ad-d119-42d3-bf53-3eb49992172a" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="90aa56f4-9dcf-48f5-9986-0e36cd4066c9" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="b5cfa397-8bf1-4126-9d70-669be075b3e0" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="3b0c7d5f-f58a-4d83-8cdf-5964b7e4d5c9" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="a9cee7e4-b5fc-49e5-8fcb-20b0ac770a99" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="2ac617f7-d27e-44d2-8076-66fb77e72236" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="f5ca99f4-fc41-44f6-9bff-c2fa7d1f425c" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="24b886d9-2fa3-42ba-b502-12478ddfebdf" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="3980e853-ce11-4ab7-98c4-bd4b91a14856" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="12ba0c97-e103-4dc8-830c-c81ccbfa483f" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="806a5846-59e6-4d74-96cc-e235f165ad87" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="5a4d42ad-cbcf-440c-afe9-5823719af786" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="37619f9b-9dc6-40d7-844f-55de57703f94" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="2d61271d-22ab-4642-a8b3-1277049f0fb8" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="8fd31231-2e27-4b4a-80f4-543a515b3ff8" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="d594ba14-2cb6-45b5-af74-a9c1babca520" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="3376d6f6-220a-4e31-8853-171e0ef33906" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4e400230-2fae-4988-847e-ab3757fa8fa4" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="58f94156-741d-40ad-9bf7-2ef9f4862121" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="421172c0-08b4-49cb-bbec-3d7b4d869437" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4e9ecd0f-6c9c-4b13-b83b-9893f1de5150" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ad36a981-7551-42e9-84e1-ba598d5408d0" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="618ba864-1149-449d-aa55-d6ab54a34330" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="2a2b1938-3a37-4858-b0a2-498dfaa306d6" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="31b7d986-a721-4ec8-b993-f3da88a7827c" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="9a264ed9-1ba1-44b1-beec-74e61daf26c0" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="83f9cfd4-f51f-4a3a-b65f-0974720eda98" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="6d8333dd-ce29-4e95-86cb-8655eb41c42c" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="81499cd6-4c07-499e-a3aa-d88bf5e1fcbe" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="7079ff55-201e-45c2-bfa1-1785e078e6aa" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="f5884057-dda4-406e-8f6e-eeee0ece06cf" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment Id="4e24bd7f-ce46-4862-9243-ae3bb84dbd22" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="If">
+            <coveredLifelines>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="857f8e33-a02e-43b1-81ff-4ea04d2f8ed1" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+                  <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint Id="97033e32-cd2b-4d4d-ad24-d390ef162d34" guardText="if (stationId == null)" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="4d148751-0bdf-456b-91f4-bb832393be48" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="b5cfa397-8bf1-4126-9d70-669be075b3e0" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="3dc080a9-5e0e-4724-8f2c-d9c5554748de" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="19bf44c3-e0f1-4d21-91d0-f4e60cdcd796" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="4d148751-0bdf-456b-91f4-bb832393be48" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="3dc080a9-5e0e-4724-8f2c-d9c5554748de" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="e65acb41-bb4c-4126-ad36-0daddcbb25a3" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="79d484a2-8715-4867-8e3c-1cec125df0e3" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="36a80bbd-13f8-4526-9542-db4fd1f5ce03" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="08f576fe-206f-4097-a5ba-26e0a271fd20" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="df956c14-770b-4241-9234-75fb06ac06f0" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="36a80bbd-13f8-4526-9542-db4fd1f5ce03" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="7091d0aa-8b2f-4eef-9cc9-343430cb19ab" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d84ef300-f697-4dfc-8d03-af48a8e9bbf3" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="08f576fe-206f-4097-a5ba-26e0a271fd20" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="9ab536ad-d119-42d3-bf53-3eb49992172a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="df956c14-770b-4241-9234-75fb06ac06f0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="79d484a2-8715-4867-8e3c-1cec125df0e3" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="c2fab10a-05f6-4d54-8f54-0ac91dfffd99" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="90aa56f4-9dcf-48f5-9986-0e36cd4066c9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="0f569d96-f031-477f-91d0-5b8984b7f250" name="LostFoundTarget" />
+          <operandOccurrenceSpecification Id="b5cfa397-8bf1-4126-9d70-669be075b3e0" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="19bf44c3-e0f1-4d21-91d0-f4e60cdcd796" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="c1029bfd-ac4d-4186-b6a2-8efdb74036ae" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="e69d7c5d-702e-4df9-902c-16d48d9da255" LastKnownName="this._reservationQueryService : IReservationQueryService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="66ff14d5-79c7-4ed7-ba15-aa3e2a0ccc93" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="abbe1ac7-4a22-41df-88dc-9bb30e6f28a1" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="883158a3-28d6-4131-b0ec-4c94597d0256" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ee9d08f1-3990-4b12-bdfa-18151f914cce" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="abbe1ac7-4a22-41df-88dc-9bb30e6f28a1" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="7e6994ee-2880-4113-a7ae-d9b4e3de60cc" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e69d7c5d-702e-4df9-902c-16d48d9da255" LastKnownName="this._reservationQueryService : IReservationQueryService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="3b0c7d5f-f58a-4d83-8cdf-5964b7e4d5c9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="883158a3-28d6-4131-b0ec-4c94597d0256" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e69d7c5d-702e-4df9-902c-16d48d9da255" LastKnownName="this._reservationQueryService : IReservationQueryService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ee9d08f1-3990-4b12-bdfa-18151f914cce" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e69d7c5d-702e-4df9-902c-16d48d9da255" LastKnownName="this._reservationQueryService : IReservationQueryService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="a9cee7e4-b5fc-49e5-8fcb-20b0ac770a99" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="66ff14d5-79c7-4ed7-ba15-aa3e2a0ccc93" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="5ace8e85-71f1-4616-9b8c-602d5703c9ae" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e69d7c5d-702e-4df9-902c-16d48d9da255" LastKnownName="this._reservationQueryService : IReservationQueryService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <combinedFragment Id="2e4a037f-2030-485c-96dc-70e75f47d28c" name="CombinedFragment2" interactionOperator="Alt" customInteractionOperator="If">
+            <coveredLifelines>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="453430b7-f58b-4735-889b-e5a24a374e8b" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+                  <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+                  <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+                  <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint Id="8cf9c33a-b5a7-4de6-8cca-09ea5f0120a6" guardText="if (reservation != null)" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="2ac617f7-d27e-44d2-8076-66fb77e72236" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="3980e853-ce11-4ab7-98c4-bd4b91a14856" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="6d367a89-9753-431b-a5ed-fb0f5a929e9d" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="b70ab73a-a964-41da-a9d5-1e99ec438c11" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="7cdc480a-e74c-484c-8da4-d4e78158feda" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="d4824d7b-29a4-4763-beca-eb905a5a7308" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="479bf5d4-c833-49b5-ae59-47058bf7c52a" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="d25ae327-6fde-47b7-8682-22016ee2ae1f" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand Id="b54cb35e-997a-403a-b3be-77ec51ed1312" name="InteractionOperand2">
+                <coveredLifelines>
+                  <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+                  <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+                  <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+                  <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment Id="1c43e809-4640-4372-aacb-cbc42b231f2d" name="CombinedFragment1" interactionOperator="Opt" customInteractionOperator="If">
+                    <coveredLifelines>
+                      <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+                      <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand Id="318062e6-d87d-43d4-9c31-b79de9f43364" name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+                          <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint Id="c3999f8c-4e23-46d7-b61d-102836f8fda7" guardText="if (bike == null)" />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker Id="37619f9b-9dc6-40d7-844f-55de57703f94" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="3376d6f6-220a-4e31-8853-171e0ef33906" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="47284e0e-f3c1-431f-84ab-8784c1bbf247" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="2a4d3532-d54a-4409-b9f8-c32f14cd1e03" LastKnownName="OperandOccurrenceSpecification" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint Id="5232c55f-e061-434f-b0d0-9e6efe852b5b" guardText="else" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="12ba0c97-e103-4dc8-830c-c81ccbfa483f" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="4e400230-2fae-4988-847e-ab3757fa8fa4" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="77a9ea3b-ae65-427f-a57b-95b9018d6c84" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="fcdb2c0d-2c4d-4049-81d6-cb8d82b4f841" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="e1d0d6e7-343e-4616-bb98-6392d7eca3b8" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="1d283f63-b627-49a4-a26c-4b9edb88277b" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="7189d938-8306-42f1-8d58-31e0fd27d8ef" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="f9858b2e-680f-4ec6-9226-390e85c114b5" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="7cdc480a-e74c-484c-8da4-d4e78158feda" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="6d367a89-9753-431b-a5ed-fb0f5a929e9d" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="2ac617f7-d27e-44d2-8076-66fb77e72236" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="479bf5d4-c833-49b5-ae59-47058bf7c52a" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="237f661a-0035-4b18-b309-83ca47f4f703" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="9db12a70-de00-4422-843f-9e9457382ac8" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="d5c84bf6-a5e1-410b-a997-2b8f2a4edbf6" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="ad7662e1-f059-4a5c-93fd-c713e66bac52" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="14ff2d64-a105-455a-a979-beef223a534f" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="d5c84bf6-a5e1-410b-a997-2b8f2a4edbf6" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="3a49aedc-fbed-47ca-8b8b-247eac209109" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f5ca99f4-fc41-44f6-9bff-c2fa7d1f425c" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ad7662e1-f059-4a5c-93fd-c713e66bac52" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="14ff2d64-a105-455a-a979-beef223a534f" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="24b886d9-2fa3-42ba-b502-12478ddfebdf" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="9db12a70-de00-4422-843f-9e9457382ac8" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="5a9f911c-e7aa-4a56-ab0d-759a5ec75a2a" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="d25ae327-6fde-47b7-8682-22016ee2ae1f" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="d4824d7b-29a4-4763-beca-eb905a5a7308" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="3980e853-ce11-4ab7-98c4-bd4b91a14856" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="b70ab73a-a964-41da-a9d5-1e99ec438c11" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="7189d938-8306-42f1-8d58-31e0fd27d8ef" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="77a9ea3b-ae65-427f-a57b-95b9018d6c84" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="12ba0c97-e103-4dc8-830c-c81ccbfa483f" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e1d0d6e7-343e-4616-bb98-6392d7eca3b8" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="a9c76445-521b-498c-ae76-413158b5e405" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="2259431f-9ba5-4deb-8ce6-ec86046bb5e6" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="0f67dd1e-5507-4c74-8329-72afd9838958" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="c9e2ff10-f7cc-43e6-a1f5-3282fc2a365c" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="5b81c70b-a626-415b-915c-ae1bacb5a666" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="0f67dd1e-5507-4c74-8329-72afd9838958" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="687d6e16-d52e-4caf-a629-9b73690aabe5" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="806a5846-59e6-4d74-96cc-e235f165ad87" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="c9e2ff10-f7cc-43e6-a1f5-3282fc2a365c" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5a4d42ad-cbcf-440c-afe9-5823719af786" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5b81c70b-a626-415b-915c-ae1bacb5a666" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="2259431f-9ba5-4deb-8ce6-ec86046bb5e6" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="3e317a18-747c-40b9-a648-81cbd6144e39" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="37619f9b-9dc6-40d7-844f-55de57703f94" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="47284e0e-f3c1-431f-84ab-8784c1bbf247" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="1817ff21-cc31-49e6-a9ce-f0d9b9833214" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="4e77d3a6-453f-4f20-9857-10e8b581febc" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="552b0134-ff04-45b0-a4bd-311cb7a74e61" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="f954ae62-ea21-429d-9ca9-ec20c7c16390" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="78c5e477-3fb4-4a86-b516-e49190a1c6cb" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="552b0134-ff04-45b0-a4bd-311cb7a74e61" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="9e8e207a-b485-475c-b0dc-0b5fc4ad113e" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2d61271d-22ab-4642-a8b3-1277049f0fb8" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f954ae62-ea21-429d-9ca9-ec20c7c16390" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="78c5e477-3fb4-4a86-b516-e49190a1c6cb" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8fd31231-2e27-4b4a-80f4-543a515b3ff8" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="4e77d3a6-453f-4f20-9857-10e8b581febc" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="19eaa421-e002-4722-9c40-7cf6e51ec9d9" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="7580ca11-0ecb-464e-ab58-650a5d3ee1bf" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="d594ba14-2cb6-45b5-af74-a9c1babca520" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="3376d6f6-220a-4e31-8853-171e0ef33906" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="2a4d3532-d54a-4409-b9f8-c32f14cd1e03" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="4e400230-2fae-4988-847e-ab3757fa8fa4" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1d283f63-b627-49a4-a26c-4b9edb88277b" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" LastKnownName="this._bikeQueryService : IBikeQueryService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="fcdb2c0d-2c4d-4049-81d6-cb8d82b4f841" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4954e75a-7677-4479-a6d7-72137f4cf42c" LastKnownName="this._reservationCommandService : IReservationCommandService" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="f9858b2e-680f-4ec6-9226-390e85c114b5" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="bf5c242e-7a9d-4861-8378-34439f3a94a3" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="a51b81ef-23a0-4d25-aae9-2f14afc5124e" LastKnownName="this._bikeCommandService : IBikeCommandService" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="e86d785a-9809-4520-8cef-26ffe5287b73" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="9c9f5f22-ceee-4106-84ef-b22d51f75530" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="1faf2f09-5fca-4473-b5a6-e9322a1bcb08" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="b0b1254d-f573-451a-86db-da8e2e8f37f8" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="9c9f5f22-ceee-4106-84ef-b22d51f75530" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="03f5a838-9fd9-43b2-af0a-13f28cfbc50e" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="a51b81ef-23a0-4d25-aae9-2f14afc5124e" LastKnownName="this._bikeCommandService : IBikeCommandService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="58f94156-741d-40ad-9bf7-2ef9f4862121" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1faf2f09-5fca-4473-b5a6-e9322a1bcb08" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a51b81ef-23a0-4d25-aae9-2f14afc5124e" LastKnownName="this._bikeCommandService : IBikeCommandService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b0b1254d-f573-451a-86db-da8e2e8f37f8" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a51b81ef-23a0-4d25-aae9-2f14afc5124e" LastKnownName="this._bikeCommandService : IBikeCommandService" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="421172c0-08b4-49cb-bbec-3d7b4d869437" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="e86d785a-9809-4520-8cef-26ffe5287b73" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="9da078b4-29c1-4d83-9ebe-dc172eee1714" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="a51b81ef-23a0-4d25-aae9-2f14afc5124e" LastKnownName="this._bikeCommandService : IBikeCommandService" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <combinedFragment Id="9965f889-a8ab-46e7-b4ce-e55156c4d788" name="CombinedFragment3" interactionOperator="Opt" customInteractionOperator="If">
+            <coveredLifelines>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="c4923f43-3103-4b9a-b54c-7f3b17f5baa5" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+                  <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint Id="907351ea-2576-49b0-a199-fbdecbaa9ff7" guardText="if (action.ItemId != null)" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="4e9ecd0f-6c9c-4b13-b83b-9893f1de5150" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="31b7d986-a721-4ec8-b993-f3da88a7827c" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="89df13be-5fd7-4b8e-a381-61cf52d4d5d9" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="c1f2c6e4-9d4d-4c30-b37b-bb75d7b96bf6" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="89df13be-5fd7-4b8e-a381-61cf52d4d5d9" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="4e9ecd0f-6c9c-4b13-b83b-9893f1de5150" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="b9df809a-8043-4266-a7f3-e2d6e0ca93cc" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="cb3c04ba-2b1f-4930-ba32-8ad558ebd49f" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="877b8ba2-3274-4ee3-9653-8579f662a67f" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="c4fe0b13-cc92-4190-96b5-c0073ff99635" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="e5119a8c-3d0a-4362-9af3-0421c4b51992" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="877b8ba2-3274-4ee3-9653-8579f662a67f" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="bb1b774d-4567-4f77-a3a6-3a9707564233" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="c4fe0b13-cc92-4190-96b5-c0073ff99635" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ad36a981-7551-42e9-84e1-ba598d5408d0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e5119a8c-3d0a-4362-9af3-0421c4b51992" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="618ba864-1149-449d-aa55-d6ab54a34330" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="cb3c04ba-2b1f-4930-ba32-8ad558ebd49f" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8a68d0d6-7cdd-49c4-95fe-59d29000134e" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2a2b1938-3a37-4858-b0a2-498dfaa306d6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget Id="6d6ff64b-d416-4d88-9416-8f1c29b9b87f" name="LostFoundTarget" />
+          <operandOccurrenceSpecification Id="31b7d986-a721-4ec8-b993-f3da88a7827c" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="c1f2c6e4-9d4d-4c30-b37b-bb75d7b96bf6" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" LastKnownName="content : AnonymousType" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="711c5a28-f28f-4740-b7b7-ae55da91b164" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="224c4c80-c1a4-4d87-a4c1-f749ac76c646" LastKnownName="content : AnonymousType" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="c5c35d90-1c80-4e81-b4bc-3be832587d59" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="2f9750c9-9f0b-4d66-ba54-5c73e88e0721" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="30206ee9-37c8-4df2-85e4-d947e3d8b8a6" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="31378855-6065-4f22-ac63-37a5f52a1987" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="2f9750c9-9f0b-4d66-ba54-5c73e88e0721" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="6c91e1c5-908a-4193-b22c-36536baf21dc" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="224c4c80-c1a4-4d87-a4c1-f749ac76c646" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="30206ee9-37c8-4df2-85e4-d947e3d8b8a6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="224c4c80-c1a4-4d87-a4c1-f749ac76c646" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="9a264ed9-1ba1-44b1-beec-74e61daf26c0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="83f9cfd4-f51f-4a3a-b65f-0974720eda98" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="31378855-6065-4f22-ac63-37a5f52a1987" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="224c4c80-c1a4-4d87-a4c1-f749ac76c646" LastKnownName="content : AnonymousType" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="c5c35d90-1c80-4e81-b4bc-3be832587d59" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="ec93e6a3-4281-448b-9d9a-a24ab80b505d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="224c4c80-c1a4-4d87-a4c1-f749ac76c646" LastKnownName="content : AnonymousType" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="aead9dd9-8b9d-44dc-9ab6-3d9f5de8a770" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b8294415-663a-4853-95f7-50d49708900f" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="251843a7-7d25-4a06-921b-d11760179c67" LastKnownName="this : BikeController" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="251843a7-7d25-4a06-921b-d11760179c67" name="this : BikeController" isActor="false" lifelineDisplayName="this : BikeController" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Namespace=Bicimad.Api.Controllers Type=BikeController ObjectInstance=&quot;Object instance 3&quot;)" referencedType="Bicimad‎.Api‎.Controllers‎.BikeController">
+            <referencesInternal>
+              <reference Id="146c3cab-d12d-44da-9aa5-4dfa07e369d1" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Api.Controllers)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Namespace=Bicimad.Api.Controllers Type=BikeController)&quot;)" tag="DGQL" />
+              <reference Id="9c2e2160-bf9b-4615-b194-ceef18554e2c" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Namespace=Bicimad.Api.Controllers Type=BikeController)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="6d8333dd-ce29-4e95-86cb-8655eb41c42c" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="aead9dd9-8b9d-44dc-9ab6-3d9f5de8a770" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="0c47a2ae-9f90-4c2a-8107-b6d0380b83cc" name="content : AnonymousType" isActor="false" lifelineDisplayName="content : AnonymousType" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Type=AnonymousType ObjectInstance=&quot;Object instance 8&quot;)" referencedType="AnonymousType">
+            <referencesInternal>
+              <reference Id="743968c2-cf78-485e-8a0d-3822204a6186" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)" tag="DGQL" />
+              <reference Id="e76708c7-f2ce-43e8-b089-c6a3d27315ac" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="3dc080a9-5e0e-4724-8f2c-d9c5554748de" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="36a80bbd-13f8-4526-9542-db4fd1f5ce03" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="79d484a2-8715-4867-8e3c-1cec125df0e3" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="19bf44c3-e0f1-4d21-91d0-f4e60cdcd796" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="e69d7c5d-702e-4df9-902c-16d48d9da255" name="this._reservationQueryService : IReservationQueryService" isActor="false" lifelineDisplayName="this._reservationQueryService : IReservationQueryService" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Namespace=Bicimad.Api.Controllers Type=BikeController Member=_reservationQueryService ObjectInstance=&quot;Object instance 11&quot;)" referencedType="Bicimad‎.Services‎.Query‎.Interfaces‎.IReservationQueryService">
+            <referencesInternal>
+              <reference Id="42ad3c29-5aea-493a-8af4-6e629b809128" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Query.Interfaces)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Query.Interfaces Type=IReservationQueryService)&quot;)" tag="DGQL" />
+              <reference Id="af847572-5585-4d14-b990-e8a07195c09c" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Query.Interfaces Type=IReservationQueryService)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="abbe1ac7-4a22-41df-88dc-9bb30e6f28a1" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="66ff14d5-79c7-4ed7-ba15-aa3e2a0ccc93" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="4954e75a-7677-4479-a6d7-72137f4cf42c" name="this._reservationCommandService : IReservationCommandService" isActor="false" lifelineDisplayName="this._reservationCommandService : IReservationCommandService" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Namespace=Bicimad.Api.Controllers Type=BikeController Member=_reservationCommandService ObjectInstance=&quot;Object instance 17&quot;)" referencedType="Bicimad‎.Services‎.Command‎.Interface‎.IReservationCommandService">
+            <referencesInternal>
+              <reference Id="3e1bce84-5efc-433a-82e0-0f688853abce" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Command.Interface)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Command.Interface Type=IReservationCommandService)&quot;)" tag="DGQL" />
+              <reference Id="b37feca9-ee38-4bdc-aa2b-a569388faad3" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Command.Interface Type=IReservationCommandService)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="6d367a89-9753-431b-a5ed-fb0f5a929e9d" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="d5c84bf6-a5e1-410b-a997-2b8f2a4edbf6" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="9db12a70-de00-4422-843f-9e9457382ac8" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="b70ab73a-a964-41da-a9d5-1e99ec438c11" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="77a9ea3b-ae65-427f-a57b-95b9018d6c84" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="fcdb2c0d-2c4d-4049-81d6-cb8d82b4f841" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="c7119bba-e18b-47a4-8f0d-20dbb22646ef" name="this._bikeQueryService : IBikeQueryService" isActor="false" lifelineDisplayName="this._bikeQueryService : IBikeQueryService" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Namespace=Bicimad.Api.Controllers Type=BikeController Member=_bikeQueryService ObjectInstance=&quot;Object instance 19&quot;)" referencedType="Bicimad‎.Services‎.Query‎.Interfaces‎.IBikeQueryService">
+            <referencesInternal>
+              <reference Id="6e709b3e-5c43-4d7b-aea1-40a6fe0ec470" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Query.Interfaces)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Query.Interfaces Type=IBikeQueryService)&quot;)" tag="DGQL" />
+              <reference Id="03e31e8c-2f74-42e9-9859-5f0438da675f" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Query.Interfaces Type=IBikeQueryService)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="7cdc480a-e74c-484c-8da4-d4e78158feda" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="d4824d7b-29a4-4763-beca-eb905a5a7308" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="e1d0d6e7-343e-4616-bb98-6392d7eca3b8" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="0f67dd1e-5507-4c74-8329-72afd9838958" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="2259431f-9ba5-4deb-8ce6-ec86046bb5e6" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="1d283f63-b627-49a4-a26c-4b9edb88277b" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="a87bf385-6fd5-4063-9271-f21cbb047ebe" name="content : AnonymousType" isActor="false" lifelineDisplayName="content : AnonymousType" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Type=AnonymousType ObjectInstance=&quot;Object instance 26&quot;)" referencedType="AnonymousType">
+            <referencesInternal>
+              <reference Id="c5c6ace7-a93c-4dbd-b642-e6bedbfe4874" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)" tag="DGQL" />
+              <reference Id="4ee05a5c-8839-4144-8134-93cafb53298e" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="479bf5d4-c833-49b5-ae59-47058bf7c52a" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="d25ae327-6fde-47b7-8682-22016ee2ae1f" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="7189d938-8306-42f1-8d58-31e0fd27d8ef" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="47284e0e-f3c1-431f-84ab-8784c1bbf247" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="552b0134-ff04-45b0-a4bd-311cb7a74e61" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="4e77d3a6-453f-4f20-9857-10e8b581febc" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="2a4d3532-d54a-4409-b9f8-c32f14cd1e03" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="f9858b2e-680f-4ec6-9226-390e85c114b5" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="a51b81ef-23a0-4d25-aae9-2f14afc5124e" name="this._bikeCommandService : IBikeCommandService" isActor="false" lifelineDisplayName="this._bikeCommandService : IBikeCommandService" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Namespace=Bicimad.Api.Controllers Type=BikeController Member=_bikeCommandService ObjectInstance=&quot;Object instance 29&quot;)" referencedType="Bicimad‎.Services‎.Command‎.Interface‎.IBikeCommandService">
+            <referencesInternal>
+              <reference Id="8e54abe9-7482-480b-83ba-6784306a2b74" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Command.Interface)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Command.Interface Type=IBikeCommandService)&quot;)" tag="DGQL" />
+              <reference Id="01066b49-8839-4a46-ae75-ca290b7afa67" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Command.Interface Type=IBikeCommandService)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="9c9f5f22-ceee-4106-84ef-b22d51f75530" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="e86d785a-9809-4520-8cef-26ffe5287b73" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="30f7d03a-c1b4-4759-94d8-6e7ecbfae7fa" name="content : AnonymousType" isActor="false" lifelineDisplayName="content : AnonymousType" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Type=AnonymousType ObjectInstance=&quot;Object instance 36&quot;)" referencedType="AnonymousType">
+            <referencesInternal>
+              <reference Id="184820ba-d790-4baa-b7e0-e274fe3709f1" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)" tag="DGQL" />
+              <reference Id="9079b724-6f56-4f45-b0d1-3c652bd12e73" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="89df13be-5fd7-4b8e-a381-61cf52d4d5d9" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="877b8ba2-3274-4ee3-9653-8579f662a67f" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="cb3c04ba-2b1f-4930-ba32-8ad558ebd49f" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="c1f2c6e4-9d4d-4c30-b37b-bb75d7b96bf6" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="224c4c80-c1a4-4d87-a4c1-f749ac76c646" name="content : AnonymousType" isActor="false" lifelineDisplayName="content : AnonymousType" referencedInstance="(Assembly=$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri) Type=AnonymousType ObjectInstance=&quot;Object instance 43&quot;)" referencedType="AnonymousType">
+            <referencesInternal>
+              <reference Id="95c9cc2a-4da4-4c4b-99f5-006bdeb32ae4" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)" tag="DGQL" />
+              <reference Id="d0de8ec3-abd6-4c8d-b4a5-ee486e4642a6" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="2f9750c9-9f0b-4d66-ba54-5c73e88e0721" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="c5c35d90-1c80-4e81-b4bc-3be832587d59" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="96666d12-01af-42b9-8964-b99547fc81b1" name="TakeBike" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="61a9f7d8-1ecd-4a74-9bf6-cfc1ae2f7fc0" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Api.Controllers)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Namespace=Bicimad.Api.Controllers Type=BikeController)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Namespace=Bicimad.Api.Controllers Type=BikeController Member=(Name=TakeBike OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="75e5a20f-0c46-4045-9507-f1aa9fbd8d29" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Namespace=Bicimad.Api.Controllers Type=BikeController Member=(Name=TakeBike OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="7079ff55-201e-45c2-bfa1-1785e078e6aa" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="f5884057-dda4-406e-8f6e-eeee0ece06cf" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="6967e336-57a1-4470-abb6-050093c602d4" name="Create AnonymousType" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="205d0e14-02dc-44b8-949e-b239d299ac1c" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="8d6b3787-88ec-41fc-b737-a875a5a4f503" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="d84ef300-f697-4dfc-8d03-af48a8e9bbf3" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="08f576fe-206f-4097-a5ba-26e0a271fd20" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="97ae25a8-132c-46e7-ab97-d4c53f56f5c8" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="df956c14-770b-4241-9234-75fb06ac06f0" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="9ab536ad-d119-42d3-bf53-3eb49992172a" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="96514f7f-3d08-4c9f-9e4c-d071f6959089" name="Return" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false" signatureText="return Json(new {Success = false, BikeId = &quot;&quot;, Error = &quot;Estación no valida&quot;})">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="90aa56f4-9dcf-48f5-9986-0e36cd4066c9" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="0f569d96-f031-477f-91d0-5b8984b7f250" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="be0b3383-f716-4db2-a5ca-3fcfbdfcd9b8" name="GetReservation" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="_reservationQueryService.GetReservation(userId, stationId, true)">
+            <referencesInternal>
+              <reference Id="e3cfa7a1-83c6-4c67-88ae-d3d13a1abd93" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Query.Interfaces)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Query.Interfaces Type=IReservationQueryService)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Query.Interfaces Type=IReservationQueryService Member=(Name=GetReservation OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=Boolean)]))&quot;)" tag="DGQL" />
+              <reference Id="2385ef53-9a07-41b8-b292-6bc10dc77715" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Query.Interfaces Type=IReservationQueryService Member=(Name=GetReservation OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=Boolean)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="3b0c7d5f-f58a-4d83-8cdf-5964b7e4d5c9" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="883158a3-28d6-4131-b0ec-4c94597d0256" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="eaafd6d9-079e-46ed-8a80-59bf3fc5b560" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ee9d08f1-3990-4b12-bdfa-18151f914cce" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="a9cee7e4-b5fc-49e5-8fcb-20b0ac770a99" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="fb4ae2f0-b582-488a-a5f6-9707ad108d23" name="RemoveReservation" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="_reservationCommandService.RemoveReservation(userId, stationId)">
+            <referencesInternal>
+              <reference Id="101cdbc5-d65e-495b-9b10-7e08e7931d4e" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Command.Interface)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Command.Interface Type=IReservationCommandService)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Command.Interface Type=IReservationCommandService Member=(Name=RemoveReservation OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="c8fd7f60-f41a-4205-8e99-1bcc58577e1d" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Command.Interface Type=IReservationCommandService Member=(Name=RemoveReservation OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="f5ca99f4-fc41-44f6-9bff-c2fa7d1f425c" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="ad7662e1-f059-4a5c-93fd-c713e66bac52" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="062fd3d7-8f3e-430e-836a-51f165dd698c" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="14ff2d64-a105-455a-a979-beef223a534f" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="24b886d9-2fa3-42ba-b502-12478ddfebdf" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="0ba36213-dc91-49a7-825e-afa5a6e4743d" name="GetFreeBike" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="_bikeQueryService.GetFreeBike(stationId)">
+            <referencesInternal>
+              <reference Id="ad5c09e3-9715-4e86-9edb-8bf3c386d0be" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Query.Interfaces)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Query.Interfaces Type=IBikeQueryService)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Query.Interfaces Type=IBikeQueryService Member=(Name=GetFreeBike OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="186c3440-1f61-4abb-8937-140741e3add5" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Query.Interfaces Type=IBikeQueryService Member=(Name=GetFreeBike OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="806a5846-59e6-4d74-96cc-e235f165ad87" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="c9e2ff10-f7cc-43e6-a1f5-3282fc2a365c" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="749b8f1a-f329-458c-a600-aae92acdcd4e" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="5b81c70b-a626-415b-915c-ae1bacb5a666" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="5a4d42ad-cbcf-440c-afe9-5823719af786" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="4e4b7d1e-8674-42e1-9f74-c3d2a5ede67b" name="Create AnonymousType" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="6d55983f-a554-4119-8db4-634a2f706d59" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="8c5abfd8-02c5-477b-bea5-36909d3b9505" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="2d61271d-22ab-4642-a8b3-1277049f0fb8" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="f954ae62-ea21-429d-9ca9-ec20c7c16390" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="895b2249-b77b-4170-ab9b-b770c5d8461b" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="78c5e477-3fb4-4a86-b516-e49190a1c6cb" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="8fd31231-2e27-4b4a-80f4-543a515b3ff8" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="715ed71f-4812-4ff3-b684-fb98d3666bd6" name="Return" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false" signatureText="return Json(new {Success = false, BikeId = &quot;&quot;, Error = &quot;No hay bicicletas disponibles&quot;})">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="d594ba14-2cb6-45b5-af74-a9c1babca520" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="7580ca11-0ecb-464e-ab58-650a5d3ee1bf" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="b6393b2c-8815-4420-9454-ccbcaef2f451" name="TakeBike" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="_bikeCommandService.TakeBike(userId, stationId, bikeId)">
+            <referencesInternal>
+              <reference Id="40fd9506-70fd-4edd-920c-c3a7a5a01b41" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=Bicimad.Services.Command.Interface)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Command.Interface Type=IBikeCommandService)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&amp;quot; Namespace=Bicimad.Services.Command.Interface Type=IBikeCommandService Member=(Name=TakeBike OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=String)]))&quot;)" tag="DGQL" />
+              <reference Id="6e42e8b9-8706-4f30-989b-1643523ba64d" handle="(Assembly=&quot;$(66e10168-7502-4e07-a1ab-48ac99f03b83.OutputPathUri)&quot; Namespace=Bicimad.Services.Command.Interface Type=IBikeCommandService Member=(Name=TakeBike OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=String)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="58f94156-741d-40ad-9bf7-2ef9f4862121" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="1faf2f09-5fca-4473-b5a6-e9322a1bcb08" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="dd0a822b-9c34-433f-a9d6-7d56d972d0d1" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="b0b1254d-f573-451a-86db-da8e2e8f37f8" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="421172c0-08b4-49cb-bbec-3d7b4d869437" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="285473d9-b8b9-4b5b-87ff-9844473edf94" name="Create AnonymousType" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="c6cb5689-67d6-4112-9417-5d04641dc8d5" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="aa652a05-9514-4e6a-82b2-516190a116aa" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="ad36a981-7551-42e9-84e1-ba598d5408d0" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="c4fe0b13-cc92-4190-96b5-c0073ff99635" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="1a201b5d-f49a-4521-8661-06148cb53920" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="e5119a8c-3d0a-4362-9af3-0421c4b51992" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="618ba864-1149-449d-aa55-d6ab54a34330" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="7f8e3fe2-9f91-4c78-810d-dc693905c7f4" name="Return" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false" signatureText="return Json(new {Success = true, BikeId = bikeId, Error = &quot;&quot;})">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="2a2b1938-3a37-4858-b0a2-498dfaa306d6" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <lostFoundTargetMoniker Id="6d6ff64b-d416-4d88-9416-8f1c29b9b87f" LastKnownName="LostFoundTarget" />
+            </receiveEvent>
+          </message>
+          <message Id="93ffc248-1334-4b20-832d-1312e6df5120" name="Create AnonymousType" messageKind="Complete" messageSort="CreateMessage" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="d511855f-bd0d-4c8b-9e28-72a1e879487b" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=::)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&amp;quot; Type=AnonymousType Member=.ctor)&quot;)" tag="DGQL" />
+              <reference Id="31838703-7581-4112-96a6-7c92607c3bfd" handle="(Assembly=&quot;$(65c42317-b55e-4636-a3e6-16078a3cfd77.OutputPathUri)&quot; Type=AnonymousType Member=.ctor)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="9a264ed9-1ba1-44b1-beec-74e61daf26c0" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="30206ee9-37c8-4df2-85e4-d947e3d8b8a6" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="8e28f7de-a894-44d3-9c21-8545a3d2c4fc" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="31378855-6065-4f22-ac63-37a5f52a1987" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="83f9cfd4-f51f-4a3a-b65f-0974720eda98" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="81499cd6-4c07-499e-a3aa-d88bf5e1fcbe" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b8294415-663a-4853-95f7-50d49708900f" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="7091d0aa-8b2f-4eef-9cc9-343430cb19ab" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="c2fab10a-05f6-4d54-8f54-0ac91dfffd99" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="7e6994ee-2880-4113-a7ae-d9b4e3de60cc" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="5ace8e85-71f1-4616-9b8c-602d5703c9ae" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="3a49aedc-fbed-47ca-8b8b-247eac209109" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="5a9f911c-e7aa-4a56-ab0d-759a5ec75a2a" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="687d6e16-d52e-4caf-a629-9b73690aabe5" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="3e317a18-747c-40b9-a648-81cbd6144e39" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="9e8e207a-b485-475c-b0dc-0b5fc4ad113e" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="19eaa421-e002-4722-9c40-7cf6e51ec9d9" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="03f5a838-9fd9-43b2-af0a-13f28cfbc50e" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="9da078b4-29c1-4d83-9ebe-dc172eee1714" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="bb1b774d-4567-4f77-a3a6-3a9707564233" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8a68d0d6-7cdd-49c4-95fe-59d29000134e" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="6c91e1c5-908a-4193-b22c-36536baf21dc" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="ec93e6a3-4281-448b-9d9a-a24ab80b505d" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>

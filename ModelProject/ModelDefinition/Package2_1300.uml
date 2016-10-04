@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0b3b0c18-01e6-44e8-85dd-e6e9a7c50c77"
+  name="App_Start"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ee5c3526-24b4-48b1-8731-effe0fd88620"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Api.App_Start"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ba56a451-a739-4786-b6a5-6e318f8cc9b4"
+        name="NinjectWebCommon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1f7356be-cbe9-43f1-857a-6acb278dade4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ab9d3bfc-71a2-4f03-8867-386889175c46"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f206998-a844-43c4-8af6-b89bb0c8203a">
+                <propertyInstance
+                  Id="e599051a-144c-4e0d-8a0f-b27fe6b27eaa"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="39d53e76-8413-41d7-b5d2-6b67d9f31e2d">
+                <propertyInstance
+                  Id="2adc8e47-e317-47e1-8af0-539e8460a73f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cd26ec45-f6a6-4aa7-8804-08fa93539e9a">
+                <propertyInstance
+                  Id="56bc2106-78ba-4653-89cb-69f742678c18"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56c6aa1f-ff38-4bcc-a1d2-85a2cd2ce988">
+                <propertyInstance
+                  Id="d166b335-beed-426e-8532-9d26a75847af"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="13ba8c84-261a-44ca-8950-d7d125c24b74">
+                <propertyInstance
+                  Id="f6587271-7821-49c8-80d4-a15fbbae6d53"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6dae92e6-f367-4529-91c5-5a2c3220685b"
+            name="bootstrapper"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f75c1bd4-a917-4656-9772-b4a5e40e1d9c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon Member%3Dbootstrapper"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="148f34b2-48de-44cb-b165-a2adf74cb399"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="960ab9b9-faa6-4a46-96f7-baf618dbe5fc">
+                    <propertyInstance
+                      Id="83360b08-0aa7-478d-aa79-ca0ba85257aa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="898c8e15-5c32-4b9c-a3eb-c304e4340054">
+                    <propertyInstance
+                      Id="cef1ed8c-cd7b-4df7-8c22-2ea17bca1a18"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcbcceb0-edac-473a-a4ed-f1a137217ee4">
+                    <propertyInstance
+                      Id="06de3a1e-6851-4706-8539-e3ef7267d3d2"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46080be4-c86c-4e4d-94b7-ac861c6b74f1">
+                    <propertyInstance
+                      Id="00c46cb2-57d7-49d0-8b9b-4f4e8c2bc9de"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33c6be08-4ab9-47e2-a95f-57627d96c857">
+                    <propertyInstance
+                      Id="7ed340bc-49a4-4d4a-bfff-9a17907b5d9b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="96923666-3d67-458a-ac28-65010e8f2ff2"
+                LastKnownName="Bootstrapper"
+                LastKnownLocation="Package5_1300.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="33d4e088-4eac-42d7-83b5-6706d2637023"
+            name="Start"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="18d3f3d9-0bc1-46b1-9a82-e80f0ca4757d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="68a75a41-c975-4534-9035-b54204c21ebb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78443960-7041-4bcb-8332-06f5b0979cf8">
+                    <propertyInstance
+                      Id="30f2b659-6a14-44ad-ab89-7ce467aed37e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6156383a-72f7-4194-bfee-ab1ef0c7bbf9">
+                    <propertyInstance
+                      Id="31b3da92-67e7-4273-a543-f02db8083670"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f742e98f-bd0f-4ad9-b6ca-b80841549c7f">
+                    <propertyInstance
+                      Id="85db07fb-2c8f-4955-a394-03bb64a6ac01"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b93b141-74dd-4991-ba2f-39a116dfd401">
+                    <propertyInstance
+                      Id="acc6f415-ccc3-4e53-b959-97243e5dbfa5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abffc6f4-f08e-4487-ab1b-219beccd9876">
+                    <propertyInstance
+                      Id="b72ed978-2c3b-466d-a9e3-695a3e3a0036"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c257af6f-bbe1-46b2-8b82-f78c491fbe70">
+                    <propertyInstance
+                      Id="09e7860c-6e66-4752-848d-d5098c9f0427"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="101fa465-1f50-4fdb-8943-3d531df763e6"
+            name="Stop"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="369a398b-97eb-4047-b78b-a554aae350de"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon Member%3DStop"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b1774237-a383-47a9-ac7b-8712286292fe"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="792f062c-4454-4667-a550-6fa47d228dc6">
+                    <propertyInstance
+                      Id="5dbb7a54-d3a4-4f8f-bec5-67643363bd68"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40da2a2d-3679-4de8-a28c-03aa84dceb3c">
+                    <propertyInstance
+                      Id="235fe40b-389a-46d5-82bf-589787886e20"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f0cad2d-b94b-43ae-80dc-b08232b7c611">
+                    <propertyInstance
+                      Id="2ec6ce63-18cb-489f-975a-e4bf0ed4e71a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66b3a941-f2ef-419b-9e11-6df28384b834">
+                    <propertyInstance
+                      Id="1380d203-6780-4fc2-a1c3-a7ed65480c83"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed05b039-9779-4486-8fb4-157ca8ea8d99">
+                    <propertyInstance
+                      Id="9650ac77-4721-4078-b039-52cbee0d3c52"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="716e1967-5241-4aba-8db0-44f2811ca6c7">
+                    <propertyInstance
+                      Id="9c1f78af-54e9-452e-9099-c9c78b791460"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="a09186cc-c0a2-4673-ad7c-e27eb51dff32"
+            name="CreateKernel"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2ed1a26e-75d9-4307-853b-1b736795e540"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon Member%3DCreateKernel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="09cc4d03-9383-4bb3-b56c-df27f4e8d7aa"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34452640-24ce-4edc-aaa0-2b1d04b549bd">
+                    <propertyInstance
+                      Id="5120efdb-6b51-4276-8d8c-c8c932228b36"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca463c49-23a2-4cce-9e63-107edbebb394">
+                    <propertyInstance
+                      Id="62de12f3-4836-4de0-9290-0b0216f5e8cd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23821faa-0876-4f5e-ad04-0ee64324f8b0">
+                    <propertyInstance
+                      Id="a7503a7b-8559-4d61-89db-653fb0fd62b0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d96a43a7-44f0-4d90-a742-8482ea9d8170">
+                    <propertyInstance
+                      Id="c230c6eb-8aca-4766-92db-a4ab65aa5ebe"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3dbe793a-3425-4285-844f-87841ed71096">
+                    <propertyInstance
+                      Id="15114a49-2cb7-4497-aecc-2d0098f37f76"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75a6378a-6b66-4981-b553-1b5c99b746dd">
+                    <propertyInstance
+                      Id="9ad72f97-f087-439d-86b1-0ac20de35ebc"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4530a86c-2cc4-430d-bbf7-7920cf56f3a7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="062e63c7-8a15-453c-8cdc-3076c3e19b82"
+                      LastKnownName="IKernel"
+                      LastKnownLocation="Package3_1300.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a4b75de3-3c50-44d9-a380-555a636af825"
+            name="RegisterServices"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1249edf3-459f-4dbc-a995-e70a31b02198"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon Member%3D(Name%3DRegisterServices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2Fpackages%2FNinject.3.2.0.0%2Flib%2Fnet45-full%2FNinject.dll Namespace%3DNinject Type%3DIKernel)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="96deeb5a-1dae-4a41-bc2e-370012d42017"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8e57365-bb91-4296-b925-f9c7cb14d663">
+                    <propertyInstance
+                      Id="cb3541a4-4147-4eea-bdaa-12f8657d02d3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="15705031-c224-4a56-b3f5-344e985f2866">
+                    <propertyInstance
+                      Id="4b458374-4122-4885-a338-3d9ddbc0cce4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4550f315-6333-4202-b26d-1b8cd0e42626">
+                    <propertyInstance
+                      Id="9768cf91-f212-4ff3-afbd-d23476d0ad67"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca5f6e71-d652-49e9-b264-5a3ee323c33b">
+                    <propertyInstance
+                      Id="55c68270-5999-47bd-a49a-cd454d748baf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f4822fc-1531-4d6f-914f-76a6865f2a24">
+                    <propertyInstance
+                      Id="cbdb9495-de52-43d3-81ee-8f797b84bccb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7333082f-cd0c-4532-bedc-ab0cd9fb8b71">
+                    <propertyInstance
+                      Id="3fe9098f-3dc9-4c72-a8f4-4b7aee7e5088"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0b86a73f-48db-4acd-b51a-bd723aab7c86"
+                  name="kernel"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d36b09b0-aa13-4374-93e7-d42701eb713e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Api%2Fbin%2FBicimad.Api.dll Namespace%3DBicimad.Api.App_Start Type%3DNinjectWebCommon Member%3D(Name%3DRegisterServices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2Fpackages%2FNinject.3.2.0.0%2Flib%2Fnet45-full%2FNinject.dll Namespace%3DNinject Type%3DIKernel)]) ParameterIdentifier%3Dkernel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="062e63c7-8a15-453c-8cdc-3076c3e19b82"
+                      LastKnownName="IKernel"
+                      LastKnownLocation="Package3_1300.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

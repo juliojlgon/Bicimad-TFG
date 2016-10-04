@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4d102bdc-d6de-4483-b95d-153ae28b2fd1"
+  name="User"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="734c1ecd-1e59-4d0f-8184-e1612a23e413"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Web.Areas.User"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fc4c116f-78d7-40b8-861f-06f5f06e4a87"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package2_1317.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c38e9600-6b44-4755-8cf0-ee376b986832"
+        LastKnownName="Models"
+        LastKnownLocation="Package_1318.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

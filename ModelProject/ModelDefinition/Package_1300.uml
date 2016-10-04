@@ -1,73 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="b3518399-195e-4c0b-852a-49bd7fe688bf"
-  name="Station"
+  Id="f8df7864-98f3-4892-8b34-47d704cdce12"
+  name="Owin"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="f1d44547-f6a8-4635-91f9-ede3e98e6647"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Query.Dto.Station"
+      Id="b5c67b0b-9658-4e6b-8be4-5993dc359954"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOwin"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
-      <class
-        Id="7d9a10fd-1daa-49f5-ac28-c4b1c14326e4"
-        name="StationDto"
+      <Interface
+        Id="db39e8c4-2551-4fa8-93fc-039db90fad7b"
+        name="IAppBuilder"
         isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
+        isLeaf="false">
         <referencesInternal>
           <reference
-            Id="ee39af8b-ef30-4b69-ac1e-997f57859833"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Query.Dto.Station Type%3DStationDto"
+            Id="2f09eea2-308e-49e5-9357-ca8505f8e634"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2Fpackages%2FOwin.1.0%2Flib%2Fnet40%2FOwin.dll Namespace%3DOwin Type%3DIAppBuilder"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
           <stereotypeInstance
-            Id="b7838306-24fb-4d96-b89e-0bb46c85ba34"
-            name="class"
+            Id="101c01ec-1312-4472-9138-302c9742524b"
+            name="interface"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="c8d956fd-41f9-4e04-b94f-b8ad0576113e">
+                Id="07a7bf84-c677-4be0-9a58-1c5255a3b0bb">
                 <propertyInstance
-                  Id="64f29169-6671-419a-a49e-1f0b9d8f8690"
+                  Id="8ff4df83-4eba-420d-9445-3122171836ec"
                   name="ClrAttributes" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="643f770d-6a6b-41cd-b08b-6c2585136597">
+                Id="b4272094-c02f-4357-a79f-fe748053a5cc">
                 <propertyInstance
-                  Id="54398842-a26e-4c7e-940b-508381678d00"
+                  Id="3bbd3c1d-dbca-481a-a986-94b23078e7d1"
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="4a475d83-2a62-4384-a39c-72ddc63a2c4c">
+                Id="1159e25f-923f-477e-970c-14fd26e9816f">
                 <propertyInstance
-                  Id="67f51b70-1c85-4346-b985-78e8d9d415a1"
-                  name="IsStatic"
-                  value="False" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="3e566c18-5ce4-4722-8090-740a7fb50429">
-                <propertyInstance
-                  Id="d232c5f7-3b0f-472b-a3cf-1881f41b59f0"
+                  Id="7a083fc7-008c-4349-be89-4e022da07cbe"
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="ae70c812-c920-46dc-afa7-ef81e9fdc975">
+                Id="39948fe7-eac2-40d7-add8-075bca1fa652">
                 <propertyInstance
-                  Id="d9f2c83f-24ce-4ea2-835c-2858b66d8d2c"
+                  Id="fc331418-002a-4335-9b0c-357f1317a02b"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-      </class>
+      </Interface>
     </packageHasNamedElement>
   </packagedElements>
 </package>

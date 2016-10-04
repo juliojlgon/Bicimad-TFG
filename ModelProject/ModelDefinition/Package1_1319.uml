@@ -1,66 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="b3518399-195e-4c0b-852a-49bd7fe688bf"
-  name="Station"
+  Id="26d59d9c-45c8-45f4-abe7-6f6a929ebd5a"
+  name="Account"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="f1d44547-f6a8-4635-91f9-ede3e98e6647"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Services.Query.Dto.Station"
+      Id="c167bafd-96b3-4fb7-bea3-de23b98b5078"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Web.Models.Account"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="7d9a10fd-1daa-49f5-ac28-c4b1c14326e4"
-        name="StationDto"
+        Id="c345ca7f-b1a4-4fb9-aaec-6f8fdcd2a04e"
+        name="LoginModel"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
-            Id="ee39af8b-ef30-4b69-ac1e-997f57859833"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Services%2Fbin%2FDebug%2FBicimad.Services.dll Namespace%3DBicimad.Services.Query.Dto.Station Type%3DStationDto"
+            Id="399913c8-8192-4d8c-aa55-e24c183d65df"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Models.Account Type%3DLoginModel"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
           <stereotypeInstance
-            Id="b7838306-24fb-4d96-b89e-0bb46c85ba34"
+            Id="20944d1c-6b9d-4da6-a693-10342fe132b2"
             name="class"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="c8d956fd-41f9-4e04-b94f-b8ad0576113e">
+                Id="5c4fa3ea-2d5a-4ca0-a54c-95319e14f553">
                 <propertyInstance
-                  Id="64f29169-6671-419a-a49e-1f0b9d8f8690"
+                  Id="8a37b94c-94a7-4948-9281-abdb465840a5"
                   name="ClrAttributes" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="643f770d-6a6b-41cd-b08b-6c2585136597">
+                Id="801fc20a-86d6-4809-b4f4-300dfeb3d617">
                 <propertyInstance
-                  Id="54398842-a26e-4c7e-940b-508381678d00"
+                  Id="2b3ecf61-e383-4f53-8f5d-5e5b0196d4da"
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="4a475d83-2a62-4384-a39c-72ddc63a2c4c">
+                Id="f223319e-29c1-43f6-a77f-a89c02e8553f">
                 <propertyInstance
-                  Id="67f51b70-1c85-4346-b985-78e8d9d415a1"
+                  Id="c3c2b3a0-09af-41bc-a75f-3f06b9a9eb9a"
                   name="IsStatic"
                   value="False" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="3e566c18-5ce4-4722-8090-740a7fb50429">
+                Id="8a069fa8-b3ee-407d-b3bb-bd9b4a6efb1c">
                 <propertyInstance
-                  Id="d232c5f7-3b0f-472b-a3cf-1881f41b59f0"
+                  Id="1da300c6-85a8-4153-85fc-32c02876000d"
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="ae70c812-c920-46dc-afa7-ef81e9fdc975">
+                Id="7d08ee59-75d3-4e13-ad3d-4a8e6aa83dd7">
                 <propertyInstance
-                  Id="d9f2c83f-24ce-4ea2-835c-2858b66d8d2c"
+                  Id="66c2798a-f196-4720-a2a2-a9acd6046457"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>

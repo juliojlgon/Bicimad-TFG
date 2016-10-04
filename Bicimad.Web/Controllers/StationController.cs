@@ -10,7 +10,7 @@ using Bicimad.Web.Extensions;
 
 namespace Bicimad.Web.Controllers
 {
-    public partial class StationController : Controller
+    public partial class StationController : BaseController
     {
         private readonly StationQueryService _stationQueryService;
         private readonly IReservationCommandService _reservationCommandService;

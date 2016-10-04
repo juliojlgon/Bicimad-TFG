@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="74250564-6bbb-4194-b317-93e88427ad05"
   name="ModelProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -47,6 +47,30 @@
         Id="f767b905-336f-46fa-a183-49a617b38813"
         LastKnownName="Query"
         LastKnownLocation="Package_1237.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f8df7864-98f3-4892-8b34-47d704cdce12"
+        LastKnownName="Owin"
+        LastKnownLocation="Package_1300.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dc0e99ee-554f-40f2-89d2-c4478693b9d9"
+        LastKnownName="Ninject"
+        LastKnownLocation="Package3_1300.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="abec3a14-40ad-41b1-9d33-5c76d011de9e"
+        LastKnownName="T4MVC"
+        LastKnownLocation="Package4_1314.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2f9275da-21fe-40ac-8bcf-2b4d90a62e3e"
+        LastKnownName="Areas"
+        LastKnownLocation="Package1_1318.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

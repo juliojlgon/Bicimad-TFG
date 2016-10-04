@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f2f60f54-3dfc-4499-a086-844ebde85e03"
+  name="Controllers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c53f7712-39c7-445e-9c19-84fd4606c7de"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBicimad.Web.Areas.Admin.Controllers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="206969ea-f265-461e-92b6-1d508e4bc187"
+        name="ActionNamesClass"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="422e7abd-dce5-468a-a270-d1acaa5ada29"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Areas.Admin.Controllers Type%3D(Name%3DActionNamesClass ParentType%3DStationsController)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c02906b9-cf9c-41a9-b2b1-4e63a684483e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fe45937b-fdbd-4bf7-a7bb-2e4a97e932f9">
+                <propertyInstance
+                  Id="749c90ef-b9fc-491a-854c-568315ac50af"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="632877c3-0657-4a7b-abb0-a2a53a25e267">
+                <propertyInstance
+                  Id="896233d8-b8d7-41df-bc51-90ec3fee32fc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77466422-c27c-413f-9f14-053dbcc9ef9d">
+                <propertyInstance
+                  Id="e2f808fd-1c48-4a4e-9dc1-30b69bf8a8cd"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d1b3e2b-e50c-4947-b48c-cbb7393cf4b1">
+                <propertyInstance
+                  Id="09be8010-4275-4047-9523-934f49d06b59"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="533e51e7-d58d-41d0-ae55-676df3995672">
+                <propertyInstance
+                  Id="b4cc1485-1636-47fd-8d50-1efd8a6808ea"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="00e93300-c9ac-4ca6-8e29-c660c02bd168"
+        name="ViewsClass"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6c1d1cb3-78d0-4529-8903-b5bd281d050e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Areas.Admin.Controllers Type%3D(Name%3DViewsClass ParentType%3DStationsController)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6b9da776-874e-4dbd-b2a3-3bdecac29f2f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="67f45b15-2af0-4d0c-b531-26706b8cc99a">
+                <propertyInstance
+                  Id="68b1358c-2ca2-404b-8b0b-1e4c4f67c40a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="492205f8-2fc0-4000-9833-4b315202e216">
+                <propertyInstance
+                  Id="d5d300d0-5b6e-4890-93c4-4e0830417d25"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="88ea5ab0-4438-443f-9e00-befd2d75ddc9">
+                <propertyInstance
+                  Id="91da85ed-f444-46f8-9788-41c26c0ce2c2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3cc41888-1425-4412-88b4-1cd7bcdc6bab">
+                <propertyInstance
+                  Id="3ebdcdf7-4440-4100-aa46-f79eb9a1d6e7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d466f906-6273-43ee-8267-f7babec7d170">
+                <propertyInstance
+                  Id="83c60378-d5af-418d-904e-f0def286e590"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="64829507-49a9-4662-8386-8bfe8a067548"
+        name="ActionParamsClass_SetBasePrice"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e5a87918-913d-4ca8-95bc-2b416645de3e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Areas.Admin.Controllers Type%3D(Name%3DActionParamsClass_SetBasePrice ParentType%3DStationsController)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="989f0efc-c6db-41b6-a901-27833f68f651"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="24cf5908-c6e0-46fa-b919-bcdfbac38fb4">
+                <propertyInstance
+                  Id="c49c9278-d894-4489-930f-dad84bb98e74"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="595dcdf9-0946-4ad4-bf15-6d6e9fcaac6b">
+                <propertyInstance
+                  Id="acd750f4-b410-45fa-b962-e383b1f002bd"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4ed25de1-9edb-436f-a8d6-6b2897f1cd8c">
+                <propertyInstance
+                  Id="27d7e24b-3c76-48d0-b984-0fd36ca9f678"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="42f13c7e-5ef9-46d5-8f37-a6ef1051a09f">
+                <propertyInstance
+                  Id="bf5b206d-9359-4103-b0a2-cc0a26055e0e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78884d64-2a0d-4645-9413-5a5c2d587a87">
+                <propertyInstance
+                  Id="cab28346-793d-4ce1-ba82-e82f00743ed2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e37075de-b697-487b-a4fb-e117e7fe56eb"
+        name="ActionParamsClass_SetDiscounts"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7b812727-fbbd-4bfc-a5cb-298e8f24892e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FOneDrive%2FBicimad-TFG%2FBicimad.Web%2Fbin%2FBicimad.Web.dll Namespace%3DBicimad.Web.Areas.Admin.Controllers Type%3D(Name%3DActionParamsClass_SetDiscounts ParentType%3DStationsController)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="888a7d53-0b2e-437b-92ff-5bbb95134931"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab742717-26fa-4ceb-a674-f7d4dfc9bb8b">
+                <propertyInstance
+                  Id="347b2559-d8d1-482b-84e3-6acee03d8f06"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c7e7a1a-9588-49f0-869e-85568bd4b61e">
+                <propertyInstance
+                  Id="6965ac9b-7194-4a72-81fa-d4b2fcb576f7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="abc20680-89c6-49bd-96b1-5d11a8ba2e43">
+                <propertyInstance
+                  Id="c4aca033-a95f-4918-a9c3-e94103592120"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4904e943-4b9d-45af-a60e-69a9088dc244">
+                <propertyInstance
+                  Id="b179467c-4048-4891-ba92-0ccce0593a28"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f69b905-8f6c-4c09-a86a-aa11d434e094">
+                <propertyInstance
+                  Id="11ad947f-4138-418f-afd3-7dd869a0d451"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
