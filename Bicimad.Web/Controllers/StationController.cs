@@ -99,7 +99,7 @@ namespace Bicimad.Web.Controllers
 
             if (action.Success)
             {
-                TempData.SetMessage("Reserva Eliminada", MessageType.Error);
+                TempData.SetMessage("Reserva Eliminada", MessageType.Success);
                 return RedirectToAction(MVC.User.Home.ActiveRerservations());
                 //return new JsonResult
                 //{

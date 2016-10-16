@@ -109,7 +109,9 @@ namespace Bicimad.Services.Command
             //Update the price and discount
             var metaBasePrice = Repository.MetaConfigs.Where(c => c.MetaKey == MetaConfigKey.BasePrice).Select(c=> c.MetaValue).First();
             var basePrice = double.Parse(metaBasePrice, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
-            var totalprice = basePrice*(transaction.CreatedDate.Hour - DateTimeHelper.SpanishNow.Hour);
+            var span = transaction.CreatedDate - DateTimeHelper.SpanishNow;
+            var hours = span.TotalHours;
+            var totalprice = basePrice*hours;
             
             //if same type, apply the highest one.
             if (transaction.DepartureStation.DiscType == station.DiscType)
@@ -126,7 +128,7 @@ namespace Bicimad.Services.Command
                     var totalDiscount = (station.DiscPorc > transaction.DepartureStation.DiscPorc)
                         ? station.DiscPorc
                         : transaction.DepartureStation.DiscPorc;
-                    transaction.FinalPrice = totalprice*(1 - totalDiscount);
+                    transaction.FinalPrice = totalprice*((100 - totalDiscount)/100);
                 }
 
             }
@@ -135,12 +137,12 @@ namespace Bicimad.Services.Command
                 if (transaction.DepartureStation.DiscType == DiscountType.Constant)
                 {
                     transaction.FinalPrice = (totalprice - transaction.DepartureStation.DiscConst)*
-                                             (1 - station.DiscPorc);
+                                             ((100 - station.DiscPorc)/100);
                 }
                 else
                 {
                     transaction.FinalPrice = (totalprice - station.DiscConst)*
-                                             (1 - transaction.DepartureStation.DiscPorc);               
+                                             ((100 - transaction.DepartureStation.DiscPorc)/100);               
                 }
             }
 

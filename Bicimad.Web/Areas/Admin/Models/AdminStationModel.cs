@@ -40,9 +40,11 @@ namespace Bicimad.Web.Areas.Admin.Models
         }
 
         [Display(ResourceType = typeof (Resources.Resources), Name = "Money")]
+        [RegularExpression("(?:\\d*\\.)?\\d+", ErrorMessage = "Invalid input. only positive numbers")]
         public string DiscConst { get; set; }
 
         [Display(ResourceType = typeof (Resources.Resources), Name = "PriceModel_DiscConst_Porcentual")]
+        [RegularExpression("(?:\\d*\\.)?\\d+", ErrorMessage = "Invalid input. only positive numbers")]
         public string DiscPorc { get; set; }
     }
 }

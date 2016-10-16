@@ -16,14 +16,16 @@ namespace Bicimad.Web.Controllers
         private readonly IBikeQueryService _bikeQueryService;
         private readonly IReservationCommandService _reservationCommandService;
         private readonly IReservationQueryService _reservationQueryService;
+        private readonly IUserHistoryQueryService _userHistoryQueryService;
         
 
-        public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService, IReservationQueryService reservationQueryService)
+        public BikeController(IBikeCommandService bikeCommandService, IBikeQueryService bikeQueryService, IReservationCommandService reservationCommandService, IUserHistoryQueryService userHistoryQueryService, IReservationQueryService reservationQueryService, IUserHistoryQueryService userHistoryQueryService1)
         {
             _bikeCommandService = bikeCommandService;
             _bikeQueryService = bikeQueryService;
             _reservationCommandService = reservationCommandService;
             _reservationQueryService = reservationQueryService;
+            _userHistoryQueryService = userHistoryQueryService1;
         }
 
         public virtual ActionResult Index()
@@ -114,10 +116,10 @@ namespace Bicimad.Web.Controllers
         {
             if (stationId == null)
             {
-                TempData.SetMessage("Estación no valida.", MessageType.Error);
+                TempData.SetMessage("Choose a station.", MessageType.Error);
                 return new JsonResult
                 {
-                    Data = new { Success = false, Error = "Estación no valida" }
+                    Data = new { Success = false, Error = "Estación no valida. Escoge una estación." }
                 };
             }
 
@@ -125,6 +127,16 @@ namespace Bicimad.Web.Controllers
             if (reservation != null)
             {
                  _reservationCommandService.RemoveReservation(userId, stationId);
+            }
+            var lastTrip = _userHistoryQueryService.GetUserHistory(userId);
+
+            if (lastTrip == null)
+            {
+                TempData.SetMessage("Take a bike first.", MessageType.Error);
+                return new JsonResult
+                {
+                    Data = new { Success = false, Error = "No tiene bicicleta. Coja una primero." }
+                };
             }
 
             var action = _bikeCommandService.ReturnBike(userId, stationId);
