@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="5215bcc3-f6ea-4e10-8b97-d459b2b015c2" name="UMLUseCaseDiagram" linkedPackageId="d7b19afc-95ab-43c9-9a47-68a2cac71823" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="a154ac9d-4dfb-427f-9745-41f5964c809d">
+      <profileInstance Id="5ac39bdb-8103-44c2-9c19-bb8bb45f8c64" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6cf6887e-2eed-4275-8250-aa86ee3f1b62">
+      <profileInstance Id="b9c09b99-9e49-4ced-a288-2ab8a19165f0" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="24013b3b-bc41-42eb-a3b3-d3de6ccd49bb">
+      <profileInstance Id="c2f790a2-b61c-4519-9abc-376b32510cd5" name="CSharpProfile">
+        <elementDefinition Id="85c4e7d4-4766-4c39-a803-d67dccf2ddc8" />
+      </profileInstance>
+      <elementDefinition Id="85c345ad-ab81-4561-981f-47599fbae2bf" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="de51642f-7fb4-405a-84f2-a10e52bd1b0a" name="No registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="500f728e-9ba4-4d1e-a09b-f0df23f8fc11" />
+        <targetEnds>
+          <association Id="08c49c40-8339-4840-a1c3-48dfa549fdd2" isDerived="false" sourceEndRoleName="No registrado" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1f0712ca-eb4f-49db-803f-72934dd18b0b" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="707b7e9e-e763-41a9-bc6a-ee6759554256" name="No registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1d832b0b-b603-4620-b0be-6dae9ed6874b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1ff96fa-b7b5-4d3a-9bfe-a61d23e07a04" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="724c3b49-8337-40bf-9635-173c85e11071" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7dd2b2bc-a582-4e54-96a8-870089c00fa3" />
+          </association>
+          <association Id="2625bef8-9acd-4def-adbd-f118a4c96a03" isDerived="false" sourceEndRoleName="No registrado" targetEndRoleName="Registrarse" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c2da36d-1db5-4327-b85e-0e6eb1b6f68e" LastKnownName="Registrarse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ccbd4f6c-73ff-4ec7-9d3d-31ea65f1b579" name="No registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="30044abe-4d61-403c-b5ba-f28d4e341556" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13273b5a-940f-4601-a7b6-390c9a6df120" name="Registrarse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="13a31a6a-9774-4975-a7dc-a9c47bf02652" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bae82e14-b6ff-49de-80b8-80aca133a01e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="9d00605f-89f1-49bc-b347-c465f6a06567" name="Registrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b3a94ab7-0033-4156-a638-87b78a1e620e" />
+        <targetEnds>
+          <association Id="b3e3658b-aaab-495c-b1a5-30ae1c449bce" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1f0712ca-eb4f-49db-803f-72934dd18b0b" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63d4b62c-07b6-4096-a996-ddab4047bebd" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b2392fc0-1387-4a54-843f-df7b36cbf26c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7519f594-9e49-4d03-9c01-3c254ae4b5d3" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a8d4cf64-46fb-4c23-9562-e32cf629aa81" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2b896f91-2a5a-4f1a-b697-3f13d6c709a2" />
+          </association>
+          <association Id="b0877d73-bebf-4df6-9925-5764e0f721d3" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Registrarse" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c2da36d-1db5-4327-b85e-0e6eb1b6f68e" LastKnownName="Registrarse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c1f6dbde-ea00-4734-9532-d1405b908e40" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dc83d57f-b10b-4954-9703-693e1cf6b1a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e889fa0f-8d5a-4416-a348-e8b7ee03da94" name="Registrarse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e294ccb7-2469-4975-9a0b-3b15aa7edda6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9a76c0bc-98ac-4739-8171-522977258038" />
+          </association>
+          <association Id="8b64b53a-00ff-4b76-ac1a-d66148f3fa19" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Coger Bicileta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0e9c1ccd-38f4-467e-a41f-4eb6ded92ade" LastKnownName="Coger Bicileta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="86a20660-3ac7-41a7-a1ab-48bc07f79ff4" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5f68d16d-f6c3-4fab-a521-65c1051421b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="232bda15-6d31-4fcf-97b5-c97b2ec2f573" name="Coger Bicileta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4227a4ef-e711-463c-9d85-6a1104b1816f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c0d932e6-7272-46c0-a75d-333f9d75a3f7" />
+          </association>
+          <association Id="024994f1-b641-421c-be1b-463bade695b7" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Reservar item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2db461a7-8b28-46e2-a751-dca42379ec03" LastKnownName="Reservar item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="763774b6-195d-47eb-96a8-b504734f785c" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="17dda66d-41b7-4eae-ba6c-c36b74e8bc45" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be406f5e-423a-47aa-8bd5-b02682d395b5" name="Reservar item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8a1f5f73-b50d-4e87-a420-e06cf1f84563" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1eab33ee-60f2-443a-9dd4-6ba9d02ff7e6" />
+          </association>
+          <association Id="81a58f73-e715-43db-a586-9103e59a8640" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Eliminar Reserva" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a0fa6091-9955-4942-beda-314e8c29a25f" LastKnownName="Eliminar Reserva" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="316f3829-5ed3-4124-9f5c-00bd2acfc1fe" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e8d74c08-a706-4dff-81f3-80a9244651c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="78e28b8a-dc1d-4172-97cb-c06099656301" name="Eliminar Reserva" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="993a5869-f8c5-4941-8409-113e330d645a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f462223e-747c-4449-aed9-a48a08af9c83" />
+          </association>
+          <association Id="e8da67f0-f138-474d-aa17-ff67cf510952" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Dejar Bicicleta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="22b800fd-f535-430f-a239-3625b79eef37" LastKnownName="Dejar Bicicleta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56710eb2-ce79-4b24-a683-575b74fd0a64" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f1c789ab-f08a-4715-a77f-0705c93566e3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="24042ed5-bdb2-4595-90c8-a43ca938e210" name="Dejar Bicicleta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d24d188-7e18-4926-8946-f14287e00c26" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="495590dd-113d-4e31-9670-86ce2dc63a10" />
+          </association>
+          <association Id="9e22c098-21ec-4212-b190-63e13cca1479" isDerived="false" sourceEndRoleName="Registrado" targetEndRoleName="Cerrar Sesion" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="94e14f3b-5821-498b-8573-7045f27b5c46" LastKnownName="Cerrar Sesion" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a16988b-275f-4713-b0b4-16b01e5288fe" name="Registrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f580206d-c838-40aa-acf8-ebc913979a73" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db95c170-796e-432b-9bf5-b715601e45c8" name="Cerrar Sesion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5825f7c-858f-464c-9fa6-99b04290664a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a6b85193-0a14-4f41-b61c-594129db8b35" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="231a2957-49a0-4c23-aaff-d5f10f4118df" name="Administrador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58470839-3dd7-4344-893f-1875dab745c4" />
+        <targetEnds>
+          <association Id="24b2c6f4-f206-4e56-b962-a0bf17739eb0" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1f0712ca-eb4f-49db-803f-72934dd18b0b" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf20d8d8-7d7e-49f4-bde8-855878c4d4ed" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0bb3b2f1-83b5-470d-8b2d-f67b538d6f1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="609de2b2-cb7d-4059-88bd-4fbe0ad67fdf" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c84bc76c-8aff-4bfb-a099-805d39762ac2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b1e141b1-95ea-4984-a217-13bfffbc7366" />
+          </association>
+          <association Id="5ad6d3e4-9302-49e2-8a6a-44f67175d890" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Registrarse" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c2da36d-1db5-4327-b85e-0e6eb1b6f68e" LastKnownName="Registrarse" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="541627b6-be0a-4d2a-9500-e11b183ec7a1" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a1e8925f-778b-4f93-904f-bf5fb2b0a5a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f5ef3fd-176d-4afa-8695-8cf89dde1b3a" name="Registrarse" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="836411b2-fe7c-4663-9281-e3a544d58046" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9accba62-4063-468c-af68-2262ee7584a8" />
+          </association>
+          <association Id="3a2d241c-4266-469b-b62f-3d041de4adc3" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Coger Bicileta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0e9c1ccd-38f4-467e-a41f-4eb6ded92ade" LastKnownName="Coger Bicileta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="536a73c2-4dbb-4523-8104-6df8a267c3cb" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d00a4fc-d193-438f-8783-c2f63ea32aa8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02fe5648-596f-4b69-922d-c185711f20af" name="Coger Bicileta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e029b642-fcd0-441c-b83e-240c7b8ffed0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48de2776-48fe-429a-8c3c-319fd8577cc7" />
+          </association>
+          <association Id="46e4fa91-5384-4f60-8841-9ff94d675e56" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Dejar Bicicleta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="22b800fd-f535-430f-a239-3625b79eef37" LastKnownName="Dejar Bicicleta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="63fb1c0d-7f4b-4209-be87-6a4616444e9c" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="919e2225-ade5-4765-b9dd-1e1a75ffb84a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="33da70b0-525f-44f8-81ff-85aee79a203a" name="Dejar Bicicleta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e761fa80-706d-4a33-ae07-9d65da154046" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fe0fbce5-c01a-4f2f-a2bf-2e4f3d23c32e" />
+          </association>
+          <association Id="6d7b204e-8abe-4c32-b7c8-919c1fdb7cef" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Reservar item" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2db461a7-8b28-46e2-a751-dca42379ec03" LastKnownName="Reservar item" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c145c0f4-735b-4819-b5aa-c2758c062a78" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="da5665a2-3080-4ae6-8eef-39fa6f2c9be4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa8dcbb6-2978-46d1-b2ea-aa3680de98dd" name="Reservar item" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="46d102bd-e77c-4f35-9171-e718678b1fad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f8ed4408-62b7-48d1-bba7-dab78a405dc0" />
+          </association>
+          <association Id="e00c02ef-4980-4006-9257-68b3b2c17208" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Eliminar Reserva" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a0fa6091-9955-4942-beda-314e8c29a25f" LastKnownName="Eliminar Reserva" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a7fc80f-acbf-4cbc-80bd-d47bad522d21" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="11e2f16a-21e2-459f-a337-fdeb04556c92" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="26ee9f77-6b61-4b6e-906b-ada067e24a5c" name="Eliminar Reserva" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="13712021-4213-4973-974d-f06a01796f1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cf186ec9-5fe6-47a7-a931-8dad52d7d3c8" />
+          </association>
+          <association Id="e5ed5064-0569-4d56-a2a1-d36af19026c7" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Cerrar Sesion" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="94e14f3b-5821-498b-8573-7045f27b5c46" LastKnownName="Cerrar Sesion" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b0d23c6b-967a-4fe2-b614-405799a643db" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="929c6148-9137-4ddb-b54a-6a9971d7d3f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="797a6b53-a876-43fc-8306-e1ac6deaa814" name="Cerrar Sesion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3f2db920-102e-4529-a9fe-0b87d707eff5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="53e2b3d7-da6c-4b8c-a166-e908534f4933" />
+          </association>
+          <association Id="78fefa9a-7023-4800-bd7f-2bb0d83f7269" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Cambiar Descuento" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0427bdce-30e5-40eb-bb92-067b073cb779" LastKnownName="Cambiar Descuento" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="018a4009-dd1e-4d76-b5fa-0e6d101ff779" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fbde41e1-f724-4a01-9381-0465b04f83b4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2dc528a6-bddb-4e6a-a062-747cb26f3024" name="Cambiar Descuento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a92dd992-776a-40aa-b244-9d5699eb44c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="300bcaf8-f75a-4ec3-acef-255fc0b2b2dd" />
+          </association>
+          <association Id="1e6072a8-9738-49ef-9ec2-664ca02fe046" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Cambiar tarifa" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8a5e02c5-ed49-4ee1-94ef-4ed25ae0a67c" LastKnownName="Cambiar tarifa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="15016d4e-0696-4625-b52f-4c680d4f0a78" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f00938a1-092a-4c0a-8f0f-561e77981ecd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="17187ccc-5a4b-43f2-9ae8-3fa8af6402bb" name="Cambiar tarifa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45e437fb-e975-4255-8ebf-f4f7fa294a2f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="45a99a0d-0200-4d1f-8a2b-53b6d136c21e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1f0712ca-eb4f-49db-803f-72934dd18b0b" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40b9417b-a6a9-4b11-95b0-6e717c5bed5e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c2da36d-1db5-4327-b85e-0e6eb1b6f68e" name="Registrarse" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f3e35aef-21c0-45a9-b308-4915f4c3a873" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0e9c1ccd-38f4-467e-a41f-4eb6ded92ade" name="Coger Bicileta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ce3d58c2-14e6-45b6-af13-7d5e7b2755bf" />
+        <additions>
+          <include Id="3c57d173-2ee2-4832-9f7a-75d004f35aaf">
+            <useCaseMoniker Id="a0fa6091-9955-4942-beda-314e8c29a25f" LastKnownName="Eliminar Reserva" />
+            <elementDefinition Id="0317a618-9190-4a97-8453-834486242981" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a0fa6091-9955-4942-beda-314e8c29a25f" name="Eliminar Reserva" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ebc7e893-3e5b-42fc-9882-f446592ec907" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2db461a7-8b28-46e2-a751-dca42379ec03" name="Reservar item" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5b461450-211a-4aac-8b77-6b279d7abeb9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="22b800fd-f535-430f-a239-3625b79eef37" name="Dejar Bicicleta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0f6009c2-fc19-473f-9865-a1fd28d6a825" />
+        <additions>
+          <include Id="929515d6-3343-43b5-a414-fad1ba039f09">
+            <useCaseMoniker Id="a0fa6091-9955-4942-beda-314e8c29a25f" LastKnownName="Eliminar Reserva" />
+            <elementDefinition Id="64857dc7-eead-42e5-984c-0feb8394698e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8a5e02c5-ed49-4ee1-94ef-4ed25ae0a67c" name="Cambiar tarifa" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="47128cbe-a125-472c-a2b5-5a2b21a17345" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0427bdce-30e5-40eb-bb92-067b073cb779" name="Cambiar Descuento" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b24894f9-a3e9-4bd6-b43c-8a225705f38a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="94e14f3b-5821-498b-8573-7045f27b5c46" name="Cerrar Sesion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3ae46eb-3e6c-49f3-b919-2c5947f8125b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="d7b19afc-95ab-43c9-9a47-68a2cac71823" name="ModelProject">
+    <elementDefinition Id="74250564-6bbb-4194-b317-93e88427ad05" />
+  </package>
+</useCaseModelRoot>

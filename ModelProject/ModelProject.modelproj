@@ -268,6 +268,13 @@
       <SubType>Content</SubType>
       <DependentUpon>StationController_BookSlot.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="UMLUseCaseDiagram.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLUseCaseDiagram.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLUseCaseDiagram.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="WebClassDiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>

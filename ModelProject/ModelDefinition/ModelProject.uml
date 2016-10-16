@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="74250564-6bbb-4194-b317-93e88427ad05"
   name="ModelProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -71,6 +71,821 @@
         Id="2f9275da-21fe-40ac-8bcf-2b4d90a62e3e"
         LastKnownName="Areas"
         LastKnownLocation="Package1_1318.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="500f728e-9ba4-4d1e-a09b-f0df23f8fc11"
+        name="No registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7dd2b2bc-a582-4e54-96a8-870089c00fa3"
+            isDerived="false"
+            sourceEndRoleName="No registrado"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="40b9417b-a6a9-4b11-95b0-6e717c5bed5e"
+              LastKnownName="Login"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1d832b0b-b603-4620-b0be-6dae9ed6874b"
+                  name="No registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="724c3b49-8337-40bf-9635-173c85e11071"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="bae82e14-b6ff-49de-80b8-80aca133a01e"
+            isDerived="false"
+            sourceEndRoleName="No registrado"
+            targetEndRoleName="Registrarse"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f3e35aef-21c0-45a9-b308-4915f4c3a873"
+              LastKnownName="Registrarse"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="30044abe-4d61-403c-b5ba-f28d4e341556"
+                  name="No registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13a31a6a-9774-4975-a7dc-a9c47bf02652"
+                  name="Registrarse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b3a94ab7-0033-4156-a638-87b78a1e620e"
+        name="Registrado"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2b896f91-2a5a-4f1a-b697-3f13d6c709a2"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="40b9417b-a6a9-4b11-95b0-6e717c5bed5e"
+              LastKnownName="Login"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b2392fc0-1387-4a54-843f-df7b36cbf26c"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a8d4cf64-46fb-4c23-9562-e32cf629aa81"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9a76c0bc-98ac-4739-8171-522977258038"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Registrarse"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f3e35aef-21c0-45a9-b308-4915f4c3a873"
+              LastKnownName="Registrarse"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dc83d57f-b10b-4954-9703-693e1cf6b1a7"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e294ccb7-2469-4975-9a0b-3b15aa7edda6"
+                  name="Registrarse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c0d932e6-7272-46c0-a75d-333f9d75a3f7"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Coger Bicileta"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ce3d58c2-14e6-45b6-af13-7d5e7b2755bf"
+              LastKnownName="Coger Bicileta"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f68d16d-f6c3-4fab-a521-65c1051421b9"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4227a4ef-e711-463c-9d85-6a1104b1816f"
+                  name="Coger Bicileta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1eab33ee-60f2-443a-9dd4-6ba9d02ff7e6"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Reservar item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5b461450-211a-4aac-8b77-6b279d7abeb9"
+              LastKnownName="Reservar item"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17dda66d-41b7-4eae-ba6c-c36b74e8bc45"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8a1f5f73-b50d-4e87-a420-e06cf1f84563"
+                  name="Reservar item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f462223e-747c-4449-aed9-a48a08af9c83"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Eliminar Reserva"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ebc7e893-3e5b-42fc-9882-f446592ec907"
+              LastKnownName="Eliminar Reserva"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e8d74c08-a706-4dff-81f3-80a9244651c7"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="993a5869-f8c5-4941-8409-113e330d645a"
+                  name="Eliminar Reserva"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="495590dd-113d-4e31-9670-86ce2dc63a10"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Dejar Bicicleta"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0f6009c2-fc19-473f-9865-a1fd28d6a825"
+              LastKnownName="Dejar Bicicleta"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f1c789ab-f08a-4715-a77f-0705c93566e3"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d24d188-7e18-4926-8946-f14287e00c26"
+                  name="Dejar Bicicleta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a6b85193-0a14-4f41-b61c-594129db8b35"
+            isDerived="false"
+            sourceEndRoleName="Registrado"
+            targetEndRoleName="Cerrar Sesion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d3ae46eb-3e6c-49f3-b919-2c5947f8125b"
+              LastKnownName="Cerrar Sesion"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f580206d-c838-40aa-acf8-ebc913979a73"
+                  name="Registrado"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5825f7c-858f-464c-9fa6-99b04290664a"
+                  name="Cerrar Sesion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="58470839-3dd7-4344-893f-1875dab745c4"
+        name="Administrador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b1e141b1-95ea-4984-a217-13bfffbc7366"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="40b9417b-a6a9-4b11-95b0-6e717c5bed5e"
+              LastKnownName="Login"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0bb3b2f1-83b5-470d-8b2d-f67b538d6f1e"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c84bc76c-8aff-4bfb-a099-805d39762ac2"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9accba62-4063-468c-af68-2262ee7584a8"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Registrarse"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f3e35aef-21c0-45a9-b308-4915f4c3a873"
+              LastKnownName="Registrarse"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1e8925f-778b-4f93-904f-bf5fb2b0a5a8"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="836411b2-fe7c-4663-9281-e3a544d58046"
+                  name="Registrarse"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="48de2776-48fe-429a-8c3c-319fd8577cc7"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Coger Bicileta"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ce3d58c2-14e6-45b6-af13-7d5e7b2755bf"
+              LastKnownName="Coger Bicileta"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d00a4fc-d193-438f-8783-c2f63ea32aa8"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e029b642-fcd0-441c-b83e-240c7b8ffed0"
+                  name="Coger Bicileta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fe0fbce5-c01a-4f2f-a2bf-2e4f3d23c32e"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Dejar Bicicleta"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0f6009c2-fc19-473f-9865-a1fd28d6a825"
+              LastKnownName="Dejar Bicicleta"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="919e2225-ade5-4765-b9dd-1e1a75ffb84a"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e761fa80-706d-4a33-ae07-9d65da154046"
+                  name="Dejar Bicicleta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f8ed4408-62b7-48d1-bba7-dab78a405dc0"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Reservar item"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5b461450-211a-4aac-8b77-6b279d7abeb9"
+              LastKnownName="Reservar item"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da5665a2-3080-4ae6-8eef-39fa6f2c9be4"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46d102bd-e77c-4f35-9171-e718678b1fad"
+                  name="Reservar item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cf186ec9-5fe6-47a7-a931-8dad52d7d3c8"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Eliminar Reserva"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ebc7e893-3e5b-42fc-9882-f446592ec907"
+              LastKnownName="Eliminar Reserva"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="11e2f16a-21e2-459f-a337-fdeb04556c92"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13712021-4213-4973-974d-f06a01796f1c"
+                  name="Eliminar Reserva"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="53e2b3d7-da6c-4b8c-a166-e908534f4933"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Cerrar Sesion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d3ae46eb-3e6c-49f3-b919-2c5947f8125b"
+              LastKnownName="Cerrar Sesion"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="929c6148-9137-4ddb-b54a-6a9971d7d3f6"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f2db920-102e-4529-a9fe-0b87d707eff5"
+                  name="Cerrar Sesion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="300bcaf8-f75a-4ec3-acef-255fc0b2b2dd"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Cambiar Descuento"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b24894f9-a3e9-4bd6-b43c-8a225705f38a"
+              LastKnownName="Cambiar Descuento"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fbde41e1-f724-4a01-9381-0465b04f83b4"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a92dd992-776a-40aa-b244-9d5699eb44c9"
+                  name="Cambiar Descuento"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="45a99a0d-0200-4d1f-8a2b-53b6d136c21e"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Cambiar tarifa"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="47128cbe-a125-472c-a2b5-5a2b21a17345"
+              LastKnownName="Cambiar tarifa"
+              LastKnownLocation="ModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f00938a1-092a-4c0a-8f0f-561e77981ecd"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45e437fb-e975-4255-8ebf-f4f7fa294a2f"
+                  name="Cambiar tarifa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40b9417b-a6a9-4b11-95b0-6e717c5bed5e"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f3e35aef-21c0-45a9-b308-4915f4c3a873"
+        name="Registrarse"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ce3d58c2-14e6-45b6-af13-7d5e7b2755bf"
+        name="Coger Bicileta"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0317a618-9190-4a97-8453-834486242981">
+            <useCaseMoniker
+              Id="ebc7e893-3e5b-42fc-9882-f446592ec907"
+              LastKnownName="Eliminar Reserva"
+              LastKnownLocation="ModelProject.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ebc7e893-3e5b-42fc-9882-f446592ec907"
+        name="Eliminar Reserva"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5b461450-211a-4aac-8b77-6b279d7abeb9"
+        name="Reservar item"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0f6009c2-fc19-473f-9865-a1fd28d6a825"
+        name="Dejar Bicicleta"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="64857dc7-eead-42e5-984c-0feb8394698e">
+            <useCaseMoniker
+              Id="ebc7e893-3e5b-42fc-9882-f446592ec907"
+              LastKnownName="Eliminar Reserva"
+              LastKnownLocation="ModelProject.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="47128cbe-a125-472c-a2b5-5a2b21a17345"
+        name="Cambiar tarifa"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b24894f9-a3e9-4bd6-b43c-8a225705f38a"
+        name="Cambiar Descuento"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3ae46eb-3e6c-49f3-b919-2c5947f8125b"
+        name="Cerrar Sesion"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
