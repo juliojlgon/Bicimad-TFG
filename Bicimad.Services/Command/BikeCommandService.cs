@@ -109,7 +109,7 @@ namespace Bicimad.Services.Command
             //Update the price and discount
             var metaBasePrice = Repository.MetaConfigs.Where(c => c.MetaKey == MetaConfigKey.BasePrice).Select(c=> c.MetaValue).First();
             var basePrice = double.Parse(metaBasePrice, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
-            var span = transaction.CreatedDate - DateTimeHelper.SpanishNow;
+            var span = DateTimeHelper.SpanishNow - transaction.CreatedDate;
             var hours = span.TotalHours;
             var totalprice = basePrice*hours;
             
@@ -147,7 +147,7 @@ namespace Bicimad.Services.Command
             }
 
 
-            transaction.TotalDiscount = string.Format("{0}", totalprice - transaction.FinalPrice);            
+            transaction.TotalDiscount = string.Format("{0:0.##}", totalprice - transaction.FinalPrice);            
             
 
             //Add the action to the database.
