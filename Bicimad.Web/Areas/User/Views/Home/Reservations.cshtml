@@ -24,6 +24,14 @@
         {
             <tr>
                 
+                @if (user.Isbike)
+                {
+                    <td>@Resources.Bike</td>
+                }
+                else
+                {
+                    <td>@Resources.Slot</td>
+                }
                 <td>
                     @user.StationName
                 </td>
@@ -58,12 +66,10 @@
                 @if (user.Isbike)
                 {
                     <td><a href="@Url.Action(MVC.Bike.RemoveBikeReservation(userId, user.StationId))"><i class="material-icons left">delete</i></a></td>
-                    <td>@Resources.Bike</td>
                 }
                 else
                 {
-                    <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId,user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
-                    <td>@Resources.Slot</td>
+                    <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId, user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
                 }
 
             </tr>
