@@ -72,6 +72,7 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     //TODO: Buscar un icono por defecto para meter aquí
+                    <a class="white-text" style="font-size: 20px" href="@Url.Action(MVC.User.Home.Index())" class="waves-effect waves-light">My Profile</a>
                     <a href="@Url.Action(MVC.User.Home.Index())" class="btn-floating btn-large waves-effect waves-light"><img src="http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-1.jpg" class="img-responsive blue"></a>
                     <a href="@Url.Action(MVC.Account.LogOut())" class="btn btn-danger waves-effect waves-light" data-cat="Exit" data-act="Click" data-lab="Menu">@Resources.Logout</a>
                 }
