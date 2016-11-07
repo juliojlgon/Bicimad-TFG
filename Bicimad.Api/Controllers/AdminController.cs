@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Description;
 using Bicimad.Api.Attributes;
 using Bicimad.Api.Models.Admin;
 using Bicimad.Enums;
@@ -38,6 +39,7 @@ namespace Bicimad.Api.Controllers
         ///     Admin required.
         /// </summary>
         /// <returns>Json of stations.</returns>
+        [HttpGet, ResponseType(typeof(AdminStationModel))]
         public virtual IHttpActionResult GetAdminStationList()
         {
             var stations = _stationQueryService.GetStations().ToList();
@@ -63,6 +65,7 @@ namespace Bicimad.Api.Controllers
         /// </summary>
         /// <param name="basePrice"></param>
         /// <returns>Ok if everything is correct otherwise BadRequest</returns>
+        /// <response code="400"> Error message</response>
         public virtual IHttpActionResult SetBasePrice(double? basePrice)
         {
             if (!basePrice.HasValue)
@@ -91,7 +94,8 @@ namespace Bicimad.Api.Controllers
         /// <param name="discountType">0 for constant value. 1 for percent</param>
         /// <param name="discConst">Decimal value</param>
         /// <param name="discPorc">value between 0 and 1</param>
-        /// <returns></returns>
+        /// <response code="200"> Stations Updated </response>
+        /// <response code="400"> Error message</response>
         [HttpPost]
         public virtual IHttpActionResult SetDiscounts(List<string> stationIds, DiscountType discountType,
             string discConst,

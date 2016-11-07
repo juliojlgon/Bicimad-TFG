@@ -29,11 +29,22 @@ namespace Bicimad.Api.Controllers
 
         /// <summary>
         /// Post method.
-        /// It logs the user.
+        /// It logs the user and return an Auth Token.
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns>A string representing the token.</returns>
+        /// <response code="200">return user information and token
+        /// {Success = true, Token = token, CurrentUser, Error = ""}
+        /// </response>
+        /// <response code="400">If the model is not correct
+        /// 
+        /// {
+        ///                    Success = false,
+        ///                    Token = ""
+        /// }
+        /// 
+        /// </response>
         [HttpPost]
         public virtual IHttpActionResult Login(string username, string password)
         {
@@ -88,13 +99,13 @@ namespace Bicimad.Api.Controllers
 
         }
        /// <summary>
-       /// It register the user into the system.
+        /// Create a new user and add it to the database.
        /// </summary>
        /// <param name="username"></param>
        /// <param name="email"></param>
        /// <param name="password"></param>
        /// <param name="rePass"></param>
-       /// <returns>Ok or a json with an error.</returns>
+        /// <returns>True if it's possible, False otherwise.</returns>
         [HttpPost]
         public virtual IHttpActionResult Register(string username, string email, string password, string rePass)
         {
