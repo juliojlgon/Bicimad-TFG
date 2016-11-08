@@ -68,7 +68,7 @@ public class HistoricRenderer extends Renderer<History> {
         this.departureSText.setText(historial.getDepartureStationUserName());
         this.bikeIdText.setText("Ident: " + historial.getBikeId());
         this.dateText.setText(formatTimeToString(historial.getCreatedDate()));
-        this.priceText.setText(String.format("%s€", historial.getFinalprice()));
+        this.priceText.setText(String.format("%.2f€", historial.getFinalprice()));
     }
 
     private String formatTimeToString(String time){

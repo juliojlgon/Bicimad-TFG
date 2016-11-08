@@ -41,7 +41,7 @@ public interface IBiciMadServices {
     @GET("Account/istokenvalid")
     Observable<ValidResult> isTokenValid(@Query("token") String token);
 
-    @POST("station/fillmap")
+    @GET("station/fillmap")
     Observable<List<Station>> getStations();
 
     @GET("station/gethistory")

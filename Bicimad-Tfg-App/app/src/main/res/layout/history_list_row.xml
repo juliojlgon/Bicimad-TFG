@@ -28,7 +28,7 @@
         android:textSize="16dp"
         android:textStyle="bold"
         android:layout_below="@+id/from"
-        android:layout_width="wrap_content"
+        android:layout_width="115dp"
         android:layout_height="wrap_content" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
 
@@ -61,7 +61,7 @@
         android:text="Pintor Rosales"
         android:textSize="16dp"
         android:textStyle="bold"
-        android:layout_width="wrap_content"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/to"
         android:layout_alignParentRight="true"
@@ -73,7 +73,7 @@
     <TextView
         android:id="@+id/bikeident"
         android:layout_below="@id/departurestation"
-        android:layout_width="match_parent"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:textSize="14dp"
         android:textColor="@color/primaryText"

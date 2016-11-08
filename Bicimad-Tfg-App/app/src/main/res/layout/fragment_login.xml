@@ -3,6 +3,8 @@
     android:layout_height="match_parent"
     >
 
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -86,5 +88,15 @@
             android:background="@null"/>
 
     </LinearLayout>
+
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cpv_indeterminate="true"
+        app:cpv_color="@color/colorAccent"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
