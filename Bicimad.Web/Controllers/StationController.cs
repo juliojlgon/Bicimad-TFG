@@ -10,7 +10,7 @@ using Bicimad.Web.Extensions;
 
 namespace Bicimad.Web.Controllers
 {
-    public partial class StationController : Controller
+    public partial class StationController : BaseController
     {
         private readonly StationQueryService _stationQueryService;
         private readonly IReservationCommandService _reservationCommandService;
@@ -99,7 +99,7 @@ namespace Bicimad.Web.Controllers
 
             if (action.Success)
             {
-                TempData.SetMessage("Reserva Eliminada", MessageType.Error);
+                TempData.SetMessage("Reserva Eliminada", MessageType.Success);
                 return RedirectToAction(MVC.User.Home.ActiveRerservations());
                 //return new JsonResult
                 //{

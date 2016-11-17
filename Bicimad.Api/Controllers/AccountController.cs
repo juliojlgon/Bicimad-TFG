@@ -10,6 +10,9 @@ using Bicimad.Services.Query.Interfaces;
 
 namespace Bicimad.Api.Controllers
 {
+    /// <summary>
+    /// Controller in charge of Login and Register methods.
+    /// </summary>
     public class AccountController : BaseController
     {
         private readonly IUserCommandService _userCommandService;
@@ -24,7 +27,24 @@ namespace Bicimad.Api.Controllers
             _securityQueryService = securityQueryService;
         }
 
-        // POST: api/login
+        /// <summary>
+        /// Post method.
+        /// It logs the user and return an Auth Token.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns>A string representing the token.</returns>
+        /// <response code="200">return user information and token
+        /// {Success = true, Token = token, CurrentUser, Error = ""}
+        /// </response>
+        /// <response code="400">If the model is not correct
+        /// 
+        /// {
+        ///                    Success = false,
+        ///                    Token = ""
+        /// }
+        /// 
+        /// </response>
         [HttpPost]
         public virtual IHttpActionResult Login(string username, string password)
         {
@@ -50,6 +70,11 @@ namespace Bicimad.Api.Controllers
             return Json(new { Success = false, Token = "" });
         }
 
+        /// <summary>
+        /// The user data of the current user Logger.
+        /// Post method and requires a Token.
+        /// </summary>
+        /// <returns>The actual user in a Json.</returns>
         [ApiAuthorize, HttpPost]
         public virtual IHttpActionResult GetUserData()
         {
@@ -69,11 +94,18 @@ namespace Bicimad.Api.Controllers
                 FriendlyUrlName = userDto.FriendlyUrlUserName
             };
 
-            return HashHelper.GenerateToken(userDto.Id, userDto.UserName, password, DateTimeHelper.SpanishNow.Ticks);
+            return HashHelper.GenerateToken(userDto.Id, userDto.UserName, password, DateTimeHelper.SpanishNow.Ticks,userDto.IsAdmin);
 
 
         }
-       
+       /// <summary>
+        /// Create a new user and add it to the database.
+       /// </summary>
+       /// <param name="username"></param>
+       /// <param name="email"></param>
+       /// <param name="password"></param>
+       /// <param name="rePass"></param>
+        /// <returns>True if it's possible, False otherwise.</returns>
         [HttpPost]
         public virtual IHttpActionResult Register(string username, string email, string password, string rePass)
         {
@@ -102,6 +134,11 @@ namespace Bicimad.Api.Controllers
             return Json(new { Success = false, Error = createUserResult.ValidationErrors.Select(e => e.ErrorMessage).First()});
         }
 
+        /// <summary>
+        /// This method verify if the token received is valid
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns>Json with token and a bool value</returns>
         [HttpGet]
         public virtual IHttpActionResult IsTokenValid(string token)
         {
@@ -110,6 +147,10 @@ namespace Bicimad.Api.Controllers
             return Json(new {Token = token, Valid = valid});
         }
 
+        /// <summary>
+        /// It logs the user out.
+        /// </summary>
+        /// <returns></returns>
         [ApiAuthorize]
         public virtual IHttpActionResult LogOut()
         {

@@ -10,29 +10,28 @@
 {
     <table class="table table-striped">
         <tr>
-            <th></th>
+            
             <th>@Resources.Type</th>
             <th>@Resources.Station</th>
             <th>@Resources.Date</th>
             <th>@Resources.Time</th>
             <th>@Resources.BikeId</th>
             @*<th>Finalizado</th>*@
+            <th></th>
         </tr>
         @{string userId = ViewBag.UserId;}
         @foreach (var user in Model)
         {
             <tr>
+                
                 @if (user.Isbike)
                 {
-                    <td><a href="@Url.Action(MVC.Bike.RemoveBikeReservation(userId, user.StationId))"><i class="material-icons left">delete</i></a></td>
                     <td>@Resources.Bike</td>
                 }
                 else
                 {
-                    <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId,user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
                     <td>@Resources.Slot</td>
                 }
-
                 <td>
                     @user.StationName
                 </td>
@@ -63,6 +62,15 @@
                             </label>
                         }
                     </td>*@
+
+                @if (user.Isbike)
+                {
+                    <td><a href="@Url.Action(MVC.Bike.RemoveBikeReservation(userId, user.StationId))"><i class="material-icons left">delete</i></a></td>
+                }
+                else
+                {
+                    <td><a href="@Url.Action(MVC.Station.RemoveSlotReservation(userId, user.StationId))" class="btn btn-default btn-small"><i class="material-icons left">delete</i></a></td>
+                }
 
             </tr>
         }

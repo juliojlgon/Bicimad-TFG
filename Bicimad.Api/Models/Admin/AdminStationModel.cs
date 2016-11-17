@@ -6,14 +6,13 @@ using Bicimad.Enums;
 using Bicimad.Helpers;
 using Bicimad.Services.Query.Dto.Station;
 
-namespace Bicimad.Web.Areas.Admin.Models
+namespace Bicimad.Api.Models.Admin
 {
     public class AdminStationModel
     {
         public List<StationDto> Stations { get; set; }
 
         [Display(Name = "Base Price")]
-        [RegularExpression(@"(?:\d*\.)?\d+", ErrorMessage = "Invalid input. Only positive numbers")]
         public double? BasePrice { get; set; }
 
         public int TotalCount { get; set; }
@@ -41,11 +40,9 @@ namespace Bicimad.Web.Areas.Admin.Models
         }
 
         [Display(ResourceType = typeof (Resources.Resources), Name = "Money")]
-        [RegularExpression(@"(?:\d*\.)?\d+", ErrorMessage = "Invalid input. only positive numbers")]
         public string DiscConst { get; set; }
 
         [Display(ResourceType = typeof (Resources.Resources), Name = "PriceModel_DiscConst_Porcentual")]
-        [RegularExpression(@"(?:\d*\.)?\d+", ErrorMessage = "Invalid input. only positive numbers")]
         public string DiscPorc { get; set; }
     }
 }

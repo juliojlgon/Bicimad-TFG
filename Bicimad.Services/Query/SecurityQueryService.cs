@@ -26,7 +26,7 @@ namespace Bicimad.Services.Query
 
                 // Split the parts.
                 var parts = key.Split(':');
-                if (parts.Length == 4)
+                if (parts.Length == 5)
                 {
                     // Get the hash message, username, and timestamp.
                     var hash = parts[0];
@@ -34,6 +34,7 @@ namespace Bicimad.Services.Query
                     var username = parts[2];
                     var ticks = long.Parse(parts[3]);
                     var timeStamp = new DateTime(ticks);
+                    var isAdmin = parts[4];
 
                     // Ensure the timestamp is valid.
                     var expired = Math.Abs((DateTime.UtcNow - timeStamp).TotalMinutes) > ExpirationMinutes;
@@ -49,7 +50,7 @@ namespace Bicimad.Services.Query
             }
             catch (Exception)
             {
-                // ignored
+                return false;
             }
 
             return result;

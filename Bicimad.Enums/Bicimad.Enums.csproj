@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiscountType.cs" />
+    <Compile Include="MetaConfigKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MessageType.cs" />
     <Compile Include="ReservationCategory.cs" />

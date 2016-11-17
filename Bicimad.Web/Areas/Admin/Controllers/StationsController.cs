@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Bicimad.Enums;
 using Bicimad.Helpers;
+using Bicimad.Services.Command.Commands.MetaConfig;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Web.Areas.Admin.Models;
@@ -15,21 +16,28 @@ namespace Bicimad.Web.Areas.Admin.Controllers
     {
         private readonly IStationCommandService _stationCommandService;
         private readonly IStationQueryService _stationQueryService;
+        private readonly IMetaConfigCommandService _metaConfigCommandService;
+        private readonly IMetaConfigQueryService _metaconfigQueryService;
 
-        public StationsController(IStationQueryService stationQueryService, IStationCommandService stationCommandService)
+        public StationsController(IStationQueryService stationQueryService, IStationCommandService stationCommandService, IMetaConfigCommandService metaConfigCommandService, IMetaConfigQueryService metaconfigQueryService)
         {
             _stationQueryService = stationQueryService;
             _stationCommandService = stationCommandService;
+            _metaConfigCommandService = metaConfigCommandService;
+            _metaconfigQueryService = metaconfigQueryService;
         }
 
         // GET: Admin/Station
         public virtual ActionResult Index()
         {
             var stations = _stationQueryService.GetStations().ToList();
+            var metaBasePrice = _metaconfigQueryService.Get(MetaConfigKey.BasePrice).FirstOrDefault();
+            var baseprice = metaBasePrice != null ? metaBasePrice.MetaValue : "5";
+            
 
             var model = new AdminStationModel
             {
-                BasePrice = BicimadMetadata.BasePrice,
+                BasePrice = double.Parse(baseprice, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo),
                 Stations = stations,
                 TotalCount = stations.Count,
                 DiscConst = "0",
@@ -42,12 +50,25 @@ namespace Bicimad.Web.Areas.Admin.Controllers
         public virtual ActionResult SetBasePrice(double? basePrice)
         {
             if (!basePrice.HasValue)
-                BicimadMetadata.BasePrice = 5;
+                basePrice = 5;
+
+            var command = new CreateMetaConfigCommand
+            {
+                MetaKey = MetaConfigKey.BasePrice,
+                DeleteExistentKeys = true,
+                MetaValue = basePrice.Value.ToString(CultureInfo.InvariantCulture)
+            };
+
+            var result = _metaConfigCommandService.Create(command);
+
+            if (result.Success)
+            {
+                TempData.SetMessage("Base price changed.", MessageType.Success);
+            }
             else
-                BicimadMetadata.BasePrice = basePrice.Value;
-
-            TempData.SetMessage("Base price changed.", MessageType.Success);
-
+            {
+                TempData.SetMessage("There was a problem changing the price", MessageType.Error);
+            }
             return RedirectToAction(MVC.Admin.Stations.Index());
         }
 

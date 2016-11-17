@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainObjects\MetaConfig.cs" />
     <Compile Include="DomainObjects\UserHistory.cs" />
     <Compile Include="DomainObjects\Reservation.cs" />
     <Compile Include="DomainObjects\Slot.cs" />
@@ -119,6 +120,10 @@
     <Compile Include="Migrations\201609202319159_PriceAsBoolean.Designer.cs">
       <DependentUpon>201609202319159_PriceAsBoolean.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609231056486_MetaConfigAdded.cs" />
+    <Compile Include="Migrations\201609231056486_MetaConfigAdded.Designer.cs">
+      <DependentUpon>201609231056486_MetaConfigAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609202319159_PriceAsBoolean.resx">
       <DependentUpon>201609202319159_PriceAsBoolean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609231056486_MetaConfigAdded.resx">
+      <DependentUpon>201609231056486_MetaConfigAdded.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\bicimad.xml" />
   </ItemGroup>

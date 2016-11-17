@@ -28,9 +28,15 @@
             </div>
         </div>
 
+        <div class="card blue darken-4 display">
+            <div class="card-content white-text">
+                <p>Choose a station.</p>
+            </div>
+        </div>
+
         <div class="panel transparent text-center">
-            <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="takebike" data-user-id="@ViewBag.UserId">@Resources.TakeBike</a>
-            <a class="btn btn-primary btn-block waves-effect blue disabled j-button" id="bookbike" data-user-id="@ViewBag.UserId">@Resources.BookBike</a>
+            <a class="btn btn-primary btn-block waves-effect blue  j-button" id="takebike" data-user-id="@ViewBag.UserId" style="display: none">@Resources.TakeBike</a>
+            <a class="btn btn-primary btn-block waves-effect blue  j-button" id="bookbike" data-user-id="@ViewBag.UserId" style="display: none">@Resources.BookBike</a>
         </div>
     </div>
 
@@ -69,10 +75,10 @@
                     $("#station-title").text(stationName);
                     $("#station").text("");
                     $("<p class=\"flow-text\" style=\"font-size: 1.2vw\">"
-                            + "@Resources.FreeBikes -> " + freeBikes + "<br/>"
-                            + "@Resources.Discount -> " + discStr + "<br>" 
-                            + "Metro -> " + metro + "<br/>"
-                            + "Bus -> " + bus + "</p>")
+                            + "@Resources.FreeBikes: " + freeBikes + "<br/>"
+                            + "@Resources.Discount: " + discStr + "<br>" 
+                            + "Metro: " + metro + "<br/>"
+                            + "Bus: " + bus + "</p>")
                         .appendTo("#station");
                     $(".no-display").show();
                 },
@@ -118,7 +124,7 @@
         });
         var greyMarker = L.ExtraMarkers.icon({
             icon: "fa-minus-square",
-            markerColor: "red",
+            markerColor: "black",
             shape: "square",
             prefix: "fa"
         });
@@ -188,8 +194,11 @@
                     }
 
                     marker.on("click", function (e) {
-                        $("#takebike")["removeClass"]("disabled");
-                        $("#bookbike")["removeClass"]("disabled");
+                        //$("#takebike")["removeClass"]("disabled");
+                        //$("#bookbike")["removeClass"]("disabled");
+                        $("#takebike").show();
+                        $("#bookbike").show();
+                        $(".display").hide();
 
                         selectedStation = e.target.options.title;
 
@@ -217,8 +226,9 @@
         function onMapClick(e) {
             removeHighlight();
             selectedStation = "";
-            $("#takebike")["addClass"]("disabled");
-            $("#bookbike")["addClass"]("disabled");
+            $("#takebike").hide();
+            $("#bookbike").hide();
+            $(".display").show();
             $(".no-display").hide();
         }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Description;
 using System.Web.UI.WebControls;
 using Bicimad.Api.Attributes;
 using Bicimad.Mappers;
@@ -8,11 +9,17 @@ using Bicimad.Models.Station;
 using Bicimad.Services.Command.Interface;
 using Bicimad.Services.Query;
 using Bicimad.Services.Query.Dto.History;
+using Bicimad.Services.Query.Dto.Reservation;
+using Bicimad.Services.Query.Dto.Station;
 using Bicimad.Services.Query.Interfaces;
 using Bicimad.Services.Query.Queries;
 
 namespace Bicimad.Api.Controllers
 {
+    /// <summary>
+    /// Requires a token to work.
+    /// It manages the methods relate to stations.
+    /// </summary>
     [ApiAuthorize]
     public class StationController : BaseController
     {
@@ -34,7 +41,13 @@ namespace Bicimad.Api.Controllers
             _userStoryQueryService = userStoryQueryService;
         }
 
-        [HttpPost]
+        /// <summary>
+        /// Requires an AuthToken.
+        /// Search a station by its Id
+        /// </summary>
+        /// <param name="id">The id of the station.</param>
+        /// <returns>A station object as Json.</returns>
+        [HttpPost, ResponseType(typeof(StationDto))]
         public virtual IHttpActionResult GetStationByIdJson(string id)
         {
             var station = _stationQueryService.GetStation(id);
@@ -42,6 +55,15 @@ namespace Bicimad.Api.Controllers
             return jsonStation;
         }
 
+        /// <summary>
+        /// Requires an AuthToken.
+        /// Book a slot in a desired station.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="stationId"></param>
+        /// <returns>Json with bool value "Success" and a "BikeId" for the slot.</returns>
+        /// <response code="200"> {Success = true; BikeId=xxxxxxxxxxxxx; error = ""} </response>
+        /// <response code="400"> {Success = false; BikeId=""; error = error message} </response>
         [HttpPost]
         public virtual IHttpActionResult BookSlot(string userId, string stationId)
         {
@@ -67,6 +89,12 @@ namespace Bicimad.Api.Controllers
             return Json(new {Success = false, BikeId = "", Error = action.ValidationErrors.First().ErrorMessage});
         }
 
+        /// <summary>
+        /// Requires an AuthToken.
+        /// Method used for filling up a GoogleMaps map. but It can be used to fill any other object.
+        /// </summary>
+        /// <returns>List of the status of all stations, with information about reservations.</returns>
+        [HttpGet, ResponseType(typeof(MapReservStationModel))]
         public virtual IHttpActionResult FillMap()
         {
             var stations = _stationQueryService.GetStations();
@@ -94,6 +122,12 @@ namespace Bicimad.Api.Controllers
             return jsonStationModel;
         }
 
+        /// <summary>
+        /// Requires an AuthToken.
+        /// Get all the trips, completed or not, that the user did.
+        /// </summary>
+        /// <returns>Json with a list of UserHistoryDto </returns>
+        [HttpGet, ResponseType(typeof(UserHistoryDto))]
         public virtual IHttpActionResult GetHistory()
         {
 
@@ -107,6 +141,12 @@ namespace Bicimad.Api.Controllers
             return Json(userHistorical);
         }
 
+        /// <summary>
+        /// Requires an AuthToken.
+        /// Get all the active reservations for the current user.
+        /// </summary>
+        /// <returns>List of ReservationDto</returns>
+        [HttpGet, ResponseType(typeof(ReservationDto))]
         public virtual IHttpActionResult GetActiveReservations()
         {
 
@@ -121,6 +161,15 @@ namespace Bicimad.Api.Controllers
             return Json(reservationHistorical);
         }
 
+        /// <summary>
+        /// Requires an AuthToken.
+        /// Remove the slot reservation
+        /// </summary>
+        /// <param name="userId">currentUser Id</param>
+        /// <param name="stationId">Id of the station</param>
+        /// <returns>boolean value to show result</returns>
+        /// <response code="200"> {Success = true; error = ""} </response>
+        /// <response code="400"> {Success = false;  error = error message} </response>
         [HttpPost]
         public virtual IHttpActionResult RemoveSlotReservation(string userId, string stationId)
         {

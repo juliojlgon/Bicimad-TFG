@@ -24,19 +24,21 @@ namespace Bicimad.Api.Controllers
 
                 // Split the parts.
                 var parts = key.Split(':');
-                if (parts.Length == 4)
+                if (parts.Length == 5)
                 {
                     // Get the hash message, username, and timestamp.
                     var hash = parts[0];
                     var userId = parts[1];
                     var username = parts[2];
                     var ticks = long.Parse(parts[3]);
+                    var isAdmin = bool.Parse(parts[4]);
 
 
                     CurrentUser = new UserLoggedModel
                     {
                         Id = userId,
-                        Name = username
+                        Name = username,
+                        IsAdmin = isAdmin
                     };
                 }
             }
