@@ -91,10 +91,11 @@ namespace Bicimad.Api.Controllers
 
         /// <summary>
         /// Requires an AuthToken.
-        /// Method used for filling up a GoogleMaps map. but It can be used to fill any other object.
+        /// Retrieves a list of stations.
+        /// Can be used for used for filling up a GoogleMaps map. It can be used to fill any other object.
         /// </summary>
         /// <returns>List of the status of all stations, with information about reservations.</returns>
-        [HttpGet, ResponseType(typeof(MapReservStationModel))]
+        [HttpGet, ResponseType(typeof(List<MapReservStationModel>))]
         public virtual IHttpActionResult FillMap()
         {
             var stations = _stationQueryService.GetStations();
