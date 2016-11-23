@@ -4,12 +4,11 @@
 
 ###Carpetas del proyecto:
   Al ser un proyecto que incluye Frontend, Backend y la APP. Puede resultar algo complicado de entender que es cada cosa.
-En principio la carpeta cuenta con distintos archivos. Los unicos que se deben diferenciar son `Bicimad-Tfg-App` y `Bicimad-TFG.sln`.
+En principio la carpeta cuenta con distintos archivos. Los únicos que se deben diferenciar son `Bicimad-Tfg-App` y `Bicimad-TFG.sln`.
 
 + Bicimad-Tfg-App es la carpeta que contiene la Aplicación Android.Esta carpeta deberá poder abrirse usando ´Android Studio´.
 + Bicimad-TFG.sln es el archivo de solucion de Visual Studio. Este archivo es el archivo que une todas las demás carpetas en único 
-proyecto y cualquier **IDE compatible con Visual Studio** deberá capaz de interpretar estos archivos sin ningún tipo de problema 
-para generar un proyecto.
+proyecto y cualquier **IDE compatible con Visual Studio** deberá capaz de interpretar estos archivos sin problema para trabajar.
 
 ####En detalle:
 + Bicimad.API: Contiene todos los archivos relacionados con el API.
