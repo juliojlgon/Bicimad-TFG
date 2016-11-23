@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Bicimad.Core.DomainObjects;
-using Bicimad.Helpers;
+
 
 namespace Bicimad.Core.Migrations
 {
