@@ -8,5 +8,6 @@ namespace Bicimad.Services.Command.Interface
         CommandResult TakeBike(string userId, string stationId, string bikeId);
         CommandResult ReturnBike(string userId, string arrivalStationId);
         CommandResult InformBrokenBike(string bikeId);
+        CommandResult RemoveBikesFromStation(int numBikes, string friendlyUrlStationName);
     }
 }

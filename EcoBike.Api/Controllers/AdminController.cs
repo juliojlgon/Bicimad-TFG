@@ -23,15 +23,17 @@ namespace Bicimad.Api.Controllers
         private readonly IMetaConfigQueryService _metaconfigQueryService;
         private readonly IStationCommandService _stationCommandService;
         private readonly IStationQueryService _stationQueryService;
+        private readonly IBikeCommandService _bikeCommandService;
 
         public AdminController(IMetaConfigQueryService metaconfigQueryService,
             IMetaConfigCommandService metaConfigCommandService, IStationQueryService stationQueryService,
-            IStationCommandService stationCommandService)
+            IStationCommandService stationCommandService, IBikeCommandService bikeCommandService)
         {
             _metaconfigQueryService = metaconfigQueryService;
             _metaConfigCommandService = metaConfigCommandService;
             _stationQueryService = stationQueryService;
             _stationCommandService = stationCommandService;
+            _bikeCommandService = bikeCommandService;
         }
 
         /// <summary>
@@ -113,6 +115,21 @@ namespace Bicimad.Api.Controllers
                 return Ok("Stations Updated");
             }
 
+            return BadRequest(result.FirstErrorMessage);
+        }
+
+        /// <summary>
+        /// Remove bikes from station. Only for control Uses.
+        /// </summary>
+        /// <param name="numBikes"></param>
+        /// <param name="friendlyUrlStationName"></param>
+        /// <returns></returns>
+        public virtual IHttpActionResult RemoveBikesFromStation(int numBikes, string friendlyUrlStationName)
+        {
+            var result = _bikeCommandService.RemoveBikesFromStation(numBikes, friendlyUrlStationName);
+
+            if (result.Success)
+                return Ok("Eliminadas correctamente");
             return BadRequest(result.FirstErrorMessage);
         }
     }
