@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Api", "EcoBike.Api\EcoBike.Api.csproj", "{65C42317-B55E-4636-A3E6-16078A3CFD77}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Web", "EcoBike.Web\EcoBike.Web.csproj", "{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Services", "EcoBike.Services\EcoBike.Services.csproj", "{66E10168-7502-4E07-A1AB-48AC99F03B83}"
@@ -12,8 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Enums", "EcoBike.Enums\Bicimad.Enums.csproj", "{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Resources", "EcoBike.Resources\Bicimad.Resources.csproj", "{11BCAC89-25FD-4744-8A6B-C1B2886F823F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Api", "EcoBike.Api\EcoBike.Api.csproj", "{65C42317-B55E-4636-A3E6-16078A3CFD77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Mappers", "EcoBike.Mappers\Bicimad.Mappers.csproj", "{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}"
 EndProject
@@ -29,6 +29,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,10 +49,6 @@ Global
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65C42317-B55E-4636-A3E6-16078A3CFD77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
