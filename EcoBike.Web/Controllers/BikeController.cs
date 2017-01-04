@@ -61,6 +61,11 @@ namespace Bicimad.Web.Controllers
         [HttpPost]
         public virtual ActionResult TakeBike(string userId, string stationId)
         {
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                RedirectToAction(MVC.Account.Login());
+            }
             if (stationId == null)
             {
                 TempData.SetMessage("Estación no valida.", MessageType.Error);
