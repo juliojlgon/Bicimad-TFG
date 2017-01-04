@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Web", "Bicimad.Web\Bicimad.Web.csproj", "{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Web", "EcoBike.Web\EcoBike.Web.csproj", "{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Core", "Bicimad.Core\Bicimad.Core.csproj", "{636A6C20-8A44-464A-AF4C-626B64C6C02B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Services", "Bicimad.Services\Bicimad.Services.csproj", "{66E10168-7502-4E07-A1AB-48AC99F03B83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Services", "EcoBike.Services\EcoBike.Services.csproj", "{66E10168-7502-4E07-A1AB-48AC99F03B83}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Helpers", "ClassLibrary1\Bicimad.Helpers.csproj", "{1589AD50-1C09-4C11-A917-B1799DE1C805}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Enums", "EcoBike.Enums\Bicimad.Enums.csproj", "{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Enums", "Bicimad.Enums\Bicimad.Enums.csproj", "{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Resources", "EcoBike.Resources\Bicimad.Resources.csproj", "{11BCAC89-25FD-4744-8A6B-C1B2886F823F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Resources", "Bicimad.Resources\Bicimad.Resources.csproj", "{11BCAC89-25FD-4744-8A6B-C1B2886F823F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Api", "EcoBike.Api\EcoBike.Api.csproj", "{65C42317-B55E-4636-A3E6-16078A3CFD77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Api", "Bicimad.Api\Bicimad.Api.csproj", "{65C42317-B55E-4636-A3E6-16078A3CFD77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Mappers", "EcoBike.Mappers\Bicimad.Mappers.csproj", "{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Mappers", "Bicimad.Mappers\Bicimad.Mappers.csproj", "{F69398B7-B60E-4AF7-AFB7-F885F6A184E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Models", "EcoBike.Models\Bicimad.Models.csproj", "{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Models", "Bicimad.Models\Bicimad.Models.csproj", "{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bicimad.Helpers", "EcoBike.Helpers\Bicimad.Helpers.csproj", "{1589AD50-1C09-4C11-A917-B1799DE1C805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoBike.Core", "EcoBike.Core\EcoBike.Core.csproj", "{636A6C20-8A44-464A-AF4C-626B64C6C02B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +33,10 @@ Global
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA321E3C-02B8-4EE7-BD4B-25BFB7BAB63F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66E10168-7502-4E07-A1AB-48AC99F03B83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,15 +57,23 @@ Global
 		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1589AD50-1C09-4C11-A917-B1799DE1C805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636A6C20-8A44-464A-AF4C-626B64C6C02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1589AD50-1C09-4C11-A917-B1799DE1C805} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 		{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 		{11BCAC89-25FD-4744-8A6B-C1B2886F823F} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 		{F69398B7-B60E-4AF7-AFB7-F885F6A184E2} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 		{4D2E0982-ABEE-4373-9C49-F1CDFC7DD077} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
+		{1589AD50-1C09-4C11-A917-B1799DE1C805} = {6F66E522-AB3F-4A00-ACD0-1CB18F896A4A}
 	EndGlobalSection
 EndGlobal

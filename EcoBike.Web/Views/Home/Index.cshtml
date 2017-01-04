@@ -1,0 +1,167 @@
+﻿@using Bicimad.Resources
+@model Bicimad.Models.Home.BikeStatsModel
+@{
+    ViewBag.Title = "Home"; //No resource -> No debería cambiar.
+}
+
+<br/>
+@* TODO: Añadir un botón para marcar avería *@
+<div class="col-md-2 center-block" style="margin-top: 5em">
+    <div class="card default-color darken-1 z-depth-3">
+        <div class="card-content white-text">
+            <span class="card-title">@Resources.Statistic</span>
+            @if (Model != null)
+            {
+                <p>@Resources.FreeBikes: @Model.FreeBikes </p>
+                <p>@Resources.ActiveBikes: @Model.ActiveBikes</p>
+                <p>@Resources.BrokenBikes:@Model.BrokenBikes </p>
+            }
+
+        </div>
+    </div>
+
+    @*<div class="panel text-center">*@
+        @*<a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect blue">@Resources.TakeActions</a>*@
+        @*<a href="@Url.Action(MVC.Bike.Index())" class="btn btn-primary btn-block waves-effect default-color">@Resources.BookBike</a>*@
+        @*<a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect default-color">@Resources.ReturnActions</a>*@
+        @*<a href="@Url.Action(MVC.Bike.ReturnIndex())" class="btn btn-primary btn-block waves-effect blue">@Resources.ReturnBike</a>*@
+    @*</div>*@
+</div>
+
+<div class="card default-color col-md-10">
+    <div class="card-content">
+        <span class="card-title">@Resources.Status</span>
+        <div id="map" style="height: 550px;
+                                      max-height: 50%;">
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    @* TODO: CUANDO EL SCRIPT ESTE ACABADO METERLO EN UN SCRIPT APARTE y add locate *@
+    <script>
+        $(function() {
+
+
+            var map = L.map("map").setView([40.420829, -3.704729], 14);
+
+            var token = "pk.eyJ1IjoianVsaW9qbGdvbiIsImEiOiJjaWwycG13eDcwMGNmd25tMHljZnZocWg4In0.xCFNgIP46ccbU5bQ7cvyPg";
+            L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=" + token, {
+                maxZoom: 18,
+                attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, " +
+                    "<a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, " +
+                    "Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
+                id: "juliojlgon.p8hc8pdp"
+            }).addTo(map);
+
+            var redMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "red",
+                shape: "square",
+                prefix: "fa"
+            });
+            var orangeMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "orange",
+                shape: "square",
+                prefix: "fa"
+            });
+            var greenMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "green",
+                shape: "square",
+                prefix: "fa"
+            });
+            var greyMarker = L.ExtraMarkers.icon({
+                icon: "fa-minus-square",
+                markerColor: "red",
+                shape: "square",
+                prefix: "fa"
+            });
+            var bookedMarker = L.ExtraMarkers.icon({
+                icon: "fa-bicycle",
+                markerColor: "violet",
+                shape: "square",
+                prefix: "fa"
+            });
+
+
+            var url = "/home/fillmap";
+            var stations = [];
+            $.ajax({
+                "url": url,
+                "type": "POST",
+                "data": "",
+                "dataType": "json",
+                "success": function(data) {
+                    for (var i = 0; i < data.length; i++) {
+                        stations.push(data[i]);
+                        var lat = data[i].Latitude;
+                        var lon = data[i].Longitude;
+                        var porc = data[i].FreeBikes / data[i].BikeNum;
+                        var availSlots = data[i].AvailSlots;
+                        var stationBooked = data[i].IsBikeBooked;
+                        var discType = (data[i].DiscType == 0);
+                        var discStr = (discType) ? data[i].DiscConst + "€" : data[i].DiscPorc + "%";
+                        var markertext = "<b class=\"text-center  center-block\">" + data[i].StationName + "</b><hr>" +
+                            "<b>@Resources.FreeBikes: </b>" + data[i].FreeBikes + "<br>" +
+                            "<b>@Resources.FreeSlots: </b>" + availSlots + "<br>" +
+                            "<b>@Resources.Discount: </b>" + discStr + "<br>" +
+                            "<b>Metro: </b>" + data[i].Metro + "<br>" +
+                            "<b>Bus: </b>" + data[i].Bus + "<br>";
+                        var marker;
+                        if (stationBooked) {
+                            marker = L.marker([lat, lon], { icon: bookedMarker });
+                        }
+                        else if (porc > 0.75) {
+                            marker = L.marker([lat, lon], { icon: greenMarker });
+                        } else if (porc <= 0) {
+                            marker = L.marker([lat, lon], { icon: greyMarker });
+                        } else if (porc < 0.25) {
+                            marker = L.marker([lat, lon], { icon: redMarker });
+                        } else {
+                            marker = L.marker([lat, lon], { icon: orangeMarker });
+                        }
+                        marker.bindPopup(markertext);
+                        marker.addTo(map);
+                    }
+                },
+                "error": function () {
+                    console.log("Error calling " + url);
+                }
+            });
+
+            //L.marker([51.5, -0.09]).addTo(map)
+            //	.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+
+            //L.circle([51.508, -0.11], 500, {
+            //	color: 'red',
+            //	fillColor: '#f03',
+            //	fillOpacity: 0.5
+            //}).addTo(map).bindPopup("I am a circle.");
+
+            //L.polygon([
+            //	[51.509, -0.08],
+            //	[51.503, -0.06],
+            //	[51.51, -0.047]
+            //]).addTo(map).bindPopup("I am a polygon.");
+
+
+            var popup = L.popup();
+
+            //function onMapClick(e) {
+            //    popup
+            //        .setLatLng(e.latlng)
+            //        .setContent("You clicked the map at " + e.latlng.toString())
+            //        .openOn(map);
+            //}
+
+            //map.on('click', onMapClick);
+        });
+
+    </script>
+
+}
+

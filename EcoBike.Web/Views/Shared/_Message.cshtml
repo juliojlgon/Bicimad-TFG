@@ -1,0 +1,30 @@
+﻿@using Bicimad.Enums
+@using Bicimad.Web.Extensions
+@if (TempData.HasMessage())
+{
+    var message = TempData.GetMessage();
+    var cssClass = string.Empty;
+
+    switch (message.MessageType)
+    {
+        case MessageType.Success:
+            cssClass = "alert alert-success green";
+            break;
+        case MessageType.Warning:
+            cssClass = "alert alert-warning orange";
+            break;
+        case MessageType.Error:
+            cssClass = "alert alert-danger red";
+            break;
+        case MessageType.Info:
+            cssClass = "alert alert-info";
+            break;
+    }
+
+    <div class="alert @cssClass alert-dismissable text-center">
+        @*<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>*@
+        
+            <p class="white-text"><strong>@Html.Raw(message.Message)</strong></p>
+    </div>
+
+}

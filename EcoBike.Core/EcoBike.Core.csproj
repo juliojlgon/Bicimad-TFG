@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{636A6C20-8A44-464A-AF4C-626B64C6C02B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bicimad.Core</RootNamespace>
+    <AssemblyName>Bicimad.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainObjects\MetaConfig.cs" />
+    <Compile Include="DomainObjects\UserHistory.cs" />
+    <Compile Include="DomainObjects\Reservation.cs" />
+    <Compile Include="DomainObjects\Slot.cs" />
+    <Compile Include="DomainObjects\Station.cs" />
+    <Compile Include="DomainObjects\Bike.cs" />
+    <Compile Include="DomainObjects\User.cs" />
+    <Compile Include="EFRepository.cs" />
+    <Compile Include="DomainObjects\Interfaces\IEntity.cs" />
+    <Compile Include="DomainObjects\Interfaces\IEntityComparer.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Migrations\201602141141363_Initial.cs" />
+    <Compile Include="Migrations\201602141141363_Initial.Designer.cs">
+      <DependentUpon>201602141141363_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602141324078_StationAdded.cs" />
+    <Compile Include="Migrations\201602141324078_StationAdded.Designer.cs">
+      <DependentUpon>201602141324078_StationAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602152139364_UpdateStation.cs" />
+    <Compile Include="Migrations\201602152139364_UpdateStation.Designer.cs">
+      <DependentUpon>201602152139364_UpdateStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602160938513_UpdateStationA.cs" />
+    <Compile Include="Migrations\201602160938513_UpdateStationA.Designer.cs">
+      <DependentUpon>201602160938513_UpdateStationA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602161051205_UpdateStationB.cs" />
+    <Compile Include="Migrations\201602161051205_UpdateStationB.Designer.cs">
+      <DependentUpon>201602161051205_UpdateStationB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602181943041_Testing.cs" />
+    <Compile Include="Migrations\201602181943041_Testing.Designer.cs">
+      <DependentUpon>201602181943041_Testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602182034055_StationReference.cs" />
+    <Compile Include="Migrations\201602182034055_StationReference.Designer.cs">
+      <DependentUpon>201602182034055_StationReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603012204047_StationReserved.cs" />
+    <Compile Include="Migrations\201603012204047_StationReserved.Designer.cs">
+      <DependentUpon>201603012204047_StationReserved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603050840568_ReservationYSlot.cs" />
+    <Compile Include="Migrations\201603050840568_ReservationYSlot.Designer.cs">
+      <DependentUpon>201603050840568_ReservationYSlot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603141302591_UserHistories.cs" />
+    <Compile Include="Migrations\201603141302591_UserHistories.Designer.cs">
+      <DependentUpon>201603141302591_UserHistories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604041800335_Hack.cs" />
+    <Compile Include="Migrations\201604041800335_Hack.Designer.cs">
+      <DependentUpon>201604041800335_Hack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609202223235_StationPrice.cs" />
+    <Compile Include="Migrations\201609202223235_StationPrice.Designer.cs">
+      <DependentUpon>201609202223235_StationPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609202239335_UserHistoryPrice.cs" />
+    <Compile Include="Migrations\201609202239335_UserHistoryPrice.Designer.cs">
+      <DependentUpon>201609202239335_UserHistoryPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609202319159_PriceAsBoolean.cs" />
+    <Compile Include="Migrations\201609202319159_PriceAsBoolean.Designer.cs">
+      <DependentUpon>201609202319159_PriceAsBoolean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609231056486_MetaConfigAdded.cs" />
+    <Compile Include="Migrations\201609231056486_MetaConfigAdded.Designer.cs">
+      <DependentUpon>201609231056486_MetaConfigAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602141141363_Initial.resx">
+      <DependentUpon>201602141141363_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602141324078_StationAdded.resx">
+      <DependentUpon>201602141324078_StationAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602152139364_UpdateStation.resx">
+      <DependentUpon>201602152139364_UpdateStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602160938513_UpdateStationA.resx">
+      <DependentUpon>201602160938513_UpdateStationA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602161051205_UpdateStationB.resx">
+      <DependentUpon>201602161051205_UpdateStationB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\2.xml" />
+    <EmbeddedResource Include="Migrations\201602181943041_Testing.resx">
+      <DependentUpon>201602181943041_Testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602182034055_StationReference.resx">
+      <DependentUpon>201602182034055_StationReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603012204047_StationReserved.resx">
+      <DependentUpon>201603012204047_StationReserved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603050840568_ReservationYSlot.resx">
+      <DependentUpon>201603050840568_ReservationYSlot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603141302591_UserHistories.resx">
+      <DependentUpon>201603141302591_UserHistories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604041800335_Hack.resx">
+      <DependentUpon>201604041800335_Hack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609202223235_StationPrice.resx">
+      <DependentUpon>201609202223235_StationPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609202239335_UserHistoryPrice.resx">
+      <DependentUpon>201609202239335_UserHistoryPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609202319159_PriceAsBoolean.resx">
+      <DependentUpon>201609202319159_PriceAsBoolean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609231056486_MetaConfigAdded.resx">
+      <DependentUpon>201609231056486_MetaConfigAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\bicimad.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EcoBike.Enums\Bicimad.Enums.csproj">
+      <Project>{ECFD36B1-9B78-4AEC-90B7-1D53BD7DE4C8}</Project>
+      <Name>Bicimad.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

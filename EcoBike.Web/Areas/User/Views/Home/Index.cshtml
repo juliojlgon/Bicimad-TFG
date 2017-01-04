@@ -1,0 +1,80 @@
+﻿@using Bicimad.Resources
+@using Bicimad.Web.Extensions
+@model PagedList.StaticPagedList<Bicimad.Services.Query.Dto.History.UserHistoryDto>
+@{
+    ViewBag.Title = "Trayectos";
+}
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-striped table-responsive">
+            <tr>
+                <th>@Resources.DepartStation</th>
+                <th>@Resources.ArrivalStation</th>
+                <th>@Resources.Date</th>
+                <th>@Resources.Time</th>
+                <th>@Resources.BikeId</th>
+                <th>@Resources.Discount</th>
+                <th>@Resources.TotPrice</th>
+                <th>@Resources.isFinished</th>
+            </tr>
+            
+            @foreach (var historyDto in Model)
+            {
+                <tr>
+                    <td>
+                        @historyDto.DepartureStationUserName
+                    </td>
+
+                    <td>
+                        @historyDto.ArrivalStationUserName
+                    </td>
+
+                    <td>
+                        @historyDto.CreatedDate.ToShortDateString()
+                    </td>
+
+                    <td>
+                        @historyDto.CreatedDate.ToShortTimeString()
+                    </td>
+
+                    <td>
+                        @historyDto.BikeId
+                    </td>
+
+                    <td>
+                        @{
+                           var disc= (historyDto.TotalDiscount.IsEmpty()) ? "-" :
+                                historyDto.TotalDiscount + "€";
+                        }
+                        @disc
+                    </td>
+
+                    <td>
+                        @historyDto.FinalPrice €
+                    </td>
+
+                    <td>
+                        @if (historyDto.Finished)
+                        {
+                            <label>
+                                <input type="checkbox" checked disabled>
+                            </label>
+                        }
+                        else
+                        {
+                            <label>
+                                <input type="checkbox" disabled>
+                            </label>
+                        }
+                    </td>
+
+                </tr>
+            }
+        </table>
+
+        @Html.GenericPager(Model, page => Url.Action(MVC.User.Home.Index(page)))
+    }
+
+
+

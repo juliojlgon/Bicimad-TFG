@@ -1,0 +1,62 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@using System.Web.Optimization
+@using Bicimad.Web
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @Styles.Render(BundleConfig.Contents)
+    @Scripts.Render(BundleConfig.ModernizerJs)
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action(MVC.Admin.Stations.Index())">Administrador</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li><a href="@Url.Action(MVC.User.Home.Index())">Zona usuario</a></li>
+                            <li><a href="/">Web</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <p class="navbar-text">
+                                @ViewBag.UserName
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class=" container-fluid" style="margin-top: 50px">
+        @Html.Partial(MVC.Shared.Views._Message)
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; @DateTime.UtcNow.Year - Bicimad-TFG - Julio López & Manuel Gómez</p>
+                @*http://www.MDBootstrap.com MDBootstrap.com*@
+    </footer>
+
+
+    @Scripts.Render(BundleConfig.JQuery)
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
