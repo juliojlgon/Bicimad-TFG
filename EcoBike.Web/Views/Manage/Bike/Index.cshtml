@@ -194,8 +194,6 @@
                     }
 
                     marker.on("click", function (e) {
-                        //$("#takebike")["removeClass"]("disabled");
-                        //$("#bookbike")["removeClass"]("disabled");
                         $("#takebike").show();
                         $("#bookbike").show();
                         $(".display").hide();
@@ -206,10 +204,10 @@
                         $("#bookbike").attr("data-station-id", selectedStation);
 
                         showStation(selectedStation);
-                        //Save the icon for restore
-                        icon = e.target.options.icon;
                         // Remove highlight
                         removeHighlight();
+                        //Save the icon for restore
+                        icon = e.target.options.icon;
                         // Set highlight icon
                         this.setIcon(selectionMarker);
                         // Assign highlight

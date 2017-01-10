@@ -162,6 +162,51 @@ namespace Bicimad.Services.Command
             return commandResult;
         }
 
+        public CommandResult RemoveBikesFromStation(int numBikes, string friendlyUrlStationName)
+        {
+            var commandResult = new CommandResult();
+
+            if (numBikes <= 0)
+            {
+                commandResult.AddValidationError("The number cant be 0 or less than 0");
+                return commandResult;
+            }
+
+            if (string.IsNullOrEmpty(friendlyUrlStationName))
+            {
+                commandResult.AddValidationError("The Station title can't be empty");
+                return commandResult;
+            }
+
+            var station = Repository.Stations.FirstOrDefault(x => x.FriendlyUrlStationName == friendlyUrlStationName);
+
+            if (station == null)
+            {
+                commandResult.AddValidationError("The station title is not valid");
+                return commandResult;
+            }
+
+            var bikes = Repository.Bikes.Where(x => x.StationId == station.Id && !x.IsBooked && !x.IsActive).ToList();
+            var slots = Repository.Slots.Where(x => x.StationId == station.Id && !x.IsBooked).ToList();
+
+            var bikesToRemove = bikes.Take(numBikes).ToList();
+            var slotsToChange = slots.Take(numBikes).ToList();
+
+            foreach (var slot in slotsToChange)
+            {
+                slot.InUse = false;
+            }
+
+            Repository.Bikes.RemoveRange(bikesToRemove);
+
+            station.FreeBikes -= numBikes;
+
+            Repository.Commit();
+
+            return commandResult;
+
+        }
+
         public CommandResult InformBrokenBike(string bikeId)
         {
             var commandResult = new CommandResult();

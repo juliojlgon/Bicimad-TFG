@@ -21,41 +21,6 @@
 
 </head>
 <body>
-
-@*<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            </button>
-            @Html.ActionLink("Bicimad-TFG", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li>
-                        <a href="@Url.Action(MVC.Account.LogOut())" class="btn btn-danger" data-cat="Register" data-act="Click" data-lab="Menu">Salir</a>
-                    </li>
-                }
-                else
-                {
-                    <li>
-                        <a href="@Url.Action(MVC.Account.Login())" class="btn btn-lg btn-login" data-cat="Register" data-act="Click" data-lab="Menu">Login</a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action(MVC.Account.Register())" class="btn" data-cat="Register" data-act="Click" data-lab="Menu">Registro</a>
-                    </li>
-                }
-            </ul>
-        </div>
-    </div>
-</div>*@
-
 <nav class="navbar default-color navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -109,6 +74,16 @@
                             </li>
                         }
                     }
+                    <li>
+                        <a href="/Content/Files/android.pdf">Manual de Aplicacion Android</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/Content/Files/web.pdf">Manual de Aplicacion Web</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/juliojlgon/Bicimad-TFG">Proyecto</a>
+                    </li>
 
 
                 </ul>
