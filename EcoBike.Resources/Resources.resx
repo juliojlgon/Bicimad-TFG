@@ -267,4 +267,13 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Admin_TopTitle" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Save_Btn" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="User_Area" xml:space="preserve">
+    <value>User Area</value>
+  </data>
 </root>
