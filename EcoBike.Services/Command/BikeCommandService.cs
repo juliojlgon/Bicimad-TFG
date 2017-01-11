@@ -17,20 +17,17 @@ namespace Bicimad.Services.Command
 
         public CommandResult TakeBike(string userId, string stationId, string bikeId)
         {
-            
             var commandResult = new CommandResult();
-            if (Repository.UserHistories.Any(us => us.UserId == userId && !us.Finished))
+            if (Repository.UserHistories.Any(us => (us.UserId == userId) && !us.Finished))
             {
-                commandResult.AddValidationError("No puedes coger más de una bicicleta a la vez");
+                commandResult.AddValidationError("You can only take a bike at a time");
                 return commandResult;
             }
 
-            
-            var reservation = Repository.Reservations.FirstOrDefault(r => r.Id == userId && r.StationId == stationId);
+
+            var reservation = Repository.Reservations.FirstOrDefault(r => (r.Id == userId) && (r.StationId == stationId));
             if (reservation != null)
-            {
                 bikeId = reservation.ItemId;
-            }
 
             //TODO: Buscar si hay mas errores de validación.
 
@@ -53,7 +50,7 @@ namespace Bicimad.Services.Command
                 BikeId = bikeId,
                 UserId = userId,
                 DepartureStationId = stationId,
-                TotalDiscount = (station.DiscType == DiscountType.Constant)?string.Format("{0}€", station.DiscConst):string.Format("{0}%", station.DiscPorc),
+                TotalDiscount = station.DiscType == DiscountType.Constant ? string.Format("{0}€", station.DiscConst) : string.Format("{0}%", station.DiscPorc),
                 Finished = false
             });
 
@@ -68,11 +65,11 @@ namespace Bicimad.Services.Command
         {
             var commandResult = new CommandResult();
 
-            var transaction = Repository.UserHistories.FirstOrDefault(u => u.UserId == userId && !u.Finished);
+            var transaction = Repository.UserHistories.FirstOrDefault(u => (u.UserId == userId) && !u.Finished);
 
             if (transaction == null)
             {
-                commandResult.AddValidationError("Usuario no es valido");
+                commandResult.AddValidationError("You have to take a bike first.");
                 return commandResult;
             }
 
@@ -81,14 +78,14 @@ namespace Bicimad.Services.Command
 
             if (transaction.Finished)
             {
-                commandResult.AddValidationError("No Puedes entregar la bicicleta dos veces");
+                commandResult.AddValidationError("You can't return the bike two times.");
                 return commandResult;
             }
-            
-            var availSlots = station.BikeNum - (station.FreeBikes +station.ReservedSlots);
+
+            var availSlots = station.BikeNum - (station.FreeBikes + station.ReservedSlots);
             if (availSlots == 0)
             {
-                commandResult.AddValidationError("No hay ningún anclaje disponible");
+                commandResult.AddValidationError("No slot availiable");
                 return commandResult;
             }
 
@@ -107,48 +104,43 @@ namespace Bicimad.Services.Command
             station.FreeBikes = freeB;
 
             //Update the price and discount
-            var metaBasePrice = Repository.MetaConfigs.Where(c => c.MetaKey == MetaConfigKey.BasePrice).Select(c=> c.MetaValue).First();
+            var metaBasePrice = Repository.MetaConfigs.Where(c => c.MetaKey == MetaConfigKey.BasePrice).Select(c => c.MetaValue).First();
             var basePrice = double.Parse(metaBasePrice, NumberStyles.AllowDecimalPoint, NumberFormatInfo.InvariantInfo);
             var span = DateTimeHelper.SpanishNow - transaction.CreatedDate;
             var hours = span.TotalHours;
             var totalprice = basePrice*hours;
-            
+
             //if same type, apply the highest one.
             if (transaction.DepartureStation.DiscType == station.DiscType)
             {
                 if (transaction.DepartureStation.DiscType == DiscountType.Constant)
                 {
-                    var totalDiscount = (station.DiscConst > transaction.DepartureStation.DiscConst)
+                    var totalDiscount = station.DiscConst > transaction.DepartureStation.DiscConst
                         ? station.DiscConst
                         : transaction.DepartureStation.DiscConst;
                     transaction.FinalPrice = totalprice - totalDiscount;
                 }
                 else
                 {
-                    var totalDiscount = (station.DiscPorc > transaction.DepartureStation.DiscPorc)
+                    var totalDiscount = station.DiscPorc > transaction.DepartureStation.DiscPorc
                         ? station.DiscPorc
                         : transaction.DepartureStation.DiscPorc;
                     transaction.FinalPrice = totalprice*((100 - totalDiscount)/100);
                 }
-
             }
             else
             {
                 if (transaction.DepartureStation.DiscType == DiscountType.Constant)
-                {
                     transaction.FinalPrice = (totalprice - transaction.DepartureStation.DiscConst)*
                                              ((100 - station.DiscPorc)/100);
-                }
                 else
-                {
                     transaction.FinalPrice = (totalprice - station.DiscConst)*
-                                             ((100 - transaction.DepartureStation.DiscPorc)/100);               
-                }
+                                             ((100 - transaction.DepartureStation.DiscPorc)/100);
             }
 
 
-            transaction.TotalDiscount = string.Format("{0:0.##}", totalprice - transaction.FinalPrice);            
-            
+            transaction.TotalDiscount = string.Format("{0:0.##}", totalprice - transaction.FinalPrice);
+
 
             //Add the action to the database.
             transaction.ArrivalStationId = arrivalStationId;
@@ -186,16 +178,14 @@ namespace Bicimad.Services.Command
                 return commandResult;
             }
 
-            var bikes = Repository.Bikes.Where(x => x.StationId == station.Id && !x.IsBooked && !x.IsActive).ToList();
-            var slots = Repository.Slots.Where(x => x.StationId == station.Id && !x.IsBooked).ToList();
+            var bikes = Repository.Bikes.Where(x => (x.StationId == station.Id) && !x.IsBooked && !x.IsActive).ToList();
+            var slots = Repository.Slots.Where(x => (x.StationId == station.Id) && !x.IsBooked).ToList();
 
             var bikesToRemove = bikes.Take(numBikes).ToList();
             var slotsToChange = slots.Take(numBikes).ToList();
 
             foreach (var slot in slotsToChange)
-            {
                 slot.InUse = false;
-            }
 
             Repository.Bikes.RemoveRange(bikesToRemove);
 
@@ -204,7 +194,6 @@ namespace Bicimad.Services.Command
             Repository.Commit();
 
             return commandResult;
-
         }
 
         public CommandResult InformBrokenBike(string bikeId)
@@ -222,7 +211,6 @@ namespace Bicimad.Services.Command
             Repository.Commit();
 
             return commandResult;
-
         }
     }
 }
