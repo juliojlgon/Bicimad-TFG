@@ -335,6 +335,7 @@
     <Content Include="Content\Files\web.pdf" />
     <Content Include="Content\Files\android.pdf" />
     <None Include="Properties\PublishProfiles\bicimad-tfg - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\IISFiles.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
