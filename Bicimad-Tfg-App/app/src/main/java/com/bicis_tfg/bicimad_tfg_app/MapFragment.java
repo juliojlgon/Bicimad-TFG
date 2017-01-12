@@ -1,6 +1,7 @@
 package com.bicis_tfg.bicimad_tfg_app;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -101,6 +102,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private Station station;
     private Marker previousMarker;
 
+    private  ProgressDialog progress;
+
     private View root;
 
     private boolean isTakeState = true;
@@ -135,6 +138,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         /* map is already there, just return view as it is */
             }
 
+
+       progress = new ProgressDialog(getContext());
+        progress.setTitle("Loading");
+        progress.setMessage("Loading...");
+        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
 
         SupportMapFragment mapFragment = (SupportMapFragment) this.getChildFragmentManager()
                 .findFragmentById(R.id.map);
@@ -373,7 +381,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
             bookSlot();
         }
         //TODO: Actualizar el marker de la bicicleta que coges.
-        Log.i("BOOKACTION", "BookBikeOrSlot: ");
+        getStation();
 
     }
 
@@ -385,33 +393,53 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         }else{
             returnBike();
         }
-        Log.i("TAKEACTION", "takeOrReturnBike: ");
+        getStation();
+    }
+
+    private void  getStation(){
+        Observable<List<Station>> stationsObs = apiService.getStations();
+        stationsObs.doOnError(Throwable::printStackTrace).subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(stations -> {
+                    this.stations.clear();
+                    this.stations = stations;
+                    Double percent;
+                    boolean booked = false;
+                    for(Marker marker: markerList){
+                        marker.hideInfoWindow();
+                        Station s = getStationByName(marker.getTitle());
+                        if(isTakeState) {
+                            percent = s.getAvailSlots() / (double) s.getBikeNum();
+                            booked = s.getIsSlotBooked();
+                            mTakeActionButton.setText(resources.getString(R.string.return_bike));
+                            mBookActionButton.setText(resources.getString(R.string.book_slot));
+                            mChangeViewActionButton.setText(resources.getString(R.string.return_mode));
+                        }else {
+                            percent = s.getFreeBikes() / (double) s.getBikeNum();
+                            booked = s.getIsBikeBooked();
+                            mTakeActionButton.setText(resources.getString(R.string.take_bike));
+                            mBookActionButton.setText(resources.getString(R.string.book_bike));
+                            mChangeViewActionButton.setText(resources.getString(R.string.take_mode));
+
+                        }
+                        boolean type = (s.getDiscType() == 0);
+                        String discount = (type)? String.format("%s€", s.getDiscConst()) : String.format("%s%%", s.getDiscPorc());
+                        marker.setSnippet(new StringBuilder().append(appendTitle(s.getIsBikeBooked())).append("Free Bikes: ").append(s.getFreeBikes())
+                                                .append("\nFree Slots: ").append(s.getAvailSlots())
+                                                .append("\nDiscount: ").append(discount)
+                                                .append("\nMetro: ").append(s.getMetro())
+                                                .append("\nBus lines: ").append(s.getBus()).toString());
+                        marker.setIcon(getIcon(booked,percent));
+                    }
+                    isTakeState = !isTakeState;
+                    progress.hide();
+                });
     }
 
     @OnClick(R.id.changeView)
     void changeView(){
-        Double percent;
-        boolean booked = false;
-        for(Marker marker: markerList){
-            Station s = getStationByName(marker.getTitle());
-            if(isTakeState) {
-                percent = s.getAvailSlots() / (double) s.getBikeNum();
-                booked = s.getIsSlotBooked();
-                mTakeActionButton.setText(resources.getString(R.string.return_bike));
-                mBookActionButton.setText(resources.getString(R.string.book_slot));
-                mChangeViewActionButton.setText(resources.getString(R.string.return_mode));
-            }else {
-                percent = s.getFreeBikes() / (double) s.getBikeNum();
-                booked = s.getIsBikeBooked();
-                mTakeActionButton.setText(resources.getString(R.string.take_bike));
-                mBookActionButton.setText(resources.getString(R.string.book_bike));
-                mChangeViewActionButton.setText(resources.getString(R.string.take_mode));
-
-            }
-
-            marker.setIcon(getIcon(booked,percent));
-        }
-        isTakeState = !isTakeState;
+        progress.show();
+        station = null;
+        getStation();
     }
 
     private void takeBike(){
