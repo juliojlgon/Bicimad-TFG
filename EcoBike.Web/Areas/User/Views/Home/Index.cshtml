@@ -44,8 +44,16 @@
 
                     <td>
                         @{
-                           var disc= (historyDto.TotalDiscount.IsEmpty()) ? "-" :
-                                historyDto.TotalDiscount + "€";
+                            var disc = "";
+                            if (!historyDto.Finished)
+                            {
+                                disc = "-";
+                            }
+                            else
+                            {
+                                disc = (historyDto.TotalDiscount.IsEmpty()) ? "-" :
+                                historyDto.TotalDiscount;
+                            }
                         }
                         @disc
                     </td>
