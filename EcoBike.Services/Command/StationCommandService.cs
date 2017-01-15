@@ -65,7 +65,7 @@ namespace Bicimad.Services.Command
                         station.DiscConst = discountConst;
                         break;
                     }
-                    case DiscountType.Porcentual:
+                    case DiscountType.Percentual:
                     {
                         station.DiscPorc = discountPorc;
                         break;

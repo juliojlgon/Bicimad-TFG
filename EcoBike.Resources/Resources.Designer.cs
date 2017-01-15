@@ -430,6 +430,15 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not a member? Sign up now!.
+        /// </summary>
+        public static string SignupLink {
+            get {
+                return ResourceManager.GetString("SignupLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Slot.
         /// </summary>
         public static string Slot {

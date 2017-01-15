@@ -276,4 +276,7 @@
   <data name="User_Area" xml:space="preserve">
     <value>User Area</value>
   </data>
+  <data name="SignupLink" xml:space="preserve">
+    <value>Not a member? Sign up now!</value>
+  </data>
 </root>

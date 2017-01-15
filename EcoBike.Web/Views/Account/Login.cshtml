@@ -29,16 +29,17 @@
                 <label class="form-inline input-field">
                     @Html.CheckBoxFor(m => m.RememberMe) @Resources.RememberMe
                 </label>
+            </div>
 
                 <div class="text-center">
-                    <input type="submit" class="btn btn-primary btn-info" value="Iniciar sesión"/>
+                    <input type="submit" class="btn btn-primary btn-info" value="@Resources.Login" />
                 </div>
                 <div>
                     <div class="text-center">
-                        <a href="@Url.Action(MVC.Account.Register())">@Resources.Submit</a>
+                        <a href="@Url.Action(MVC.Account.Register())">@Resources.SignupLink</a>
                     </div>
                 </div>
-            </div>
+            
         </form>
 
 
