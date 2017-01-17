@@ -334,6 +334,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Content\Files\web.pdf" />
     <Content Include="Content\Files\android.pdf" />
+    <Content Include="Content\Files\Ecobike.apk" />
     <None Include="Properties\PublishProfiles\bicimad-tfg - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\IISFiles.pubxml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
