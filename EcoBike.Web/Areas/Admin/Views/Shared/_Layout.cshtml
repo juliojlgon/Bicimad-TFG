@@ -1,6 +1,7 @@
 ﻿@using System.Web.Mvc
 @using System.Web.Mvc.Html
 @using System.Web.Optimization
+@using Bicimad.Resources
 @using Bicimad.Web
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +24,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="@Url.Action(MVC.Admin.Stations.Index())">Administrador</a>
+                    <a class="navbar-brand" href="@Url.Action(MVC.Admin.Stations.Index())">@Resources.Admin_TopTitle</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li><a href="@Url.Action(MVC.User.Home.Index())">Zona usuario</a></li>
+                            <li><a href="@Url.Action(MVC.User.Home.Index())">@Resources.User_Area</a></li>
                             <li><a href="/">Web</a></li>
                         </ul>
                     </nav>

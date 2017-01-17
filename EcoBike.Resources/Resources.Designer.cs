@@ -79,6 +79,15 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin.
+        /// </summary>
+        public static string Admin_TopTitle {
+            get {
+                return ResourceManager.GetString("Admin_TopTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Arrival Station.
         /// </summary>
         public static string ArrivalStation {
@@ -403,11 +412,29 @@ namespace Bicimad.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save_Btn {
+            get {
+                return ResourceManager.GetString("Save_Btn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select All.
         /// </summary>
         public static string SelectAll {
             get {
                 return ResourceManager.GetString("SelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not a member? Sign up now!.
+        /// </summary>
+        public static string SignupLink {
+            get {
+                return ResourceManager.GetString("SignupLink", resourceCulture);
             }
         }
         
@@ -507,6 +534,15 @@ namespace Bicimad.Resources {
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Area.
+        /// </summary>
+        public static string User_Area {
+            get {
+                return ResourceManager.GetString("User_Area", resourceCulture);
             }
         }
     }

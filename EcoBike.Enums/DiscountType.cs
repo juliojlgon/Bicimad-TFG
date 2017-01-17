@@ -9,6 +9,6 @@ namespace Bicimad.Enums
     public enum DiscountType
     {
         Constant = 0,
-        Porcentual = 1
+        Percentual = 1
     }
 }
