@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bicimad-Tfg-App</string>
+    <string name="app_name">EcoBike</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Support chat</string>
     <string name="title_activity_login">Sign in</string>
@@ -35,7 +35,8 @@
     <string name="return_bike">Return Bike</string>
     <string name="book_bike">Book Bike</string>
     <string name="book_slot">Book Slot</string>
-    <string name="change_view">Change View</string>
+    <string name="take_mode">Take Mode</string>
+    <string name="return_mode">Return Mode</string>
     <string name="openDrawer"></string>
     <string name="closeDrawer"></string>
 

@@ -111,6 +111,15 @@ public class RegisterFragment extends Fragment {
     }
 
     private void attempRegister() {
+
+        if (!tPass.getText().toString().equals(tRePass.getText().toString())){
+            Snackbar snackbar = Snackbar.make(coordinatorLayout, "The passwords do not match.", Snackbar.LENGTH_LONG).setAction("Action", null);
+            View snackbarView = snackbar.getView();
+            TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+            textView.setTextColor(Color.RED);
+            snackbar.show();
+            return;
+        }
         Observable<RegisterModel> result = apiService.registerUser(tUsername.getText().toString(), tEmail.getText().toString(), tPass.getText().toString(),
                 tRePass.getText().toString());
 

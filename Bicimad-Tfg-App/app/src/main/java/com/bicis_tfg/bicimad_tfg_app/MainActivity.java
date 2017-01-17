@@ -1,20 +1,26 @@
 package com.bicis_tfg.bicimad_tfg_app;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bicis_tfg.bicimad_tfg_app.helpers.ResourcesHelper;
@@ -180,7 +186,27 @@ public class MainActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
 
+            }
+            case R.id.action_settings:{
+                final EditText input = new EditText(this);
+                input.setSingleLine(false);
+                input.setMaxLines(10);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT);
+                input.setLayoutParams(lp);
 
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle("Support Chat");
+                dialog.setView(input);
+                dialog.setPositiveButton("send", (dialog1, which) -> {
+                    Snackbar snackbar = Snackbar.make(getCurrentFocus(), "Message sent. Wait for response from Admins", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null);
+                    snackbar.show();
+                });
+                dialog.setCancelable(true);
+                dialog.show();
+                return true;
             }default:
                 return super.onOptionsItemSelected(item);
 
