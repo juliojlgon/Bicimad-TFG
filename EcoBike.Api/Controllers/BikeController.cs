@@ -32,9 +32,8 @@ namespace Bicimad.Api.Controllers
 
         /// <summary>
         /// Requires an AuthToken.
-        /// Values insteresting for returning a bike
+        /// It will return information usefull to show while returning objects. 
         /// </summary>
-        /// <returns>Returns a Json with data useful to show while returning objetcs.</returns>
         [HttpGet, ResponseType(typeof(BikeStatsModel))]
         public virtual IHttpActionResult ReturnIndex()
         {
