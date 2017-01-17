@@ -44,6 +44,7 @@
             android:inputType="textPassword"
             android:padding="10dp"
             android:singleLine="true" />
+
         <EditText
             android:id="@+id/register_repassword"
             android:layout_width="fill_parent"

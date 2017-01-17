@@ -393,7 +393,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         }else{
             returnBike();
         }
-        getStation();
+
     }
 
     private void  getStation(){
@@ -432,13 +432,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                     }
                     isTakeState = !isTakeState;
                     progress.hide();
+                    station = null;
                 });
     }
 
     @OnClick(R.id.changeView)
     void changeView(){
         progress.show();
-        station = null;
         getStation();
     }
 
@@ -459,9 +459,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                         progressView.stopAnimation();
                         progressView.setVisibility(View.GONE);
                         if (bookResult.isSuccess()) {
-                            Snackbar snackbar = Snackbar.make(getView(), "Bike successful taken. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
+                            Snackbar snackbar = Snackbar.make(getView(), "Bike successfully taken. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
                                     .setAction("Action", null);
                             snackbar.show();
+                            getStation();
                         } else {
                             Snackbar snackbar = Snackbar.make(getView(), bookResult.getError(), Snackbar.LENGTH_LONG)
                                     .setAction("Action", null);
@@ -491,7 +492,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                     progressView.stopAnimation();
                     progressView.setVisibility(View.GONE);
                     if(bookResult.isSuccess()){
-                        Snackbar snackbar = Snackbar.make(getView(), "Bike successful booked. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
+                        Snackbar snackbar = Snackbar.make(getView(), "Bike successfully booked. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
                                 .setAction("Action", null);
                         snackbar.show();
                     }else{
@@ -523,7 +524,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                         progressView.stopAnimation();
                         progressView.setVisibility(View.GONE);
                         if (bookResult.isSuccess()) {
-                            Snackbar snackbar = Snackbar.make(getView(), "Slot successful booked. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
+                            Snackbar snackbar = Snackbar.make(getView(), "Slot successfully booked. " + bookResult.getBikeId(), Snackbar.LENGTH_LONG)
                                     .setAction("Action", null);
                             snackbar.show();
                         } else {
@@ -555,9 +556,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                         progressView.stopAnimation();
                         progressView.setVisibility(View.GONE);
                         if (bookResult.isSuccess()) {
-                            Snackbar snackbar = Snackbar.make(getView(), "Bike successful returned.", Snackbar.LENGTH_LONG)
+                            Snackbar snackbar = Snackbar.make(getView(), "Bike successfully returned.", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null);
                             snackbar.show();
+                            getStation();
                         } else {
                             Snackbar snackbar = Snackbar.make(getView(), bookResult.getError(), Snackbar.LENGTH_LONG)
                                     .setAction("Action", null);
@@ -566,6 +568,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                             textView.setTextColor(Color.RED);
                             snackbar.show();
                         }
+                    }, throwable -> {
+                        Snackbar.make(getView(), "There was a problem returning the bike. Try again.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                     });
         }
     }
