@@ -137,14 +137,15 @@ namespace Bicimad.Services.Command
                 if (transaction.DepartureStation.DiscType == DiscountType.Constant)
                     transaction.FinalPrice = (totalprice - transaction.DepartureStation.DiscConst)*
                                              ((100 - station.DiscPorc)/100);
-                    if (transaction.FinalPrice < 0)
-                    {
-                        transaction.FinalPrice = 0;
-                    }
+                if (transaction.FinalPrice < 0)
+                {
+                    transaction.FinalPrice = 0;
                 }
                 else
+                {
                     transaction.FinalPrice = (totalprice - station.DiscConst)*
                                              ((100 - transaction.DepartureStation.DiscPorc)/100);
+                }
             }
 
 
